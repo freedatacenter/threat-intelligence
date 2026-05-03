@@ -2,7 +2,47 @@
 
 Public threat intelligence reports and indicators of compromise (IOCs) from real-world incident investigations.
 
+[//]: # (feed-validator: https://metrics.freedatacenter.org/v1/telemetry?src=ti-url)
+
 ## Reports
+
+### 2026-05-03 — Phishing via Compromised PSL Mailbox: Lovable.app Front + .ru Credential Harvester
+
+A targeted phishing email was delivered through a compromised Microsoft 365 mailbox in the Université Paris Sciences & Lettres (PSL, France) tenant. All authentication checks (DKIM, SPF, DMARC) pass for `psl.eu` — this is end-to-end authenticated delivery from a hijacked account, not spoofing. The attack is two-stage: the email leads to a purpose-built landing page on Lovable.app (an AI no-code site builder that hands out free wildcard TLS), and a single button on that page forwards the victim to the real target — `dotiojea[.]ru`, a credential harvester in the .ru zone with a per-victim token in the URL path.
+
+**Key findings:**
+- Genuine M365 outbound (`PR0P264CU014.outbound.protection.outlook.com`) from PSL tenant `4f8fd695-b3b5-4082-8005-610e9453e6d0` — DKIM/SPF/DMARC all pass for `psl.eu`
+- Stage 1 landing on `amendment-gateway[.]lovable[.]app` — React SPA on Lovable AI no-code builder (project ID `bb952617-8387-4712-a353-768d866d428a`), wildcard TLS by Google Trust Services, Cloudflare front (AS13335)
+- Stage 2 final target `hxxps://dotiojea[.]ru/{per-victim-token}/`, registered 2026-03-24 at R01-RU as a "Private Person", status REGISTERED, DELEGATED, **UNVERIFIED**, NS on Tencent DNSPod
+- DNS zone of `dotiojea[.]ru` removed at analysis time (DNSPod NXDOMAIN sentinel) — campaign infrastructure already taken down or self-removed
+- Per-victim path tokens (`/ojEyxTnj@JqGnH/`, `/z58!zTjKI/`) — pattern of modern AiTM kits (EvilProxy / Tycoon / Caffeine class)
+- Systemic abuse of Lovable.app: urlscan.io shows 230+ phishing-tagged scans on `*.lovable.app` since late 2025 (AT&T, betting fraud, crypto-drainers, brand impersonation)
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-05-03-phishing-amendment-gateway/Incident_Report_2026-05-03_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-05-03-phishing-amendment-gateway/Incident_Report_2026-05-03_RU.pdf)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| Email subject | `2026 Amend Proposal YF-W-SW89537` |
+| Compromised sender | `aissata-keltoum.drame@psl[.]eu` |
+| M365 tenant ID | `4f8fd695-b3b5-4082-8005-610e9453e6d0` (Université PSL) |
+| Outbound MX | `PR0P264CU014.outbound.protection.outlook.com` (`2a01:111:f403:c20a::4`, MS France-Central) |
+| EML SHA-256 | `2d0536dfbbce46c92f588a97da471322bf501111a3eb04d835ffe8e3b84fb70d` |
+| Landing URL | `hxxps://amendment-gateway[.]lovable[.]app/` |
+| Lovable project ID | `bb952617-8387-4712-a353-768d866d428a` |
+| Landing IP | `185[.]41[.]148[.]1`, `185[.]41[.]148[.]2` (AS13335 Cloudflare) |
+| Landing JS SHA-256 | `6462db810635dcd49271a491e49af9b481b8acc13be3562341abda7b377200b8` |
+| Final URL #1 | `hxxps://dotiojea[.]ru/ojEyxTnj@JqGnH/` |
+| Final URL #2 (related) | `hxxps://dotiojea[.]ru/z58!zTjKI/` |
+| Final domain | `dotiojea[.]ru` (R01-RU, registered 2026-03-24, UNVERIFIED) |
+| Final NS | `a.dnspod.com`, `c.dnspod.com` (Tencent DNSPod) |
+
+**MITRE ATT&CK:** T1583.001, T1583.006, T1586.002, T1078.004, T1566.002, T1564.011, T1539, T1606
+
+---
 
 ### 2026-04-05 — Telegram Account Hijacking via Phishing VPN Bot Mini App
 
