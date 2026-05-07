@@ -6,6 +6,44 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-05-07 — Honeypot Threat Intelligence: Monthly Report, April 2026
+
+A distributed honeypot network spanning nodes in Germany (DE/Hetzner), the United States (US/HOSTKEY), and Russia (RU/SelectEl) — with a new ICS/OT node launched in Poland on April 28 — recorded 578,657 SSH login attempts, 654 unique malware samples (100% confirmed malicious), and over 236,000 SIP/VoIP scanning events during April 2026. WannaCry-matching PE32 binaries remain in active distribution (884 YARA hits). A coordinated SSH campaign specifically targeted Solana validator usernames (`sol`, `solana`, `solv`) with 37,000+ combined attempts. Attackers are increasingly targeting AI inference infrastructure: 54,032 unauthorized requests were logged against the Ollama API honeypot and 1,049 Docker API sessions were classified as LLM-abuse. A Go-based SSH worm matching Panchan was observed using Discord as a secondary C2 channel. TLS analysis identified 3,383 sessions to `api[.]telegram[.]org`, consistent with Telegram Bot API used as C2 transport.
+
+**Key findings:**
+- WannaCry YARA rule triggered on 884 PE32 samples — legacy ransomware propagation mechanisms remain a live threat in 2026
+- Coordinated Solana validator targeting: 37,000+ SSH attempts against `sol`, `solana`, `solv` usernames — deliberate blockchain infrastructure focus
+- 54,032 unauthorized Ollama API inference requests + 1,049 Docker API LLM-abuse sessions — growing attacker interest in hijacking AI compute
+- 3,383 TLS sessions to `api[.]telegram[.]org` from honeypot nodes — malware families using Telegram Bot API as C2 channel
+- Panchan Go SSH worm detected with Discord as secondary C2; Mirai variant using XOR-obfuscated C2 domains (keys `0x22355627`, `0x544f4e49`)
+- Attack-correlated events traced to Aeza International (21 hits, EU/US sanctioned hoster) and Proton66 OOO (8 hits, known bulletproof hosting)
+- New ICS/OT honeypot (PL node) emulating Modbus, IEC 61850, DNP3, S7 launched April 28; attracted traffic within hours
+- 184 abuse reports generated; 35 submitted to ISPs; top sources: DigitalOcean (1,835 hits), OVH (436), Amazon AWS (430)
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-05-07-honeypot-monthly-april/Incident_Report_2026-05-07_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-05-07-honeypot-monthly-april/Incident_Report_2026-05-07_RU.pdf)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| C2 domain | `api[.]telegram[.]org` (Telegram Bot API used as malware C2 transport) |
+| Cryptominer URL | `xmrig[.]com` (XMRig miner delivery) |
+| Mining pool | `nicehash[.]com` (NiceHash pool endpoint) |
+| C2 platform | Discord (secondary C2 for Panchan/Discord_C2_ELF family) |
+| IP lookup | `api[.]ipify[.]org` (anti-GeoFencing recon by malware) |
+| Attacker ASN | AS204603 — Aeza International (EU/US sanctioned) |
+| Attacker ASN | AS197695 — Proton66 OOO (bulletproof hosting) |
+| YARA | `WannaCry_Ransomware` — 884 hits on PE32 samples |
+| YARA | `Panchan_SSHWorm_Go` — 6 hits on Go ELF binaries |
+| YARA | `Discord_C2_ELF` — 7 hits on Linux ELF samples |
+| YARA | `MAL_ARM_LNX_Mirai_Mar13_2022` — 2 hits (XOR C2 keys `0x22355627`, `0x544f4e49`) |
+
+**MITRE ATT&CK:** T1110.001, T1190, T1496, T1071.001, T1059.004, T1027, T1583.003, T1102.002
+
+---
+
 ### 2026-05-03 — Phishing via Compromised PSL Mailbox: Lovable.app Front + .ru Credential Harvester
 
 A targeted phishing email was delivered through a compromised Microsoft 365 mailbox in the Université Paris Sciences & Lettres (PSL, France) tenant. All authentication checks (DKIM, SPF, DMARC) pass for `psl.eu` — this is end-to-end authenticated delivery from a hijacked account, not spoofing. The attack is two-stage: the email leads to a purpose-built landing page on Lovable.app (an AI no-code site builder that hands out free wildcard TLS), and a single button on that page forwards the victim to the real target — `dotiojea[.]ru`, a credential harvester in the .ru zone with a per-victim token in the URL path.
