@@ -1,0 +1,101 @@
+{
+  "Event": {
+    "uuid": "899fd7ad-f7d0-529d-8496-b6a6b093d577",
+    "info": "[TLP:CLEAR] Targeted Phishing Impersonating National Endowment for Democracy",
+    "date": "2026-02-18",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "b19b42e7-753a-5e37-9ecd-f67ba777790b",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "daniel.knaus@hunterspropertyzm.com",
+        "to_ids": false,
+        "comment": "Spoofed sender, compromised Zambian domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3cf59f96-afcd-5c19-a8b3-85f5473dc6b2",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "hunterspropertyzm.com",
+        "to_ids": true,
+        "comment": "Compromised sender domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ce22d6ba-ed8f-5eb0-96bf-d4213d0dd8dd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "188.127.227.111",
+        "to_ids": true,
+        "comment": "SmartApe VPS, Moscow (DataPro datacenter)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fecf3256-adb3-5c74-a0c0-d867c104bc25",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "192.250.227.159",
+        "to_ids": true,
+        "comment": "StableServer email relay",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1feb3bb2-84ef-58d1-84be-8322d8af1cd1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.201.18.54",
+        "to_ids": true,
+        "comment": "AntiSpamCloud relay",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.001"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1598"
+      },
+      {
+        "name": "mitre-attack:T1589"
+      },
+      {
+        "name": "mitre-attack:T1591"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1586.002"
+      },
+      {
+        "name": "mitre-attack:T1204.001"
+      },
+      {
+        "name": "mitre-attack:T1585"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:spear-phishing"
+      },
+      {
+        "name": "label:ngo-targeting"
+      }
+    ]
+  }
+}

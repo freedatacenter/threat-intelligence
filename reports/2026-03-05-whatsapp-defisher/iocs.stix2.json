@@ -1,0 +1,527 @@
+{
+  "type": "bundle",
+  "id": "bundle--9c00e153-e945-5a4a-bb0b-6e52e101a6e2",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--c4ac9fe2-1153-5d63-bdaa-f947cddedc62",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "WhatsApp Account Takeover via Defisher Phishing Kit",
+      "published": "2026-03-05T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--b2df6a18-a3b7-57fa-9b38-bbb380477a74",
+        "indicator--41e639b1-0ffe-5e3f-91fb-2ceebf7f4cf8",
+        "indicator--58091fad-e752-5ae0-9814-e0e103e33c3a",
+        "indicator--c4e37d8b-26d7-59e0-a1d9-94b7a853291d",
+        "indicator--cc7146df-8e6a-53d2-b17f-2a331e66c0eb",
+        "indicator--87582593-d8fa-521c-a0e9-e2111e148126",
+        "indicator--bb004eaf-a76a-55bf-be08-1d8c4d447bea",
+        "indicator--ada601c6-5742-532d-85c2-a4a47b8eb116"
+      ],
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b2df6a18-a3b7-57fa-9b38-bbb380477a74",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: trust-authorization.tech",
+      "description": "Phishing page (WhatsApp Web impersonation)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'trust-authorization.tech']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--41e639b1-0ffe-5e3f-91fb-2ceebf7f4cf8",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: panel-my-test.online",
+      "description": "Defisher C2 panel and WebSocket API",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'panel-my-test.online']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--58091fad-e752-5ae0-9814-e0e103e33c3a",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 147.45.43.133",
+      "description": "AEZA Group bulletproof hosting, Frankfurt, AS210644",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '147.45.43.133']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c4e37d8b-26d7-59e0-a1d9-94b7a853291d",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS210644",
+      "description": "AEZA Group (US OFAC sanctioned Jul 2025)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 210644]",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cc7146df-8e6a-53d2-b17f-2a331e66c0eb",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://trust-authorization.tech/pUsl9nuZo649dKua0HL7uG5npbYAq1bn",
+      "description": "Phishing entry URL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://trust-authorization.tech/pUsl9nuZo649dKua0HL7uG5npbYAq1bn']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--87582593-d8fa-521c-a0e9-e2111e148126",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://panel-my-test.online/api/socket",
+      "description": "WebSocket C2 endpoint",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://panel-my-test.online/api/socket']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bb004eaf-a76a-55bf-be08-1d8c4d447bea",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://panel-my-test.online/auth",
+      "description": "Defisher admin panel login",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://panel-my-test.online/auth']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ada601c6-5742-532d-85c2-a4a47b8eb116",
+      "created": "2026-03-05T00:00:00Z",
+      "modified": "2026-03-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "HASSH: e42184b06d45385a906f0803d04c83da",
+      "description": "SSH HASSH fingerprint of C2 server",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-hassh:value = 'e42184b06d45385a906f0803d04c83da']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "whatsapp",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    }
+  ]
+}

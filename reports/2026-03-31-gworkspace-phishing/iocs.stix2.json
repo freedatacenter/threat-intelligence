@@ -1,0 +1,3990 @@
+{
+  "type": "bundle",
+  "id": "bundle--c942bc57-53af-54a6-a35a-593eb6e71078",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--676baa17-b96b-5b13-be38-cd7ddaf18dc1",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Mass Credential Phishing Campaign Impersonating Google Workspace",
+      "published": "2026-03-31T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--51cfa81e-6d0e-5666-81f3-4f53eaa920ec",
+        "indicator--ec47a7bd-b122-51d3-b4ac-d60ef9a508a1",
+        "indicator--701ce62a-39cc-51e7-b72d-be97b0c73b47",
+        "indicator--beb48588-1d39-5cf3-b90c-7af19c3d1cb6",
+        "indicator--44a61dd2-f878-58b1-b0fb-bf03afa85820",
+        "indicator--812b4a8c-3900-558b-9642-a79b8532e82e",
+        "indicator--b2d919fc-c521-5058-b67a-da208bd98fb5",
+        "indicator--c4c3e0ac-b2eb-5e6d-80a5-5ab7f2adbb6a",
+        "indicator--fa5d3c8b-7e6d-5027-9e60-4e4172f99330",
+        "indicator--a5be28e6-f7d7-58ec-ac24-41099ce90fb7",
+        "indicator--08769ee1-f86d-53f1-9140-e931de9bcc40",
+        "indicator--47ad10e8-0527-508c-bbdd-df823238cde0",
+        "indicator--9655e1e0-9188-56a9-a53a-e8a402402979",
+        "indicator--00b05a31-f5e4-5375-a0db-d6a66451d71a",
+        "indicator--38096425-3c4d-58c7-99ce-6e6a1a447688",
+        "indicator--222db736-4efd-5494-b003-55643d66252c",
+        "indicator--26aa6e42-c652-5b24-9b34-2d6a55cc076c",
+        "indicator--dcc0f3cb-1f8b-5f86-bfde-c358cdb57211",
+        "indicator--e026075c-3f76-516c-931e-1fd0f7147858",
+        "indicator--e6d4891f-3d6e-5dc6-99ea-17df485115ea",
+        "indicator--f12ef984-173c-5be2-a19c-1ab66734daf1",
+        "indicator--5ac53224-e756-5e01-b74f-9b1945b80a91",
+        "indicator--d2c049a4-2b8f-5329-a1a5-637ee9e76d15",
+        "indicator--0bf1d732-a349-57b5-97a6-f48a3646742a",
+        "indicator--e548cea0-016f-50f2-a09c-6b8ff5b8325c",
+        "indicator--40954873-4a54-5c8f-a1db-a941a29f2f19",
+        "indicator--334b44f6-c69a-5406-8fc1-37ddb60c1e94",
+        "indicator--e67eac55-aeb5-5548-93f3-7cc58eb78af3",
+        "indicator--2633c181-7415-5d55-a803-e152e63ef9a0",
+        "indicator--f68b6473-46bc-5754-a9d9-3e63192360f6",
+        "indicator--98edd3c0-3346-54e7-82b5-db38679cc123",
+        "indicator--f9231ffa-feb9-5206-adac-90c4d6a097ad",
+        "indicator--a0a76fc4-c264-5fbd-9c25-ce0669ae890b",
+        "indicator--1f86f0f4-d675-5dac-ac75-842b4ad03efe",
+        "indicator--b3345054-44b7-5b00-bd4c-6ec195a25e95",
+        "indicator--6de617da-287c-57e2-a9a5-388d9c689608",
+        "indicator--e75203c9-aed9-53df-9a58-4eddaf905c7a",
+        "indicator--fd34da9f-2987-57f4-8cb7-a2aa7ebee92c",
+        "indicator--d6c25b5b-8766-53de-af7e-94ab835df0dc",
+        "indicator--7df7ed14-e6b2-5407-ad3f-93522b0ea662",
+        "indicator--4ef4bef6-9eaa-557e-bc27-d2ea266e61b9",
+        "indicator--b8f41a04-ee2c-53f7-ba28-d4db318ea6b1",
+        "indicator--5328ce8a-2031-5aee-a877-8fc1d51bc14e",
+        "indicator--094b416c-6b89-574e-8f0d-dda07cd64d00",
+        "indicator--b63408d3-fb3f-5a08-817e-b5a66ee81bad",
+        "indicator--08d5207c-13bd-52e9-82b0-713ebc2623a5",
+        "indicator--39563052-b483-5ef4-be51-455236d3f26d",
+        "indicator--119530c1-d756-5d64-ad33-69532b4d7dd1",
+        "indicator--86ccc549-c0fc-5589-9813-68286d1bfb7e",
+        "indicator--2686a36e-7cfe-5999-a94a-e367d304cf3a",
+        "indicator--c99a3d91-8407-5ae7-9c79-8d8ba3d2998c",
+        "indicator--ef9b2bab-92f0-5c1c-8fdf-efbfd2a48cc6",
+        "indicator--72e29e91-f9cb-55b0-8d5c-afb6fd7c076a",
+        "indicator--3691ab9c-b7d4-5d9e-9a5f-725a8a56bd28",
+        "indicator--0dfc5b26-58e0-5c0e-8deb-d537d2b27532",
+        "indicator--2d0620d0-4c6b-545c-9664-c7309f3fb462",
+        "indicator--f3714916-0f2d-5d83-8f8c-cf8b51cd794e",
+        "indicator--55ed6cd2-f377-5c5c-af50-206d3526847c",
+        "indicator--d6490503-1517-52c2-a444-eb3d6949fb9e",
+        "indicator--b7ed34ff-19dd-5a2e-8d91-78bbd0d49f80",
+        "indicator--9598e1b2-e315-5526-9650-6c7d8659d76c",
+        "indicator--e181c773-8e0e-5585-b46e-48032429eba5",
+        "indicator--5f439cca-a3c0-5201-b8be-6d16c92ced7b",
+        "indicator--90c3085e-9f85-5a2c-9e0f-d06531f844cd",
+        "indicator--4720ed4c-7ae1-59d6-952f-a3558230e395",
+        "indicator--b9624d63-88fa-5c82-b40e-cfb47580f5f6",
+        "indicator--b6d26855-b2e1-5749-8cf7-2e385cd7a6d7",
+        "indicator--aa26c8c2-a0ec-5ce6-aa06-ab20f8f533c0",
+        "indicator--2ce41708-2413-5a58-b529-68b2a445c2d0",
+        "indicator--0ac649de-02ed-51b4-9d9a-5fb2fd1d4c1c"
+      ],
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--51cfa81e-6d0e-5666-81f3-4f53eaa920ec",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: crooveazoo.ru",
+      "description": "Primary C2 domain (Laravel app, MongoDB panel)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'crooveazoo.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ec47a7bd-b122-51d3-b4ac-d60ef9a508a1",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 89.124.98.199",
+      "description": "C2 server, VDSina NL, AS216071 — hosts all 62 .ru domains",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '89.124.98.199']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--701ce62a-39cc-51e7-b72d-be97b0c73b47",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: lasys.com.br",
+      "description": "Compromised phishing host (Brazilian website)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'lasys.com.br']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--beb48588-1d39-5cf3-b90c-7af19c3d1cb6",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 69.6.213.189",
+      "description": "Compromised phishing host IP",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '69.6.213.189']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--44a61dd2-f878-58b1-b0fb-bf03afa85820",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: ejm.org",
+      "description": "Spoofed sender domain (DMARC p=NONE)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'ejm.org']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--812b4a8c-3900-558b-9642-a79b8532e82e",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 54.240.4.15",
+      "description": "Amazon SES eu-west-1 (compromised account)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '54.240.4.15']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b2d919fc-c521-5058-b67a-da208bd98fb5",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: http://bit.ly/4rVLObb",
+      "description": "Redirect chain: bit.ly hop",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://bit.ly/4rVLObb']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c4c3e0ac-b2eb-5e6d-80a5-5ab7f2adbb6a",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: http://bit.ly/41muSA5",
+      "description": "Redirect chain: bit.ly hop",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://bit.ly/41muSA5']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fa5d3c8b-7e6d-5027-9e60-4e4172f99330",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: http://bit.ly/4bGmwcs",
+      "description": "Redirect chain: bit.ly hop",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://bit.ly/4bGmwcs']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a5be28e6-f7d7-58ec-ac24-41099ce90fb7",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: biowatea.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'biowatea.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--08769ee1-f86d-53f1-9140-e931de9bcc40",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: cayudu.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'cayudu.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--47ad10e8-0527-508c-bbdd-df823238cde0",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: chaithouwi.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'chaithouwi.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9655e1e0-9188-56a9-a53a-e8a402402979",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: chastirou.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'chastirou.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00b05a31-f5e4-5375-a0db-d6a66451d71a",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: chiocroupu.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'chiocroupu.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--38096425-3c4d-58c7-99ce-6e6a1a447688",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: chopaichu.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'chopaichu.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--222db736-4efd-5494-b003-55643d66252c",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: codreju.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'codreju.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--26aa6e42-c652-5b24-9b34-2d6a55cc076c",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: dooyuyi.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'dooyuyi.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dcc0f3cb-1f8b-5f86-bfde-c358cdb57211",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: duvoochio.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'duvoochio.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e026075c-3f76-516c-931e-1fd0f7147858",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: frakiope.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'frakiope.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e6d4891f-3d6e-5dc6-99ea-17df485115ea",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: gapiothai.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'gapiothai.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f12ef984-173c-5be2-a19c-1ab66734daf1",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: heacrutrai.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'heacrutrai.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5ac53224-e756-5e01-b74f-9b1945b80a91",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: heagoomu.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'heagoomu.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d2c049a4-2b8f-5329-a1a5-637ee9e76d15",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: hucacou.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'hucacou.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0bf1d732-a349-57b5-97a6-f48a3646742a",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: jaijeashu.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'jaijeashu.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e548cea0-016f-50f2-a09c-6b8ff5b8325c",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: jedrudroo.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'jedrudroo.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--40954873-4a54-5c8f-a1db-a941a29f2f19",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: jeyougea.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'jeyougea.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--334b44f6-c69a-5406-8fc1-37ddb60c1e94",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: jouwuge.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'jouwuge.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e67eac55-aeb5-5548-93f3-7cc58eb78af3",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: kaineathe.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'kaineathe.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2633c181-7415-5d55-a803-e152e63ef9a0",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: kathouze.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'kathouze.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f68b6473-46bc-5754-a9d9-3e63192360f6",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: kouthoulio.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'kouthoulio.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--98edd3c0-3346-54e7-82b5-db38679cc123",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: kouyiocri.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'kouyiocri.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f9231ffa-feb9-5206-adac-90c4d6a097ad",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: laihanea.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'laihanea.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a0a76fc4-c264-5fbd-9c25-ce0669ae890b",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: legewe.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'legewe.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1f86f0f4-d675-5dac-ac75-842b4ad03efe",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: liobeaju.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'liobeaju.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b3345054-44b7-5b00-bd4c-6ec195a25e95",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: lozioko.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'lozioko.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6de617da-287c-57e2-a9a5-388d9c689608",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: matreafea.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'matreafea.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e75203c9-aed9-53df-9a58-4eddaf905c7a",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: mustozu.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'mustozu.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fd34da9f-2987-57f4-8cb7-a2aa7ebee92c",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: naratrou.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'naratrou.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d6c25b5b-8766-53de-af7e-94ab835df0dc",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: nedefo.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'nedefo.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7df7ed14-e6b2-5407-ad3f-93522b0ea662",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: nigepu.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'nigepu.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4ef4bef6-9eaa-557e-bc27-d2ea266e61b9",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: nishorou.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'nishorou.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b8f41a04-ee2c-53f7-ba28-d4db318ea6b1",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: powoofru.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'powoofru.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5328ce8a-2031-5aee-a877-8fc1d51bc14e",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: raishaifoo.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'raishaifoo.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--094b416c-6b89-574e-8f0d-dda07cd64d00",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: safraigio.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'safraigio.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b63408d3-fb3f-5a08-817e-b5a66ee81bad",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: shaigeawi.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'shaigeawi.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--08d5207c-13bd-52e9-82b0-713ebc2623a5",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: shaithofroo.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'shaithofroo.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--39563052-b483-5ef4-be51-455236d3f26d",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: shiocoopai.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'shiocoopai.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--119530c1-d756-5d64-ad33-69532b4d7dd1",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: shoohoodoo.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'shoohoodoo.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--86ccc549-c0fc-5589-9813-68286d1bfb7e",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: sootruthea.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'sootruthea.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2686a36e-7cfe-5999-a94a-e367d304cf3a",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: sooweala.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'sooweala.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c99a3d91-8407-5ae7-9c79-8d8ba3d2998c",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: sotreafroo.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'sotreafroo.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ef9b2bab-92f0-5c1c-8fdf-efbfd2a48cc6",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: stadoomu.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'stadoomu.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--72e29e91-f9cb-55b0-8d5c-afb6fd7c076a",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: steakeatai.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'steakeatai.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3691ab9c-b7d4-5d9e-9a5f-725a8a56bd28",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: stootroke.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'stootroke.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0dfc5b26-58e0-5c0e-8deb-d537d2b27532",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: thaikooha.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'thaikooha.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2d0620d0-4c6b-545c-9664-c7309f3fb462",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: todrimai.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'todrimai.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f3714916-0f2d-5d83-8f8c-cf8b51cd794e",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: toodoonou.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'toodoonou.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--55ed6cd2-f377-5c5c-af50-206d3526847c",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: toufrace.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'toufrace.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d6490503-1517-52c2-a444-eb3d6949fb9e",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: trahagi.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'trahagi.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b7ed34ff-19dd-5a2e-8d91-78bbd0d49f80",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: truthoodru.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'truthoodru.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9598e1b2-e315-5526-9650-6c7d8659d76c",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: tuziosa.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'tuziosa.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e181c773-8e0e-5585-b46e-48032429eba5",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: vetioza.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'vetioza.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5f439cca-a3c0-5201-b8be-6d16c92ced7b",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: waibuwo.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'waibuwo.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--90c3085e-9f85-5a2c-9e0f-d06531f844cd",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: yaisteatou.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'yaisteatou.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4720ed4c-7ae1-59d6-952f-a3558230e395",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: yibuhea.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'yibuhea.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b9624d63-88fa-5c82-b40e-cfb47580f5f6",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: yithiohe.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'yithiohe.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b6d26855-b2e1-5749-8cf7-2e385cd7a6d7",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: yojiovi.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'yojiovi.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aa26c8c2-a0ec-5ce6-aa06-ab20f8f533c0",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: youdrata.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'youdrata.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2ce41708-2413-5a58-b529-68b2a445c2d0",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: zamoocou.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'zamoocou.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0ac649de-02ed-51b4-9d9a-5fb2fd1d4c1c",
+      "created": "2026-03-31T00:00:00Z",
+      "modified": "2026-03-31T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: zofiofe.ru",
+      "description": "DGA-like .ru C2 domain on 89.124.98.199",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'zofiofe.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-31T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "mass-campaign"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "Event": {
+    "uuid": "005ca903-0038-550b-aae9-30d3a0bf249a",
+    "info": "[TLP:CLEAR] Instagram Credential Phishing via Compromised Telegram Accounts",
+    "date": "2026-04-04",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "d740266e-e4af-5ca0-a2f5-69111b4f0083",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "va-kt.bayern",
+        "to_ids": true,
+        "comment": "Phishing domain (wildcard DNS — all subdomains resolve to C2)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7487ac45-b145-505b-9944-01b95ba6baa9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "friend.va-kt.bayern",
+        "to_ids": true,
+        "comment": "Active phishing subdomain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c9bbcadf-e2be-59ce-a8ce-3f89705f215d",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://friend.va-kt.bayern/ua/6",
+        "to_ids": true,
+        "comment": "Phishing entry URL (Ukrainian audience)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e8e7f7c9-d5cf-5ef6-9733-efbdd3047f0d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "62.60.226.50",
+        "to_ids": true,
+        "comment": "C2 server, AS214351 (FEMO IT SOLUTIONS LIMITED), Frankfurt DE",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0feacd92-b266-5896-81e3-56ed930ae51c",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS214351",
+        "to_ids": false,
+        "comment": "FEMO IT SOLUTIONS LIMITED (Censys-classified BULLETPROOF, 514 domains)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "25d93642-f244-51e7-85a0-6dfd91f30660",
+        "type": "hasshserver-md5",
+        "category": "Network activity",
+        "value": "41ff3ecd1458b0bf86e1b4891636213e",
+        "to_ids": true,
+        "comment": "SSH HASSH fingerprint of phishing server",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1586.002"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1598.003"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1557"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:credential-harvesting"
+      },
+      {
+        "name": "label:reverse-proxy"
+      },
+      {
+        "name": "label:bulletproof-hosting"
+      }
+    ]
+  }
+}

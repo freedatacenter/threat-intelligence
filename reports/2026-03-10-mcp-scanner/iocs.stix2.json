@@ -1,0 +1,158 @@
+{
+  "type": "bundle",
+  "id": "bundle--9269f6df-9b49-5cfa-aaaa-4632addc4984",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--f7bf865e-5318-5a67-9102-e09d1a678bb8",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Multi-Protocol Scanner with MCP Module Detected in Honeypot",
+      "published": "2026-03-10T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--2c4f6b7a-990e-537c-8187-8e3ba116ef74",
+        "indicator--56ee31bf-16f0-5fc7-927d-d35b88c6ed58"
+      ],
+      "labels": [
+        "scanning",
+        "reconnaissance",
+        "mcp"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1046"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1610"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1613"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2c4f6b7a-990e-537c-8187-8e3ba116ef74",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 95.51.243.130",
+      "description": "Scanner source: Orange Polska residential DSL, Warsaw, PL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '95.51.243.130']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-10T00:00:00Z",
+      "labels": [
+        "scanning",
+        "reconnaissance",
+        "mcp"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1046"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1610"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1613"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--56ee31bf-16f0-5fc7-927d-d35b88c6ed58",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "HASSH: eeca2460550b9ded084ecf2f70a75356",
+      "description": "SSH HASSH (OpenSSH 10.2, post-quantum KEX)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-hassh:value = 'eeca2460550b9ded084ecf2f70a75356']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-10T00:00:00Z",
+      "labels": [
+        "scanning",
+        "reconnaissance",
+        "mcp"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1046"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1610"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1613"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        }
+      ]
+    }
+  ]
+}

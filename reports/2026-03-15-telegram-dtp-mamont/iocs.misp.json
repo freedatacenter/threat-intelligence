@@ -1,0 +1,131 @@
+{
+  "Event": {
+    "uuid": "37310fa0-0d09-58b3-99af-d37ade3bff65",
+    "info": "[TLP:CLEAR] Mamont Banking Trojan: Telegram Phishing Disguised as Accident Photos",
+    "date": "2026-03-15",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "b5dcceda-5c96-52f6-b29c-3f01ac6f0feb",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "cc08aa94ad0a58c81ac6d7922db970271cce3c064e9e561157d2794bb80b7e79",
+        "to_ids": true,
+        "comment": "Mamont APK (org.net.framework)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "374c4cab-53ef-5a58-8c3a-deeeb002c4b3",
+        "type": "md5",
+        "category": "Payload delivery",
+        "value": "b787fff066ef4a03360cc3822289f9aa",
+        "to_ids": true,
+        "comment": "Mamont APK",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9e974bee-6448-57cd-9199-5d01d0daed54",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "amuvvoafs.com",
+        "to_ids": true,
+        "comment": "Mamont C2 domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "163161f3-2c04-56db-9295-0cd5c79bae7f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "amuvvoafs.me",
+        "to_ids": true,
+        "comment": "Mamont C2 domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0324cb74-b5cb-5f96-89ac-372e72d3cd78",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "amuvvoafs.su",
+        "to_ids": true,
+        "comment": "Mamont C2 domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "09623190-308b-5086-a6fc-dd6787508db0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "tlydtdl.me",
+        "to_ids": true,
+        "comment": "Mamont C2 domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e3ac6509-4d7c-516b-ad00-fedaa7e08a14",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://t.me/+XEAhWyIorixlODVl",
+        "to_ids": true,
+        "comment": "Telegram distribution channel (APK hosting)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1660"
+      },
+      {
+        "name": "mitre-attack:T1204.002"
+      },
+      {
+        "name": "mitre-attack:T1398"
+      },
+      {
+        "name": "mitre-attack:T1406"
+      },
+      {
+        "name": "mitre-attack:T1407"
+      },
+      {
+        "name": "mitre-attack:T1417"
+      },
+      {
+        "name": "mitre-attack:T1636.004"
+      },
+      {
+        "name": "mitre-attack:T1636.003"
+      },
+      {
+        "name": "mitre-attack:T1418"
+      },
+      {
+        "name": "mitre-attack:T1481.002"
+      },
+      {
+        "name": "mitre-attack:T1646"
+      },
+      {
+        "name": "mitre-attack:T1582"
+      },
+      {
+        "name": "label:malware"
+      },
+      {
+        "name": "label:banking-trojan"
+      },
+      {
+        "name": "label:android"
+      },
+      {
+        "name": "label:telegram"
+      }
+    ]
+  }
+}

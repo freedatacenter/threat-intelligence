@@ -1,0 +1,598 @@
+{
+  "type": "bundle",
+  "id": "bundle--4cf8b8fc-7656-5095-b73e-29ef19c28c95",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--7c21cf27-1560-5ac3-a99c-bc7730570e6d",
+      "created": "2026-03-15T00:00:00Z",
+      "modified": "2026-03-15T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Mamont Banking Trojan: Telegram Phishing Disguised as Accident Photos",
+      "published": "2026-03-15T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--93775907-0470-531f-82ed-e4428db04a9b",
+        "indicator--9f034403-8a21-53ed-9ce7-7fadc2ed5f2d",
+        "indicator--cb7c099f-2eca-52fa-958a-a4c884ccfca8",
+        "indicator--c3eb4672-052c-51da-9b25-b54afd88ba21",
+        "indicator--2e17b647-173f-5524-9163-82812c9aed83",
+        "indicator--0dd3be3f-3525-5ced-bcca-5db56a64bce1",
+        "indicator--513c3fec-b317-5bd6-968d-dcb51b2b03f9"
+      ],
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1398"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1407"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--93775907-0470-531f-82ed-e4428db04a9b",
+      "created": "2026-03-15T00:00:00Z",
+      "modified": "2026-03-15T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: cc08aa94ad0a58c81ac6d7922db970271cce3c064e9e561157d2794bb80b7e79",
+      "description": "Mamont APK (org.net.framework)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'cc08aa94ad0a58c81ac6d7922db970271cce3c064e9e561157d2794bb80b7e79']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-15T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1398"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1407"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9f034403-8a21-53ed-9ce7-7fadc2ed5f2d",
+      "created": "2026-03-15T00:00:00Z",
+      "modified": "2026-03-15T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "MD5: b787fff066ef4a03360cc3822289f9aa",
+      "description": "Mamont APK",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.MD5 = 'b787fff066ef4a03360cc3822289f9aa']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-15T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1398"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1407"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cb7c099f-2eca-52fa-958a-a4c884ccfca8",
+      "created": "2026-03-15T00:00:00Z",
+      "modified": "2026-03-15T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: amuvvoafs.com",
+      "description": "Mamont C2 domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'amuvvoafs.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-15T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1398"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1407"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c3eb4672-052c-51da-9b25-b54afd88ba21",
+      "created": "2026-03-15T00:00:00Z",
+      "modified": "2026-03-15T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: amuvvoafs.me",
+      "description": "Mamont C2 domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'amuvvoafs.me']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-15T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1398"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1407"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2e17b647-173f-5524-9163-82812c9aed83",
+      "created": "2026-03-15T00:00:00Z",
+      "modified": "2026-03-15T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: amuvvoafs.su",
+      "description": "Mamont C2 domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'amuvvoafs.su']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-15T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1398"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1407"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0dd3be3f-3525-5ced-bcca-5db56a64bce1",
+      "created": "2026-03-15T00:00:00Z",
+      "modified": "2026-03-15T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: tlydtdl.me",
+      "description": "Mamont C2 domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'tlydtdl.me']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-15T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1398"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1407"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--513c3fec-b317-5bd6-968d-dcb51b2b03f9",
+      "created": "2026-03-15T00:00:00Z",
+      "modified": "2026-03-15T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://t.me/+XEAhWyIorixlODVl",
+      "description": "Telegram distribution channel (APK hosting)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://t.me/+XEAhWyIorixlODVl']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-15T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1398"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1407"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        }
+      ]
+    }
+  ]
+}

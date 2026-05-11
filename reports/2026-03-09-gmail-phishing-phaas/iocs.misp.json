@@ -1,0 +1,167 @@
+{
+  "Event": {
+    "uuid": "a647b840-ca81-56c7-b84d-fae1d5c15cb8",
+    "info": "[TLP:CLEAR] Gmail Workspace Credential Phishing via Commercial PhaaS Platform",
+    "date": "2026-03-09",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "06a49871-5f95-561b-ae2a-042ad24c626c",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://maxillae890.bitnest.za.com/testatrix449/",
+        "to_ids": true,
+        "comment": "PhaaS campaign URL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "153bc1f9-df5b-5e93-a822-41f043c06078",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://demo.bitnest.za.com/testatrix449/",
+        "to_ids": true,
+        "comment": "PhaaS demo URL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "284469ca-78af-5b13-b636-4ff6364ce27b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bitnest.za.com",
+        "to_ids": true,
+        "comment": "PhaaS platform (wildcard DNS, Cloudflare-fronted)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cf0fe2e5-7648-5e52-adcc-865fb7b13dc5",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "oesplindia.com",
+        "to_ids": true,
+        "comment": "Compromised sender domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ce641d5e-5de9-5d95-bd18-e8883bdec5cb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sevensounds.ae",
+        "to_ids": true,
+        "comment": "Reply-To domain (linked to phishing infra via shared IP)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "006b8dda-e48b-5e47-a366-8224b0c84806",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "188.114.96.11",
+        "to_ids": true,
+        "comment": "Cloudflare CDN",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1227afd0-b05f-5d2d-9c78-dd897ea78cc6",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "188.114.97.11",
+        "to_ids": true,
+        "comment": "Cloudflare CDN",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e4f93778-2247-599e-92f4-ccf3cdff3c83",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "170.10.163.134",
+        "to_ids": true,
+        "comment": "LiquidNet US, AS14555",
+        "distribution": "5"
+      },
+      {
+        "uuid": "64a12116-ec21-56a2-9ee3-732038583c0f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.193.42.16",
+        "to_ids": true,
+        "comment": "AMANKA SARL, shared IP linking Reply-To to PhaaS infra",
+        "distribution": "5"
+      },
+      {
+        "uuid": "29581daf-d89d-5167-8ecd-5f9b34fc7e1a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "149.72.123.24",
+        "to_ids": true,
+        "comment": "SendGrid outbound",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5ffa8011-b2cb-59a3-ae5d-87e8d4251795",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "sandeep@oesplindia.com",
+        "to_ids": false,
+        "comment": "Compromised sender address",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d9341753-9f3f-5a40-a96c-be87ebe495aa",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "td@sevensounds.ae",
+        "to_ids": false,
+        "comment": "Reply-To address",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1598.003"
+      },
+      {
+        "name": "mitre-attack:T1589.001"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.006"
+      },
+      {
+        "name": "mitre-attack:T1585.002"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1071.001"
+      },
+      {
+        "name": "mitre-attack:T1217"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:phaas"
+      },
+      {
+        "name": "label:fingerprinting"
+      },
+      {
+        "name": "label:credential-harvesting"
+      }
+    ]
+  }
+}

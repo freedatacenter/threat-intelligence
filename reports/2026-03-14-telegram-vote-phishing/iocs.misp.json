@@ -1,0 +1,230 @@
+{
+  "Event": {
+    "uuid": "6ddad750-8ad0-59f1-b95a-deeb8230d995",
+    "info": "[TLP:CLEAR] Telegram Account Hijacking via Fake Voting Phishing Campaign",
+    "date": "2026-03-14",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "2fe3e4f3-4cb0-5870-b175-3744674f40c0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "beaminkjet.com",
+        "to_ids": true,
+        "comment": "Primary phishing domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ecd73606-aba3-5811-8d3c-5de54d99f732",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.83.39.62",
+        "to_ids": true,
+        "comment": "Pitline Ltd, Kharkiv, UA (Censys BULLETPROOF 0.75)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8906ea8d-6b1c-5cf7-98a0-d7206fcbedcb",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS214940",
+        "to_ids": false,
+        "comment": "KPRONET",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a08cf4cf-b97b-5b52-9e0a-695fbc42d397",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS215693",
+        "to_ids": false,
+        "comment": "PalmaHost",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6d1f89b2-c3aa-5288-a4da-7318c31ef737",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "syimono1488@gmail.com",
+        "to_ids": false,
+        "comment": "WHOIS registrant email",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c454932a-d602-507a-a3fa-c760b44e455d",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://beaminkjet.com/umarashab",
+        "to_ids": true,
+        "comment": "Phishing entry URL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cdc8e10e-fff2-5b84-8af1-9601c46519a4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vybory.cyou",
+        "to_ids": true,
+        "comment": "Co-located phishing domain (elections theme)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f4bea122-7d9c-5f28-9866-3a4b8e9765d3",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vybory.bond",
+        "to_ids": true,
+        "comment": "Co-located phishing domain (elections theme)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f12b0f98-a7e2-5bad-9088-deed7f6aed6b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vybory.sbs",
+        "to_ids": true,
+        "comment": "Co-located phishing domain (elections theme)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7c455c63-52f3-5149-9d48-d229711c6dab",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vybory.cfd",
+        "to_ids": true,
+        "comment": "Co-located phishing domain (elections theme)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2e68695f-072d-5a0e-8974-9f395e273aec",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vesna2026.cyou",
+        "to_ids": true,
+        "comment": "Co-located phishing domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3acbfde5-1137-59f0-871e-c286351df263",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vesna2026.cfd",
+        "to_ids": true,
+        "comment": "Co-located phishing domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "268c3b6c-0003-5dbc-90da-88513557cb17",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vesna2026.sbs",
+        "to_ids": true,
+        "comment": "Co-located phishing domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e451beb1-23af-5bab-b441-61ed9a345c82",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "onetop.sbs",
+        "to_ids": true,
+        "comment": "Co-located phishing domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a65b02c8-3c8d-531b-9001-38116ba26fae",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "onetop.cfd",
+        "to_ids": true,
+        "comment": "Co-located phishing domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d8d7cc5f-aca9-58b7-a280-9eabd9ab924e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "onetop.bond",
+        "to_ids": true,
+        "comment": "Co-located phishing domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4316b267-437f-5d5e-9f1b-73018ce7a7a4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "onetop.click",
+        "to_ids": true,
+        "comment": "Co-located phishing domain",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1204.001"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1027"
+      },
+      {
+        "name": "mitre-attack:T1539"
+      },
+      {
+        "name": "mitre-attack:T1056.003"
+      },
+      {
+        "name": "mitre-attack:T1556"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1588.002"
+      },
+      {
+        "name": "mitre-attack:T1608.002"
+      },
+      {
+        "name": "mitre-attack:T1550.004"
+      },
+      {
+        "name": "mitre-attack:T1589.001"
+      },
+      {
+        "name": "mitre-attack:T1070.004"
+      },
+      {
+        "name": "mitre-attack:T1213"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:account-takeover"
+      },
+      {
+        "name": "label:telegram"
+      },
+      {
+        "name": "label:phaas"
+      }
+    ]
+  }
+}

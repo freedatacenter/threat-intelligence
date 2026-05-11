@@ -1,0 +1,227 @@
+{
+  "Event": {
+    "uuid": "504780a3-f54f-54a1-8e08-cb3cfa4e6d46",
+    "info": "[TLP:CLEAR] ClickFix Social Engineering Campaign Delivering Vidar Stealer via Fake Cloudflare CAPTCHA",
+    "date": "2026-03-27",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "eb1b5ba5-4623-5601-b623-d556bc69b816",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "oulpansheli.org",
+        "to_ids": true,
+        "comment": "Compromised landing page (Hebrew language school, OVH FR)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "53739388-d63e-5397-a3af-97b755ae338f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "productionmaza.cyou",
+        "to_ids": true,
+        "comment": "Crypter payload delivery (Cloudflare)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0294a2b4-445a-563b-8f1d-c07eb20f67cb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "neugepower.net",
+        "to_ids": true,
+        "comment": "Vidar Stealer C2 domain (Hetzner DE)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cc34eb7b-691e-5812-8532-3e5ff217b739",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "skfilmsint.com",
+        "to_ids": true,
+        "comment": "Backup C2 via dead drop resolver (NameCheap/Cloudflare)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1e3fcb3d-0883-55bb-8300-bdc0a96d8d11",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "78.46.199.184",
+        "to_ids": true,
+        "comment": "Vidar Stealer C2, Hetzner DE",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0b88a25b-3d46-599f-9bf3-b774a55d7b0d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "213.186.33.16",
+        "to_ids": true,
+        "comment": "Compromised landing page server, OVH FR",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d8d1f273-40e3-5e31-bbc8-4c6de523ca65",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "172.67.148.28",
+        "to_ids": true,
+        "comment": "Cloudflare proxy (productionmaza[.]cyou)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f1e774d4-c0df-5b7f-850d-d4dfe7a21ce5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "104.21.55.125",
+        "to_ids": true,
+        "comment": "Cloudflare proxy (productionmaza[.]cyou)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "345e7653-c00f-56b9-b3e0-e3cfac9232d7",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://oulpansheli.org/ru/",
+        "to_ids": true,
+        "comment": "ClickFix lure page",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fd6e9946-249e-5095-b310-3f6a64615f9e",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://productionmaza.cyou/api/index.php?a=dl&token=fcdd5b796fbf5cb5614da7aaa4773fb404771c4821e4b8d30305ed8df58a2188&src=cloudflare&mode=cloudflare",
+        "to_ids": true,
+        "comment": "Crypter (blindcousin) download URL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "edda012f-7d83-53c9-95b1-1bdcefdb5b5c",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://telegram.me/v2ts23m",
+        "to_ids": true,
+        "comment": "Dead drop resolver: Telegram channel with backup C2 domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0e2f8c53-8c1b-5876-bb4c-e353ef5be8dd",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://steamcommunity.com/profiles/76561198724155486",
+        "to_ids": true,
+        "comment": "Dead drop resolver: Steam profile",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4b725a3b-470a-5e48-989f-4bea4977c029",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "e2f6f791dd32b18fd7a002efce17fdd039f69809f7ddabeda9d0de1035da82d9",
+        "to_ids": true,
+        "comment": "Go loader 'blindcousin' (garble-obfuscated, XOR/SUB 5-round decrypt)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "22851416-f296-5160-8bc2-16016789ea11",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "4a788d7009f7cd13fda4291461e67191bc4b9c34e16761796e0457810fe5bba8",
+        "to_ids": true,
+        "comment": "Vidar Stealer v1.0 payload (botnet 4c0a49bed86cb25165c2f64c7c27c48a)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dc89a09b-6461-5288-b3ff-39c133f2a84e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "4d4cd6ee9165a7b5e1bb8c7e91e2d62cb9db662b415900959785d24a59188a42",
+        "to_ids": true,
+        "comment": "Delivery ZIP archive",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1204.002"
+      },
+      {
+        "name": "mitre-attack:T1059.001"
+      },
+      {
+        "name": "mitre-attack:T1027.013"
+      },
+      {
+        "name": "mitre-attack:T1140"
+      },
+      {
+        "name": "mitre-attack:T1105"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1584.001"
+      },
+      {
+        "name": "mitre-attack:T1071.001"
+      },
+      {
+        "name": "mitre-attack:T1070.004"
+      },
+      {
+        "name": "mitre-attack:T1564.003"
+      },
+      {
+        "name": "mitre-attack:T1555"
+      },
+      {
+        "name": "mitre-attack:T1555.003"
+      },
+      {
+        "name": "mitre-attack:T1552.001"
+      },
+      {
+        "name": "mitre-attack:T1005"
+      },
+      {
+        "name": "mitre-attack:T1114"
+      },
+      {
+        "name": "mitre-attack:T1217"
+      },
+      {
+        "name": "mitre-attack:T1012"
+      },
+      {
+        "name": "mitre-attack:T1082"
+      },
+      {
+        "name": "mitre-attack:T1124"
+      },
+      {
+        "name": "label:malware"
+      },
+      {
+        "name": "label:stealer"
+      },
+      {
+        "name": "label:clickfix"
+      },
+      {
+        "name": "label:vidar"
+      },
+      {
+        "name": "label:social-engineering"
+      }
+    ]
+  }
+}

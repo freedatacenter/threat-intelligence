@@ -1,0 +1,683 @@
+{
+  "Event": {
+    "uuid": "d8d65395-35c3-5abf-a94f-0a09f406f920",
+    "info": "[TLP:CLEAR] Mass Credential Phishing Campaign Impersonating Google Workspace",
+    "date": "2026-03-31",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "c7cf1268-3a23-5619-998b-e22259b7b70f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "crooveazoo.ru",
+        "to_ids": true,
+        "comment": "Primary C2 domain (Laravel app, MongoDB panel)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "09bdb05d-5b3a-55b8-a6dc-a47556b1c7df",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "89.124.98.199",
+        "to_ids": true,
+        "comment": "C2 server, VDSina NL, AS216071 — hosts all 62 .ru domains",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0c9954af-cd0e-5031-98a9-bb26ad95f5b0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "lasys.com.br",
+        "to_ids": true,
+        "comment": "Compromised phishing host (Brazilian website)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ba0b1928-900a-5c99-8921-7bbfca2f453e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "69.6.213.189",
+        "to_ids": true,
+        "comment": "Compromised phishing host IP",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c7cacd5a-37ca-5f85-821c-10a5ef3207ff",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ejm.org",
+        "to_ids": true,
+        "comment": "Spoofed sender domain (DMARC p=NONE)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "263fce04-0d9a-5497-be29-d9e26319a7f8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "54.240.4.15",
+        "to_ids": true,
+        "comment": "Amazon SES eu-west-1 (compromised account)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4bbb2497-466d-58f9-adf8-8bbaf639a030",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://bit.ly/4rVLObb",
+        "to_ids": true,
+        "comment": "Redirect chain: bit.ly hop",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fbdaf88b-b466-563b-ba3d-31dde4e629c9",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://bit.ly/41muSA5",
+        "to_ids": true,
+        "comment": "Redirect chain: bit.ly hop",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0b58eb45-2d3b-5b14-baf7-b92967665847",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://bit.ly/4bGmwcs",
+        "to_ids": true,
+        "comment": "Redirect chain: bit.ly hop",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4b022b6b-d054-54d7-be69-48c5f66e9232",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "biowatea.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a2b0dbc8-ec36-5665-8083-a6e238517aa7",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "cayudu.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cd88ee8e-90c6-5a22-9ed8-d1f57d55ea68",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "chaithouwi.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "93878e9a-b6c8-5a74-8a20-c70499934242",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "chastirou.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7fc1e194-21d4-500e-8e92-69ae9c32fecd",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "chiocroupu.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c8037d5a-d60f-5750-b761-9266312ac8e9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "chopaichu.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "41a371e2-b928-50ac-9dd4-2cfc91c9d56b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "codreju.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "653f61c2-af60-5ea2-bce4-e2e2bdc01f45",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "dooyuyi.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cbb6ef61-9bca-5e4c-a608-7b9bdf50f6c1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "duvoochio.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ca1e0fd9-e5f7-560b-83f8-b54f8619cdf8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "frakiope.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a64ef868-71c0-59a1-b928-13867aa2330f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "gapiothai.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a54cca69-0bc4-55d1-8553-79b700d32ca9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "heacrutrai.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5abe797c-bbd9-5c64-8488-48773f40a406",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "heagoomu.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f4495a50-b9fd-5bd1-81b1-812cc92c02a2",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "hucacou.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4f8b7722-b52e-5bab-9375-846d3f8bb84e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "jaijeashu.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0d2d532f-f078-542e-8d0d-c33fd8b80a1c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "jedrudroo.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a74763b6-8e0c-5951-883b-237926dca9cd",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "jeyougea.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "449797a1-afeb-5ed0-8a91-def106b729dd",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "jouwuge.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee46cfbe-251c-5d29-a85f-668ecdbd897c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "kaineathe.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a6bb4c2f-376f-5f48-b492-e988fcf6d677",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "kathouze.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fecf9efa-8f99-5646-8f1c-9ae5a2443a2f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "kouthoulio.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee383e6c-e2b2-5150-b17b-0b6502afddaa",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "kouyiocri.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "de53bc03-3792-55a6-819d-b275a9afe30a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "laihanea.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1aa8aebc-3f9a-5e71-80fc-6759e609c11b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "legewe.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "58289e0b-b792-5401-bc89-be00f2f99a5d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "liobeaju.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1c8bc2d3-54db-5ba3-9174-8bf6f3959091",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "lozioko.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f8d06547-5bb5-55a7-b5ea-a9011e9e4000",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "matreafea.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2822af68-602b-5e82-b53e-fae277f035b4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mustozu.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a200bd49-a8ea-5499-943a-e402e54b880e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "naratrou.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "efeddade-96ca-5c46-9065-a83dafc0f0ab",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "nedefo.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee405e5d-c1de-50f6-be51-ecd6c09ceaac",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "nigepu.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "29b1b9ed-7df5-5225-9c10-e61b7d62a09c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "nishorou.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5b7ed905-ae5f-56f6-b67d-0af70a460e18",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "powoofru.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a09e721a-e823-5083-b6bc-d5b1e469f2e0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "raishaifoo.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "af4532b7-d1ea-5fc4-89fe-108dc4e8b412",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "safraigio.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "afb1a7f4-95a5-578c-9128-922dad20e3c9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "shaigeawi.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fec14d64-21ac-57c3-b865-5522f61adaa8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "shaithofroo.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f5cbbae0-35d8-597f-814a-d79149b317bf",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "shiocoopai.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ffdf8fc2-d3f3-541a-9cd6-0547b96a43fc",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "shoohoodoo.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f4fa5ab2-8923-5d42-896d-bd3526eecb03",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sootruthea.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a30699fa-cfbf-5fc8-a0bd-783e94d69b90",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sooweala.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "40f756e1-6964-592c-bffc-bb098e1ee9ef",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sotreafroo.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "60590760-9496-5f00-8eb5-ad0041706929",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "stadoomu.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f1a77744-e19a-55a9-8999-2a25bc25ff5f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "steakeatai.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f870feaf-2b92-5740-bba6-64a03ea46a52",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "stootroke.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2797173c-932c-5616-b8e0-1325543861a6",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "thaikooha.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7ff4362a-dbcf-5799-a679-de9022a52c5a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "todrimai.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c4760901-8bdc-55fa-9415-ff4548bc1817",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "toodoonou.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6f15d31b-6857-5210-9dfa-4b08f8a6aef2",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "toufrace.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5eda9729-4e13-5d87-953d-be245809042f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "trahagi.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0f7b7343-4979-54dc-85e6-5c324c8e79a5",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "truthoodru.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "09526cc4-a3be-5e8e-8e3d-482be0397be2",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "tuziosa.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2d097abb-4930-57c6-b395-394c047929e6",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vetioza.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dff6e2a8-199e-5870-9ab2-e8e520a82a49",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "waibuwo.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "905c633a-6000-5ace-ae5c-b386d2fa7df8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yaisteatou.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "73871523-61c6-506b-98c8-e68e89ccda9d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yibuhea.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "53889d4d-e244-54c6-9cfd-ef93b19668bc",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yithiohe.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ba6e4265-0603-54b7-ab53-c429fdee0e09",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yojiovi.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f65074b7-71e6-51b8-bd8a-354da22bccc3",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "youdrata.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fb0f3526-83d0-5d9f-ac0d-004132afd9b5",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "zamoocou.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6d80d06b-b0ff-58ab-8a5e-ad55c576135d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "zofiofe.ru",
+        "to_ids": true,
+        "comment": "DGA-like .ru C2 domain on 89.124.98.199",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.006"
+      },
+      {
+        "name": "mitre-attack:T1584.004"
+      },
+      {
+        "name": "mitre-attack:T1078"
+      },
+      {
+        "name": "mitre-attack:T1608.005"
+      },
+      {
+        "name": "mitre-attack:T1027"
+      },
+      {
+        "name": "mitre-attack:T1497.001"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:credential-harvesting"
+      },
+      {
+        "name": "label:mass-campaign"
+      }
+    ]
+  }
+}

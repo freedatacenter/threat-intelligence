@@ -1,0 +1,374 @@
+{
+  "type": "bundle",
+  "id": "bundle--eaef2231-2baf-5c40-820b-8d3256d30c79",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--afb974e6-81a9-54d8-bdfe-1ed80e7ba0db",
+      "created": "2026-02-18T00:00:00Z",
+      "modified": "2026-02-18T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Targeted Phishing Impersonating National Endowment for Democracy",
+      "published": "2026-02-18T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--20ea73c2-06a4-582f-959a-9487aa6cfc4d",
+        "indicator--34157637-4114-5ce2-a859-c0fa2e27f7e5",
+        "indicator--de795dc1-c3f3-5eb4-bcf1-2fbb8db5befb",
+        "indicator--5914c2b0-2069-5476-82ad-ae840a15e57b",
+        "indicator--2d798b58-2638-55b3-be44-534ccde04abf"
+      ],
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1591"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--20ea73c2-06a4-582f-959a-9487aa6cfc4d",
+      "created": "2026-02-18T00:00:00Z",
+      "modified": "2026-02-18T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: daniel.knaus@hunterspropertyzm.com",
+      "description": "Spoofed sender, compromised Zambian domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'daniel.knaus@hunterspropertyzm.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-18T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1591"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--34157637-4114-5ce2-a859-c0fa2e27f7e5",
+      "created": "2026-02-18T00:00:00Z",
+      "modified": "2026-02-18T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: hunterspropertyzm.com",
+      "description": "Compromised sender domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'hunterspropertyzm.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-18T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1591"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--de795dc1-c3f3-5eb4-bcf1-2fbb8db5befb",
+      "created": "2026-02-18T00:00:00Z",
+      "modified": "2026-02-18T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 188.127.227.111",
+      "description": "SmartApe VPS, Moscow (DataPro datacenter)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '188.127.227.111']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-18T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1591"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5914c2b0-2069-5476-82ad-ae840a15e57b",
+      "created": "2026-02-18T00:00:00Z",
+      "modified": "2026-02-18T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 192.250.227.159",
+      "description": "StableServer email relay",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '192.250.227.159']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-18T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1591"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2d798b58-2638-55b3-be44-534ccde04abf",
+      "created": "2026-02-18T00:00:00Z",
+      "modified": "2026-02-18T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 185.201.18.54",
+      "description": "AntiSpamCloud relay",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '185.201.18.54']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-18T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1591"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585"
+        }
+      ]
+    }
+  ]
+}

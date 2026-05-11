@@ -1,0 +1,143 @@
+{
+  "Event": {
+    "uuid": "bdf59c7b-993b-5b48-8e99-125e9069fe20",
+    "info": "[TLP:CLEAR] Targeted Phishing Impersonating Meta/Facebook Against a Human Rights NGO",
+    "date": "2026-03-02",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "a73a8386-283e-5754-a9b8-df1b3b46eb38",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "identity-policy@readlundy.com",
+        "to_ids": false,
+        "comment": "Phishing sender",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9e4527b6-ce11-572d-be80-f6c28a50639b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "readlundy.com",
+        "to_ids": true,
+        "comment": "Sending domain, registered 2025-08-15",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ffaa110f-e157-599f-8d75-2d56698ae6a4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "send.readlundy.com",
+        "to_ids": true,
+        "comment": "Resend SPF subdomain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f2dd3080-d876-5441-9397-c061d4d1728f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "skillbaseltd.co.uk",
+        "to_ids": true,
+        "comment": "Phishing host (hijacked expired domain)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0b937ae9-8736-5e77-9fb8-fd3d45319e7f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "restorewellbeing.co.uk",
+        "to_ids": true,
+        "comment": "Staged infra: Resend+SES pre-configured",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b68c522d-ee91-5ad6-9762-8317381e1f85",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "rubyandginger.co.uk",
+        "to_ids": true,
+        "comment": "Staged infra: Resend+SES pre-configured",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dea3031a-1916-5b9f-a2f2-f0c850f5e679",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "senditmyway.co.uk",
+        "to_ids": true,
+        "comment": "Staged infra: Resend+SES pre-configured",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d0345cac-3467-5d49-8654-f78cf97ac5ec",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "23.251.234.52",
+        "to_ids": true,
+        "comment": "Amazon SES ap-northeast-1, Tokyo",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2ee7e6ca-5f3f-57c5-a1b7-40d08b8a5480",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "104.21.15.116",
+        "to_ids": true,
+        "comment": "Cloudflare CDN (phishing host)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5ae45b7f-775f-570b-9783-90c8e61f1fdb",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://skillbaseltd.co.uk/",
+        "to_ids": true,
+        "comment": "Phishing landing page",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.006"
+      },
+      {
+        "name": "mitre-attack:T1584.001"
+      },
+      {
+        "name": "mitre-attack:T1585.002"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1056.003"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "mitre-attack:T1036"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:spear-phishing"
+      },
+      {
+        "name": "label:ngo-targeting"
+      }
+    ]
+  }
+}

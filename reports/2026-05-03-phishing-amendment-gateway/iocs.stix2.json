@@ -1,0 +1,584 @@
+{
+  "type": "bundle",
+  "id": "bundle--9bd9f22f-9625-5e0b-aeb6-42807e55d6f9",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--751f145f-2eed-56cd-b0b7-85d4792dde70",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Phishing via Compromised PSL Mailbox: Lovable.app Front + .ru Credential Harvester",
+      "published": "2026-05-03T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--eda09dc1-6311-56d0-ac1b-557cc2b10e8b",
+        "indicator--437776df-93fa-509e-af43-a473103b44f3",
+        "indicator--af2db041-a0e2-549e-a3ae-118c50fc9800",
+        "indicator--8dd94239-2330-5cd1-b58d-70f9992a6d2e",
+        "indicator--7281ada0-b8e8-5e0d-a5d2-4a73c4838ad2",
+        "indicator--9403ec9f-c0fb-567b-8da2-67b340bc11d8",
+        "indicator--b535d076-f1eb-55ec-a951-979961be643a",
+        "indicator--befb3011-2acc-57d0-86b2-8d4ee7a4f11b",
+        "indicator--c808d0ce-cfcb-5d70-8411-4d5f8c5d1cbf"
+      ],
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--eda09dc1-6311-56d0-ac1b-557cc2b10e8b",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: aissata-keltoum.drame@psl.eu",
+      "description": "Compromised M365 sender (PSL tenant)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'aissata-keltoum.drame@psl.eu']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--437776df-93fa-509e-af43-a473103b44f3",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 2d0536dfbbce46c92f588a97da471322bf501111a3eb04d835ffe8e3b84fb70d",
+      "description": "Phishing EML file hash",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '2d0536dfbbce46c92f588a97da471322bf501111a3eb04d835ffe8e3b84fb70d']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--af2db041-a0e2-549e-a3ae-118c50fc9800",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: amendment-gateway.lovable.app",
+      "description": "Stage 1 landing (Lovable AI builder, Cloudflare AS13335)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'amendment-gateway.lovable.app']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8dd94239-2330-5cd1-b58d-70f9992a6d2e",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 185.41.148.1",
+      "description": "Stage 1 landing IP (Cloudflare AS13335)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '185.41.148.1']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7281ada0-b8e8-5e0d-a5d2-4a73c4838ad2",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 185.41.148.2",
+      "description": "Stage 1 landing IP (Cloudflare AS13335)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '185.41.148.2']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9403ec9f-c0fb-567b-8da2-67b340bc11d8",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 6462db810635dcd49271a491e49af9b481b8acc13be3562341abda7b377200b8",
+      "description": "Stage 1 landing JS fingerprint",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '6462db810635dcd49271a491e49af9b481b8acc13be3562341abda7b377200b8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b535d076-f1eb-55ec-a951-979961be643a",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: dotiojea.ru",
+      "description": "Stage 2 credential harvester (.ru, R01-RU, registered 2026-03-24, UNVERIFIED)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'dotiojea.ru']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--befb3011-2acc-57d0-86b2-8d4ee7a4f11b",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://dotiojea.ru/ojEyxTnj@JqGnH/",
+      "description": "Per-victim harvester URL #1",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://dotiojea.ru/ojEyxTnj@JqGnH/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c808d0ce-cfcb-5d70-8411-4d5f8c5d1cbf",
+      "created": "2026-05-03T00:00:00Z",
+      "modified": "2026-05-03T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://dotiojea.ru/z58!zTjKI/",
+      "description": "Per-victim harvester URL #2 (related)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://dotiojea.ru/z58!zTjKI/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-03T00:00:00Z",
+      "labels": [
+        "phishing",
+        "aitm",
+        "account-takeover",
+        "compromised-m365"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.011"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1606"
+        }
+      ]
+    }
+  ]
+}

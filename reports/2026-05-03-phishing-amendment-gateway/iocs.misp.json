@@ -1,0 +1,137 @@
+{
+  "Event": {
+    "uuid": "35a6d4f8-cffd-57cd-9d85-d8fcf4319bdd",
+    "info": "[TLP:CLEAR] Phishing via Compromised PSL Mailbox: Lovable.app Front + .ru Credential Harvester",
+    "date": "2026-05-03",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "10c01cac-f70b-5a8e-92c4-95b06e6bd7f1",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "aissata-keltoum.drame@psl.eu",
+        "to_ids": false,
+        "comment": "Compromised M365 sender (PSL tenant)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a7dc9b91-9b14-5e8f-a752-f24c81764132",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2d0536dfbbce46c92f588a97da471322bf501111a3eb04d835ffe8e3b84fb70d",
+        "to_ids": true,
+        "comment": "Phishing EML file hash",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cd681187-ab23-5049-909a-8914f6697779",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "amendment-gateway.lovable.app",
+        "to_ids": true,
+        "comment": "Stage 1 landing (Lovable AI builder, Cloudflare AS13335)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e8db5bb6-95ad-50bc-90aa-a40af8ba0ea3",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.41.148.1",
+        "to_ids": true,
+        "comment": "Stage 1 landing IP (Cloudflare AS13335)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "feab2d97-cb81-5f55-9af3-89b6052df1d4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.41.148.2",
+        "to_ids": true,
+        "comment": "Stage 1 landing IP (Cloudflare AS13335)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1900812e-d022-5d5d-848b-6d773fa302c6",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "6462db810635dcd49271a491e49af9b481b8acc13be3562341abda7b377200b8",
+        "to_ids": true,
+        "comment": "Stage 1 landing JS fingerprint",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c48fe569-035c-5364-a35f-b1216e3468e0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "dotiojea.ru",
+        "to_ids": true,
+        "comment": "Stage 2 credential harvester (.ru, R01-RU, registered 2026-03-24, UNVERIFIED)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "13ec122c-20f4-5610-8721-c5ccc464020a",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://dotiojea.ru/ojEyxTnj@JqGnH/",
+        "to_ids": true,
+        "comment": "Per-victim harvester URL #1",
+        "distribution": "5"
+      },
+      {
+        "uuid": "beb99bb7-ef12-5f2a-8437-43cfed3ae36f",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://dotiojea.ru/z58!zTjKI/",
+        "to_ids": true,
+        "comment": "Per-victim harvester URL #2 (related)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.006"
+      },
+      {
+        "name": "mitre-attack:T1586.002"
+      },
+      {
+        "name": "mitre-attack:T1078.004"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1564.011"
+      },
+      {
+        "name": "mitre-attack:T1539"
+      },
+      {
+        "name": "mitre-attack:T1606"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:aitm"
+      },
+      {
+        "name": "label:account-takeover"
+      },
+      {
+        "name": "label:compromised-m365"
+      }
+    ]
+  }
+}

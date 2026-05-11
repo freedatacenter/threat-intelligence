@@ -1,0 +1,89 @@
+{
+  "Event": {
+    "uuid": "1cadba20-435d-5af1-95cb-3ed0bb6b0824",
+    "info": "[TLP:CLEAR] Honeypot Threat Intelligence: Monthly Report, April 2026",
+    "date": "2026-05-07",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "4b47b1a1-f42a-5b51-b864-5370dd0351f2",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "xmrig.com",
+        "to_ids": true,
+        "comment": "XMRig miner delivery (cryptomining malware)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dfa2101c-8457-522a-848e-4910a820214d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "nicehash.com",
+        "to_ids": true,
+        "comment": "NiceHash mining pool endpoint used by malware",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ae812c08-e43c-5f66-a971-222da4a898e4",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS204603",
+        "to_ids": false,
+        "comment": "Aeza International (EU/US sanctioned hoster, 21 attack-correlated hits)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "811a8bad-dc0d-5c21-8b6e-159d159f4d0f",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS197695",
+        "to_ids": false,
+        "comment": "Proton66 OOO (bulletproof hosting, 8 attack-correlated hits)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1110.001"
+      },
+      {
+        "name": "mitre-attack:T1190"
+      },
+      {
+        "name": "mitre-attack:T1496"
+      },
+      {
+        "name": "mitre-attack:T1071.001"
+      },
+      {
+        "name": "mitre-attack:T1059.004"
+      },
+      {
+        "name": "mitre-attack:T1027"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1102.002"
+      },
+      {
+        "name": "label:honeypot"
+      },
+      {
+        "name": "label:threat-intelligence"
+      },
+      {
+        "name": "label:monthly-report"
+      }
+    ]
+  }
+}

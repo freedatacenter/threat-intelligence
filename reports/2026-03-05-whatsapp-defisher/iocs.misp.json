@@ -1,0 +1,128 @@
+{
+  "Event": {
+    "uuid": "c3c4e4c2-615f-567b-ab24-ffda5ef11271",
+    "info": "[TLP:CLEAR] WhatsApp Account Takeover via Defisher Phishing Kit",
+    "date": "2026-03-05",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "b4d5e8f0-19a1-5b75-b3b4-c82ebcbf6f51",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "trust-authorization.tech",
+        "to_ids": true,
+        "comment": "Phishing page (WhatsApp Web impersonation)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3c2de4b5-7a5e-5050-962b-08bc63dc43bb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "panel-my-test.online",
+        "to_ids": true,
+        "comment": "Defisher C2 panel and WebSocket API",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e6b47152-2694-5e00-8de0-ca0d3b063c01",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "147.45.43.133",
+        "to_ids": true,
+        "comment": "AEZA Group bulletproof hosting, Frankfurt, AS210644",
+        "distribution": "5"
+      },
+      {
+        "uuid": "25c02050-7db3-590b-922d-7a6b0c9b5f87",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS210644",
+        "to_ids": false,
+        "comment": "AEZA Group (US OFAC sanctioned Jul 2025)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f37ad420-2987-5d49-8b23-c591645c71c4",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://trust-authorization.tech/pUsl9nuZo649dKua0HL7uG5npbYAq1bn",
+        "to_ids": true,
+        "comment": "Phishing entry URL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4c153a53-92d3-5d09-917e-7868787fbf30",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://panel-my-test.online/api/socket",
+        "to_ids": true,
+        "comment": "WebSocket C2 endpoint",
+        "distribution": "5"
+      },
+      {
+        "uuid": "289145b0-4edf-57e5-8a8a-c8937174f528",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://panel-my-test.online/auth",
+        "to_ids": true,
+        "comment": "Defisher admin panel login",
+        "distribution": "5"
+      },
+      {
+        "uuid": "97912b1e-bcd7-5fc2-8303-d4cb140b425a",
+        "type": "hasshserver-md5",
+        "category": "Network activity",
+        "value": "e42184b06d45385a906f0803d04c83da",
+        "to_ids": true,
+        "comment": "SSH HASSH fingerprint of C2 server",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1078"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1588.002"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1071.001"
+      },
+      {
+        "name": "mitre-attack:T1530"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:account-takeover"
+      },
+      {
+        "name": "label:whatsapp"
+      },
+      {
+        "name": "label:phaas"
+      }
+    ]
+  }
+}

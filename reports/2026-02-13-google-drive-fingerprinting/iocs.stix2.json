@@ -1,0 +1,952 @@
+{
+  "type": "bundle",
+  "id": "bundle--e073d806-04b0-5eec-81c1-fe90e758fb66",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--d73377e1-2064-5cdf-9665-1d1ff4952413",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Phishing Campaign via Google Drive with Browser Fingerprinting",
+      "published": "2026-02-13T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--bb156e8f-d391-518b-9039-c995a39404c4",
+        "indicator--b783e041-0027-5ecc-9fe6-467b14bca968",
+        "indicator--1dbbc65c-6c10-513a-9f7d-5f9f44d055b9",
+        "indicator--54213a8e-87c5-5540-995d-8e5954c51e18",
+        "indicator--0b27f3ab-455b-5616-a21e-c44f9d58bdd9",
+        "indicator--232fe4f9-1ea3-5a38-b05f-48c2bb6e49f5",
+        "indicator--bd7441fa-b2a7-553d-bb70-406b66f5edb7",
+        "indicator--c3ed5ef5-04d2-550d-9bea-2aed942ea857",
+        "indicator--4036446c-c8de-5120-9086-b5d4728bf086",
+        "indicator--86f28485-1ebe-571c-a5ae-3dbee9bf01de",
+        "indicator--63807968-922f-5ea5-82fc-9ddbce0ff020",
+        "indicator--cbe611b4-ec00-519b-b6ac-8800aab6f1ea",
+        "indicator--52d5203e-51da-5b71-99a3-2f00c1b99842"
+      ],
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bb156e8f-d391-518b-9039-c995a39404c4",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: online.accessinformnotice.com",
+      "description": "Phishing landing page",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'online.accessinformnotice.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b783e041-0027-5ecc-9fe6-467b14bca968",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: accessinformnotice.com",
+      "description": "Phishing infrastructure",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'accessinformnotice.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1dbbc65c-6c10-513a-9f7d-5f9f44d055b9",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: accessinformattention.com",
+      "description": "Phishing infrastructure",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'accessinformattention.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--54213a8e-87c5-5540-995d-8e5954c51e18",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: docusign.notifyentryflow.com",
+      "description": "DocuSign impersonation (same C2 IP)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'docusign.notifyentryflow.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0b27f3ab-455b-5616-a21e-c44f9d58bdd9",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: notifyentryflow.com",
+      "description": "Related parent domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'notifyentryflow.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--232fe4f9-1ea3-5a38-b05f-48c2bb6e49f5",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: warningentrypath.com",
+      "description": "Related domain, active 2026-02-26",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'warningentrypath.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bd7441fa-b2a7-553d-bb70-406b66f5edb7",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 91.202.233.71",
+      "description": "PROSPERO OOO bulletproof hosting, St. Petersburg, AS200593",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '91.202.233.71']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c3ed5ef5-04d2-550d-9bea-2aed942ea857",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS200593",
+      "description": "PROSPERO OOO, bulletproof hosting",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 200593]",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4036446c-c8de-5120-9086-b5d4728bf086",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://online.accessinformnotice.com/secure/index_newest.html",
+      "description": "Phishing entry URL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://online.accessinformnotice.com/secure/index_newest.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--86f28485-1ebe-571c-a5ae-3dbee9bf01de",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://online.accessinformnotice.com/secure/secure.php",
+      "description": "PHP backend handler",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://online.accessinformnotice.com/secure/secure.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--63807968-922f-5ea5-82fc-9ddbce0ff020",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://storage.googleapis.com/persontwelve/online/offer.html",
+      "description": "Google Cloud Storage lure",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://storage.googleapis.com/persontwelve/online/offer.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cbe611b4-ec00-519b-b6ac-8800aab6f1ea",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://drive.google.com/file/d/18XPn0pHsygsvZcinTivBQ_I225l-xzpC",
+      "description": "Google Drive lure",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://drive.google.com/file/d/18XPn0pHsygsvZcinTivBQ_I225l-xzpC']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--52d5203e-51da-5b71-99a3-2f00c1b99842",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: neyjardespbeg2002@secure.accessinformattention.com",
+      "description": "Campaign contact address",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'neyjardespbeg2002@secure.accessinformattention.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-02-13T00:00:00Z",
+      "labels": [
+        "phishing",
+        "fingerprinting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598"
+        }
+      ]
+    }
+  ]
+}

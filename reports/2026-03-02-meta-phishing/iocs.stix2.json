@@ -1,0 +1,630 @@
+{
+  "type": "bundle",
+  "id": "bundle--9358ab85-b173-5b49-aa84-eee8ec7f053d",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--5143f981-66f3-5dc4-bdff-7fe9b434834c",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Targeted Phishing Impersonating Meta/Facebook Against a Human Rights NGO",
+      "published": "2026-03-02T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--8400919d-ca28-5645-ad7a-ee63790027d4",
+        "indicator--f87d790c-ddab-537e-ac7f-937318adf4f6",
+        "indicator--0728c149-6e35-5e4d-9b5b-5e07ab24893a",
+        "indicator--40101dc1-924e-5d44-985a-9e67665972aa",
+        "indicator--9c63bd95-a157-51db-8542-0e867fb32a90",
+        "indicator--96c974e6-eaed-5545-bece-e1a300ecae0b",
+        "indicator--629f284e-4ec6-53f2-a78f-d53055a8a016",
+        "indicator--aaed6db9-c162-51dc-aa5c-d7fdcbb99ca3",
+        "indicator--ab04eb52-4aa2-5b3c-9b82-178253d1d005",
+        "indicator--8e4c7556-312e-56a1-a6a1-6c28313047df"
+      ],
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8400919d-ca28-5645-ad7a-ee63790027d4",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: identity-policy@readlundy.com",
+      "description": "Phishing sender",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'identity-policy@readlundy.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f87d790c-ddab-537e-ac7f-937318adf4f6",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: readlundy.com",
+      "description": "Sending domain, registered 2025-08-15",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'readlundy.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0728c149-6e35-5e4d-9b5b-5e07ab24893a",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: send.readlundy.com",
+      "description": "Resend SPF subdomain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'send.readlundy.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--40101dc1-924e-5d44-985a-9e67665972aa",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: skillbaseltd.co.uk",
+      "description": "Phishing host (hijacked expired domain)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'skillbaseltd.co.uk']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9c63bd95-a157-51db-8542-0e867fb32a90",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: restorewellbeing.co.uk",
+      "description": "Staged infra: Resend+SES pre-configured",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'restorewellbeing.co.uk']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--96c974e6-eaed-5545-bece-e1a300ecae0b",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: rubyandginger.co.uk",
+      "description": "Staged infra: Resend+SES pre-configured",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'rubyandginger.co.uk']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--629f284e-4ec6-53f2-a78f-d53055a8a016",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: senditmyway.co.uk",
+      "description": "Staged infra: Resend+SES pre-configured",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'senditmyway.co.uk']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aaed6db9-c162-51dc-aa5c-d7fdcbb99ca3",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 23.251.234.52",
+      "description": "Amazon SES ap-northeast-1, Tokyo",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '23.251.234.52']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ab04eb52-4aa2-5b3c-9b82-178253d1d005",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 104.21.15.116",
+      "description": "Cloudflare CDN (phishing host)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '104.21.15.116']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8e4c7556-312e-56a1-a6a1-6c28313047df",
+      "created": "2026-03-02T00:00:00Z",
+      "modified": "2026-03-02T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://skillbaseltd.co.uk/",
+      "description": "Phishing landing page",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://skillbaseltd.co.uk/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-02T00:00:00Z",
+      "labels": [
+        "phishing",
+        "spear-phishing",
+        "ngo-targeting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    }
+  ]
+}

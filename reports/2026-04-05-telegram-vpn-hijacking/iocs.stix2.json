@@ -1,0 +1,284 @@
+{
+  "type": "bundle",
+  "id": "bundle--714b9a5f-f704-53d6-bc18-d4cf999d8bb0",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--ebbde993-d9d4-5704-9115-ccca94259271",
+      "created": "2026-04-05T00:00:00Z",
+      "modified": "2026-04-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Telegram Account Hijacking via Phishing VPN Bot Mini App",
+      "published": "2026-04-05T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--71b04aeb-365e-59bd-8192-7d9186ac5719",
+        "indicator--93916b55-daf4-5337-890b-b2fcadc22b85",
+        "indicator--340951f6-211b-5901-8749-2c70d1f29b7b",
+        "indicator--455ed1ca-6dfa-5639-a09e-f6758133f699",
+        "indicator--00edaaeb-f164-5827-81e2-b0d9c861fade"
+      ],
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "mini-app"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--71b04aeb-365e-59bd-8192-7d9186ac5719",
+      "created": "2026-04-05T00:00:00Z",
+      "modified": "2026-04-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: aerobot20.sbs",
+      "description": "Phishing Mini App host (bulletproof infra)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'aerobot20.sbs']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "mini-app"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--93916b55-daf4-5337-890b-b2fcadc22b85",
+      "created": "2026-04-05T00:00:00Z",
+      "modified": "2026-04-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: qqeki982.aerobot20.sbs",
+      "description": "Active phishing subdomain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'qqeki982.aerobot20.sbs']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "mini-app"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--340951f6-211b-5901-8749-2c70d1f29b7b",
+      "created": "2026-04-05T00:00:00Z",
+      "modified": "2026-04-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 104.21.8.168",
+      "description": "Cloudflare CDN (aerobot20[.]sbs)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '104.21.8.168']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "mini-app"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--455ed1ca-6dfa-5639-a09e-f6758133f699",
+      "created": "2026-04-05T00:00:00Z",
+      "modified": "2026-04-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 172.67.139.203",
+      "description": "Cloudflare CDN (aerobot20[.]sbs)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '172.67.139.203']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "mini-app"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00edaaeb-f164-5827-81e2-b0d9c861fade",
+      "created": "2026-04-05T00:00:00Z",
+      "modified": "2026-04-05T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://qqeki982.aerobot20.sbs/checkstatus.php",
+      "description": "Phone number/auth code exfiltration endpoint",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://qqeki982.aerobot20.sbs/checkstatus.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-05T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "mini-app"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    }
+  ]
+}

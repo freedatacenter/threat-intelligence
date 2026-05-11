@@ -1,0 +1,1646 @@
+{
+  "type": "bundle",
+  "id": "bundle--85c3ee6c-bdd1-51ee-9beb-09b8b58bb426",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--981d3b79-2000-5e23-936c-36e48917c424",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ClickFix Social Engineering Campaign Delivering Vidar Stealer via Fake Cloudflare CAPTCHA",
+      "published": "2026-03-27T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--b7039302-d07e-5a83-89c1-a566b02b6c10",
+        "indicator--c3e0807a-00f1-5021-91fd-4acaa0966ab1",
+        "indicator--51212d69-bb2c-5a72-9bf7-bc6bf05e8eb8",
+        "indicator--4734a9db-6316-51a9-943b-b1094830784e",
+        "indicator--05e54707-b4e9-5161-9154-2da36eae518b",
+        "indicator--e86b1a1b-7526-53cd-b53d-dd855bb3f3e3",
+        "indicator--61b30b92-7de7-5c17-a9cf-385414d2965d",
+        "indicator--9d307d37-6a43-5cc7-8316-72f21b3773fc",
+        "indicator--bf69d6d3-d558-59e8-adac-60a002f06b75",
+        "indicator--9121470d-a54d-58fc-9192-6aa02459700a",
+        "indicator--83e7ff32-5f8e-5d21-a013-c2ce914fc03b",
+        "indicator--2059cee1-42ab-5d75-b796-e21c7e9ed161",
+        "indicator--e89d4416-b2e6-5ee2-9094-1aa07d131aa9",
+        "indicator--35fccfdc-17b7-54d6-b144-de5f0e3102fc",
+        "indicator--38474ee2-82b7-5e4f-8ff5-75fd45c9ec0a"
+      ],
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b7039302-d07e-5a83-89c1-a566b02b6c10",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: oulpansheli.org",
+      "description": "Compromised landing page (Hebrew language school, OVH FR)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'oulpansheli.org']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c3e0807a-00f1-5021-91fd-4acaa0966ab1",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: productionmaza.cyou",
+      "description": "Crypter payload delivery (Cloudflare)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'productionmaza.cyou']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--51212d69-bb2c-5a72-9bf7-bc6bf05e8eb8",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: neugepower.net",
+      "description": "Vidar Stealer C2 domain (Hetzner DE)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'neugepower.net']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4734a9db-6316-51a9-943b-b1094830784e",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: skfilmsint.com",
+      "description": "Backup C2 via dead drop resolver (NameCheap/Cloudflare)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'skfilmsint.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--05e54707-b4e9-5161-9154-2da36eae518b",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 78.46.199.184",
+      "description": "Vidar Stealer C2, Hetzner DE",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '78.46.199.184']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e86b1a1b-7526-53cd-b53d-dd855bb3f3e3",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 213.186.33.16",
+      "description": "Compromised landing page server, OVH FR",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '213.186.33.16']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--61b30b92-7de7-5c17-a9cf-385414d2965d",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 172.67.148.28",
+      "description": "Cloudflare proxy (productionmaza[.]cyou)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '172.67.148.28']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9d307d37-6a43-5cc7-8316-72f21b3773fc",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 104.21.55.125",
+      "description": "Cloudflare proxy (productionmaza[.]cyou)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '104.21.55.125']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bf69d6d3-d558-59e8-adac-60a002f06b75",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://oulpansheli.org/ru/",
+      "description": "ClickFix lure page",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://oulpansheli.org/ru/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9121470d-a54d-58fc-9192-6aa02459700a",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://productionmaza.cyou/api/index.php?a=dl&token=fcdd5b796fbf5cb5614da7aaa4773fb404771c4821e4b8d30305ed8df58a2188&src=cloudflare&mode=cloudflare",
+      "description": "Crypter (blindcousin) download URL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://productionmaza.cyou/api/index.php?a=dl&token=fcdd5b796fbf5cb5614da7aaa4773fb404771c4821e4b8d30305ed8df58a2188&src=cloudflare&mode=cloudflare']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--83e7ff32-5f8e-5d21-a013-c2ce914fc03b",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://telegram.me/v2ts23m",
+      "description": "Dead drop resolver: Telegram channel with backup C2 domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://telegram.me/v2ts23m']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2059cee1-42ab-5d75-b796-e21c7e9ed161",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://steamcommunity.com/profiles/76561198724155486",
+      "description": "Dead drop resolver: Steam profile",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://steamcommunity.com/profiles/76561198724155486']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e89d4416-b2e6-5ee2-9094-1aa07d131aa9",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: e2f6f791dd32b18fd7a002efce17fdd039f69809f7ddabeda9d0de1035da82d9",
+      "description": "Go loader 'blindcousin' (garble-obfuscated, XOR/SUB 5-round decrypt)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'e2f6f791dd32b18fd7a002efce17fdd039f69809f7ddabeda9d0de1035da82d9']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--35fccfdc-17b7-54d6-b144-de5f0e3102fc",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 4a788d7009f7cd13fda4291461e67191bc4b9c34e16761796e0457810fe5bba8",
+      "description": "Vidar Stealer v1.0 payload (botnet 4c0a49bed86cb25165c2f64c7c27c48a)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '4a788d7009f7cd13fda4291461e67191bc4b9c34e16761796e0457810fe5bba8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--38474ee2-82b7-5e4f-8ff5-75fd45c9ec0a",
+      "created": "2026-03-27T00:00:00Z",
+      "modified": "2026-03-27T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 4d4cd6ee9165a7b5e1bb8c7e91e2d62cb9db662b415900959785d24a59188a42",
+      "description": "Delivery ZIP archive",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '4d4cd6ee9165a7b5e1bb8c7e91e2d62cb9db662b415900959785d24a59188a42']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-27T00:00:00Z",
+      "labels": [
+        "malware",
+        "stealer",
+        "clickfix",
+        "vidar",
+        "social-engineering"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1124"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "type": "bundle",
+  "id": "bundle--a1d3a4b5-846e-5220-9bd7-2c60de574f7e",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--0d60fccd-57a4-59bc-b563-e277946fb7a6",
+      "created": "2026-05-07T00:00:00Z",
+      "modified": "2026-05-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Honeypot Threat Intelligence: Monthly Report, April 2026",
+      "published": "2026-05-07T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--40f7195c-df52-553c-95e4-eead4611580d",
+        "indicator--d46ba038-8a8a-5a2c-b006-bc0717965a65",
+        "indicator--114b6e4d-bd36-5aea-9ab0-d76fa9ab0ad9",
+        "indicator--b4ac201a-41bf-56fa-8470-3e9ff33aedc1"
+      ],
+      "labels": [
+        "honeypot",
+        "threat-intelligence",
+        "monthly-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1496"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--40f7195c-df52-553c-95e4-eead4611580d",
+      "created": "2026-05-07T00:00:00Z",
+      "modified": "2026-05-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: xmrig.com",
+      "description": "XMRig miner delivery (cryptomining malware)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'xmrig.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-07T00:00:00Z",
+      "labels": [
+        "honeypot",
+        "threat-intelligence",
+        "monthly-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1496"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d46ba038-8a8a-5a2c-b006-bc0717965a65",
+      "created": "2026-05-07T00:00:00Z",
+      "modified": "2026-05-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: nicehash.com",
+      "description": "NiceHash mining pool endpoint used by malware",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'nicehash.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-07T00:00:00Z",
+      "labels": [
+        "honeypot",
+        "threat-intelligence",
+        "monthly-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1496"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--114b6e4d-bd36-5aea-9ab0-d76fa9ab0ad9",
+      "created": "2026-05-07T00:00:00Z",
+      "modified": "2026-05-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS204603",
+      "description": "Aeza International (EU/US sanctioned hoster, 21 attack-correlated hits)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 204603]",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-07T00:00:00Z",
+      "labels": [
+        "honeypot",
+        "threat-intelligence",
+        "monthly-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1496"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b4ac201a-41bf-56fa-8470-3e9ff33aedc1",
+      "created": "2026-05-07T00:00:00Z",
+      "modified": "2026-05-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS197695",
+      "description": "Proton66 OOO (bulletproof hosting, 8 attack-correlated hits)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 197695]",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-07T00:00:00Z",
+      "labels": [
+        "honeypot",
+        "threat-intelligence",
+        "monthly-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1496"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        }
+      ]
+    }
+  ]
+}

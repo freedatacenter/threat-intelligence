@@ -1,0 +1,176 @@
+{
+  "Event": {
+    "uuid": "23e486f6-0be1-51eb-b433-55cfbc26976f",
+    "info": "[TLP:CLEAR] Phishing Campaign via Google Drive with Browser Fingerprinting",
+    "date": "2026-02-13",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "6782521e-cf9e-5a80-82e5-e4581e0a71ef",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "online.accessinformnotice.com",
+        "to_ids": true,
+        "comment": "Phishing landing page",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8c8c65af-11fd-57ef-be5d-138f161812aa",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "accessinformnotice.com",
+        "to_ids": true,
+        "comment": "Phishing infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a6089762-f192-5fd3-893b-85372eb2e3ec",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "accessinformattention.com",
+        "to_ids": true,
+        "comment": "Phishing infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2c76dea1-6317-5c4f-8f3d-3870ecb52f5b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "docusign.notifyentryflow.com",
+        "to_ids": true,
+        "comment": "DocuSign impersonation (same C2 IP)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e51201d7-006d-5f06-a503-626bd89a88e0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "notifyentryflow.com",
+        "to_ids": true,
+        "comment": "Related parent domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ccaed790-d041-5cc1-add6-c453d7f93486",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "warningentrypath.com",
+        "to_ids": true,
+        "comment": "Related domain, active 2026-02-26",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4897e497-e84d-5b9d-88bf-be0a003c14fd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.202.233.71",
+        "to_ids": true,
+        "comment": "PROSPERO OOO bulletproof hosting, St. Petersburg, AS200593",
+        "distribution": "5"
+      },
+      {
+        "uuid": "75982c81-ef60-5666-b12b-6c2b135cb185",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS200593",
+        "to_ids": false,
+        "comment": "PROSPERO OOO, bulletproof hosting",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c8895844-ec5e-5341-800e-6365ea3a1023",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://online.accessinformnotice.com/secure/index_newest.html",
+        "to_ids": true,
+        "comment": "Phishing entry URL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ba944b08-22fe-5bcd-943d-b5041041a66f",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://online.accessinformnotice.com/secure/secure.php",
+        "to_ids": true,
+        "comment": "PHP backend handler",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f6eae75d-8301-5710-bdd9-f0c7d674a9a5",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://storage.googleapis.com/persontwelve/online/offer.html",
+        "to_ids": true,
+        "comment": "Google Cloud Storage lure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fd2e3557-6b2f-5881-87bb-c596eeaca584",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://drive.google.com/file/d/18XPn0pHsygsvZcinTivBQ_I225l-xzpC",
+        "to_ids": true,
+        "comment": "Google Drive lure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f520d43c-b70d-5a98-9db9-8da6473d93ec",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "neyjardespbeg2002@secure.accessinformattention.com",
+        "to_ids": false,
+        "comment": "Campaign contact address",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1036.001"
+      },
+      {
+        "name": "mitre-attack:T1204.001"
+      },
+      {
+        "name": "mitre-attack:T1608.005"
+      },
+      {
+        "name": "mitre-attack:T1090"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1217"
+      },
+      {
+        "name": "mitre-attack:T1041"
+      },
+      {
+        "name": "mitre-attack:T1592.004"
+      },
+      {
+        "name": "mitre-attack:T1598"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:fingerprinting"
+      }
+    ]
+  }
+}

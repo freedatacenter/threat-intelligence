@@ -1,0 +1,92 @@
+{
+  "Event": {
+    "uuid": "89981f99-3916-570f-bc39-2998d12caa93",
+    "info": "[TLP:CLEAR] Telegram Account Hijacking via Phishing VPN Bot Mini App",
+    "date": "2026-04-05",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "6fe20199-768a-5604-b96d-500302aedc05",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "aerobot20.sbs",
+        "to_ids": true,
+        "comment": "Phishing Mini App host (bulletproof infra)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7efaa741-abd9-5313-a3ff-96299312b5eb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "qqeki982.aerobot20.sbs",
+        "to_ids": true,
+        "comment": "Active phishing subdomain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ea29aba0-d47e-5b46-836b-83b1b1f288f9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "104.21.8.168",
+        "to_ids": true,
+        "comment": "Cloudflare CDN (aerobot20[.]sbs)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8f671d70-49a0-5b38-b70c-3002f8cf6ff1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "172.67.139.203",
+        "to_ids": true,
+        "comment": "Cloudflare CDN (aerobot20[.]sbs)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1b91ec11-efed-54b8-b340-484293fb8da4",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://qqeki982.aerobot20.sbs/checkstatus.php",
+        "to_ids": true,
+        "comment": "Phone number/auth code exfiltration endpoint",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.003"
+      },
+      {
+        "name": "mitre-attack:T1598.003"
+      },
+      {
+        "name": "mitre-attack:T1078"
+      },
+      {
+        "name": "mitre-attack:T1539"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:account-takeover"
+      },
+      {
+        "name": "label:telegram"
+      },
+      {
+        "name": "label:mini-app"
+      }
+    ]
+  }
+}

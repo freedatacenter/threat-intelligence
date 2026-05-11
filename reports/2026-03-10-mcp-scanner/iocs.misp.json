@@ -1,0 +1,65 @@
+{
+  "Event": {
+    "uuid": "661af30d-6856-5b64-8e2d-e13e22834f37",
+    "info": "[TLP:CLEAR] Multi-Protocol Scanner with MCP Module Detected in Honeypot",
+    "date": "2026-03-10",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "e888f10f-d9a7-5f65-bd36-0ef0cd530c09",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "95.51.243.130",
+        "to_ids": true,
+        "comment": "Scanner source: Orange Polska residential DSL, Warsaw, PL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "91bd5335-a299-524f-b753-b71d33c6b10e",
+        "type": "hasshserver-md5",
+        "category": "Network activity",
+        "value": "eeca2460550b9ded084ecf2f70a75356",
+        "to_ids": true,
+        "comment": "SSH HASSH (OpenSSH 10.2, post-quantum KEX)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1595.002"
+      },
+      {
+        "name": "mitre-attack:T1046"
+      },
+      {
+        "name": "mitre-attack:T1190"
+      },
+      {
+        "name": "mitre-attack:T1610"
+      },
+      {
+        "name": "mitre-attack:T1613"
+      },
+      {
+        "name": "mitre-attack:T1552.001"
+      },
+      {
+        "name": "label:scanning"
+      },
+      {
+        "name": "label:reconnaissance"
+      },
+      {
+        "name": "label:mcp"
+      }
+    ]
+  }
+}

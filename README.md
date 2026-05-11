@@ -23,6 +23,8 @@ A distributed honeypot network spanning nodes in Germany (DE/Hetzner), the Unite
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-05-07-honeypot-monthly-april/Incident_Report_2026-05-07_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-05-07-honeypot-monthly-april/Incident_Report_2026-05-07_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-05-07-honeypot-monthly-april/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-05-07-honeypot-monthly-april/iocs.misp.json)
 
 **IOCs:**
 
@@ -59,6 +61,8 @@ A targeted phishing email was delivered through a compromised Microsoft 365 mail
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-05-03-phishing-amendment-gateway/Incident_Report_2026-05-03_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-05-03-phishing-amendment-gateway/Incident_Report_2026-05-03_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-05-03-phishing-amendment-gateway/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-05-03-phishing-amendment-gateway/iocs.misp.json)
 
 **IOCs:**
 
@@ -97,6 +101,8 @@ An active phishing campaign targeting Telegram account hijacking was identified,
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-04-05-telegram-vpn-hijacking/Incident_Report_2026-04-05_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-04-05-telegram-vpn-hijacking/Incident_Report_2026-04-05_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-04-05-telegram-vpn-hijacking/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-04-05-telegram-vpn-hijacking/iocs.misp.json)
 
 **IOCs:**
 
@@ -132,6 +138,8 @@ A cross-platform phishing campaign targeting Ukrainian-speaking users was identi
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-04-04-instagram-phishing/Incident_Report_2026-04-04_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-04-04-instagram-phishing/Incident_Report_2026-04-04_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-04-04-instagram-phishing/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-04-04-instagram-phishing/iocs.misp.json)
 
 **IOCs:**
 
@@ -164,6 +172,8 @@ A large-scale credential phishing operation was identified targeting organizatio
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-03-31-gworkspace-phishing/Incident_Report_2026-03-31_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-03-31-gworkspace-phishing/Incident_Report_2026-03-31_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-03-31-gworkspace-phishing/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-03-31-gworkspace-phishing/iocs.misp.json)
 
 **IOCs:**
 
@@ -201,6 +211,8 @@ A social engineering attack using the "ClickFix" technique was observed targetin
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-03-27-clickfix-vidar/Incident_Report_2026-03-27_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-03-27-clickfix-vidar/Incident_Report_2026-03-27_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-03-27-clickfix-vidar/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-03-27-clickfix-vidar/iocs.misp.json)
 
 **IOCs:**
 
@@ -244,6 +256,8 @@ A phishing email impersonating a Gmail Workspace system notification ("Release I
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-03-09-gmail-phishing-phaas/Incident_Report_2026-03-09_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-03-09-gmail-phishing-phaas/Incident_Report_2026-03-09_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-03-09-gmail-phishing-phaas/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-03-09-gmail-phishing-phaas/iocs.misp.json)
 
 **IOCs:**
 
@@ -284,6 +298,8 @@ Distribution of the Mamont banking trojan via Telegram, observed on March 12, 20
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-03-15-telegram-dtp-mamont/Incident_Report_2026-03-15_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-03-15-telegram-dtp-mamont/Incident_Report_2026-03-15_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-03-15-telegram-dtp-mamont/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-03-15-telegram-dtp-mamont/iocs.misp.json)
 
 **IOCs:**
 
@@ -318,6 +334,8 @@ A phishing campaign targeting Russian-speaking Muslim communities was observed d
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-03-14-telegram-vote-phishing/Incident_Report_2026-03-14_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-03-14-telegram-vote-phishing/Incident_Report_2026-03-14_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-03-14-telegram-vote-phishing/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-03-14-telegram-vote-phishing/iocs.misp.json)
 
 **IOCs:**
 
@@ -355,6 +373,8 @@ A multi-service honeypot recorded a systematic reconnaissance campaign from a si
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-03-10-mcp-scanner/Incident_Report_2026-03-10_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-03-10-mcp-scanner/Incident_Report_2026-03-10_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-03-10-mcp-scanner/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-03-10-mcp-scanner/iocs.misp.json)
 
 **IOCs:**
 
@@ -389,6 +409,8 @@ A phishing link distributed via Signal led to a WhatsApp account compromise thro
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-03-05-whatsapp-defisher/Incident_Report_2026-03-05_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-03-05-whatsapp-defisher/Incident_Report_2026-03-05_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-03-05-whatsapp-defisher/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-03-05-whatsapp-defisher/iocs.misp.json)
 
 **IOCs:**
 
@@ -427,6 +449,8 @@ A spear-phishing email impersonating Meta/Facebook was delivered to a Russian hu
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-03-02-meta-phishing/Incident_Report_2026-03-02_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-03-02-meta-phishing/Incident_Report_2026-03-02_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-03-02-meta-phishing/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-03-02-meta-phishing/iocs.misp.json)
 
 **IOCs:**
 
@@ -463,6 +487,8 @@ A spear-phishing campaign impersonating the National Endowment for Democracy (NE
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-02-18-ned-phishing/Incident_Report_2026-02-18_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-02-18-ned-phishing/Incident_Report_2026-02-18_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-02-18-ned-phishing/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-02-18-ned-phishing/iocs.misp.json)
 
 **IOCs:**
 
@@ -495,6 +521,8 @@ A phishing campaign abusing Google's legitimate infrastructure (Drive, Cloud Sto
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-02-13-google-drive-fingerprinting/Incident_Report_2026-02-13_EN.pdf)
 - [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-02-13-google-drive-fingerprinting/Incident_Report_2026-02-13_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-02-13-google-drive-fingerprinting/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-02-13-google-drive-fingerprinting/iocs.misp.json)
 
 **IOCs:**
 

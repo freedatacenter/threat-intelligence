@@ -1,0 +1,807 @@
+{
+  "type": "bundle",
+  "id": "bundle--0390b7e5-3679-5597-9461-23f81b7def5c",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--7b617236-afd2-560b-a43f-dd601b8ad991",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Gmail Workspace Credential Phishing via Commercial PhaaS Platform",
+      "published": "2026-03-09T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--f328e0b9-57dc-5c30-88bc-da4eac660ae7",
+        "indicator--df670a98-6ef9-58c9-b8fc-f8c69647c689",
+        "indicator--3750d372-8ef4-58df-9348-5901c4e48626",
+        "indicator--4acdaf53-2595-5506-9627-6fb451f57f94",
+        "indicator--ee21cef7-c83c-5240-a75b-cb4188b45b1f",
+        "indicator--72046696-ae49-5bdd-b33b-7b3a6a0c5744",
+        "indicator--9350129c-18f5-5bde-bf20-e8b8ed8c375e",
+        "indicator--dbd4b04c-a4a9-5ad0-b3f0-f43e7bcb3953",
+        "indicator--e7a7e0e7-6451-50ee-b0bc-24af22902903",
+        "indicator--15552edd-0389-5db1-9099-f7ccb806b80b",
+        "indicator--9f3e4905-89d0-57f8-a264-f62b8cfd1f61",
+        "indicator--9b181d45-fbf0-5bb6-bd89-231d0c2c1236"
+      ],
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f328e0b9-57dc-5c30-88bc-da4eac660ae7",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://maxillae890.bitnest.za.com/testatrix449/",
+      "description": "PhaaS campaign URL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://maxillae890.bitnest.za.com/testatrix449/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--df670a98-6ef9-58c9-b8fc-f8c69647c689",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://demo.bitnest.za.com/testatrix449/",
+      "description": "PhaaS demo URL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://demo.bitnest.za.com/testatrix449/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3750d372-8ef4-58df-9348-5901c4e48626",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: bitnest.za.com",
+      "description": "PhaaS platform (wildcard DNS, Cloudflare-fronted)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'bitnest.za.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4acdaf53-2595-5506-9627-6fb451f57f94",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: oesplindia.com",
+      "description": "Compromised sender domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'oesplindia.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ee21cef7-c83c-5240-a75b-cb4188b45b1f",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: sevensounds.ae",
+      "description": "Reply-To domain (linked to phishing infra via shared IP)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'sevensounds.ae']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--72046696-ae49-5bdd-b33b-7b3a6a0c5744",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 188.114.96.11",
+      "description": "Cloudflare CDN",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '188.114.96.11']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9350129c-18f5-5bde-bf20-e8b8ed8c375e",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 188.114.97.11",
+      "description": "Cloudflare CDN",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '188.114.97.11']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dbd4b04c-a4a9-5ad0-b3f0-f43e7bcb3953",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 170.10.163.134",
+      "description": "LiquidNet US, AS14555",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '170.10.163.134']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e7a7e0e7-6451-50ee-b0bc-24af22902903",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 91.193.42.16",
+      "description": "AMANKA SARL, shared IP linking Reply-To to PhaaS infra",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '91.193.42.16']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--15552edd-0389-5db1-9099-f7ccb806b80b",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 149.72.123.24",
+      "description": "SendGrid outbound",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '149.72.123.24']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9f3e4905-89d0-57f8-a264-f62b8cfd1f61",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: sandeep@oesplindia.com",
+      "description": "Compromised sender address",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'sandeep@oesplindia.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9b181d45-fbf0-5bb6-bd89-231d0c2c1236",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: td@sevensounds.ae",
+      "description": "Reply-To address",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'td@sevensounds.ae']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-09T00:00:00Z",
+      "labels": [
+        "phishing",
+        "phaas",
+        "fingerprinting",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    }
+  ]
+}

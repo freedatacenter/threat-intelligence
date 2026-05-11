@@ -1,0 +1,1544 @@
+{
+  "type": "bundle",
+  "id": "bundle--54ccd1e5-0745-5ddf-8804-8caf5768a9de",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--26a77ef1-9bde-5ab6-9082-f75db86376ed",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Telegram Account Hijacking via Fake Voting Phishing Campaign",
+      "published": "2026-03-14T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--63f1f900-d282-5ea3-ab86-34fd1287c34a",
+        "indicator--b8dda6e0-c6fd-5e03-8ce8-d458b9b29b1c",
+        "indicator--ee129eab-2e1d-5d48-ba8a-fe85dc7990c1",
+        "indicator--060a9a85-7e12-5bab-be98-b6ae03ab6f8e",
+        "indicator--9c1d3271-efec-5bbb-9a8f-8a3856974989",
+        "indicator--e2ef7d35-be5d-5953-9faa-5057585689ee",
+        "indicator--146eb253-3808-5046-a447-0624e02d55da",
+        "indicator--d76c4a4f-f9c1-5ab9-84f9-5c8d25734b57",
+        "indicator--269b3c0a-4cc4-518c-b744-b9291c42aba3",
+        "indicator--1e93c9ca-112c-5540-bc25-85a61780e26b",
+        "indicator--d9fbb694-bb69-5fe8-a66a-a7689798f6c0",
+        "indicator--039ad02e-3d4c-5ade-88ee-e7735ba31ae5",
+        "indicator--746a606c-850b-5f7d-91c3-a3c6d315850f",
+        "indicator--660921a4-21ad-58bd-8c7b-ca6a03673255",
+        "indicator--e0efc50c-84cc-5fcf-a94b-ee1599b0e4e1",
+        "indicator--b539caba-4ec3-5c10-a3b2-b30b46117858",
+        "indicator--1ede3018-89cc-52e7-ace1-766ebebda5d4"
+      ],
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--63f1f900-d282-5ea3-ab86-34fd1287c34a",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: beaminkjet.com",
+      "description": "Primary phishing domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'beaminkjet.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b8dda6e0-c6fd-5e03-8ce8-d458b9b29b1c",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 77.83.39.62",
+      "description": "Pitline Ltd, Kharkiv, UA (Censys BULLETPROOF 0.75)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '77.83.39.62']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ee129eab-2e1d-5d48-ba8a-fe85dc7990c1",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS214940",
+      "description": "KPRONET",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 214940]",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--060a9a85-7e12-5bab-be98-b6ae03ab6f8e",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS215693",
+      "description": "PalmaHost",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 215693]",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9c1d3271-efec-5bbb-9a8f-8a3856974989",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: syimono1488@gmail.com",
+      "description": "WHOIS registrant email",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'syimono1488@gmail.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e2ef7d35-be5d-5953-9faa-5057585689ee",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://beaminkjet.com/umarashab",
+      "description": "Phishing entry URL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://beaminkjet.com/umarashab']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--146eb253-3808-5046-a447-0624e02d55da",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: vybory.cyou",
+      "description": "Co-located phishing domain (elections theme)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'vybory.cyou']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d76c4a4f-f9c1-5ab9-84f9-5c8d25734b57",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: vybory.bond",
+      "description": "Co-located phishing domain (elections theme)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'vybory.bond']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--269b3c0a-4cc4-518c-b744-b9291c42aba3",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: vybory.sbs",
+      "description": "Co-located phishing domain (elections theme)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'vybory.sbs']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1e93c9ca-112c-5540-bc25-85a61780e26b",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: vybory.cfd",
+      "description": "Co-located phishing domain (elections theme)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'vybory.cfd']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d9fbb694-bb69-5fe8-a66a-a7689798f6c0",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: vesna2026.cyou",
+      "description": "Co-located phishing domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'vesna2026.cyou']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--039ad02e-3d4c-5ade-88ee-e7735ba31ae5",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: vesna2026.cfd",
+      "description": "Co-located phishing domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'vesna2026.cfd']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--746a606c-850b-5f7d-91c3-a3c6d315850f",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: vesna2026.sbs",
+      "description": "Co-located phishing domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'vesna2026.sbs']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--660921a4-21ad-58bd-8c7b-ca6a03673255",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: onetop.sbs",
+      "description": "Co-located phishing domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'onetop.sbs']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e0efc50c-84cc-5fcf-a94b-ee1599b0e4e1",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: onetop.cfd",
+      "description": "Co-located phishing domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'onetop.cfd']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b539caba-4ec3-5c10-a3b2-b30b46117858",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: onetop.bond",
+      "description": "Co-located phishing domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'onetop.bond']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1ede3018-89cc-52e7-ace1-766ebebda5d4",
+      "created": "2026-03-14T00:00:00Z",
+      "modified": "2026-03-14T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: onetop.click",
+      "description": "Co-located phishing domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'onetop.click']",
+      "pattern_type": "stix",
+      "valid_from": "2026-03-14T00:00:00Z",
+      "labels": [
+        "phishing",
+        "account-takeover",
+        "telegram",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1556"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1550.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1213"
+        }
+      ]
+    }
+  ]
+}

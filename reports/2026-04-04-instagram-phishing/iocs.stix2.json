@@ -1,0 +1,385 @@
+{
+  "type": "bundle",
+  "id": "bundle--21103b9a-eccd-59ed-9e89-affab25ea7ff",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--9fe3f02a-799f-5e16-81e8-b4f33c7734d9",
+      "created": "2026-04-04T00:00:00Z",
+      "modified": "2026-04-04T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Instagram Credential Phishing via Compromised Telegram Accounts",
+      "published": "2026-04-04T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--3795ce80-de70-51a5-8ccc-eaa35b725e3d",
+        "indicator--f23cb05d-fb58-5803-a6a3-92d80cb0b293",
+        "indicator--e5bec1b6-22aa-5f2e-b5e8-c0cb719faddd",
+        "indicator--28a17543-a326-5a07-84a6-b58ab8f57db4",
+        "indicator--8dd56862-a505-5a07-9744-092800731b68",
+        "indicator--0d4f6da2-d32e-5f6a-a37e-f2a16e315062"
+      ],
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "reverse-proxy",
+        "bulletproof-hosting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3795ce80-de70-51a5-8ccc-eaa35b725e3d",
+      "created": "2026-04-04T00:00:00Z",
+      "modified": "2026-04-04T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: va-kt.bayern",
+      "description": "Phishing domain (wildcard DNS — all subdomains resolve to C2)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'va-kt.bayern']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-04T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "reverse-proxy",
+        "bulletproof-hosting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f23cb05d-fb58-5803-a6a3-92d80cb0b293",
+      "created": "2026-04-04T00:00:00Z",
+      "modified": "2026-04-04T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: friend.va-kt.bayern",
+      "description": "Active phishing subdomain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'friend.va-kt.bayern']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-04T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "reverse-proxy",
+        "bulletproof-hosting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e5bec1b6-22aa-5f2e-b5e8-c0cb719faddd",
+      "created": "2026-04-04T00:00:00Z",
+      "modified": "2026-04-04T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: http://friend.va-kt.bayern/ua/6",
+      "description": "Phishing entry URL (Ukrainian audience)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://friend.va-kt.bayern/ua/6']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-04T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "reverse-proxy",
+        "bulletproof-hosting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--28a17543-a326-5a07-84a6-b58ab8f57db4",
+      "created": "2026-04-04T00:00:00Z",
+      "modified": "2026-04-04T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 62.60.226.50",
+      "description": "C2 server, AS214351 (FEMO IT SOLUTIONS LIMITED), Frankfurt DE",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '62.60.226.50']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-04T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "reverse-proxy",
+        "bulletproof-hosting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8dd56862-a505-5a07-9744-092800731b68",
+      "created": "2026-04-04T00:00:00Z",
+      "modified": "2026-04-04T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS214351",
+      "description": "FEMO IT SOLUTIONS LIMITED (Censys-classified BULLETPROOF, 514 domains)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 214351]",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-04T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "reverse-proxy",
+        "bulletproof-hosting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0d4f6da2-d32e-5f6a-a37e-f2a16e315062",
+      "created": "2026-04-04T00:00:00Z",
+      "modified": "2026-04-04T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "HASSH: 41ff3ecd1458b0bf86e1b4891636213e",
+      "description": "SSH HASSH fingerprint of phishing server",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-hassh:value = '41ff3ecd1458b0bf86e1b4891636213e']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-04T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "reverse-proxy",
+        "bulletproof-hosting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        }
+      ]
+    }
+  ]
+}
