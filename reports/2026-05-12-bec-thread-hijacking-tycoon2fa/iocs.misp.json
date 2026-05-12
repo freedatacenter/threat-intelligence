@@ -98,15 +98,6 @@
         "distribution": "5"
       },
       {
-        "uuid": "d9200c9d-c7c1-575c-bc06-bd2d38958917",
-        "type": "domain",
-        "category": "Network activity",
-        "value": "unapei-ap.fr",
-        "to_ids": true,
-        "comment": "Legitimate French NGO — mailbox compromised, notify organisation IT, do not block",
-        "distribution": "5"
-      },
-      {
         "uuid": "306fdbb1-0ae7-5595-9608-655054a32641",
         "type": "text",
         "category": "Other",

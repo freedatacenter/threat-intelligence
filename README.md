@@ -8,7 +8,7 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ### 2026-05-12 — BEC via Compromised NGO Mailbox + Tycoon 2FA AiTM Phishing Kit
 
-A phishing email was delivered from a legitimate Microsoft 365 mailbox belonging to a French non-profit organisation (UNAPEI Alpes Provence), using three evasion layers: genuine M365 account compromise (bypassing SPF/DKIM/DMARC), thread hijacking with a real French-language medical conversation as context, and a Microsoft Customer Voice (nam.dcv.ms) short-link that resolves through a trusted Microsoft service. The final destination is a Tycoon 2FA / Mamba 2FA class Phishing-as-a-Service (PaaS) kit on a RackNerd VPS, equipped with a fake Gmail CAPTCHA, an XOR-obfuscated cloud-IP filter, and an AiTM mechanism that harvests session cookies to bypass MFA. Seven parallel phishing domains were identified on the same infrastructure cluster, all provisioned on April 17, 2026.
+A phishing email was delivered from a legitimate Microsoft 365 mailbox belonging to a French non-profit organisation, using three evasion layers: genuine M365 account compromise (bypassing SPF/DKIM/DMARC), thread hijacking with a real French-language medical conversation as context, and a Microsoft Customer Voice (nam.dcv.ms) short-link that resolves through a trusted Microsoft service. The final destination is a Tycoon 2FA / Mamba 2FA class Phishing-as-a-Service (PaaS) kit on a RackNerd VPS, equipped with a fake Gmail CAPTCHA, an XOR-obfuscated cloud-IP filter, and an AiTM mechanism that harvests session cookies to bypass MFA. Seven parallel phishing domains were identified on the same infrastructure cluster, all provisioned on April 17, 2026.
 
 **Key findings:**
 - Account compromise (not spoofing): email transited genuine Exchange Online EU servers (`DB9PR08MB6809.eurprd08.prod.outlook.com`); Message-ID format confirms real M365 mailbox send
@@ -37,8 +37,7 @@ A phishing email was delivered from a legitimate Microsoft 365 mailbox belonging
 | Domain | `beawoushoo[.]digital` (cluster) |
 | Domain | `shodiothai[.]enterprises` (cluster) |
 | URL | `hxxps://stiofidri[.]company/u@xTBw1Q9qK4Qb0ZS9gxFUS/` (payload URL) |
-| URL | `hxxps://nam[.]dcv[.]ms/o9XDteis3W` (Microsoft Customer Voice lure, now 404) |
-| Domain | `unapei-ap[.]fr` (compromised mailbox — notify organisation IT, do not block) |
+| URL | `hxxps://nam[.]dcv[.]ms/o9XDteis3W` (Microsoft Customer Voice short-link used as lure, form now 404) |
 | Kit artifact | XOR key `3HO3y7Soso1HgJPsnDn2pg==` (anti-sandbox JS) |
 
 **MITRE ATT&CK:** T1583.001, T1583.004, T1586.002, T1078.004, T1566.002, T1566.003, T1656, T1036.005, T1027.013, T1497.001, T1480, T1539, T1056.003, T1114.002
