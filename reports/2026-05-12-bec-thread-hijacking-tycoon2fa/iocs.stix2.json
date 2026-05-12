@@ -35,6 +35,7 @@
         "indicator--48ad3f2d-6c68-56f2-8392-4ce21704bf1b",
         "indicator--efaacb75-03c1-5741-a29a-f9b00780525b",
         "indicator--e2b6997f-b561-5cdd-a8ba-514cc5fc6038",
+        "indicator--b14d324c-458a-56a6-83b4-1ecde085b272",
         "indicator--5e83c783-1b60-560e-aa42-055ff31510a8"
       ],
       "labels": [
@@ -845,6 +846,87 @@
         "malicious-activity"
       ],
       "pattern": "[url:value = 'https://nam.dcv.ms/o9XDteis3W']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-12T00:00:00Z",
+      "labels": [
+        "phishing",
+        "bec",
+        "aitm",
+        "thread-hijacking",
+        "paas-phishing"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1480"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1114.002"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b14d324c-458a-56a6-83b4-1ecde085b272",
+      "created": "2026-05-12T00:00:00Z",
+      "modified": "2026-05-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: unapei-ap.fr",
+      "description": "Legitimate French NGO — mailbox compromised, notify organisation IT, do not block",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'unapei-ap.fr']",
       "pattern_type": "stix",
       "valid_from": "2026-05-12T00:00:00Z",
       "labels": [
