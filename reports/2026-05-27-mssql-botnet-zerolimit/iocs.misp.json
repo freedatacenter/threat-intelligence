@@ -1,0 +1,260 @@
+{
+  "Event": {
+    "uuid": "ffc3b945-4dc9-50c8-85f3-455ae88b199a",
+    "info": "[TLP:CLEAR] MSSQL Brute-force Farm and RDP Bruteforcer — zerolimit-servers.cool / AS205997",
+    "date": "2026-05-27",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "6fb41115-3853-56fa-ae0c-1941af432b32",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.2",
+        "to_ids": true,
+        "comment": "MSSQL Panel C2 controller + bot (194.113.39.0/24, AS206378)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "50cc4d83-72ca-525b-a922-e9e47982ee3e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.6",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3d7fd90d-1054-51c4-b4ae-579feeb6d5d8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.10",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "65852157-93f9-5f8e-bf7e-6137317cfe52",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.14",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f31b1fd4-08bc-501e-b146-3e2fb9d872e3",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.18",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3cf97140-255b-575f-b734-2dd8688ea119",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.22",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e254adf8-c6e4-5c74-8a77-79c03b115175",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.26",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "998d3e80-91c9-5efe-8cf3-0c5ec8904c5b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.30",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cb3d8cfa-9250-52a8-b495-5c4ce6541a62",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.34",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "da914bae-530d-5b92-957d-a1a69ac4452a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.113.39.38",
+        "to_ids": true,
+        "comment": "MSSQL brute-force bot (AS206378 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "16006541-ad22-581f-a470-ce28ce28b70b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.218.138.3",
+        "to_ids": true,
+        "comment": "Ultimate RDP bruteforcer panel port 9090 (AS205997 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "11633f4b-07f6-5ce2-9721-b4445f3d0a00",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.218.138.5",
+        "to_ids": true,
+        "comment": "Ultimate RDP bruteforcer panel port 9090 (AS205997 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f63f6498-ab68-5f09-b063-0cb0708d12c0",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.218.138.16",
+        "to_ids": true,
+        "comment": "Ultimate RDP bruteforcer panel port 9090 (AS205997 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c5d6d6b0-c06a-5275-bc62-a7a409093b51",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.218.138.17",
+        "to_ids": true,
+        "comment": "Ultimate RDP bruteforcer panel port 9090 (AS205997 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1f536fd9-5005-5877-9965-609254544e30",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.218.138.29",
+        "to_ids": true,
+        "comment": "Ultimate RDP bruteforcer panel port 9090 (AS205997 / Vlad Cojuhari)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8bb2c8b0-d54f-5bfc-a640-d53c50faee74",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "80.66.66.68",
+        "to_ids": true,
+        "comment": "Ultimate RDP bruteforcer panel ports 8050+9090 (AS209702 SOLDATOV-AS, BG)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ebf0ae7b-2ac2-5c3d-80ff-ac547617392a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "109.205.211.4",
+        "to_ids": true,
+        "comment": "Ultimate RDP bruteforcer panel port 9090 (AS201814 Mevspace, PL)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5fdaabc1-c348-5cce-8e96-20451623b1f8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.38.20.97",
+        "to_ids": true,
+        "comment": "zerolimit-servers.cool mail origin (AS48693 Rices, UA)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fbf89ecf-f9cc-5e70-883e-25141e7c6392",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "zerolimit-servers.cool",
+        "to_ids": true,
+        "comment": "Operator brand domain / ASN website (Cloudflare CDN)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3d887d44-5508-53fd-96f2-0273d18c2ee6",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS205997",
+        "to_ids": false,
+        "comment": "Vlad Cojuhari — direct operator ASN (zerolimit-servers.cool)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c5bb8086-68a1-5a49-aa29-69f05a51b44e",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS206378",
+        "to_ids": false,
+        "comment": "FOP Dmytro Nedilskyi — announces 194.113.39.0/24",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e2ee1b7e-4907-5bbb-98cc-e655c8928133",
+        "type": "text",
+        "category": "Other",
+        "value": "fb3aa028387ecc371879ac10e123064050e766e6174fe4d1ddd1011db15e131a",
+        "to_ids": false,
+        "comment": "TLS cert SHA-256: O=MSSQL Panel (globally unique, 194.113.39.2:8443)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "45d00357-3a3d-52f5-950e-586ef8898b88",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "ban-me-please@zerolimit-servers.cool",
+        "to_ids": false,
+        "comment": "RIPE abuse contact — explicit bulletproof indicator",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1583.005"
+      },
+      {
+        "name": "mitre-attack:T1110.001"
+      },
+      {
+        "name": "mitre-attack:T1595.001"
+      },
+      {
+        "name": "mitre-attack:T1595.002"
+      },
+      {
+        "name": "mitre-attack:T1071.001"
+      },
+      {
+        "name": "label:botnet"
+      },
+      {
+        "name": "label:brute-force"
+      },
+      {
+        "name": "label:bulletproof-hosting"
+      },
+      {
+        "name": "label:mssql"
+      },
+      {
+        "name": "label:c2-panel"
+      }
+    ]
+  }
+}

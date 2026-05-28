@@ -6,6 +6,51 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-05-27 — MSSQL Brute-force Farm and RDP Bruteforcer — zerolimit-servers.cool / AS205997
+
+A coordinated brute-force farm operating from 194.113.39.0/24 was identified targeting MSSQL servers (TCP/1433) globally. The infrastructure consists of exactly 10 Windows VPS nodes deployed with a uniform automated profile and a centralised Go-based control panel at 194.113.39.2:8443 with a self-signed TLS certificate bearing Subject O=MSSQL Panel — the only instance of this certificate observable across the entire internet at time of analysis. The farm is operated by Vlad Cojuhari (Moldova/Ukraine), owner of AS205997 (zerolimit-servers.cool), announced via AS206378 (FOP Dmytro Nedilskyi, UA/PL) with bulletproof upstream AS202425 (IP Volume inc.). A related subnet 185.218.138.0/24 (AS205997) hosts five nodes running an "Ultimate RDP bruteforcer" panel; the same tool was identified on two externally-operated hosts in Bulgaria (AS209702) and Poland (AS201814), suggesting the tool is being sold or shared.
+
+**Key findings:**
+- C2 panel at `194[.]113[.]39[.]2:8443`: self-signed TLS cert `O=MSSQL Panel`, SHA-256 `fb3aa028...e131a` — globally unique (Shodan `ssl:"MSSQL Panel"` returns exactly 1 result); Go HTTP server with Basic-auth; deployed 2026-05-16
+- MSSQL farm: 10 Windows VPS at 4-address intervals (.2/.6/.10/.14/.18/.22/.26/.30/.34/.38), all sharing RDP JARM `14d14d16...f532` and JA3S `ba1b42ef...c1b` — typical default Windows Server without domain membership; independent SSH host keys indicate scripted provisioning
+- Operator attribution: Vlad Cojuhari (ORG-ZA297-RIPE, Constantin Brancusi St 3, MD); RIPE abuse contact `ban-me-please@zerolimit-servers[.]cool` is an explicit bulletproof indicator; network created 2026-01-30
+- Infrastructure chain: AS205997 (Cojuhari direct) → announced via AS206378 (FOP Dmytro Nedilskyi, linked to CleanTalk-listed AS211736) → upstream AS202425 (IP Volume inc., successor to Ecatel/Quasi Networks)
+- RDP bruteforcer: "Ultimate RDP bruteforcer" panel (port 9090, Last-Modified 2026-05-08) found on 5 nodes in 185.218.138.0/24 and 2 external hosts — tool is being distributed beyond the primary operator
+- All 10 MSSQL farm IPs appear in global honeypot feeds (OTX 50 pulses on .2 alone, active from 2026-04-22), zero malware payload hosting — purely credential-access infrastructure
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-05-27-mssql-botnet-zerolimit/Incident_Report_2026-05-27_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-05-27-mssql-botnet-zerolimit/Incident_Report_2026-05-27_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-05-27-mssql-botnet-zerolimit/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-05-27-mssql-botnet-zerolimit/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| IP | `194[.]113[.]39[.]2` (C2 panel + bot, AS206378) |
+| IP | `194[.]113[.]39[.]6` (MSSQL bot, AS206378) |
+| IP | `194[.]113[.]39[.]10` (MSSQL bot, AS206378) |
+| IP | `194[.]113[.]39[.]14` (MSSQL bot, AS206378) |
+| IP | `194[.]113[.]39[.]18` (MSSQL bot, AS206378) |
+| IP | `194[.]113[.]39[.]22` (MSSQL bot, AS206378) |
+| IP | `194[.]113[.]39[.]26` (MSSQL bot, AS206378) |
+| IP | `194[.]113[.]39[.]30` (MSSQL bot, AS206378) |
+| IP | `194[.]113[.]39[.]34` (MSSQL bot, AS206378) |
+| IP | `194[.]113[.]39[.]38` (MSSQL bot, AS206378) |
+| Subnet | `194[.]113[.]39[.]0/24` (MSSQL farm, AS206378 / Vlad Cojuhari) |
+| IP | `185[.]218[.]138[.]3`, `185[.]218[.]138[.]5`, `185[.]218[.]138[.]16`, `185[.]218[.]138[.]17`, `185[.]218[.]138[.]29` (RDP bruteforcer, AS205997) |
+| IP | `80[.]66[.]66[.]68` (RDP bruteforcer external user, AS209702, BG) |
+| IP | `109[.]205[.]211[.]4` (RDP bruteforcer external user, AS201814 Mevspace, PL) |
+| Domain | `zerolimit-servers[.]cool` (operator brand / ASN website) |
+| TLS SHA-256 | `fb3aa028387ecc371879ac10e123064050e766e6174fe4d1ddd1011db15e131a` (MSSQL Panel cert, unique globally) |
+| ASN | AS205997 (Vlad Cojuhari — operator) |
+| ASN | AS206378 (FOP Dmytro Nedilskyi — announces 194.113.39.0/24) |
+
+**MITRE ATT&CK:** T1583.003, T1583.005, T1110.001, T1595.001, T1595.002, T1071.001
+
+---
+
 ### 2026-05-12 — BEC via Compromised NGO Mailbox + Tycoon 2FA AiTM Phishing Kit
 
 A phishing email was delivered from a legitimate Microsoft 365 mailbox belonging to a French non-profit organisation, using three evasion layers: genuine M365 account compromise (bypassing SPF/DKIM/DMARC), thread hijacking with a real French-language medical conversation as context, and a Microsoft Customer Voice (nam.dcv.ms) short-link that resolves through a trusted Microsoft service. The final destination is a Tycoon 2FA / Mamba 2FA class Phishing-as-a-Service (PaaS) kit on a RackNerd VPS, equipped with a fake Gmail CAPTCHA, an XOR-obfuscated cloud-IP filter, and an AiTM mechanism that harvests session cookies to bypass MFA. Seven parallel phishing domains were identified on the same infrastructure cluster, all provisioned on April 17, 2026.
