@@ -6,6 +6,50 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-06-09 — Honeypot Fleet: Monthly Threat Report, May 2026
+
+Over May 2026 our distributed honeypot sensors (Germany, the United States and Russia) recorded roughly 911,000 attack events across SSH, multi-protocol exploitation, Docker, LLM, MikroTik and Kubernetes surfaces. The headline development is the continued maturation of attacks against self-hosted LLM inference endpoints (Ollama, llama.cpp) — now extending beyond compute theft into SSRF-based theft of cloud credentials. Other notable activity includes ongoing SSH targeting of Solana validators, multi-architecture Mirai/Gafgyt droppers, a dominant WannaCry/SMB stream in captured malware, and the first ICS interactions (IEC-104 OLTC commands) against a newly deployed substation decoy.
+
+**Key findings:**
+- Attacks on LLM inference endpoints (~75,300 requests): ~95% scanning, ~3.7% inference/compute theft, and — new this month — ~0.5% SSRF pivots toward cloud metadata (`169.254.169.254`) for IAM credential theft. Persistent operator `203[.]159[.]90[.]152` (AS210558, Stark-linked per open sources) active across March–May.
+- Solana validator targeting via SSH: dictionaries carry `sol`/`solana`/`solv` usernames and matching passwords.
+- Multi-architecture Mirai/Gafgyt droppers: 85 downloads, 33 unique SHA-256 from four primary dropper servers; arch-selection fingerprint `/bin/./uname -s -v -n -r -m` (578×).
+- Captured malware (126 unique samples, all malicious): ~85 are PE32 WannaCry/EternalBlue DLLs; ClamAV produced zero detections — current stream caught only by YARA/imphash.
+- ICS substation decoy (IEC-104), preliminary: 205 events including 84 connects, 62 on-load tap-changer (OLTC) operations and 28 general interrogations.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-06-09-honeypot-monthly-may/Incident_Report_2026-06-09_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-06-09-honeypot-monthly-may/Incident_Report_2026-06-09_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-06-09-honeypot-monthly-may/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-06-09-honeypot-monthly-may/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| IP | `203[.]159[.]90[.]152` (LLM-abuse, AS210558 1337 Services GmbH, Stark-linked per open sources) |
+| IP | `37[.]19[.]210[.]21` (LLM-abuse top source, AS212238 Datacamp/CDN77, likely VPN exit) |
+| IP | `103[.]77[.]246[.]174` (Mirai/Gafgyt dropper, AS140810 Megacore, VN) |
+| IP | `45[.]81[.]234[.]64` (Mirai/Gafgyt dropper `/10Gbins.sh`, AS44486 synlinq.de, DE) |
+| IP | `202[.]71[.]14[.]246` (Mirai/Gafgyt dropper `proto.*`, AS43641 Sollutium EU, NL) |
+| IP | `209[.]92[.]170[.]225` (Mirai/Gafgyt dropper `lmkjn.*`, AS212238 Datacamp, MY) |
+| IP | `14[.]46[.]136[.]77` (Botnet C2, AS4766, KR) |
+| IP | `151[.]242[.]125[.]187` (Botnet C2, HK) |
+| IP | `87[.]121[.]79[.]73` (Botnet C2, AS199428, BG) |
+| IP | `45[.]70[.]90[.]106` (Top SSH bruteforce, AS52477 ApInter, AR) |
+| IP | `185[.]156[.]74[.]10` (Top SSH bruteforce, AS210848 Telkom Internet, NL) |
+| IP | `45[.]153[.]34[.]149` (Top SSH bruteforce, AS51396 Pfcloud UG, NL) |
+| SHA-256 | `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` (Mirai/Gafgyt ELF) |
+| SHA-256 | `0a731d26eeb377a3f101bd4941e700ab87076cc7a50a0bb99f2b683b6266d351` (dropper `wget.sh`) |
+| UA | `ollama/0.0.0 (amd64 linux) Go/go1.26.3` (LLM scanner, official Ollama Go client) |
+| UA | `EchelonGraph-ShadowAIRadar-Verifier/1.0` (commercial AI-asset scanner) |
+| URL-path | `/props` (llama.cpp inference probe) |
+| URL-path | `/rest/oauth2-credential/callback` (n8n credential probe) |
+
+**MITRE ATT&CK:** T1595.002, T1110, T1046, T1190, T1610, T1496, T1552.005, T1078.004, T0855, T0836
+
+---
+
 ### 2026-05-27 — MSSQL Brute-force Farm and RDP Bruteforcer — zerolimit-servers.cool / AS205997
 
 A coordinated brute-force farm operating from 194.113.39.0/24 was identified targeting MSSQL servers (TCP/1433) globally. The infrastructure consists of exactly 10 Windows VPS nodes deployed with a uniform automated profile and a centralised Go-based control panel at 194.113.39.2:8443 with a self-signed TLS certificate bearing Subject O=MSSQL Panel — the only instance of this certificate observable across the entire internet at time of analysis. The farm is operated by Vlad Cojuhari (Moldova/Ukraine), owner of AS205997 (zerolimit-servers.cool), announced via AS206378 (FOP Dmytro Nedilskyi, UA/PL) with bulletproof upstream AS202425 (IP Volume inc.). A related subnet 185.218.138.0/24 (AS205997) hosts five nodes running an "Ultimate RDP bruteforcer" panel; the same tool was identified on two externally-operated hosts in Bulgaria (AS209702) and Poland (AS201814), suggesting the tool is being sold or shared.

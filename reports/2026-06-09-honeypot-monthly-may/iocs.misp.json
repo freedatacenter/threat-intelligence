@@ -1,0 +1,257 @@
+{
+  "Event": {
+    "uuid": "7a6fd80d-d4d0-5658-8946-9f8c781e5ee7",
+    "info": "[TLP:CLEAR] Honeypot Fleet: Monthly Threat Report, May 2026",
+    "date": "2026-06-09",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "998421f1-88c7-528b-90eb-0322692790cf",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "203.159.90.152",
+        "to_ids": true,
+        "comment": "LLM-abuse, AS210558 1337 Services GmbH (Stark-linked per open sources), multi-month",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0fce4632-414b-5e69-90f0-5848da538c10",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "37.19.210.21",
+        "to_ids": true,
+        "comment": "LLM-abuse top source, AS212238 Datacamp/CDN77 (likely VPN exit)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "234cb5cd-2855-52b3-aa74-7ab92397a25b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.77.246.174",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt dropper, AS140810 Megacore, VN",
+        "distribution": "5"
+      },
+      {
+        "uuid": "957e492b-957e-53bd-b2fb-91a0c0041ecd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.81.234.64",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt dropper (/10Gbins.sh), AS44486 synlinq.de, DE",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d11e02ae-9e48-5d5f-8502-075efdbb69f5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "202.71.14.246",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt dropper (proto.*), AS43641 Sollutium EU, NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f0143dc1-4cdb-541f-b11f-c1261eb90aa0",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "209.92.170.225",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt dropper (lmkjn.*), AS212238 Datacamp, MY",
+        "distribution": "5"
+      },
+      {
+        "uuid": "01eb27b9-4604-5dbc-a471-a2fda5e0f248",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "14.46.136.77",
+        "to_ids": true,
+        "comment": "Botnet C2, AS4766, KR",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bfe7229a-fce4-5229-b703-dcd9d42fd7aa",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "151.242.125.187",
+        "to_ids": true,
+        "comment": "Botnet C2, HK",
+        "distribution": "5"
+      },
+      {
+        "uuid": "07e11ef4-b23d-561c-a153-02a07dedcc58",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "87.121.79.73",
+        "to_ids": true,
+        "comment": "Botnet C2, AS199428, BG",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8f9f053f-4bb5-5a2d-b3c8-327c9389430d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.70.90.106",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source, AS52477 ApInter, AR",
+        "distribution": "5"
+      },
+      {
+        "uuid": "adf8eada-6964-5c9b-8e3e-0b5627858ac5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.156.74.10",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source, AS210848 Telkom Internet, NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f4e26b00-cec7-5298-ae32-499c3446c0e1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.153.34.149",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source, AS51396 Pfcloud UG, NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4f78b969-b159-5c5d-bc6f-6844e7797eb8",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt ELF (cowrie download)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fc640a3d-effc-5ff0-b9aa-995dbd4482b1",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "0a731d26eeb377a3f101bd4941e700ab87076cc7a50a0bb99f2b683b6266d351",
+        "to_ids": true,
+        "comment": "Dropper 103.77.246.174/wget.sh",
+        "distribution": "5"
+      },
+      {
+        "uuid": "13128677-75b4-5881-8879-f49305c9eb6b",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "7aaa1dda3d5d8d625bf2b32f48ba858d2e35a5081ec177907f6994ed381b4e6c",
+        "to_ids": true,
+        "comment": "Dropper 45.81.234.64/armv6l",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f3c447e3-b80e-5288-8c85-3b9a688eff74",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2773c1a142df303740724e10a44302970ffcdab1595c199a9da2339a5b619138",
+        "to_ids": true,
+        "comment": "Dropper 45.81.234.64/x86",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3e1194f5-6ebb-5ba3-98e6-285229fb4bea",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "c7ae488ae575fa649af5f2c6faa3de8a06ff378e5176e29c71d6d96290c51227",
+        "to_ids": true,
+        "comment": "Dropper 103.77.246.174/arm",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7cfc764c-4b31-53f0-a8a1-9f222a787dcc",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d503c43061b795982f53851e66ae2679f6887c2897453b6a6c8d66b5cb4a8cc0",
+        "to_ids": true,
+        "comment": "Dropper 202.71.14.246/proto.mips",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6c24e280-5b62-50af-962f-54dddc39bb37",
+        "type": "text",
+        "category": "Other",
+        "value": "ollama/0.0.0 (amd64 linux) Go/go1.26.3",
+        "to_ids": false,
+        "comment": "LLM scanner fingerprint (official Ollama Go client)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "963b3747-08e7-526a-9ae3-6aa421ee2dd5",
+        "type": "text",
+        "category": "Other",
+        "value": "EchelonGraph-ShadowAIRadar-Verifier/1.0",
+        "to_ids": false,
+        "comment": "Commercial AI-asset scanner user-agent",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ebbbc461-7e8f-5cc5-8394-22930b2829dd",
+        "type": "text",
+        "category": "Other",
+        "value": "/props",
+        "to_ids": false,
+        "comment": "llama.cpp inference probe URL-path",
+        "distribution": "5"
+      },
+      {
+        "uuid": "54d8805a-ee66-5b4d-b635-7ba3e171cc61",
+        "type": "text",
+        "category": "Other",
+        "value": "/rest/oauth2-credential/callback",
+        "to_ids": false,
+        "comment": "n8n credential probe URL-path (adjacent to LLM)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1595.002"
+      },
+      {
+        "name": "mitre-attack:T1110"
+      },
+      {
+        "name": "mitre-attack:T1046"
+      },
+      {
+        "name": "mitre-attack:T1190"
+      },
+      {
+        "name": "mitre-attack:T1610"
+      },
+      {
+        "name": "mitre-attack:T1496"
+      },
+      {
+        "name": "mitre-attack:T1552.005"
+      },
+      {
+        "name": "mitre-attack:T1078.004"
+      },
+      {
+        "name": "mitre-attack:T0855"
+      },
+      {
+        "name": "mitre-attack:T0836"
+      },
+      {
+        "name": "label:honeypot"
+      },
+      {
+        "name": "label:threat-intelligence"
+      },
+      {
+        "name": "label:monthly-report"
+      }
+    ]
+  }
+}
