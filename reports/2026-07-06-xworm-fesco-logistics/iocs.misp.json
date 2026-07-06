@@ -1,0 +1,230 @@
+{
+  "Event": {
+    "uuid": "0efe4d16-afe2-5731-9d16-2fa9e4053a5f",
+    "info": "[TLP:CLEAR] XWorm V7.1 — spoofed-FESCO 'signed contract' logistics phishing campaign",
+    "date": "2026-07-06",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "9cf72544-01d4-5e3b-80b3-8e76f6464c76",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "109.248.150.234",
+        "to_ids": true,
+        "comment": "XWorm C2 (port 443); AS203557 SIA RixHost / DATACLUB-NL, NL; ThreatFox XWorm since 2026-06-18",
+        "distribution": "5"
+      },
+      {
+        "uuid": "53737a9b-e846-5512-9574-541fa3227e18",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.27.134.124",
+        "to_ids": true,
+        "comment": "Stager/download host pulled by the .vbs variant (same campaign)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bb165b7f-4cb2-5fd9-b592-edeb0561bfd9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "89.108.121.15",
+        "to_ids": true,
+        "comment": "Spoofed-FESCO sending MTA (HELO rpnmail.fmf.ru); SPF Fail",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0c059f5f-4279-5b33-a0b8-54b08517f3c9",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS203557",
+        "to_ids": false,
+        "comment": "SIA RixHost / DATACLUB-NL — C2 hosting (Windows Server 2019)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "78df9e64-a167-5729-91f3-15500f819c2a",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "ABersenyov@fesco.com",
+        "to_ids": false,
+        "comment": "Spoofed From (FESCO/VMTP impersonation), SPF Fail",
+        "distribution": "5"
+      },
+      {
+        "uuid": "059187c7-5baa-5d80-8fde-2ffb40ed5f8d",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "37f7127bcae8388c61432dc2d46b0df36cb33690ebbc5b725b28b33dfb145d4b",
+        "to_ids": true,
+        "comment": "XWorm dropper EXE (Contract9021_06_07_26.exe)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1a133404-4bf2-5e80-b8af-a1a4f9cc60f8",
+        "type": "md5",
+        "category": "Payload delivery",
+        "value": "5053320a66a5c4989c44a932a8720b7d",
+        "to_ids": true,
+        "comment": "XWorm dropper EXE (MD5)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7209c083-4030-5a6b-a418-4d9765bde6e2",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "e8e901194d86b29166d6028cc97d3b7559ecff413f20cd7b7f84601c2d9f2709",
+        "to_ids": true,
+        "comment": "Email attachment — ZIP disguised as .r11 (Contract9021_06_07_26.r11)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e6103446-7ad0-57b5-8e1f-ab46eca0f66f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f9183d461a9ef71e1a0a97ddef54f5a785c3d4fa1ac6cb979a82206a52037928",
+        "to_ids": true,
+        "comment": "XWorm config/payload (YARA match on process dump)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3f0ee0b8-5443-5828-8af1-38c4bf7c8057",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "7776706d26fb2dfd7cb96910810bb4c3a02b343a228035a0ca4db3ccf8e4d26a",
+        "to_ids": true,
+        "comment": "Related XWorm sample, same C2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a5507cdc-5d14-517e-8129-94fab44fa29d",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d4bc7db58a0b6207d2d24336833ae73a8cac77bf9f6bfe68ad1c33b52f990d0d",
+        "to_ids": true,
+        "comment": "Related XWorm sample, same C2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "37737294-b331-5c71-b0a7-3f5e224917f3",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "6bdd98cecb7ecf8240b8fd57497a952dd2850075339b3932f4e2c2285dda00c6",
+        "to_ids": true,
+        "comment": "Related XWorm sample, same C2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "900a49a7-bc5e-5688-8265-2065d14c5aa4",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "c8c385c10b1586728318f43b9dcafecfd46d8d6000984fe489bb1d219ea8b4f9",
+        "to_ids": true,
+        "comment": "Related XWorm sample, same C2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f6050163-9006-5e7a-9783-ad1e85daf263",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "70c2fe27f67d5bd45f18c826a1dc1f852fa86b2de8271151a7b8c4d6d58f34d7",
+        "to_ids": true,
+        "comment": "Related XWorm sample, same C2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a591c3c0-b003-571c-900e-2cf4c502a3b9",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "fe126b87922ff8049c4b19d6588324a3bb4874020b943e86de176445ebe7c7b9",
+        "to_ids": true,
+        "comment": "Related XWorm sample, same C2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4664d10e-b873-5d34-b72d-780b172241e3",
+        "type": "text",
+        "category": "Other",
+        "value": "70vLmgcqMEnUJOeL",
+        "to_ids": false,
+        "comment": "XWorm runtime mutex",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3e8f8179-2b60-5263-9199-41c1296c4110",
+        "type": "text",
+        "category": "Other",
+        "value": "bK5bLIZIB9durXZWd5PDkvR0hpNHk04+uqD7mNo2KtY=",
+        "to_ids": false,
+        "comment": "XWorm C2 AES traffic key",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6896ac3b-a389-5c71-8b42-caf6f9cb2595",
+        "type": "text",
+        "category": "Other",
+        "value": "%AppData%\\bin.exe",
+        "to_ids": false,
+        "comment": "XWorm install path (autorun persistence)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.001"
+      },
+      {
+        "name": "mitre-attack:T1204.002"
+      },
+      {
+        "name": "mitre-attack:T1036.008"
+      },
+      {
+        "name": "mitre-attack:T1055"
+      },
+      {
+        "name": "mitre-attack:T1547.001"
+      },
+      {
+        "name": "mitre-attack:T1053.005"
+      },
+      {
+        "name": "mitre-attack:T1562.001"
+      },
+      {
+        "name": "mitre-attack:T1059.001"
+      },
+      {
+        "name": "mitre-attack:T1091"
+      },
+      {
+        "name": "mitre-attack:T1539"
+      },
+      {
+        "name": "mitre-attack:T1497"
+      },
+      {
+        "name": "mitre-attack:T1573"
+      },
+      {
+        "name": "label:xworm"
+      },
+      {
+        "name": "label:rat"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:maritime-logistics"
+      }
+    ]
+  }
+}

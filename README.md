@@ -6,6 +6,50 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-07-06 — XWorm V7.1 — Spoofed-FESCO "Signed Contract" Logistics Phishing Campaign
+
+An inbound email honeypot gateway we operate captured a phishing email that spoofed the Russian sea carrier FESCO (PJSC VMTP, Vladivostok Commercial Sea Port), subject "Подписанный договор" ("signed contract"). The attachment `Contract9021_06_07_26.r11` is named as a RAR volume but is in fact a ZIP archive (magic `PK`) containing a single PE, `Contract9021_06_07_26.exe`, posing as the contract. The message failed SPF (real sender `89.108.121[.]15`, HELO `rpnmail.fmf.ru`; envelope-from `abersenyov@fesco.com` forged). Sandbox detonation extracted an XWorm V7.1 configuration: C2 `109.248.150[.]234:443`, AES traffic key, and mutex. A C2 pivot revealed an active campaign — 34 samples, all XWorm, all sharing one mutex and one AES key (a single operator/build), themed around maritime freight (bills of lading HBL/MBL, "pre-alert" shipping notices, contracts), with waves from 2026-06-18 onward.
+
+**Key findings:**
+- XWorm V7.1 .NET RAT delivered as a ZIP archive disguised with a `.r11` (fake RAR-volume) extension — evades naive extension- and archive-based filtering.
+- C2 `109.248.150[.]234:443` hosted on AS203557 (SIA RixHost / DATACLUB-NL, Netherlands); the box is a Windows Server 2019 with RDP/WinRM exposed. Tracked as an XWorm C2 in ThreatFox since 2026-06-18, yet AbuseIPDB reputation is 0/100 (under-reported).
+- Dedicated, single-tenant C2: all 34 pivoted samples are XWorm with an identical mutex (`70vLmgcqMEnUJOeL`) and AES key — one operator, no other malware families or web hosting on the IP.
+- Capabilities: process injection, AMSI enumeration, Windows Defender tampering via PowerShell, autorun persistence, Outlook/email/browser credential and cookie theft, USB propagation, and hardware-ID anti-sandbox checks.
+- Delivery evasion mirrored in a `.vbs`-in-ZIP variant that pulls a stager from `185.27.134[.]124`.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-07-06-xworm-fesco-logistics/Incident_Report_2026-07-06_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-07-06-xworm-fesco-logistics/Incident_Report_2026-07-06_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-07-06-xworm-fesco-logistics/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-07-06-xworm-fesco-logistics/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| C2 IP | `109.248.150[.]234` (XWorm, port 443; AS203557 SIA RixHost / DATACLUB-NL, NL) |
+| Stager IP | `185.27.134[.]124` (.vbs variant) |
+| Sender IP | `89.108.121[.]15` (spoofed-FESCO MTA, SPF Fail) |
+| ASN | `AS203557` (SIA RixHost / DATACLUB-NL) |
+| Email | `ABersenyov@fesco[.]com` (spoofed From) |
+| SHA256 | `37f7127bcae8388c61432dc2d46b0df36cb33690ebbc5b725b28b33dfb145d4b` (dropper EXE) |
+| MD5 | `5053320a66a5c4989c44a932a8720b7d` (dropper EXE) |
+| SHA256 | `e8e901194d86b29166d6028cc97d3b7559ecff413f20cd7b7f84601c2d9f2709` (ZIP-as-.r11 attachment) |
+| SHA256 | `f9183d461a9ef71e1a0a97ddef54f5a785c3d4fa1ac6cb979a82206a52037928` (config/payload) |
+| SHA256 | `7776706d26fb2dfd7cb96910810bb4c3a02b343a228035a0ca4db3ccf8e4d26a` (related, same C2) |
+| SHA256 | `d4bc7db58a0b6207d2d24336833ae73a8cac77bf9f6bfe68ad1c33b52f990d0d` (related, same C2) |
+| SHA256 | `6bdd98cecb7ecf8240b8fd57497a952dd2850075339b3932f4e2c2285dda00c6` (related, same C2) |
+| SHA256 | `c8c385c10b1586728318f43b9dcafecfd46d8d6000984fe489bb1d219ea8b4f9` (related, same C2) |
+| SHA256 | `70c2fe27f67d5bd45f18c826a1dc1f852fa86b2de8271151a7b8c4d6d58f34d7` (related, same C2) |
+| SHA256 | `fe126b87922ff8049c4b19d6588324a3bb4874020b943e86de176445ebe7c7b9` (related, same C2) |
+| Mutex | `70vLmgcqMEnUJOeL` |
+| AES key | `bK5bLIZIB9durXZWd5PDkvR0hpNHk04+uqD7mNo2KtY=` (C2 traffic) |
+| Install | `%AppData%\bin.exe` (autorun persistence) |
+
+**MITRE ATT&CK:** T1566.001, T1204.002, T1036.008, T1055, T1547.001, T1053.005, T1562.001, T1059.001, T1091, T1539, T1497, T1573
+
+---
+
 ### 2026-06-09 — Honeypot Fleet: Monthly Threat Report, May 2026
 
 Over May 2026 our distributed honeypot sensors (Germany, the United States and Russia) recorded roughly 911,000 attack events across SSH, multi-protocol exploitation, Docker, LLM, MikroTik and Kubernetes surfaces. The headline development is the continued maturation of attacks against self-hosted LLM inference endpoints (Ollama, llama.cpp) — now extending beyond compute theft into SSRF-based theft of cloud credentials. Other notable activity includes ongoing SSH targeting of Solana validators, multi-architecture Mirai/Gafgyt droppers, a dominant WannaCry/SMB stream in captured malware, and the first ICS interactions (IEC-104 OLTC commands) against a newly deployed substation decoy.

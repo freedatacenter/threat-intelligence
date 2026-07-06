@@ -1,0 +1,1401 @@
+{
+  "type": "bundle",
+  "id": "bundle--758be56e-fcd2-568b-9ccc-56b9fbf2e3ba",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--7ab18c7a-2059-5c08-8426-e51129a03375",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "XWorm V7.1 — spoofed-FESCO 'signed contract' logistics phishing campaign",
+      "published": "2026-07-06T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--5fd0c6f5-f19c-5293-ab5e-72ce2642b747",
+        "indicator--860a4a9d-1f7b-5d70-81a1-b7e017c4f99a",
+        "indicator--2a167b5d-da19-5005-8799-57c58345ddca",
+        "indicator--63a1cf9e-a411-5dc8-8ee6-b1b6ddec68f9",
+        "indicator--9b0e44a6-8bca-5dcd-9b8c-ee9470aec92f",
+        "indicator--345b7c61-fc84-5d38-a5f2-747afad1a757",
+        "indicator--e53e203e-b0cd-5d4d-acc5-146344bfb9f0",
+        "indicator--d9bae445-79d4-5d68-9b4e-5cc3fca7ac61",
+        "indicator--c05860c5-669a-5e12-8741-1fa016af0445",
+        "indicator--92cf3f99-f9b6-5c89-ae76-19228f7d8a9b",
+        "indicator--cb697ccd-79b7-5225-a2c1-4d0f39e08bf6",
+        "indicator--fd12cf2a-17b2-513a-95e7-8c0ad035f474",
+        "indicator--2aa5cdb9-f662-52f2-a6c3-9d31d4796523",
+        "indicator--33efc919-4a52-55eb-93cc-8bfa82e08bbb",
+        "indicator--c6ea0ee4-8963-545d-a9f0-b7549f5c5e91",
+        "indicator--65873201-c6b0-5ba2-a677-32deb69efc28",
+        "indicator--a7741137-4591-543f-9726-e193c9bf8269",
+        "indicator--df823cef-f963-53eb-b2f8-8b812d668f87"
+      ],
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5fd0c6f5-f19c-5293-ab5e-72ce2642b747",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 109.248.150.234",
+      "description": "XWorm C2 (port 443); AS203557 SIA RixHost / DATACLUB-NL, NL; ThreatFox XWorm since 2026-06-18",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '109.248.150.234']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--860a4a9d-1f7b-5d70-81a1-b7e017c4f99a",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 185.27.134.124",
+      "description": "Stager/download host pulled by the .vbs variant (same campaign)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '185.27.134.124']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2a167b5d-da19-5005-8799-57c58345ddca",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 89.108.121.15",
+      "description": "Spoofed-FESCO sending MTA (HELO rpnmail.fmf.ru); SPF Fail",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '89.108.121.15']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--63a1cf9e-a411-5dc8-8ee6-b1b6ddec68f9",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS203557",
+      "description": "SIA RixHost / DATACLUB-NL — C2 hosting (Windows Server 2019)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 203557]",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9b0e44a6-8bca-5dcd-9b8c-ee9470aec92f",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: ABersenyov@fesco.com",
+      "description": "Spoofed From (FESCO/VMTP impersonation), SPF Fail",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'ABersenyov@fesco.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--345b7c61-fc84-5d38-a5f2-747afad1a757",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 37f7127bcae8388c61432dc2d46b0df36cb33690ebbc5b725b28b33dfb145d4b",
+      "description": "XWorm dropper EXE (Contract9021_06_07_26.exe)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '37f7127bcae8388c61432dc2d46b0df36cb33690ebbc5b725b28b33dfb145d4b']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e53e203e-b0cd-5d4d-acc5-146344bfb9f0",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "MD5: 5053320a66a5c4989c44a932a8720b7d",
+      "description": "XWorm dropper EXE (MD5)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.MD5 = '5053320a66a5c4989c44a932a8720b7d']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d9bae445-79d4-5d68-9b4e-5cc3fca7ac61",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: e8e901194d86b29166d6028cc97d3b7559ecff413f20cd7b7f84601c2d9f2709",
+      "description": "Email attachment — ZIP disguised as .r11 (Contract9021_06_07_26.r11)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'e8e901194d86b29166d6028cc97d3b7559ecff413f20cd7b7f84601c2d9f2709']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c05860c5-669a-5e12-8741-1fa016af0445",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: f9183d461a9ef71e1a0a97ddef54f5a785c3d4fa1ac6cb979a82206a52037928",
+      "description": "XWorm config/payload (YARA match on process dump)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'f9183d461a9ef71e1a0a97ddef54f5a785c3d4fa1ac6cb979a82206a52037928']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--92cf3f99-f9b6-5c89-ae76-19228f7d8a9b",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 7776706d26fb2dfd7cb96910810bb4c3a02b343a228035a0ca4db3ccf8e4d26a",
+      "description": "Related XWorm sample, same C2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '7776706d26fb2dfd7cb96910810bb4c3a02b343a228035a0ca4db3ccf8e4d26a']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cb697ccd-79b7-5225-a2c1-4d0f39e08bf6",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: d4bc7db58a0b6207d2d24336833ae73a8cac77bf9f6bfe68ad1c33b52f990d0d",
+      "description": "Related XWorm sample, same C2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'd4bc7db58a0b6207d2d24336833ae73a8cac77bf9f6bfe68ad1c33b52f990d0d']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fd12cf2a-17b2-513a-95e7-8c0ad035f474",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 6bdd98cecb7ecf8240b8fd57497a952dd2850075339b3932f4e2c2285dda00c6",
+      "description": "Related XWorm sample, same C2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '6bdd98cecb7ecf8240b8fd57497a952dd2850075339b3932f4e2c2285dda00c6']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2aa5cdb9-f662-52f2-a6c3-9d31d4796523",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: c8c385c10b1586728318f43b9dcafecfd46d8d6000984fe489bb1d219ea8b4f9",
+      "description": "Related XWorm sample, same C2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'c8c385c10b1586728318f43b9dcafecfd46d8d6000984fe489bb1d219ea8b4f9']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--33efc919-4a52-55eb-93cc-8bfa82e08bbb",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 70c2fe27f67d5bd45f18c826a1dc1f852fa86b2de8271151a7b8c4d6d58f34d7",
+      "description": "Related XWorm sample, same C2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '70c2fe27f67d5bd45f18c826a1dc1f852fa86b2de8271151a7b8c4d6d58f34d7']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c6ea0ee4-8963-545d-a9f0-b7549f5c5e91",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: fe126b87922ff8049c4b19d6588324a3bb4874020b943e86de176445ebe7c7b9",
+      "description": "Related XWorm sample, same C2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'fe126b87922ff8049c4b19d6588324a3bb4874020b943e86de176445ebe7c7b9']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--65873201-c6b0-5ba2-a677-32deb69efc28",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 70vLmgcqMEnUJOeL",
+      "description": "XWorm runtime mutex",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '70vLmgcqMEnUJOeL']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a7741137-4591-543f-9726-e193c9bf8269",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: bK5bLIZIB9durXZWd5PDkvR0hpNHk04+uqD7mNo2KtY=",
+      "description": "XWorm C2 AES traffic key",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'bK5bLIZIB9durXZWd5PDkvR0hpNHk04+uqD7mNo2KtY=']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--df823cef-f963-53eb-b2f8-8b812d668f87",
+      "created": "2026-07-06T00:00:00Z",
+      "modified": "2026-07-06T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: %AppData%\\bin.exe",
+      "description": "XWorm install path (autorun persistence)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '%AppData%\\bin.exe']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-06T00:00:00Z",
+      "labels": [
+        "xworm",
+        "rat",
+        "phishing",
+        "maritime-logistics"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1091"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    }
+  ]
+}
