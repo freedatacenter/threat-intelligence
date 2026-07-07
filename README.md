@@ -6,6 +6,46 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-07-07 — Honeypot Fleet: Monthly Threat Report, June 2026
+
+Over June 2026 our distributed honeypot sensors (Germany, the United States and Russia) recorded roughly 870,000 attack sessions/requests across SSH, multi-protocol exploitation, Docker, LLM, MikroTik and Kubernetes surfaces. The headline development is a self-propagating Docker-API worm performing container-escape to the host: Docker-surface volume grew ~28× month-over-month (~4,300 → ~119,000 events), driven by a single operator. Captured malware also shifted — May's WannaCry/SMB (PE32 DLL) dominance gave way to almost entirely ELF SSH-worms (Panchan, Go SSH-worm, Discord-C2, Mirai/Gafgyt). Solana validator targeting and LLM-endpoint abuse continue, and an IEC-104 (ICS/OT) decoy saw steady reconnaissance but zero external control commands.
+
+**Key findings:**
+- **Docker-API worm with host escape** (headline): one operator `45[.]198[.]224[.]5` (AS215925 VPSVAULT.HOST) drove 104,299 of 118,909 Docker requests; the worm creates containers that mount the host filesystem and escape via `chroot /host sh` (T1611), then fetches a second-stage payload. A dedicated technical report follows separately.
+- **Malware stream shifted to ELF SSH-worms**: 70 unique samples, almost all ELF (Panchan, Go SSH-worm, Discord-C2, Mirai/Gafgyt) vs May's WannaCry PE32 DLLs; exactly one PE32+ sample; ClamAV detected zero of 70.
+- **SSH brute-force up to 497,929 sessions**; Solana-validator credential targeting continues (`sol`/`solana`/`solv` in dictionaries).
+- **LLM-endpoint abuse persists** (16,729 events): scanning, inference/compute theft, and attempts to proxy paid cloud models through the decoy; scanning tool shifted to `node-fetch`.
+- **IEC-104 (ICS/OT) reconnaissance is routine but hands-off**: 758 connects + 67 General Interrogations from 267 unique cloud-scanner IPs, zero external control commands.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-07-07-honeypot-monthly-june/Incident_Report_2026-07-07_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-07-07-honeypot-monthly-june/Incident_Report_2026-07-07_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-07-07-honeypot-monthly-june/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-07-07-honeypot-monthly-june/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| Docker-worm operator | `45[.]198[.]224[.]5` (AS215925 VPSVAULT.HOST LTD) |
+| Dropper | `45[.]142[.]142[.]140` (`:8443/dropper_x86`) |
+| Dropper | `192[.]142[.]28[.]77` (`/bachekuni/ohshit.*`, multi-arch) |
+| Dropper | `51[.]158[.]248[.]122` (`:8517/*`, multi-arch + loader) |
+| Dropper | `89[.]19[.]209[.]214` (secondary wget-ping) |
+| Domain | `202604157[.]xyz` (`/snh5ye.sh` loader) |
+| LLM-abuse source | `141[.]11[.]1[.]183` |
+| SSH bruteforce | `45[.]148[.]10[.]183`, `45[.]156[.]87[.]254`, `45[.]148[.]10[.]240`, `2[.]57[.]122[.]177` |
+| Botnet C2 | `217[.]60[.]195[.]113` (AE), `14[.]46[.]136[.]77` (KR), `213[.]108[.]21[.]95` (NL, Aeza) |
+| SHA256 | `f9ec1b33dfc61dad616223f2eef5a80d3b9b9165e9035b574eb436b34a78ee8e` (Mirai ELF32) |
+| SHA256 | `21811956167f72dcde22d8c16857cb63e0026c949dd1fcbb1f42d3943f5997dd` (Panchan SSH-worm ELF64) |
+| SHA256 | `4a75c5d3fade1815d3f14d4da775111370d769cc48284ea78a6314c1f717b903` (MAL_ELF_Xlogin) |
+| User-Agent | `node-fetch/1.0 (+https://github.com/bitinn/node-fetch)` (LLM scanner) |
+| Cmd pattern | `chroot /host sh -c` (Docker escape-to-host) |
+
+**MITRE ATT&CK:** T1595.002, T1110, T1046, T1190, T1610, T1611, T1496, T1552.005, T0846, T0888
+
+---
+
 ### 2026-07-06 — XWorm V7.1 — Spoofed-FESCO "Signed Contract" Logistics Phishing Campaign
 
 An inbound email honeypot gateway we operate captured a phishing email that spoofed the Russian sea carrier FESCO (PJSC VMTP, Vladivostok Commercial Sea Port), subject "Подписанный договор" ("signed contract"). The attachment `Contract9021_06_07_26.r11` is named as a RAR volume but is in fact a ZIP archive (magic `PK`) containing a single PE, `Contract9021_06_07_26.exe`, posing as the contract. The message failed SPF (real sender `89.108.121[.]15`, HELO `rpnmail.fmf.ru`; envelope-from `abersenyov@fesco.com` forged). Sandbox detonation extracted an XWorm V7.1 configuration: C2 `109.248.150[.]234:443`, AES traffic key, and mutex. A C2 pivot revealed an active campaign — 34 samples, all XWorm, all sharing one mutex and one AES key (a single operator/build), themed around maritime freight (bills of lading HBL/MBL, "pre-alert" shipping notices, contracts), with waves from 2026-06-18 onward.
@@ -52,14 +92,14 @@ An inbound email honeypot gateway we operate captured a phishing email that spoo
 
 ### 2026-06-09 — Honeypot Fleet: Monthly Threat Report, May 2026
 
-Over May 2026 our distributed honeypot sensors (Germany, the United States and Russia) recorded roughly 911,000 attack events across SSH, multi-protocol exploitation, Docker, LLM, MikroTik and Kubernetes surfaces. The headline development is the continued maturation of attacks against self-hosted LLM inference endpoints (Ollama, llama.cpp) — now extending beyond compute theft into SSRF-based theft of cloud credentials. Other notable activity includes ongoing SSH targeting of Solana validators, multi-architecture Mirai/Gafgyt droppers, a dominant WannaCry/SMB stream in captured malware, and the first ICS interactions (IEC-104 OLTC commands) against a newly deployed substation decoy.
+Over May 2026 our distributed honeypot sensors (Germany, the United States and Russia) recorded roughly 911,000 attack events across SSH, multi-protocol exploitation, Docker, LLM, MikroTik and Kubernetes surfaces. The headline development is the continued maturation of attacks against self-hosted LLM inference endpoints (Ollama, llama.cpp) — now extending beyond compute theft into SSRF-based theft of cloud credentials. Other notable activity includes ongoing SSH targeting of Solana validators, multi-architecture Mirai/Gafgyt droppers, a dominant WannaCry/SMB stream in captured malware, and the first IEC-104 (ICS/OT) reconnaissance against a newly deployed protocol decoy.
 
 **Key findings:**
 - Attacks on LLM inference endpoints (~75,300 requests): ~95% scanning, ~3.7% inference/compute theft, and — new this month — ~0.5% SSRF pivots toward cloud metadata (`169.254.169.254`) for IAM credential theft. Persistent operator `203[.]159[.]90[.]152` (AS210558, Stark-linked per open sources) active across March–May.
 - Solana validator targeting via SSH: dictionaries carry `sol`/`solana`/`solv` usernames and matching passwords.
 - Multi-architecture Mirai/Gafgyt droppers: 85 downloads, 33 unique SHA-256 from four primary dropper servers; arch-selection fingerprint `/bin/./uname -s -v -n -r -m` (578×).
 - Captured malware (126 unique samples, all malicious): ~85 are PE32 WannaCry/EternalBlue DLLs; ClamAV produced zero detections — current stream caught only by YARA/imphash.
-- ICS substation decoy (IEC-104), preliminary: 205 events including 84 connects, 62 on-load tap-changer (OLTC) operations and 28 general interrogations.
+- IEC-104 (ICS/OT) protocol decoy, preliminary: external activity was reconnaissance only (connects and general interrogations); no attacker-issued control commands were observed.
 
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-06-09-honeypot-monthly-may/Incident_Report_2026-06-09_EN.pdf)

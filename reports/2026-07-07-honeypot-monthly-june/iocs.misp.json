@@ -1,0 +1,275 @@
+{
+  "Event": {
+    "uuid": "92acd54a-f7f0-51ff-9691-781fc9c2c773",
+    "info": "[TLP:CLEAR] Honeypot Fleet: Monthly Threat Report, June 2026",
+    "date": "2026-07-07",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "ef35d9a5-584b-5b9a-ac6a-32251406fa93",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.198.224.5",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (88% of Docker traffic), AS215925 VPSVAULT.HOST LTD",
+        "distribution": "5"
+      },
+      {
+        "uuid": "17a974f3-e0d5-5faa-af92-0cb43a5d9ba4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.142.142.140",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt dropper (:8443/dropper_x86)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a1a0913c-f0de-5a9e-8c79-e2f6f1685086",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "192.142.28.77",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt dropper (/bachekuni/ohshit.*, full multi-arch)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "963c8a42-889c-58b3-a09a-4eec9f8f500b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "51.158.248.122",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt dropper (:8517/*, multi-arch + loader)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "988d6a81-e296-5a2e-b8d0-d06a8c4ff70e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "89.19.209.214",
+        "to_ids": true,
+        "comment": "Secondary dropper-ping (cowrie wget)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1b15b1c2-1eca-5ef7-847c-5aac34e5a121",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "202604157.xyz",
+        "to_ids": true,
+        "comment": "Shell-loader host (/snh5ye.sh)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "24c03fbc-90d5-5b7f-8995-629b73cb215c",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "141.11.1.183",
+        "to_ids": true,
+        "comment": "Top LLM-abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "90358e9c-c10f-56cc-8a15-5bae19869010",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "198.244.216.44",
+        "to_ids": true,
+        "comment": "LLM-abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2070244a-1abe-5fc9-9b47-02ee494e936a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "167.254.240.29",
+        "to_ids": true,
+        "comment": "LLM-abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8adbd73c-7dca-5afa-aafd-8f0dd0040f71",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.148.10.183",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9d0d2b06-ae16-5857-8f50-15966573447b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.156.87.254",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source (cluster carried from May)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fa6869ac-b740-5985-a7fd-270de37295b5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.148.10.240",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "de270dc0-b581-5e52-8fe8-992932cdbadd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "2.57.122.177",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f85dad4a-7a5e-5d1f-b3f8-45350871a7ca",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "217.60.195.113",
+        "to_ids": true,
+        "comment": "Botnet C2, AS209373, AE",
+        "distribution": "5"
+      },
+      {
+        "uuid": "711a06b9-8767-5433-91c4-36f87785fc55",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "14.46.136.77",
+        "to_ids": true,
+        "comment": "Botnet C2, AS4766, KR (carried over from May)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7104fd7a-03c3-5726-9b41-b52e2d1e48c5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "213.108.21.95",
+        "to_ids": true,
+        "comment": "Botnet C2, AS210644 Aeza (sanctioned), NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "777e0c56-803b-597f-b676-e2a5fd617823",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f9ec1b33dfc61dad616223f2eef5a80d3b9b9165e9035b574eb436b34a78ee8e",
+        "to_ids": true,
+        "comment": "Mirai_Botnet_Malware ELF32 MSB (cowrie download)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "db7fbd84-61c4-5044-8e70-7be179cd3b51",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "9ad88e310633406c46aff5b7130ca6a2a3cdb0d70781001838e50a9f5f35e415",
+        "to_ids": true,
+        "comment": "Mirai_Botnet_Malware ELF32 LSB",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0cb8aaa9-db40-5d00-ac15-72487153f63e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "4a75c5d3fade1815d3f14d4da775111370d769cc48284ea78a6314c1f717b903",
+        "to_ids": true,
+        "comment": "MAL_ELF_Xlogin_Nov24_1 ELF32 LSB",
+        "distribution": "5"
+      },
+      {
+        "uuid": "61b43eec-e413-5171-be25-9e03c9c48f27",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "dd09d9bcf29f189e60f1a2a582f659260619a7a7e51c9ebd90f47f7780244ae4",
+        "to_ids": true,
+        "comment": "MAL_ARM_LNX_Mirai (UPX) ELF32 LSB",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3db0799b-2f1c-5253-9627-426b60c49ca0",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "21811956167f72dcde22d8c16857cb63e0026c949dd1fcbb1f42d3943f5997dd",
+        "to_ids": true,
+        "comment": "Panchan_SSHWorm_Go ELF64",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d220077a-db78-50f7-b8d5-438ba72ba442",
+        "type": "text",
+        "category": "Other",
+        "value": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+        "to_ids": false,
+        "comment": "LLM scanner user-agent (June top)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "667b9e9d-80ba-5fbc-b730-e1a835c6a26c",
+        "type": "text",
+        "category": "Other",
+        "value": "EchelonGraph-ShadowAIRadar-Verifier/1.0",
+        "to_ids": false,
+        "comment": "Commercial AI-asset scanner user-agent",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5cf12bcb-0484-5efd-b3bc-5ef50d1dc7c1",
+        "type": "text",
+        "category": "Other",
+        "value": "chroot /host sh -c",
+        "to_ids": false,
+        "comment": "Docker container-escape-to-host command pattern",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1595.002"
+      },
+      {
+        "name": "mitre-attack:T1110"
+      },
+      {
+        "name": "mitre-attack:T1046"
+      },
+      {
+        "name": "mitre-attack:T1190"
+      },
+      {
+        "name": "mitre-attack:T1610"
+      },
+      {
+        "name": "mitre-attack:T1611"
+      },
+      {
+        "name": "mitre-attack:T1496"
+      },
+      {
+        "name": "mitre-attack:T1552.005"
+      },
+      {
+        "name": "mitre-attack:T0846"
+      },
+      {
+        "name": "mitre-attack:T0888"
+      },
+      {
+        "name": "label:honeypot"
+      },
+      {
+        "name": "label:threat-intelligence"
+      },
+      {
+        "name": "label:monthly-report"
+      }
+    ]
+  }
+}
