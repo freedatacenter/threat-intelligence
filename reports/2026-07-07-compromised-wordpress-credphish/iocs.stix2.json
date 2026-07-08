@@ -1,0 +1,310 @@
+{
+  "type": "bundle",
+  "id": "bundle--b1ce3d2b-c4ac-5bd6-ad22-dd8ed1027c48",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--b1a56880-2fb7-5c68-a44a-340a697df3a0",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Credential-Harvesting Campaign on Compromised WordPress Sites",
+      "published": "2026-07-07T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--037e601f-cc9b-54a4-b882-81775f652f13",
+        "indicator--2a8c9324-7703-5090-af77-13104b27a3d2",
+        "indicator--3cf112ee-7460-5b07-af13-a5b00ab7f22b",
+        "indicator--6abb9dcf-d6ad-57af-a72a-29ad9a9128a0",
+        "indicator--1f627b6b-fe7b-5cd2-80f9-dc3362482c34",
+        "indicator--dd6eec5e-dd0c-54bb-8d46-75a9773ca930",
+        "indicator--aedc1a73-b499-5315-bf54-881023f12982"
+      ],
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--037e601f-cc9b-54a4-b882-81775f652f13",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 78.130.245.134",
+      "description": "Cooolbox AD, Bulgaria, residential; AbuseIPDB 47. Wave 1 sender (Amex-KYC lure, 2026-07-06)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '78.130.245.134']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2a8c9324-7703-5090-af77-13104b27a3d2",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 77.83.39.10",
+      "description": "Lanedonet/Pitline Ltd, Netherlands, datacenter; AbuseIPDB 100. Wave 2 sender (own-domain-spoof lure, 2026-07-07)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '77.83.39.10']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3cf112ee-7460-5b07-af13-a5b00ab7f22b",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://taylorfoothealth.co.uk/wp-includes/paymm.html",
+      "description": "Credential-harvest page on compromised WordPress (victim site)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://taylorfoothealth.co.uk/wp-includes/paymm.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6abb9dcf-d6ad-57af-a72a-29ad9a9128a0",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://habitatcyprus.com/wp-includes/build/",
+      "description": "Credential-harvest page on compromised WordPress (victim site)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://habitatcyprus.com/wp-includes/build/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1f627b6b-fe7b-5cd2-80f9-dc3362482c34",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://lavilifescience.com/authn/mail/login.html",
+      "description": "Credential-harvest page on compromised site (victim); via google.com/url open-redirect",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://lavilifescience.com/authn/mail/login.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dd6eec5e-dd0c-54bb-8d46-75a9773ca930",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://submit-form.com/4FJePSjAq",
+      "description": "Formspark form abused as credential exfiltration endpoint (kit POSTs stolen JSON here); take-down target",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://submit-form.com/4FJePSjAq']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aedc1a73-b499-5315-bf54-881023f12982",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://t.co/W8S9YV2vYD",
+      "description": "Redirect obfuscation (t.co shortener) to wave-1 payload",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://t.co/W8S9YV2vYD']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    }
+  ]
+}

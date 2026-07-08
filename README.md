@@ -6,6 +6,39 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-07-07 — Credential-Harvesting Campaign on Compromised WordPress Sites
+
+Two credential-phishing waves (6–7 July 2026) delivered to corporate mailboxes at a monitored domain, sharing a common phishing kit. Both spoof the sender (an American Express brand lure, then the target's own domain-admin address), fail SPF, and hide the payload behind trusted redirects (t.co, google.com/url). The retrieved payload is a static "Webmail" credential harvester that exfiltrates stolen credentials to an abused Formspark form; it double-prompts to defeat typos and is hosted on compromised legitimate WordPress sites. Distinct sending infrastructure per wave points to a shared kit / PhaaS rather than a single operator.
+
+**Key findings:**
+- Static webmail credential harvester (not AiTM); page obfuscated via `document.write(unescape())`.
+- Credentials exfiltrated via a `fetch` POST to an abused Formspark form (`submit-form[.]com/4FJePSjAq`) — the priority take-down target.
+- Credential pages hosted on compromised legitimate WordPress sites under `/wp-includes/` paths (the sites are themselves victims; block the URL, not the domain).
+- Redirect obfuscation via `t.co` and the `google.com/url` open-redirect.
+- Two waves with distinct sending infrastructure (BG residential, NL datacenter) — shared kit / PhaaS.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-07-07-compromised-wordpress-credphish/Incident_Report_2026-07-07_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-07-07-compromised-wordpress-credphish/Incident_Report_2026-07-07_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-07-07-compromised-wordpress-credphish/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-07-07-compromised-wordpress-credphish/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| IP | `78[.]130[.]245[.]134` (Cooolbox AD, Bulgaria, residential; AbuseIPDB 47) |
+| IP | `77[.]83[.]39[.]10` (Lanedonet/Pitline, Netherlands, datacenter; AbuseIPDB 100) |
+| URL | `hxxps://taylorfoothealth[.]co[.]uk/wp-includes/paymm[.]html` (compromised WordPress) |
+| URL | `hxxps://habitatcyprus[.]com/wp-includes/build/` (compromised WordPress) |
+| URL | `hxxps://lavilifescience[.]com/authn/mail/login[.]html` (compromised site) |
+| URL (exfil) | `hxxps://submit-form[.]com/4FJePSjAq` (Formspark credential drain — take-down target) |
+| Redirect | `hxxps://t[.]co/W8S9YV2vYD` |
+
+**MITRE ATT&CK:** T1566.002, T1656, T1584.004
+
+---
+
 ### 2026-07-07 — Honeypot Fleet: Monthly Threat Report, June 2026
 
 Over June 2026 our distributed honeypot sensors (Germany, the United States and Russia) recorded roughly 870,000 attack sessions/requests across SSH, multi-protocol exploitation, Docker, LLM, MikroTik and Kubernetes surfaces. The headline development is a self-propagating Docker-API worm performing container-escape to the host: Docker-surface volume grew ~28× month-over-month (~4,300 → ~119,000 events), driven by a single operator. Captured malware also shifted — May's WannaCry/SMB (PE32 DLL) dominance gave way to almost entirely ELF SSH-worms (Panchan, Go SSH-worm, Discord-C2, Mirai/Gafgyt). Solana validator targeting and LLM-endpoint abuse continue, and an IEC-104 (ICS/OT) decoy saw steady reconnaissance but zero external control commands.

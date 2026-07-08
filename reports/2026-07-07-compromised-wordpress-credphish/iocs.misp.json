@@ -1,0 +1,104 @@
+{
+  "Event": {
+    "uuid": "d29fa047-22df-577f-866e-abf2fd05916b",
+    "info": "[TLP:CLEAR] Credential-Harvesting Campaign on Compromised WordPress Sites",
+    "date": "2026-07-07",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "dba9666d-1c61-5d69-b4eb-79f774de0727",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "78.130.245.134",
+        "to_ids": true,
+        "comment": "Cooolbox AD, Bulgaria, residential; AbuseIPDB 47. Wave 1 sender (Amex-KYC lure, 2026-07-06)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "34eee340-0812-5b4a-a007-dd7f6d19cd55",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.83.39.10",
+        "to_ids": true,
+        "comment": "Lanedonet/Pitline Ltd, Netherlands, datacenter; AbuseIPDB 100. Wave 2 sender (own-domain-spoof lure, 2026-07-07)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9fc56e2f-54db-50d5-adf5-5c572aca9751",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://taylorfoothealth.co.uk/wp-includes/paymm.html",
+        "to_ids": true,
+        "comment": "Credential-harvest page on compromised WordPress (victim site)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "53b3bcff-f114-5a14-8a51-5d3b29758ed0",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://habitatcyprus.com/wp-includes/build/",
+        "to_ids": true,
+        "comment": "Credential-harvest page on compromised WordPress (victim site)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a049ddf-0829-5459-a5c5-d12996959a46",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://lavilifescience.com/authn/mail/login.html",
+        "to_ids": true,
+        "comment": "Credential-harvest page on compromised site (victim); via google.com/url open-redirect",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5f3d86a1-e73e-5458-b439-e361127312f0",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://submit-form.com/4FJePSjAq",
+        "to_ids": true,
+        "comment": "Formspark form abused as credential exfiltration endpoint (kit POSTs stolen JSON here); take-down target",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ef31f55d-c452-589f-ab76-13613b6804d7",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://t.co/W8S9YV2vYD",
+        "to_ids": true,
+        "comment": "Redirect obfuscation (t.co shortener) to wave-1 payload",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "mitre-attack:T1584.004"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:credential-harvesting"
+      },
+      {
+        "name": "label:compromised-wordpress"
+      },
+      {
+        "name": "label:phaas"
+      }
+    ]
+  }
+}
