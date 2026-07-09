@@ -6,16 +6,16 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
-### 2026-07-07 — Credential-Harvesting Campaign on Compromised WordPress Sites
+### 2026-07-07 — Credential Phishing: Polymorphic Kit, Multi-Channel Exfiltration, Bulletproof Infrastructure
 
-Two credential-phishing waves (6–7 July 2026) delivered to corporate mailboxes at a monitored domain, sharing a common phishing kit. Both spoof the sender (an American Express brand lure, then the target's own domain-admin address), fail SPF, and hide the payload behind trusted redirects (t.co, google.com/url). The retrieved payload is a static "Webmail" credential harvester that exfiltrates stolen credentials to an abused Formspark form; it double-prompts to defeat typos and is hosted on compromised legitimate WordPress sites. Distinct sending infrastructure per wave points to a shared kit / PhaaS rather than a single operator.
+At least three phishing waves (6–9 July 2026) hit corporate mailboxes at a monitored domain, sharing a common phishing kit (PhaaS). Senders are spoofed (first an American Express brand lure, then the target's own domain-admin address) and fail SPF; payload links are masked behind trusted redirects (t.co, google.com/url, is.gd). The retrieved payload is a static webmail credential harvester in at least two obfuscation variants. Critically, exfiltration is multi-channel and rotates between builds — three independent channels are confirmed (a Formspark form, a Telegram bot, and a PHP backend on a third-party domain) — so blocking one channel does not stop collection. Delivery for the later waves comes from the KPROHOST (AS214940) bulletproof-hosting cluster, which also uses Androxgh0st to compromise the sites hosting the pages.
 
 **Key findings:**
-- Static webmail credential harvester (not AiTM); page obfuscated via `document.write(unescape())`.
-- Credentials exfiltrated via a `fetch` POST to an abused Formspark form (`submit-form[.]com/4FJePSjAq`) — the priority take-down target.
-- Credential pages hosted on compromised legitimate WordPress sites under `/wp-includes/` paths (the sites are themselves victims; block the URL, not the domain).
-- Redirect obfuscation via `t.co` and the `google.com/url` open-redirect.
-- Two waves with distinct sending infrastructure (BG residential, NL datacenter) — shared kit / PhaaS.
+- **Multi-channel, rotating exfiltration** (key): stolen credentials go to a Formspark form (`submit-form[.]com/4FJePSjAq`, ≥3 rotating IDs), a Telegram bot (`MoneyMustbot`), and a PHP backend (`qilu-pharma[.]store/files/steph/rundcub/main[.]php`). All three must be closed at once.
+- **Polymorphic kit**: static webmail harvester with two obfuscation variants — `document.write(unescape())` and a base64 → `atob` → string-array-obfuscator → `document.write` cPanel/Roundcube clone.
+- **Credential pages on compromised legitimate sites** under paths like `/wp-includes/` (the sites are themselves victims; block the URL, not the domain). One site was compromised beyond a single path and served pages since 22 June; the original path later returned 404.
+- **Infrastructure**: wave 1 from a compromised MikroTik router; waves 2–3 from KPROHOST bulletproof hosting (AS214940, Spamhaus ASN-DROP). Sites compromised via Androxgh0st (CVE-2017-9841, CVE-2021-41773, CVE-2018-15133 — all in CISA KEV).
+- **Mass mailing**: a short link's prefill named a different, unrelated victim than the recipient — the same links are reused across targets.
 
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-07-07-compromised-wordpress-credphish/Incident_Report_2026-07-07_EN.pdf)
@@ -27,15 +27,20 @@ Two credential-phishing waves (6–7 July 2026) delivered to corporate mailboxes
 
 | Type | Value |
 |------|-------|
-| IP | `78[.]130[.]245[.]134` (Cooolbox AD, Bulgaria, residential; AbuseIPDB 47) |
-| IP | `77[.]83[.]39[.]10` (Lanedonet/Pitline, Netherlands, datacenter; AbuseIPDB 100) |
+| IP | `78[.]130[.]245[.]134` (compromised MikroTik, Bulgaria/Cooolbox; AbuseIPDB 47) — wave-1 sender |
+| IP | `77[.]83[.]39[.]10` (KPROHOST AS214940, bulletproof; AbuseIPDB 100) — wave 2–3 sender |
+| ASN | `AS214940` (KPROHOST LLC, US; Spamhaus ASN-DROP) |
 | URL | `hxxps://taylorfoothealth[.]co[.]uk/wp-includes/paymm[.]html` (compromised WordPress) |
-| URL | `hxxps://habitatcyprus[.]com/wp-includes/build/` (compromised WordPress) |
+| URL | `hxxps://habitatcyprus[.]com/wp-includes/build/` (compromised WordPress; path later 404) |
 | URL | `hxxps://lavilifescience[.]com/authn/mail/login[.]html` (compromised site) |
-| URL (exfil) | `hxxps://submit-form[.]com/4FJePSjAq` (Formspark credential drain — take-down target) |
-| Redirect | `hxxps://t[.]co/W8S9YV2vYD` |
+| URL | `hxxps://transtecexpress[.]com[.]br/sddcc/secure[.]html` (compromised site, wave-3 Roundcube clone) |
+| URL (exfil) | `hxxps://submit-form[.]com/4FJePSjAq` (Formspark, ≥3 rotating IDs — take-down target) |
+| URL (exfil) | `hxxps://qilu-pharma[.]store/files/steph/rundcub/main[.]php` (PHP credential backend — take-down target) |
+| Telegram | bot `MoneyMustbot` (direct credential exfil — report to Telegram) |
+| Host | `mxhdjr[.]com` (kit asset/staging host) |
+| Redirect | `hxxps://t[.]co/…`, `google[.]com/url?q=`, `hxxps://is[.]gd/…` (do not block wholesale) |
 
-**MITRE ATT&CK:** T1566.002, T1656, T1584.004
+**MITRE ATT&CK:** T1566.002, T1656, T1190, T1584.004
 
 ---
 

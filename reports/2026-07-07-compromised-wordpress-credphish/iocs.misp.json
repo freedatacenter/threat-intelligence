@@ -13,7 +13,7 @@
         "category": "Network activity",
         "value": "78.130.245.134",
         "to_ids": true,
-        "comment": "Cooolbox AD, Bulgaria, residential; AbuseIPDB 47. Wave 1 sender (Amex-KYC lure, 2026-07-06)",
+        "comment": "Compromised MikroTik, Bulgaria (Cooolbox); AbuseIPDB 47. Wave-1 sender (Amex lure, 2026-07-06)",
         "distribution": "5"
       },
       {
@@ -22,7 +22,16 @@
         "category": "Network activity",
         "value": "77.83.39.10",
         "to_ids": true,
-        "comment": "Lanedonet/Pitline Ltd, Netherlands, datacenter; AbuseIPDB 100. Wave 2 sender (own-domain-spoof lure, 2026-07-07)",
+        "comment": "KPROHOST AS214940 bulletproof (US); AbuseIPDB 100. Wave 2-3 sender (own-domain spoof, 2026-07-07/09)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0ce67d8a-03d6-56a5-ba71-dd62e9927bae",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS214940",
+        "to_ids": false,
+        "comment": "KPROHOST LLC (US, Frankfort KY); bulletproof, Spamhaus ASN-DROP; Androxgh0st site-compromise cluster",
         "distribution": "5"
       },
       {
@@ -31,7 +40,7 @@
         "category": "External analysis",
         "value": "https://taylorfoothealth.co.uk/wp-includes/paymm.html",
         "to_ids": true,
-        "comment": "Credential-harvest page on compromised WordPress (victim site)",
+        "comment": "Credential-harvest page (compromised WordPress, victim site)",
         "distribution": "5"
       },
       {
@@ -40,7 +49,7 @@
         "category": "External analysis",
         "value": "https://habitatcyprus.com/wp-includes/build/",
         "to_ids": true,
-        "comment": "Credential-harvest page on compromised WordPress (victim site)",
+        "comment": "Credential-harvest page (compromised WordPress; path later 404)",
         "distribution": "5"
       },
       {
@@ -49,7 +58,16 @@
         "category": "External analysis",
         "value": "https://lavilifescience.com/authn/mail/login.html",
         "to_ids": true,
-        "comment": "Credential-harvest page on compromised site (victim); via google.com/url open-redirect",
+        "comment": "Credential-harvest page (compromised site); via google.com/url open-redirect",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b76cc587-510c-538f-bcc5-57d1e6291843",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://transtecexpress.com.br/sddcc/secure.html",
+        "to_ids": true,
+        "comment": "Wave-3 credential-harvest page (Roundcube clone, compromised BR site)",
         "distribution": "5"
       },
       {
@@ -58,7 +76,25 @@
         "category": "External analysis",
         "value": "https://submit-form.com/4FJePSjAq",
         "to_ids": true,
-        "comment": "Formspark form abused as credential exfiltration endpoint (kit POSTs stolen JSON here); take-down target",
+        "comment": "Exfil: Formspark form (>=3 rotating IDs); take-down target",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2f8b5e5b-7c71-5f76-b244-931632f39bb6",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://qilu-pharma.store/files/steph/rundcub/main.php",
+        "to_ids": true,
+        "comment": "Exfil: PHP credential backend (wave-3); take-down target",
+        "distribution": "5"
+      },
+      {
+        "uuid": "50c13922-db5e-5a54-90cd-5c6a6d465b37",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mxhdjr.com",
+        "to_ids": true,
+        "comment": "Kit asset/staging host (webmailorange Roundcube-clone assets)",
         "distribution": "5"
       },
       {
@@ -67,7 +103,16 @@
         "category": "External analysis",
         "value": "https://t.co/W8S9YV2vYD",
         "to_ids": true,
-        "comment": "Redirect obfuscation (t.co shortener) to wave-1 payload",
+        "comment": "Redirect obfuscation (t.co) to wave-1 payload",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fa783d36-0ee3-56fa-87eb-2d44b0bb56ac",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://is.gd/k8Oh1p",
+        "to_ids": true,
+        "comment": "Redirect obfuscation (is.gd) to wave-3 payload",
         "distribution": "5"
       }
     ],

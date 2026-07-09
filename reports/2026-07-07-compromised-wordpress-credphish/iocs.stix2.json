@@ -27,11 +27,16 @@
       "object_refs": [
         "indicator--037e601f-cc9b-54a4-b882-81775f652f13",
         "indicator--2a8c9324-7703-5090-af77-13104b27a3d2",
+        "indicator--05dc0573-6bc4-5a98-a4de-cfb64f930256",
         "indicator--3cf112ee-7460-5b07-af13-a5b00ab7f22b",
         "indicator--6abb9dcf-d6ad-57af-a72a-29ad9a9128a0",
         "indicator--1f627b6b-fe7b-5cd2-80f9-dc3362482c34",
+        "indicator--26820498-df36-542b-af11-df52635c660b",
         "indicator--dd6eec5e-dd0c-54bb-8d46-75a9773ca930",
-        "indicator--aedc1a73-b499-5315-bf54-881023f12982"
+        "indicator--1b7da44e-a16f-50b9-9d7c-0fafcdef27f7",
+        "indicator--a439ed79-631b-5f40-bb1c-15ee71ef329b",
+        "indicator--aedc1a73-b499-5315-bf54-881023f12982",
+        "indicator--c4ef11a7-9803-5567-8e38-321f54735ce8"
       ],
       "labels": [
         "phishing",
@@ -62,7 +67,7 @@
       "modified": "2026-07-07T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "IP: 78.130.245.134",
-      "description": "Cooolbox AD, Bulgaria, residential; AbuseIPDB 47. Wave 1 sender (Amex-KYC lure, 2026-07-06)",
+      "description": "Compromised MikroTik, Bulgaria (Cooolbox); AbuseIPDB 47. Wave-1 sender (Amex lure, 2026-07-06)",
       "indicator_types": [
         "malicious-activity"
       ],
@@ -98,11 +103,47 @@
       "modified": "2026-07-07T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "IP: 77.83.39.10",
-      "description": "Lanedonet/Pitline Ltd, Netherlands, datacenter; AbuseIPDB 100. Wave 2 sender (own-domain-spoof lure, 2026-07-07)",
+      "description": "KPROHOST AS214940 bulletproof (US); AbuseIPDB 100. Wave 2-3 sender (own-domain spoof, 2026-07-07/09)",
       "indicator_types": [
         "malicious-activity"
       ],
       "pattern": "[ipv4-addr:value = '77.83.39.10']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--05dc0573-6bc4-5a98-a4de-cfb64f930256",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS214940",
+      "description": "KPROHOST LLC (US, Frankfort KY); bulletproof, Spamhaus ASN-DROP; Androxgh0st site-compromise cluster",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 214940]",
       "pattern_type": "stix",
       "valid_from": "2026-07-07T00:00:00Z",
       "labels": [
@@ -134,7 +175,7 @@
       "modified": "2026-07-07T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "URL: https://taylorfoothealth.co.uk/wp-includes/paymm.html",
-      "description": "Credential-harvest page on compromised WordPress (victim site)",
+      "description": "Credential-harvest page (compromised WordPress, victim site)",
       "indicator_types": [
         "malicious-activity"
       ],
@@ -170,7 +211,7 @@
       "modified": "2026-07-07T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "URL: https://habitatcyprus.com/wp-includes/build/",
-      "description": "Credential-harvest page on compromised WordPress (victim site)",
+      "description": "Credential-harvest page (compromised WordPress; path later 404)",
       "indicator_types": [
         "malicious-activity"
       ],
@@ -206,11 +247,47 @@
       "modified": "2026-07-07T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "URL: https://lavilifescience.com/authn/mail/login.html",
-      "description": "Credential-harvest page on compromised site (victim); via google.com/url open-redirect",
+      "description": "Credential-harvest page (compromised site); via google.com/url open-redirect",
       "indicator_types": [
         "malicious-activity"
       ],
       "pattern": "[url:value = 'https://lavilifescience.com/authn/mail/login.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--26820498-df36-542b-af11-df52635c660b",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://transtecexpress.com.br/sddcc/secure.html",
+      "description": "Wave-3 credential-harvest page (Roundcube clone, compromised BR site)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://transtecexpress.com.br/sddcc/secure.html']",
       "pattern_type": "stix",
       "valid_from": "2026-07-07T00:00:00Z",
       "labels": [
@@ -242,11 +319,83 @@
       "modified": "2026-07-07T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "URL: https://submit-form.com/4FJePSjAq",
-      "description": "Formspark form abused as credential exfiltration endpoint (kit POSTs stolen JSON here); take-down target",
+      "description": "Exfil: Formspark form (>=3 rotating IDs); take-down target",
       "indicator_types": [
         "malicious-activity"
       ],
       "pattern": "[url:value = 'https://submit-form.com/4FJePSjAq']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1b7da44e-a16f-50b9-9d7c-0fafcdef27f7",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://qilu-pharma.store/files/steph/rundcub/main.php",
+      "description": "Exfil: PHP credential backend (wave-3); take-down target",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://qilu-pharma.store/files/steph/rundcub/main.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a439ed79-631b-5f40-bb1c-15ee71ef329b",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: mxhdjr.com",
+      "description": "Kit asset/staging host (webmailorange Roundcube-clone assets)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'mxhdjr.com']",
       "pattern_type": "stix",
       "valid_from": "2026-07-07T00:00:00Z",
       "labels": [
@@ -278,11 +427,47 @@
       "modified": "2026-07-07T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "URL: https://t.co/W8S9YV2vYD",
-      "description": "Redirect obfuscation (t.co shortener) to wave-1 payload",
+      "description": "Redirect obfuscation (t.co) to wave-1 payload",
       "indicator_types": [
         "malicious-activity"
       ],
       "pattern": "[url:value = 'https://t.co/W8S9YV2vYD']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-07T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "compromised-wordpress",
+        "phaas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c4ef11a7-9803-5567-8e38-321f54735ce8",
+      "created": "2026-07-07T00:00:00Z",
+      "modified": "2026-07-07T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://is.gd/k8Oh1p",
+      "description": "Redirect obfuscation (is.gd) to wave-3 payload",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://is.gd/k8Oh1p']",
       "pattern_type": "stix",
       "valid_from": "2026-07-07T00:00:00Z",
       "labels": [
