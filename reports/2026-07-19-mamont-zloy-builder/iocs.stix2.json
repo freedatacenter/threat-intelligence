@@ -1,0 +1,1139 @@
+{
+  "type": "bundle",
+  "id": "bundle--fb17e578-5c37-5af6-94f4-d499b1779f5f",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--d32bdd0a-11a7-5183-bfb4-6b85388b200c",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "\"Zloy\": New Mamont Banking Trojan Infrastructure Posing as the \"MAX\" State Messenger",
+      "published": "2026-07-19T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--2ff0591c-18bf-5c28-82e4-9b374f836ee5",
+        "indicator--ad4d258c-04a9-5eed-97ac-503388adfc53",
+        "indicator--4fb2477b-f0bc-5944-8d22-2114d9b69535",
+        "indicator--1a79fce4-970a-5457-a43e-40f2a852a4e2",
+        "indicator--7008cb86-39a8-5223-b90e-638396f4e3fd",
+        "indicator--43fe2b68-429b-5d3c-a211-b8bbd2b95db0",
+        "indicator--8fc4f7b8-aa75-5795-acd4-daa553531ab5",
+        "indicator--9fd4b190-ee08-560d-8cf4-61f96a11e320",
+        "indicator--2987df16-fd19-5efc-b2d0-574c07e848b6",
+        "indicator--4ab0e1f0-fdeb-5e74-938f-69cf268c5b89",
+        "indicator--c7d33902-6b69-5268-8afd-b21e7e491e49",
+        "indicator--69d686c6-f14d-5191-967a-a753bd289e3f",
+        "indicator--4a32f980-b99e-57d5-b2e3-12f67265add1",
+        "indicator--f8207f43-6096-5a9e-9d1a-21e81b3ab236"
+      ],
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2ff0591c-18bf-5c28-82e4-9b374f836ee5",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: a30747b76e582410903566c8fd2e50c56cb469f267af99e847eced2040132328",
+      "description": "Max_video.apk lure (ru.k6owy6.gzqak2x); C2 2.27.22.130:8443; reverse-engineered by us",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'a30747b76e582410903566c8fd2e50c56cb469f267af99e847eced2040132328']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ad4d258c-04a9-5eed-97ac-503388adfc53",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: ff79b21c3c2199a8375dfcfea02819a7e525133fd2593a02da4ee098dc8540ef",
+      "description": "base.apk, same cluster; C2 31.76.10.34:8443 (VirusTotal communicating_files)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'ff79b21c3c2199a8375dfcfea02819a7e525133fd2593a02da4ee098dc8540ef']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4fb2477b-f0bc-5944-8d22-2114d9b69535",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 2be922ac1177689d3155fc2d1b9196facc790c520103b7280fe28066f7aac65f",
+      "description": "Another lure variant Max_video.apk (homoglyph spelling), same cluster",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '2be922ac1177689d3155fc2d1b9196facc790c520103b7280fe28066f7aac65f']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1a79fce4-970a-5457-a43e-40f2a852a4e2",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: ru.k6owy6.gzqak2x",
+      "description": "Android package name, analyzed build (team=001)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'ru.k6owy6.gzqak2x']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7008cb86-39a8-5223-b90e-638396f4e3fd",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: ru.mgpwm.ocz75i7",
+      "description": "Android package name, team=Bombo build (per public abuse-report source)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'ru.mgpwm.ocz75i7']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--43fe2b68-429b-5d3c-a211-b8bbd2b95db0",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 2.27.22.130",
+      "description": "C2 (ws+http, port 8443), PLAY2GO INTERNATIONAL LIMITED (DE); analyzed sample's C2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '2.27.22.130']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8fc4f7b8-aa75-5795-acd4-daa553531ab5",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 31.76.10.34",
+      "description": "C2 (ws+http, port 8443), PLAY2GO INTERNATIONAL LIMITED (DE); >=112 files associated on VirusTotal",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '31.76.10.34']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9fd4b190-ee08-560d-8cf4-61f96a11e320",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 94.156.237.16",
+      "description": "C2 (ws+http, port 8443), PLAY2GO INTERNATIONAL LIMITED (DE); named in public abuse report (team Bombo)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '94.156.237.16']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2987df16-fd19-5efc-b2d0-574c07e848b6",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS215439",
+      "description": "PLAY2GO-NET - PLAY2GO INTERNATIONAL LIMITED; hosts all 3 C2 IPs",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 215439]",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4ab0e1f0-fdeb-5e74-938f-69cf268c5b89",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: 2026rupolice.vercel.app",
+      "description": "Phishing landing (police-impersonation lure), explicit RU targeting, Vercel",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = '2026rupolice.vercel.app']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c7d33902-6b69-5268-8afd-b21e7e491e49",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: police2206work.vercel.app",
+      "description": "Phishing landing (police-impersonation lure), Vercel",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'police2206work.vercel.app']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--69d686c6-f14d-5191-967a-a753bd289e3f",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: policeonliine2026.vercel.app",
+      "description": "Phishing landing (police-impersonation lure, misspelled 'online'), Vercel",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'policeonliine2026.vercel.app']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4a32f980-b99e-57d5-b2e3-12f67265add1",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: policeonlaine2026.vercel.app",
+      "description": "Phishing landing (police-impersonation lure, alt spelling), Vercel",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'policeonlaine2026.vercel.app']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f8207f43-6096-5a9e-9d1a-21e81b3ab236",
+      "created": "2026-07-19T00:00:00Z",
+      "modified": "2026-07-19T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: policecontrol2026.vercel.app",
+      "description": "Phishing landing (police-impersonation lure), Vercel",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'policecontrol2026.vercel.app']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-19T00:00:00Z",
+      "labels": [
+        "malware",
+        "banking-trojan",
+        "android",
+        "telegram",
+        "mamont",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1481.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1541"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624"
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,41 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-07-19 — "Zloy": New Mamont Banking Trojan Infrastructure Posing as the "MAX" State Messenger
+
+A previously undocumented Android banking trojan sample was found disguised as a video file using Greek homoglyphs in its filename. Automated sandboxes could not attribute a malware family because the APK's ZIP container has a spoofed "strong encryption" flag on its manifest entry that breaks standard zip parsers while Android's own installer ignores it. Reverse engineering identified the sample as a new infrastructure cluster of the well-documented Russian Mamont Android banking trojan, built by a private, multi-tenant builder that brands itself internally as "zloy". This cluster shares no indicators with our previously published 15 March 2026 Mamont report ("accident photos" lure) — it is a separate, self-contained operation of the same malware family.
+
+**Key findings:**
+- Deliberate static-analysis evasion: a spoofed ZIP local-header "strong encryption" flag breaks apktool/standard zip libraries while the Android package parser (which trusts the central directory) installs the APK normally
+- Multi-tenant malware-as-a-service architecture: builds carry a "team" identifier; a public abuse report for a neighboring C2 IP on the same hosting confirms a second, independent tenant ("team Bombo", operator handle "Muertos 2.0") using the same builder and infrastructure
+- Explicit target list embedded in the manifest: 10 major Russian banks, the Gosuslugi government-services app, and messengers including Telegram, VK, Odnoklassniki, and MAX — the Russian state-backed messenger the lure itself impersonates
+- Full SMS/notification interception capability (default-SMS-app takeover, NotificationListenerService for banking push codes) plus a fake "create a PIN code" overlay screen for credential harvesting
+- Stolen data exfiltrated to 8 separate Telegram channels split by data type (SMS, push notifications, installed-app list, online status, etc.)
+- AES-256-GCM session-key protocol over WebSocket C2; 3 C2 IPs identified, all hosted on PLAY2GO INTERNATIONAL LIMITED (Germany); ≥112 related files observed on one C2 address alone
+- Distribution via disposable "police lockout" phishing landing pages on Vercel, including a subdomain with explicit Russian targeting
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-07-19-mamont-zloy-builder/Incident_Report_2026-07-19_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-07-19-mamont-zloy-builder/Incident_Report_2026-07-19_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-07-19-mamont-zloy-builder/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-07-19-mamont-zloy-builder/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| SHA256 | `a30747b76e582410903566c8fd2e50c56cb469f267af99e847eced2040132328` (Max_video.apk, ru.k6owy6.gzqak2x) |
+| SHA256 | `ff79b21c3c2199a8375dfcfea02819a7e525133fd2593a02da4ee098dc8540ef` (base.apk, same cluster) |
+| SHA256 | `2be922ac1177689d3155fc2d1b9196facc790c520103b7280fe28066f7aac65f` (lure variant, same cluster) |
+| Package | `ru.k6owy6.gzqak2x`, `ru.mgpwm.ocz75i7` |
+| C2 (ws/http, :8443) | `2[.]27[.]22[.]130`, `31[.]76[.]10[.]34`, `94[.]156[.]237[.]16` (PLAY2GO INTERNATIONAL LIMITED, DE) |
+| ASN | AS215439 |
+| Domain (phishing landing) | `2026rupolice[.]vercel[.]app`, `police2206work[.]vercel[.]app`, `policeonliine2026[.]vercel[.]app`, `policeonlaine2026[.]vercel[.]app`, `policecontrol2026[.]vercel[.]app` |
+
+**MITRE ATT&CK:** T1660, T1204.002, T1406, T1417, T1517, T1582, T1636.003, T1636.004, T1481.002, T1646, T1541, T1624
+
+---
+
 ### 2026-07-07 — Credential Phishing: Polymorphic Kit, Multi-Channel Exfiltration, Bulletproof Infrastructure
 
 At least three phishing waves (6–9 July 2026) hit corporate mailboxes at a monitored domain, sharing a common phishing kit (PhaaS). Senders are spoofed (first an American Express brand lure, then the target's own domain-admin address) and fail SPF; payload links are masked behind trusted redirects (t.co, google.com/url, is.gd). The retrieved payload is a static webmail credential harvester in at least two obfuscation variants. Critically, exfiltration is multi-channel and rotates between builds — three independent channels are confirmed (a Formspark form, a Telegram bot, and a PHP backend on a third-party domain) — so blocking one channel does not stop collection. Delivery for the later waves comes from the KPROHOST (AS214940) bulletproof-hosting cluster, which also uses Androxgh0st to compromise the sites hosting the pages.

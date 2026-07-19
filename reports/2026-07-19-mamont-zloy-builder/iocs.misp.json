@@ -1,0 +1,200 @@
+{
+  "Event": {
+    "uuid": "4adb8fe4-0f9b-599a-a47f-1e78ef8f38e2",
+    "info": "[TLP:CLEAR] \"Zloy\": New Mamont Banking Trojan Infrastructure Posing as the \"MAX\" State Messenger",
+    "date": "2026-07-19",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "fa414163-cfd1-518a-9666-d68b0f861a32",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "a30747b76e582410903566c8fd2e50c56cb469f267af99e847eced2040132328",
+        "to_ids": true,
+        "comment": "Max_video.apk lure (ru.k6owy6.gzqak2x); C2 2.27.22.130:8443; reverse-engineered by us",
+        "distribution": "5"
+      },
+      {
+        "uuid": "60e89b98-6b3b-565f-8b72-7c2322179f91",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "ff79b21c3c2199a8375dfcfea02819a7e525133fd2593a02da4ee098dc8540ef",
+        "to_ids": true,
+        "comment": "base.apk, same cluster; C2 31.76.10.34:8443 (VirusTotal communicating_files)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee9ec55f-671e-535b-8785-ca9b25c0474f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2be922ac1177689d3155fc2d1b9196facc790c520103b7280fe28066f7aac65f",
+        "to_ids": true,
+        "comment": "Another lure variant Max_video.apk (homoglyph spelling), same cluster",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9a59b028-02c9-5d02-bbe6-78df81773f9b",
+        "type": "text",
+        "category": "Other",
+        "value": "ru.k6owy6.gzqak2x",
+        "to_ids": false,
+        "comment": "Android package name, analyzed build (team=001)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e68ef649-f2a0-5709-b882-110dca14816a",
+        "type": "text",
+        "category": "Other",
+        "value": "ru.mgpwm.ocz75i7",
+        "to_ids": false,
+        "comment": "Android package name, team=Bombo build (per public abuse-report source)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a6f7de19-404a-5399-82e3-1d14373321a8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "2.27.22.130",
+        "to_ids": true,
+        "comment": "C2 (ws+http, port 8443), PLAY2GO INTERNATIONAL LIMITED (DE); analyzed sample's C2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1ce688d5-5bde-54f0-821f-218e819b427d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "31.76.10.34",
+        "to_ids": true,
+        "comment": "C2 (ws+http, port 8443), PLAY2GO INTERNATIONAL LIMITED (DE); >=112 files associated on VirusTotal",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1a3b378d-5ff2-5ba3-b957-08da5559440c",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.156.237.16",
+        "to_ids": true,
+        "comment": "C2 (ws+http, port 8443), PLAY2GO INTERNATIONAL LIMITED (DE); named in public abuse report (team Bombo)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "22ed4009-0d23-5242-8427-19c8241f3450",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS215439",
+        "to_ids": false,
+        "comment": "PLAY2GO-NET - PLAY2GO INTERNATIONAL LIMITED; hosts all 3 C2 IPs",
+        "distribution": "5"
+      },
+      {
+        "uuid": "596a7bdd-ad50-5a66-bc0b-b57a4b0093e2",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "2026rupolice.vercel.app",
+        "to_ids": true,
+        "comment": "Phishing landing (police-impersonation lure), explicit RU targeting, Vercel",
+        "distribution": "5"
+      },
+      {
+        "uuid": "932c08b8-bada-5474-b330-46cf7909e836",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "police2206work.vercel.app",
+        "to_ids": true,
+        "comment": "Phishing landing (police-impersonation lure), Vercel",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8d9f4a7a-979c-5339-a2c4-c70f44ee6cf1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "policeonliine2026.vercel.app",
+        "to_ids": true,
+        "comment": "Phishing landing (police-impersonation lure, misspelled 'online'), Vercel",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a282916-0126-5881-b0ce-75ae8f2f9f3b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "policeonlaine2026.vercel.app",
+        "to_ids": true,
+        "comment": "Phishing landing (police-impersonation lure, alt spelling), Vercel",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6b70d42d-177e-528b-b564-65ef5752ec16",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "policecontrol2026.vercel.app",
+        "to_ids": true,
+        "comment": "Phishing landing (police-impersonation lure), Vercel",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1660"
+      },
+      {
+        "name": "mitre-attack:T1204.002"
+      },
+      {
+        "name": "mitre-attack:T1406"
+      },
+      {
+        "name": "mitre-attack:T1417"
+      },
+      {
+        "name": "mitre-attack:T1517"
+      },
+      {
+        "name": "mitre-attack:T1582"
+      },
+      {
+        "name": "mitre-attack:T1636.003"
+      },
+      {
+        "name": "mitre-attack:T1636.004"
+      },
+      {
+        "name": "mitre-attack:T1481.002"
+      },
+      {
+        "name": "mitre-attack:T1646"
+      },
+      {
+        "name": "mitre-attack:T1541"
+      },
+      {
+        "name": "mitre-attack:T1624"
+      },
+      {
+        "name": "label:malware"
+      },
+      {
+        "name": "label:banking-trojan"
+      },
+      {
+        "name": "label:android"
+      },
+      {
+        "name": "label:telegram"
+      },
+      {
+        "name": "label:mamont"
+      },
+      {
+        "name": "label:maas"
+      }
+    ]
+  }
+}
