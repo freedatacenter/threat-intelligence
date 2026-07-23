@@ -1,0 +1,170 @@
+{
+  "Event": {
+    "uuid": "2b8eb8cd-d40b-5c48-ba62-c5b7d615f09b",
+    "info": "[TLP:CLEAR] CraxsRAT Android RAT disguised as a \"Safe Russia\" security/VPN app",
+    "date": "2026-07-23",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "a86b2d15-9a9c-52b7-92ba-51f2b8b2f2fd",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "5f94e59c132a7ed0e35b60146d973a728ab9f390c8291f9547cee26c56427738",
+        "to_ids": true,
+        "comment": "Safe_Russia.apk — stage-1 dropper (com.uisy.cache.installertest)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "668cc0bf-2c70-5324-a5d7-e6d3aaa226ce",
+        "type": "md5",
+        "category": "Payload delivery",
+        "value": "541e1d211a172b9353e347e292f34555",
+        "to_ids": true,
+        "comment": "Safe_Russia.apk stage-1 dropper (MD5)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c07cb78c-ccf0-5baf-8a87-c8f6a1023a68",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "fc99609172910a8fad9522b374f8bae21e5805abdf052a49029edb53620a8e8c",
+        "to_ids": true,
+        "comment": "Stage-2 CraxsRAT payload (com.veloxapp.speedcore), XOR-0x5A decoded from assets/38rf88y3",
+        "distribution": "5"
+      },
+      {
+        "uuid": "aba7ede1-536b-5c21-a267-0957206f56cf",
+        "type": "text",
+        "category": "Other",
+        "value": "com.uisy.cache.installertest",
+        "to_ids": false,
+        "comment": "Android package name — stage-1 dropper",
+        "distribution": "5"
+      },
+      {
+        "uuid": "628ef95e-386e-5acd-b9e8-d6ab0fed634d",
+        "type": "text",
+        "category": "Other",
+        "value": "com.veloxapp.speedcore",
+        "to_ids": false,
+        "comment": "Android package name — stage-2 CraxsRAT",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5d402833-1ba7-5f31-8e4f-333d4f0c6196",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "golosovanie-v-maxe.digital",
+        "to_ids": true,
+        "comment": "MAX-messenger/voting phishing domain (dead); historically on same infra",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d6f703e7-f017-5108-8c30-e161b34bf0f0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "maxnost-golos.lol",
+        "to_ids": true,
+        "comment": "MAX-messenger/voting phishing domain (dead)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7f0bbd47-f842-5287-82fc-ea667cc2588f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "maxmab.lol",
+        "to_ids": true,
+        "comment": "MAX-messenger/voting phishing domain (dead)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1660"
+      },
+      {
+        "name": "mitre-attack:T1644"
+      },
+      {
+        "name": "mitre-attack:T1406"
+      },
+      {
+        "name": "mitre-attack:T1628"
+      },
+      {
+        "name": "mitre-attack:T1626"
+      },
+      {
+        "name": "mitre-attack:T1517"
+      },
+      {
+        "name": "mitre-attack:T1417"
+      },
+      {
+        "name": "mitre-attack:T1636.004"
+      },
+      {
+        "name": "mitre-attack:T1582"
+      },
+      {
+        "name": "mitre-attack:T1513"
+      },
+      {
+        "name": "mitre-attack:T1429"
+      },
+      {
+        "name": "mitre-attack:T1512"
+      },
+      {
+        "name": "mitre-attack:T1430"
+      },
+      {
+        "name": "mitre-attack:T1636.003"
+      },
+      {
+        "name": "mitre-attack:T1533"
+      },
+      {
+        "name": "mitre-attack:T1624.001"
+      },
+      {
+        "name": "mitre-attack:T1571"
+      },
+      {
+        "name": "mitre-attack:T1437"
+      },
+      {
+        "name": "label:malware"
+      },
+      {
+        "name": "label:android"
+      },
+      {
+        "name": "label:rat"
+      },
+      {
+        "name": "label:spyware"
+      },
+      {
+        "name": "label:banker"
+      },
+      {
+        "name": "label:craxsrat"
+      },
+      {
+        "name": "label:dropper"
+      },
+      {
+        "name": "label:maas"
+      }
+    ]
+  }
+}

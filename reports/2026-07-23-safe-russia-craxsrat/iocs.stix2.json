@@ -1,0 +1,923 @@
+{
+  "type": "bundle",
+  "id": "bundle--4ecb20af-9100-5b9b-b4d0-0b7c37f5c57e",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--a8593b72-cf7c-508b-b4a2-7036bf157679",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "CraxsRAT Android RAT disguised as a \"Safe Russia\" security/VPN app",
+      "published": "2026-07-23T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--055e4e57-f361-5820-8fc5-68325a1febfc",
+        "indicator--682d998c-28ac-5941-9685-93f4a84f9d0a",
+        "indicator--c6bbc63a-e0eb-53d0-b780-ae8bfb890050",
+        "indicator--c18ca236-58ae-5b18-8481-9c7885a0a522",
+        "indicator--b40f3c65-1061-54a5-bdb5-614724fbbe65",
+        "indicator--bd4b989b-0ff4-51f2-ab09-c33e842960fd",
+        "indicator--6486e190-8288-5678-b43f-97d7935dffec",
+        "indicator--0aab4c0c-e9d6-5293-92ac-458eba09db68"
+      ],
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--055e4e57-f361-5820-8fc5-68325a1febfc",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 5f94e59c132a7ed0e35b60146d973a728ab9f390c8291f9547cee26c56427738",
+      "description": "Safe_Russia.apk — stage-1 dropper (com.uisy.cache.installertest)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '5f94e59c132a7ed0e35b60146d973a728ab9f390c8291f9547cee26c56427738']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-23T00:00:00Z",
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--682d998c-28ac-5941-9685-93f4a84f9d0a",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "MD5: 541e1d211a172b9353e347e292f34555",
+      "description": "Safe_Russia.apk stage-1 dropper (MD5)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.MD5 = '541e1d211a172b9353e347e292f34555']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-23T00:00:00Z",
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c6bbc63a-e0eb-53d0-b780-ae8bfb890050",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: fc99609172910a8fad9522b374f8bae21e5805abdf052a49029edb53620a8e8c",
+      "description": "Stage-2 CraxsRAT payload (com.veloxapp.speedcore), XOR-0x5A decoded from assets/38rf88y3",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'fc99609172910a8fad9522b374f8bae21e5805abdf052a49029edb53620a8e8c']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-23T00:00:00Z",
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c18ca236-58ae-5b18-8481-9c7885a0a522",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: com.uisy.cache.installertest",
+      "description": "Android package name — stage-1 dropper",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'com.uisy.cache.installertest']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-23T00:00:00Z",
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b40f3c65-1061-54a5-bdb5-614724fbbe65",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: com.veloxapp.speedcore",
+      "description": "Android package name — stage-2 CraxsRAT",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'com.veloxapp.speedcore']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-23T00:00:00Z",
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bd4b989b-0ff4-51f2-ab09-c33e842960fd",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: golosovanie-v-maxe.digital",
+      "description": "MAX-messenger/voting phishing domain (dead); historically on same infra",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'golosovanie-v-maxe.digital']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-23T00:00:00Z",
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6486e190-8288-5678-b43f-97d7935dffec",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: maxnost-golos.lol",
+      "description": "MAX-messenger/voting phishing domain (dead)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'maxnost-golos.lol']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-23T00:00:00Z",
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0aab4c0c-e9d6-5293-92ac-458eba09db68",
+      "created": "2026-07-23T00:00:00Z",
+      "modified": "2026-07-23T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: maxmab.lol",
+      "description": "MAX-messenger/voting phishing domain (dead)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'maxmab.lol']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-23T00:00:00Z",
+      "labels": [
+        "malware",
+        "android",
+        "rat",
+        "spyware",
+        "banker",
+        "craxsrat",
+        "dropper",
+        "maas"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1660"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1644"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1406"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1628"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1626"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1517"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1582"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1429"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1512"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1430"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1636.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1533"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1624.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437"
+        }
+      ]
+    }
+  ]
+}

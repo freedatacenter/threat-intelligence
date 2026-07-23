@@ -6,6 +6,40 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-07-23 — CraxsRAT Android RAT Disguised as a "Safe Russia" Security/VPN App
+
+An Android sample distributed via hijacked Telegram accounts poses as a security/VPN application called "Safe Russia" (the display name uses Cyrillic homoglyphs to spell "Safe Russia"). It is a two-stage dropper: the outer app is a thin installer requesting only the permission to install packages, which carries an XOR-0x5A-encrypted second APK — the commercial remote-access trojan CraxsRAT. Once the victim enables the Accessibility service, the malware gains near-total device control: keylogging, SMS and notification interception for one-time codes (banking fraud), overlay phishing, and screen/microphone/camera recording. CraxsRAT is an off-the-shelf Malware-as-a-Service tool, so the sample alone does not attribute to a named operator; the campaign is aimed at Russian-speaking users and overlaps thematically with phishing around the "MAX" messenger and "voting" lures.
+
+**Key findings:**
+- Two-stage delivery: a thin dropper (`com.uisy.cache.installertest`) silently unpacks and side-loads the real payload (`com.veloxapp.speedcore`, CraxsRAT) via the PackageInstaller Session API
+- Static-analysis evasion: the embedded `classes.dex` ZIP entry has a zeroed CRC-32, so `unzip`/`apktool` extract an empty file while Android and androguard read the DEX normally — a simple, high-signal detection cue
+- Accessibility-service abuse is the core capability: auto-granting its own permissions, keylogging, and on-screen automation
+- Banking/spyware feature set: SMS receiver at priority 999 plus SEND/READ/RECEIVE_SMS (OTP theft), a NotificationListener ("Notification Reader"), overlay phishing (hardcoded `messenger.com`), screen recording, camera, microphone, location, contacts and file access
+- Persistence via OEM boot receivers and evasion of vendor autostart/battery managers (Xiaomi, Huawei, Oppo, Vivo, Samsung, OnePlus, Honor)
+- Disguised as a VPN app ("Safe Russia"); distributed through hijacked Telegram accounts
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-07-23-safe-russia-craxsrat/Incident_Report_2026-07-23_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-07-23-safe-russia-craxsrat/Incident_Report_2026-07-23_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-07-23-safe-russia-craxsrat/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-07-23-safe-russia-craxsrat/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| SHA256 | `5f94e59c132a7ed0e35b60146d973a728ab9f390c8291f9547cee26c56427738` (stage-1 dropper) |
+| SHA256 | `fc99609172910a8fad9522b374f8bae21e5805abdf052a49029edb53620a8e8c` (stage-2 CraxsRAT) |
+| MD5 | `541e1d211a172b9353e347e292f34555` (stage-1 dropper) |
+| Package | `com.uisy.cache.installertest`, `com.veloxapp.speedcore` |
+| Domain (MAX/voting phishing) | `golosovanie-v-maxe[.]digital`, `maxnost-golos[.]lol`, `maxmab[.]lol` |
+
+*Network indicators (live C2 and related hosting) are withheld from this public release to avoid prematurely alerting the operator.*
+
+**MITRE ATT&CK:** T1660, T1644, T1406, T1628, T1626, T1517, T1417, T1636.004, T1582, T1513, T1429, T1512, T1430, T1636.003, T1533, T1624.001, T1571, T1437
+
+---
+
 ### 2026-07-19 — "Zloy": New Mamont Banking Trojan Infrastructure Posing as the "MAX" State Messenger
 
 A previously undocumented Android banking trojan sample was found disguised as a video file using Greek homoglyphs in its filename. Automated sandboxes could not attribute a malware family because the APK's ZIP container has a spoofed "strong encryption" flag on its manifest entry that breaks standard zip parsers while Android's own installer ignores it. Reverse engineering identified the sample as a new infrastructure cluster of the well-documented Russian Mamont Android banking trojan, built by a private, multi-tenant builder that brands itself internally as "zloy". This cluster shares no indicators with our previously published 15 March 2026 Mamont report ("accident photos" lure) — it is a separate, self-contained operation of the same malware family.
