@@ -6,6 +6,58 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-08-04 — Honeypot Fleet: Monthly Threat Report, July 2026
+
+Our distributed honeypot sensors (Germany, the United States, Russia) together with an IEC-104 (ICS/OT) industrial-protocol decoy recorded approximately 2,700,000 attack sessions and requests during July 2026 across SSH, VNC, multi-protocol exploitation, Docker, LLM, MikroTik and Kubernetes surfaces. The headline development is a month-long distributed VNC password-guessing campaign in which thirteen addresses each contributed an almost identical share of the work — clear evidence of a single orchestrator splitting a dictionary. Alongside it, the Docker escape-to-host worm described in the June report escalated to a container specification that drops every isolation layer at once, captured malware tripled to 222 unique samples with a return of WannaCry over SMB, LLM-endpoint abuse shifted from inventory to consumption, and a previously unobserved vector appeared — attackers validating compromised hosts as open SSH proxies rather than deploying malware.
+
+**Key findings:**
+- Distributed VNC brute force: 1,256,816 connections and 193,552 authentication attempts, with thirteen addresses making 9,758–10,591 attempts each (spread under 9%) — a uniformity that does not occur among independent scanners
+- The campaign core is 30 addresses in AS398019 spread across nine /24 blocks in three non-adjacent ranges; the ASN carries 65% of authentication attempts and 63% of connections, so blocking it outright removes about two thirds of the load
+- Docker worm escalation: one /24 accounts for 85% of the entire Docker surface; the July container spec requests `Privileged: true`, `CapAdd: [ALL, SYS_ADMIN]`, host PID/IPC/network namespaces, `seccomp=unconfined`, `apparmor=unconfined` and a bind of `/` — a request to drop all isolation simultaneously
+- Malware volume tripled (70 → 222 unique samples); 63 PE32 DLLs arriving over SMB matched the WannaCry rule, 53 of them independently confirmed by ClamAV — reversing June's almost entirely ELF-worm profile
+- Signature AV recovered but lags badly: ClamAV detected 98 of 222 samples (44%) after identifying zero out of 126 and 70 in May and June; the recovery is not Windows-only — 38 of those detections are ELF
+- LLM abuse moved from enumeration to consumption — `/v1/chat/completions` overtook `/api/tags` for the first time, and the two leading sources were consumer ISPs rather than cloud platforms
+- New vector: 25,792 TCP forwarding requests after successful logins — attackers validating the host as an open SSH proxy for resale, leaving no malicious file behind
+- Delivery increasingly evades URL-based detection: XMRig pulled straight from its official GitHub release, and 49 binaries of 6–16 MB uploaded over SFTP instead of wget/curl
+- Multi-architecture droppers now span 17 targets including MIPS (both byte orders), RISC-V, Renesas SH, LoongArch and m68k
+- The IEC-104 decoy received zero control commands from external attackers for the second consecutive month — only connections and data-point enumeration, overwhelmingly from cloud census scanners; the same node's remote-desktop surface drew over a thousand times more traffic, indicating that remote-access tooling, not the industrial protocol, is the realistic entry vector
+- The Russian node received zero payload downloads for the fourth consecutive month despite normal brute-force and reconnaissance volume
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-08-04-honeypot-monthly-july/Incident_Report_2026-08-04_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-08-04-honeypot-monthly-july/Incident_Report_2026-08-04_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-08-04-honeypot-monthly-july/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-08-04-honeypot-monthly-july/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| ASN (VNC campaign) | `AS398019` — 65% of authentication attempts, 63% of connections |
+| IP (VNC campaign, AS398019) | `72[.]51[.]56[.]6`, `72[.]51[.]57[.]6`, `72[.]51[.]57[.]7`, `72[.]51[.]59[.]6`, `140[.]235[.]17[.]25`, `140[.]235[.]17[.]46`, `140[.]235[.]17[.]47`, `140[.]235[.]17[.]48`, `140[.]235[.]17[.]49`, `140[.]235[.]17[.]65`, `140[.]235[.]18[.]105`, `140[.]235[.]18[.]166`, `140[.]235[.]18[.]167`, `140[.]235[.]18[.]168`, `140[.]235[.]19[.]17`, `140[.]235[.]19[.]18`, `140[.]235[.]19[.]19`, `140[.]235[.]19[.]20`, `207[.]174[.]1[.]227`, `207[.]174[.]1[.]228`, `207[.]174[.]1[.]229`, `207[.]174[.]1[.]230`, `207[.]174[.]1[.]231`, `207[.]174[.]2[.]239`, `207[.]174[.]2[.]240`, `207[.]174[.]2[.]241`, `207[.]174[.]3[.]223`, `207[.]174[.]3[.]224`, `207[.]174[.]3[.]225`, `207[.]174[.]3[.]248` |
+| IP (VNC campaign, secondary) | `147[.]182[.]159[.]182`, `167[.]99[.]186[.]169`, `159[.]89[.]122[.]222` (DigitalOcean), `220[.]132[.]16[.]39` (HiNet) |
+| IP (Docker worm) | `45[.]198[.]224[.]5`, `45[.]198[.]224[.]26` (VPSVAULT.HOST LTD, AS215925) |
+| ASN (Docker worm) | `AS215925` (85% of fleet-wide Docker surface) |
+| IP (droppers) | `91[.]199[.]133[.]133`, `41[.]216[.]189[.]157`, `41[.]216[.]189[.]92`, `41[.]216[.]189[.]236`, `91[.]92[.]42[.]213`, `94[.]154[.]43[.]88`, `94[.]154[.]43[.]192`, `31[.]56[.]209[.]153`, `45[.]142[.]142[.]140`, `156[.]226[.]174[.]98`, `103[.]161[.]17[.]92`, `103[.]79[.]185[.]121`, `45[.]92[.]29[.]72`, `8[.]213[.]214[.]55`, `171[.]244[.]44[.]251` |
+| URL (droppers) | `hxxp://91[.]199[.]133[.]133:8080/deploy.sh`, `hxxp://41[.]216[.]189[.]157/run.sh`, `hxxp://91[.]92[.]42[.]213/phantom.sh`, `hxxp://94[.]154[.]43[.]88/ohshit.sh`, `hxxp://31[.]56[.]209[.]153/bins.sh`, `hxxp://156[.]226[.]174[.]98/bins.sh`, `hxxp://103[.]161[.]17[.]92/ohshit.sh` |
+| IP (SSH brute-force) | `45[.]148[.]10[.]183`, `45[.]148[.]10[.]240`, `94[.]154[.]43[.]243`, `94[.]154[.]43[.]181`, `195[.]178[.]110[.]30`, `195[.]178[.]110[.]228`, `128[.]199[.]25[.]179`, `188[.]166[.]209[.]30`, `103[.]102[.]153[.]9`, `179[.]43[.]133[.]154`, `45[.]156[.]87[.]254` |
+| IP (LLM abuse) | `141[.]11[.]1[.]183`, `198[.]244[.]216[.]40`, `118[.]123[.]80[.]12` |
+| IP (botnet C2) | `217[.]60[.]195[.]113`, `94[.]183[.]185[.]66`, `178[.]128[.]14[.]204`, `217[.]76[.]63[.]67`, `89[.]208[.]113[.]218` |
+| SHA256 | `5a9a809cdbce6d73071a95f13cb58e8e574724212dd661045c44fbb68761655e` (WannaCry PE32 DLL) |
+| SHA256 | `d19a27ccd8f2ad8feda6874ea4828dc47e5ddef1935d40e8784a99723443816e` (Panchan / Discord-C2 ELF64) |
+| SHA256 | `d73422ebcc2b1b46eef4fb3e09ddfafec86529186bc9738b11aee34d37f08710` (Go SSH-worm / Discord-C2 ELF64) |
+| SHA256 | `d02f97bf8d46da0f09d12d4703053fca5b8f703f9a63b1b0a850f005c0f001c3` (Mirai ELF32 MSB MIPS) |
+| SHA256 | `ff0505f010971ddaa354ff717283644d446b6ae27bd9f8ce2ff4a7ea575d3d18` (Xlogin ELF32 ARCompact) |
+| SHA256 | `77ed8c7518a32663fb766f729075dcdddc355c8d6ebe381092df51bb891e0cfc` (UPX-packed Mirai dropper) |
+| Pattern | `chroot /mnt sh /p.sh` (Docker escape-to-host) |
+| JA4H | `po11nn060000_46ba010406bc_000000000000`, `po11nn050000_2c3038913033_000000000000` (Docker worm client) |
+
+*The Docker worm's second-stage download host is withheld from this public release — it remains live, and disclosure would prematurely alert the operator. Consumer-ISP addresses — observed both as LLM-abuse sources and as one node of the VNC campaign — are also withheld, as they most likely represent compromised home devices.*
+
+**MITRE ATT&CK:** T1595.002, T1110.001, T1021.005, T1046, T1190, T1610, T1611, T1105, T1027.002, T1090, T1496, T1021.004, T1552.005, T0846, T0888
+
+---
+
 ### 2026-07-23 — CraxsRAT Android RAT Disguised as a "Safe Russia" Security/VPN App
 
 An Android sample distributed via hijacked Telegram accounts poses as a security/VPN application called "Safe Russia" (the display name uses Cyrillic homoglyphs to spell "Safe Russia"). It is a two-stage dropper: the outer app is a thin installer requesting only the permission to install packages, which carries an XOR-0x5A-encrypted second APK — the commercial remote-access trojan CraxsRAT. Once the victim enables the Accessibility service, the malware gains near-total device control: keylogging, SMS and notification interception for one-time codes (banking fraud), overlay phishing, and screen/microphone/camera recording. CraxsRAT is an off-the-shelf Malware-as-a-Service tool, so the sample alone does not attribute to a named operator; the campaign is aimed at Russian-speaking users and overlaps thematically with phishing around the "MAX" messenger and "voting" lures.

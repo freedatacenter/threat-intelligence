@@ -1,0 +1,866 @@
+{
+  "Event": {
+    "uuid": "44bfafe0-ac9e-570a-a3ee-7f8d4adc2711",
+    "info": "[TLP:CLEAR] Honeypot Fleet: Monthly Threat Report, July 2026",
+    "date": "2026-08-04",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "ff1c46da-24e5-54ae-b431-1acf048d87b3",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS398019",
+        "to_ids": false,
+        "comment": "VNC brute-force campaign — 65% of authentication attempts, 63% of connections",
+        "distribution": "5"
+      },
+      {
+        "uuid": "08399ac7-0170-5d38-8299-c1e94a62c520",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "72.51.56.6",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e84c1eb1-1375-510d-8baf-9ce833d5d032",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "72.51.57.6",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "89c6b69c-e8e4-5297-a6c5-30f704ec7bd8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "72.51.57.7",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~9.9k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bfdd4a9e-3df5-54ce-ac43-71083f99b387",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "72.51.59.6",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "514a89f9-e3ed-56ad-8195-62af79500153",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.17.25",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (highest connection count)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0c075965-0ac2-5ac0-b124-a20002600243",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.17.46",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.5k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee14ab13-ee81-5429-8e31-54d47113c86d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.17.47",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.5k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0883c9eb-25e4-5c43-848e-dd67b05fa7e7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.17.48",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.6k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "16780e6c-1e2a-5dd7-a135-0004e87d7fc0",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.17.49",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "35d2a7c5-4187-5dd3-86f3-a77814ab726c",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.17.65",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6d2f501e-c697-5582-a551-c049d1ff77c8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.18.105",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "55d78ca2-4b06-53be-bf2f-f9d5bcd40e23",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.18.166",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "88b53f72-cd50-57eb-9d78-9c17ded3c525",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.18.167",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.4k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8738a866-6258-569b-a2a3-a49d6719254f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.18.168",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~9.8k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a8f7c43-0ede-5672-ba69-2f80c5cb70c8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.19.17",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "86169f86-3372-5c5b-ab04-321bf069d90b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.19.18",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.3k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d3b5fdc8-5799-5ab6-8fc7-62c594a6bcb0",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.19.19",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.4k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2c23e6a2-2490-514e-b691-1007b67d5752",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.19.20",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.5k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "971fb9e1-d737-5365-8e2d-35d3b3afd95b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.1.227",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bc2225fb-fdc2-5c04-8b9c-cff0bbab4bae",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.1.228",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1c0b18a4-82e6-5bc9-bf0c-1c296dfac3dc",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.1.229",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "aa2b45cc-bfb2-5b18-9775-5d5c985dd3a1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.1.230",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0dda5de1-21a7-5c23-9ca3-45e6b4eb96a1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.1.231",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6c25d4a6-6625-5567-8550-efc5ed0ff382",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.2.239",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6cf17e7c-a73e-59a0-bfdd-07ac42a37f38",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.2.240",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.5k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "26ee2960-3031-5f46-b4b1-049b77384a91",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.2.241",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "63140f59-0f75-5940-b023-80f6c7f7386c",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.3.223",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9441206c-643b-563b-ae33-a8d08575d0fe",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.3.224",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.3k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "93561d53-df03-5a09-823d-85f298320d78",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.3.225",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019 (core, ~10.4k auth attempts)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7649ae60-1193-5a16-8447-dbe05bbeb792",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.3.248",
+        "to_ids": true,
+        "comment": "VNC brute-force campaign node, AS398019",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8ed2c2c3-0aa8-5104-af6a-1328e5f282a0",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "147.182.159.182",
+        "to_ids": true,
+        "comment": "VNC brute-force secondary node, AS14061 DigitalOcean",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9c1418a1-cc52-581b-b0b6-55f1641ef190",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "167.99.186.169",
+        "to_ids": true,
+        "comment": "VNC brute-force secondary node, AS14061 DigitalOcean",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bb8cce5f-869b-54ca-8ceb-bc24fd2f32d9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "159.89.122.222",
+        "to_ids": true,
+        "comment": "VNC brute-force secondary node, AS14061 DigitalOcean",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b0c51871-5717-5872-b77b-9678b2fd0d92",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "220.132.16.39",
+        "to_ids": true,
+        "comment": "VNC brute-force secondary node, AS3462 HiNet",
+        "distribution": "5"
+      },
+      {
+        "uuid": "344f776b-c8e9-5295-b855-232183f30166",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.198.224.5",
+        "to_ids": true,
+        "comment": "Docker-API worm operator, 73.6% of Docker traffic, AS215925 VPSVAULT.HOST LTD",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4944283a-f990-58b9-9557-63532270c22a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.198.224.26",
+        "to_ids": true,
+        "comment": "Docker-API worm, second operator address in the same /24 (new in July)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8e5c8054-9835-5e4e-bbc6-0c58ae054bd5",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS215925",
+        "to_ids": false,
+        "comment": "VPSVAULT.HOST LTD — 85% of the fleet-wide Docker surface originates from its 45.198.224.0/24",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ea1d98d9-814b-596b-90cf-b2cd4fdc4532",
+        "type": "text",
+        "category": "Other",
+        "value": "chroot /mnt sh /p.sh",
+        "to_ids": false,
+        "comment": "Docker container escape-to-host command pattern (July variant)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "586f2e25-745d-55c5-8082-3ac754b4b73f",
+        "type": "text",
+        "category": "Other",
+        "value": "po11nn060000_46ba010406bc_000000000000",
+        "to_ids": false,
+        "comment": "JA4H fingerprint — Docker worm client (primary cluster)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1a9d5877-2e30-55b6-ae11-153389bc902f",
+        "type": "text",
+        "category": "Other",
+        "value": "po11nn050000_2c3038913033_000000000000",
+        "to_ids": false,
+        "comment": "JA4H fingerprint — Docker worm client (secondary cluster)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "62ff4000-085a-5988-bc39-4868477bd110",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.199.133.133",
+        "to_ids": true,
+        "comment": "Top dropper host of the month (:8080/deploy.sh), AS200019 AlexHost SRL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e3be730d-7207-5422-8c01-3a5026573114",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "41.216.189.157",
+        "to_ids": true,
+        "comment": "Multi-arch Mirai/Gafgyt dropper, 17 architectures, AS211138",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e45c1f28-e0d1-57ab-9474-f3b77673a5e3",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "41.216.189.92",
+        "to_ids": true,
+        "comment": "Multi-arch dropper, same operator cluster",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a0af64ed-9c8f-5658-b119-eabcce9398a5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "41.216.189.236",
+        "to_ids": true,
+        "comment": "Multi-arch dropper, same operator cluster",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dccd4951-3096-52b2-821b-62b1b70ad067",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.92.42.213",
+        "to_ids": true,
+        "comment": "Multi-arch dropper (phantom.*), AS197170 TechTies Inc.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bee3c6bc-2e9d-5e2b-9196-45b49552aac7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.154.43.88",
+        "to_ids": true,
+        "comment": "Dropper host (ohshit.sh, anonymous ftpget), AS219502",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5af914e7-f73f-5399-a386-c80fcfc0dbaf",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.154.43.192",
+        "to_ids": true,
+        "comment": "Dropper host (nz.sh / nz.*), AS219502",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ce7ca6c3-9dc0-5cba-829c-d7371d4972a6",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "31.56.209.153",
+        "to_ids": true,
+        "comment": "Multi-arch dropper (bins.sh, nz/*), AS209373",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2d41b4d6-b31e-5c51-8652-aab323eaddb9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.142.142.140",
+        "to_ids": true,
+        "comment": "Mirai/Gafgyt dropper (:8443/dropper_arm|_x86), carried over from June",
+        "distribution": "5"
+      },
+      {
+        "uuid": "be6bd932-2ce0-588b-91bb-9b38484dfe72",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "156.226.174.98",
+        "to_ids": true,
+        "comment": "Dropper host (bins.sh), AS61112 AkileCloud",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d3f36de9-9ab7-5a73-a76b-ee0e25702590",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.161.17.92",
+        "to_ids": true,
+        "comment": "Multi-arch dropper (hiddenbin/boatnet.*), AS135967",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cfb28607-1b10-5889-9d8b-e0914fa704a6",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.79.185.121",
+        "to_ids": true,
+        "comment": "Dropper host (a7891.sh), AS206888",
+        "distribution": "5"
+      },
+      {
+        "uuid": "359278b5-81aa-5164-acef-fc94f078ad16",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.92.29.72",
+        "to_ids": true,
+        "comment": "Dropper host (a7891.sh), same campaign",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c66dfe00-206a-5815-9466-a8c3b5ae5253",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "8.213.214.55",
+        "to_ids": true,
+        "comment": "Dropper host (all.sh, huhu/$BIN), AS45102",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6fb79d91-b89e-51c5-815c-40fcf9946bfb",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "171.244.44.251",
+        "to_ids": true,
+        "comment": "Inline dropper referenced in shell commands (nerv.x86_64), AS7552",
+        "distribution": "5"
+      },
+      {
+        "uuid": "35a69ce5-f354-5d3f-a030-ba3cbb5320e4",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://91.199.133.133:8080/deploy.sh",
+        "to_ids": true,
+        "comment": "Shell loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b9f35c48-6056-589f-a64d-f8a7aaf593f5",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://41.216.189.157/run.sh",
+        "to_ids": true,
+        "comment": "Multi-arch loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8aca7e04-446e-50b2-8e89-8c892a1d525a",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://91.92.42.213/phantom.sh",
+        "to_ids": true,
+        "comment": "Multi-arch loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "211b3f9d-ab9f-5075-955a-288f2711976a",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://94.154.43.88/ohshit.sh",
+        "to_ids": true,
+        "comment": "Shell loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4db82040-5b6d-50c3-89f8-a129cca66313",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://31.56.209.153/bins.sh",
+        "to_ids": true,
+        "comment": "Multi-arch loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "18d29a73-2216-5313-8c27-7f35523dc251",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://156.226.174.98/bins.sh",
+        "to_ids": true,
+        "comment": "Shell loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1e231f4e-b3de-505a-ab30-715c6eb4d450",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://103.161.17.92/ohshit.sh",
+        "to_ids": true,
+        "comment": "Shell loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7208f9dd-2c3b-54f9-9b3b-a0f9966165a4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.148.10.183",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source (cluster carried from June)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6f0bedd4-e052-5c35-ada7-a7dadea4bf4a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.148.10.240",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source (same cluster)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5c6758d3-6386-5de7-98ce-c4f210d948fc",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.154.43.243",
+        "to_ids": true,
+        "comment": "Top SSH bruteforce source, AS219502 — same /24 as dropper hosting",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ec3dce75-8360-5feb-b39c-2d9d8f42d8b9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.154.43.181",
+        "to_ids": true,
+        "comment": "SSH bruteforce source, AS219502",
+        "distribution": "5"
+      },
+      {
+        "uuid": "115e3fbd-84c0-59da-a58f-99f45b0720fa",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "195.178.110.30",
+        "to_ids": true,
+        "comment": "SSH bruteforce source, AS48090 (bulletproof profile)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e5df920e-4f31-5288-8290-193ac112d421",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "195.178.110.228",
+        "to_ids": true,
+        "comment": "SSH bruteforce source, AS48090",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c5f172fe-95ea-544a-94dc-33542f387ac1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "128.199.25.179",
+        "to_ids": true,
+        "comment": "SSH bruteforce source, AS14061 DigitalOcean",
+        "distribution": "5"
+      },
+      {
+        "uuid": "97843f5c-1413-5af4-b427-1deb20cc02e6",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "188.166.209.30",
+        "to_ids": true,
+        "comment": "SSH bruteforce source, AS14061 DigitalOcean",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3c4544d8-fe5c-51d4-8612-674905df07f2",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.102.153.9",
+        "to_ids": true,
+        "comment": "SSH bruteforce source, AS58404",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d0b1a7de-2e57-5343-bd42-f1b2cdc53444",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "179.43.133.154",
+        "to_ids": true,
+        "comment": "SSH bruteforce source, AS51852 Private Layer",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6bfb1b11-2e02-59ab-8084-42c45047cdc1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.156.87.254",
+        "to_ids": true,
+        "comment": "SSH bruteforce source (cluster carried from May)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a99cccc8-147b-5abc-8ebf-3d8ddac3d0e5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "141.11.1.183",
+        "to_ids": true,
+        "comment": "LLM-abuse source (Ollama), AS16276 OVH — June's leader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9cbc922e-de30-5af5-b034-eb0320fcc9a4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "198.244.216.40",
+        "to_ids": true,
+        "comment": "LLM-abuse source (Ollama), AS16276 OVH",
+        "distribution": "5"
+      },
+      {
+        "uuid": "53f2273a-cf95-58f2-ad40-2a7df8ff5e17",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "118.123.80.12",
+        "to_ids": true,
+        "comment": "LLM-abuse source (Ollama), AS4134 ChinaNet",
+        "distribution": "5"
+      },
+      {
+        "uuid": "10f2703d-9ac3-54e7-b7a5-703136955aaf",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "217.60.195.113",
+        "to_ids": true,
+        "comment": "Botnet C2, largest by subordinate nodes, AS209373 (carried from June)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f116722f-ecc1-5acb-be2c-4874e8a1921b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.183.185.66",
+        "to_ids": true,
+        "comment": "Botnet C2, AS56971",
+        "distribution": "5"
+      },
+      {
+        "uuid": "36d9030c-e21b-5cfc-9311-95324573aa04",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "178.128.14.204",
+        "to_ids": true,
+        "comment": "Botnet C2, AS14061 DigitalOcean",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bce155dc-ff01-5ca3-b670-9a4e5afd06c6",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "217.76.63.67",
+        "to_ids": true,
+        "comment": "Botnet C2, AS51167 Contabo",
+        "distribution": "5"
+      },
+      {
+        "uuid": "40773bd0-f164-50fc-941f-c392b4b92250",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "89.208.113.218",
+        "to_ids": true,
+        "comment": "Botnet C2, AS210644 (sanctioned operator)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "12e32391-7b1d-57c7-bfdb-d93566245b6a",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "5a9a809cdbce6d73071a95f13cb58e8e574724212dd661045c44fbb68761655e",
+        "to_ids": true,
+        "comment": "WannaCry PE32 DLL via SMB surface (63 samples matched this family)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "93195050-dbfa-55ac-be0b-fcde1139f658",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d19a27ccd8f2ad8feda6874ea4828dc47e5ddef1935d40e8784a99723443816e",
+        "to_ids": true,
+        "comment": "Panchan_SSHWorm_Go / Discord_C2_ELF, ELF64 x86-64",
+        "distribution": "5"
+      },
+      {
+        "uuid": "defb0e71-d7b6-5682-822b-dc243d613267",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d73422ebcc2b1b46eef4fb3e09ddfafec86529186bc9738b11aee34d37f08710",
+        "to_ids": true,
+        "comment": "Go_SSHWorm_Generic / Discord_C2_ELF, ELF64 x86-64",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9d484997-2f50-544e-b7ec-fcedf86b4d6d",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d02f97bf8d46da0f09d12d4703053fca5b8f703f9a63b1b0a850f005c0f001c3",
+        "to_ids": true,
+        "comment": "Mirai_Botnet_Malware, ELF32 MSB MIPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "937b3cd8-bfe7-50b6-b54b-292e75c5c3dd",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "ff0505f010971ddaa354ff717283644d446b6ae27bd9f8ce2ff4a7ea575d3d18",
+        "to_ids": true,
+        "comment": "MAL_ELF_Xlogin_Nov24_1, ELF32 Synopsys ARCompact",
+        "distribution": "5"
+      },
+      {
+        "uuid": "44e76685-0163-5936-8876-e0e8e40a2922",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "77ed8c7518a32663fb766f729075dcdddc355c8d6ebe381092df51bb891e0cfc",
+        "to_ids": true,
+        "comment": "UPX-packed Mirai dropper, ELF32 x86",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1595.002"
+      },
+      {
+        "name": "mitre-attack:T1110.001"
+      },
+      {
+        "name": "mitre-attack:T1021.005"
+      },
+      {
+        "name": "mitre-attack:T1046"
+      },
+      {
+        "name": "mitre-attack:T1190"
+      },
+      {
+        "name": "mitre-attack:T1610"
+      },
+      {
+        "name": "mitre-attack:T1611"
+      },
+      {
+        "name": "mitre-attack:T1105"
+      },
+      {
+        "name": "mitre-attack:T1027.002"
+      },
+      {
+        "name": "mitre-attack:T1090"
+      },
+      {
+        "name": "mitre-attack:T1496"
+      },
+      {
+        "name": "mitre-attack:T1021.004"
+      },
+      {
+        "name": "mitre-attack:T1552.005"
+      },
+      {
+        "name": "mitre-attack:T0846"
+      },
+      {
+        "name": "mitre-attack:T0888"
+      },
+      {
+        "name": "label:honeypot"
+      },
+      {
+        "name": "label:threat-intelligence"
+      },
+      {
+        "name": "label:monthly-report"
+      }
+    ]
+  }
+}
