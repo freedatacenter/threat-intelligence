@@ -6,6 +6,47 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-08-10 — A Multi-Brand Phishing Operation Exposed by a Public Cloud Bucket
+
+While monitoring inbound mail for a civil-society organization in early August 2026, we observed three concurrent phishing operations. One of them exposed its entire tooling through a world-listable Google Cloud Storage bucket (`storage.googleapis[.]com/cloakier/`), letting us map a single actor running six brand-impersonation kits — Webmail/Roundcube, DocuSign, LinkedIn, Microsoft Teams/Zoom, Office 365 Excel, and a procurement lure — from one staging area, with credential exfiltration split across several back-ends including a Telegram bot. Two other operators hit the same organization in parallel: a persistent three-week "webmail re-validation" campaign harvesting credentials to a shared form-service form ID, and a DocuSign-branded BEC spray abusing an open redirect on an aged legitimate domain to reach a compromised WordPress redirector.
+
+**Key findings:**
+- A public, unauthenticated GCS bucket staged 29 objects comprising six distinct phishing kits and their decoy assets.
+- Credential exfiltration used at least four attacker endpoints (two branches of one attacker domain plus two sibling hosts) plus a Telegram bot for real-time delivery.
+- Platform-trust evasion throughout: object storage for hosting, a `blob:` URL loader that hides the malicious origin from the address bar, and IPFS-hosted decoy error pages for analyst GET requests.
+- The stable pivot across delivery-infrastructure rotation is the exfil identity — a form-service form ID linked one campaign back to a July wave.
+- Discipline point: compromised legitimate sites and residential relays in these chains are victims — block the URL path, not the domain or the IP.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-08-10-cloakier-phishing-operator/Incident_Report_2026-08-10_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-08-10-cloakier-phishing-operator/Incident_Report_2026-08-10_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-08-10-cloakier-phishing-operator/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-08-10-cloakier-phishing-operator/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| URL (staging) | `hxxps://storage.googleapis[.]com/cloakier/` |
+| URL (exfil) | `hxxps://ww2[.]crhamericasmaterial[.]com/nd/2.php` |
+| URL (exfil) | `hxxps://ww2[.]crhamericasmaterial[.]com/vicar/submit.php` |
+| URL (exfil) | `hxxps://ww2[.]crhamericasmaterial[.]com/vicar/1.php` |
+| URL (exfil) | `hxxps://clapstickmkt[.]name[.]ng/rst/1.php` |
+| Domain | `crhamericasmaterial[.]com` (Operator B backend) |
+| Domain | `acemmetric[.]com` (Operator B sender) |
+| IP | `45[.]74[.]252[.]189` (Operator B sender, Valkyrie Hosting) |
+| URL (exfil) | `hxxps://submit-form[.]com/4FJePSjAq` (Operator A — form ID pivot; shared service, block form ID not domain) |
+| URL (kit path) | `hxxps://habitatcyprus[.]com/wp-includes/build/` (compromised site — block path only) |
+| IP | `77[.]83[.]39[.]10`, `.14`, `.15`, `.17`, `.24` (Operator A sender, Pitline Ltd /24, NL) |
+| IP | `198[.]135[.]51[.]150` (Operator A sender) |
+| URL (redirect hop) | `hxxps://kingcrossingbookclub[.]org/Goodsdys/redirect.php` (compromised site — block path only) |
+| Email (spoofed) | `dse_na2@docusign[.]net` (real brand address — do not block) |
+| IP | `103[.]174[.]214[.]188`, `186[.]19[.]160[.]163` (Operator C residential relays — compromised, do not block) |
+
+**MITRE ATT&CK:** T1566.002, T1656, T1585.002, T1584.006, T1608.005, T1102
+
+---
+
 ### 2026-08-04 — Honeypot Fleet: Monthly Threat Report, July 2026
 
 Our distributed honeypot sensors (Germany, the United States, Russia) together with an IEC-104 (ICS/OT) industrial-protocol decoy recorded approximately 2,700,000 attack sessions and requests during July 2026 across SSH, VNC, multi-protocol exploitation, Docker, LLM, MikroTik and Kubernetes surfaces. The headline development is a month-long distributed VNC password-guessing campaign in which thirteen addresses each contributed an almost identical share of the work — clear evidence of a single orchestrator splitting a dictionary. Alongside it, the Docker escape-to-host worm described in the June report escalated to a container specification that drops every isolation layer at once, captured malware tripled to 222 unique samples with a return of WannaCry over SMB, LLM-endpoint abuse shifted from inventory to consumption, and a previously unobserved vector appeared — attackers validating compromised hosts as open SSH proxies rather than deploying malware.

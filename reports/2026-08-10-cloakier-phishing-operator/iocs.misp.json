@@ -1,0 +1,251 @@
+{
+  "Event": {
+    "uuid": "ad082004-0558-51c0-9736-90dbc2286fc2",
+    "info": "[TLP:CLEAR] A Multi-Brand Phishing Operation Exposed by a Public Cloud Bucket",
+    "date": "2026-08-10",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "6d43a45f-08e2-5372-b1b7-10299545e79d",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://storage.googleapis.com/cloakier/",
+        "to_ids": true,
+        "comment": "Operator B: public GCS bucket staging 6 phishing kits",
+        "distribution": "5"
+      },
+      {
+        "uuid": "00042493-a8ff-577b-af4d-539d67c166bf",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://ww2.crhamericasmaterial.com/nd/2.php",
+        "to_ids": true,
+        "comment": "Operator B: credential exfil — Webmail/DocuSign kit",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e3ffa9cc-4dab-5232-965c-d3f2c278cdc0",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://ww2.crhamericasmaterial.com/vicar/submit.php",
+        "to_ids": true,
+        "comment": "Operator B: credential exfil — LinkedIn kit",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5b7939fd-c444-551a-bb78-211c98eca1b6",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://ww2.crhamericasmaterial.com/vicar/1.php",
+        "to_ids": true,
+        "comment": "Operator B: credential exfil — generic sign-in kit",
+        "distribution": "5"
+      },
+      {
+        "uuid": "71a4f9d6-4e4f-5004-8dc7-59dc1c9fbf31",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://clapstickmkt.name.ng/rst/1.php",
+        "to_ids": true,
+        "comment": "Operator B: credential exfil — Teams/Zoom kit",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a3112ab5-fed2-54e0-926e-3f919fcd9bee",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://stockltd.duckdns.org/expo/ali.php",
+        "to_ids": true,
+        "comment": "Operator B: credential exfil — O365 kit (offline)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6b3f8881-9423-5fef-bcab-b7bb56fe47bd",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "crhamericasmaterial.com",
+        "to_ids": true,
+        "comment": "Operator B backend, registered 2026-05-08",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f4eddf1b-90db-5d7f-b832-aedfff9def12",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "acemmetric.com",
+        "to_ids": true,
+        "comment": "Operator B sending domain (A=45.74.252.189)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c7bf23a0-6d21-5a2c-84e6-ee556befa89f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.74.252.189",
+        "to_ids": true,
+        "comment": "Operator B sender, Valkyrie Hosting",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b93b0448-2b30-5116-a719-6674936bc87e",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://submit-form.com/4FJePSjAq",
+        "to_ids": true,
+        "comment": "Operator A: credential exfil — Formspark form ID (pivot; shared service, block form ID not domain)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e43bd5b1-6a6f-553f-8c62-ea0a8e9479f5",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://habitatcyprus.com/wp-includes/build/",
+        "to_ids": true,
+        "comment": "Operator A: kit on compromised WordPress — block path only, domain is victim",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5198dbdf-c616-5420-975f-31cdd5503c2f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "emailportalverify-gg218lvp3x.edgeone.app",
+        "to_ids": true,
+        "comment": "Operator A: kit host (Tencent EdgeOne subdomain)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "39aa2c01-2820-5350-adda-3a4961787479",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.83.39.10",
+        "to_ids": true,
+        "comment": "Operator A sender, Pitline Ltd /24 NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "44a18536-6d71-5cb9-807d-9a63e15fb2db",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.83.39.14",
+        "to_ids": true,
+        "comment": "Operator A sender, Pitline Ltd /24 NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7e37db1d-89d4-526a-9eda-bbc00e183bd3",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.83.39.15",
+        "to_ids": true,
+        "comment": "Operator A sender, Pitline Ltd /24 NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7e474a75-9bab-5a47-9a10-b787b0c4ebde",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.83.39.17",
+        "to_ids": true,
+        "comment": "Operator A sender, Pitline Ltd /24 NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "78345c7e-38cc-5dae-ab8b-1120fcb86dff",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.83.39.24",
+        "to_ids": true,
+        "comment": "Operator A sender, Pitline Ltd /24 NL",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6b80b7d1-5332-571c-96aa-3560fb01ee1b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "198.135.51.150",
+        "to_ids": true,
+        "comment": "Operator A sender, spinservers",
+        "distribution": "5"
+      },
+      {
+        "uuid": "06d2957b-2ebc-52e2-b1a9-78f759fd759c",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://kingcrossingbookclub.org/Goodsdys/redirect.php",
+        "to_ids": true,
+        "comment": "Operator C: redirector on compromised WordPress — block path only, domain is victim",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6ff06bf0-c60b-5f7a-9412-3f47e59de1cd",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "dse_na2@docusign.net",
+        "to_ids": false,
+        "comment": "Operator C spoofed sender — real DocuSign brand address, do NOT block",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6ede2e5b-9913-5d47-b808-dec2a8b34669",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.174.214.188",
+        "to_ids": true,
+        "comment": "Operator C residential relay — compromised host, do NOT block",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e46140a7-dde5-5df3-b54b-9f05c58d3e74",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "186.19.160.163",
+        "to_ids": true,
+        "comment": "Operator C residential relay — compromised host, do NOT block",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "mitre-attack:T1585.002"
+      },
+      {
+        "name": "mitre-attack:T1584.006"
+      },
+      {
+        "name": "mitre-attack:T1608.005"
+      },
+      {
+        "name": "mitre-attack:T1102"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:credential-harvesting"
+      },
+      {
+        "name": "label:bec"
+      },
+      {
+        "name": "label:open-redirect"
+      },
+      {
+        "name": "label:public-bucket-exposure"
+      }
+    ]
+  }
+}

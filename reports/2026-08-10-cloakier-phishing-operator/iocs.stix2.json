@@ -1,0 +1,1164 @@
+{
+  "type": "bundle",
+  "id": "bundle--b4eac204-5959-56be-9b4a-e5ae520bb653",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--e1fa4ebd-316a-5043-a715-deb1ad3db51d",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "A Multi-Brand Phishing Operation Exposed by a Public Cloud Bucket",
+      "published": "2026-08-10T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--5718dd35-5142-5e39-8287-37ef6dfb1608",
+        "indicator--e592ca18-75b5-5293-93f4-eda55fedf629",
+        "indicator--c25e4167-0073-55c9-a741-cdb647e33975",
+        "indicator--ea159679-99d6-5e7e-a141-e60b22963d5e",
+        "indicator--595d851b-4b43-5507-b345-407cc64124a4",
+        "indicator--f011722b-315e-534f-b318-a0037c39fbcb",
+        "indicator--8338613f-9d10-5eea-9222-1a99a794f07d",
+        "indicator--199a9868-50d1-5ab4-a51c-bd7e962fb5e6",
+        "indicator--7f37c9f9-0e32-589f-a3ef-8b9cc3e43fa6",
+        "indicator--9ad4fcb3-a7d6-5e2d-91d7-1afa972b2eb2",
+        "indicator--a5f694eb-7f50-5fe6-a9bd-e7139b3ae109",
+        "indicator--e0a61197-665e-544a-9ff7-59e22b50ad97",
+        "indicator--6d578eb2-17e8-5157-a5f2-58c89719b5ea",
+        "indicator--5b395031-806c-5a83-8336-0eb908473083",
+        "indicator--b4cb67e7-7e99-55ca-a9d6-5951b53e2083",
+        "indicator--a68ecfa5-9c09-59e5-adba-28e7cd33b856",
+        "indicator--3131b041-8d31-5ce8-921b-cf1d688d1987",
+        "indicator--f8547c08-152f-564e-a5ac-11e83defc5c6",
+        "indicator--30803fef-11e3-54a0-acd8-24c638cf9d69",
+        "indicator--37c530e1-aedc-5028-8ba6-503df34d7724",
+        "indicator--8c72670b-43c7-506f-8e48-7f24bc86e468",
+        "indicator--762a0910-94b4-50f3-acd0-f3af273360ed"
+      ],
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5718dd35-5142-5e39-8287-37ef6dfb1608",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://storage.googleapis.com/cloakier/",
+      "description": "Operator B: public GCS bucket staging 6 phishing kits",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://storage.googleapis.com/cloakier/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e592ca18-75b5-5293-93f4-eda55fedf629",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://ww2.crhamericasmaterial.com/nd/2.php",
+      "description": "Operator B: credential exfil — Webmail/DocuSign kit",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://ww2.crhamericasmaterial.com/nd/2.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c25e4167-0073-55c9-a741-cdb647e33975",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://ww2.crhamericasmaterial.com/vicar/submit.php",
+      "description": "Operator B: credential exfil — LinkedIn kit",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://ww2.crhamericasmaterial.com/vicar/submit.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ea159679-99d6-5e7e-a141-e60b22963d5e",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://ww2.crhamericasmaterial.com/vicar/1.php",
+      "description": "Operator B: credential exfil — generic sign-in kit",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://ww2.crhamericasmaterial.com/vicar/1.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--595d851b-4b43-5507-b345-407cc64124a4",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://clapstickmkt.name.ng/rst/1.php",
+      "description": "Operator B: credential exfil — Teams/Zoom kit",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://clapstickmkt.name.ng/rst/1.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f011722b-315e-534f-b318-a0037c39fbcb",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://stockltd.duckdns.org/expo/ali.php",
+      "description": "Operator B: credential exfil — O365 kit (offline)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://stockltd.duckdns.org/expo/ali.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8338613f-9d10-5eea-9222-1a99a794f07d",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: crhamericasmaterial.com",
+      "description": "Operator B backend, registered 2026-05-08",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'crhamericasmaterial.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--199a9868-50d1-5ab4-a51c-bd7e962fb5e6",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: acemmetric.com",
+      "description": "Operator B sending domain (A=45.74.252.189)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'acemmetric.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7f37c9f9-0e32-589f-a3ef-8b9cc3e43fa6",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 45.74.252.189",
+      "description": "Operator B sender, Valkyrie Hosting",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '45.74.252.189']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9ad4fcb3-a7d6-5e2d-91d7-1afa972b2eb2",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://submit-form.com/4FJePSjAq",
+      "description": "Operator A: credential exfil — Formspark form ID (pivot; shared service, block form ID not domain)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://submit-form.com/4FJePSjAq']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a5f694eb-7f50-5fe6-a9bd-e7139b3ae109",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://habitatcyprus.com/wp-includes/build/",
+      "description": "Operator A: kit on compromised WordPress — block path only, domain is victim",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://habitatcyprus.com/wp-includes/build/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e0a61197-665e-544a-9ff7-59e22b50ad97",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: emailportalverify-gg218lvp3x.edgeone.app",
+      "description": "Operator A: kit host (Tencent EdgeOne subdomain)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'emailportalverify-gg218lvp3x.edgeone.app']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6d578eb2-17e8-5157-a5f2-58c89719b5ea",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 77.83.39.10",
+      "description": "Operator A sender, Pitline Ltd /24 NL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '77.83.39.10']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5b395031-806c-5a83-8336-0eb908473083",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 77.83.39.14",
+      "description": "Operator A sender, Pitline Ltd /24 NL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '77.83.39.14']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b4cb67e7-7e99-55ca-a9d6-5951b53e2083",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 77.83.39.15",
+      "description": "Operator A sender, Pitline Ltd /24 NL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '77.83.39.15']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a68ecfa5-9c09-59e5-adba-28e7cd33b856",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 77.83.39.17",
+      "description": "Operator A sender, Pitline Ltd /24 NL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '77.83.39.17']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3131b041-8d31-5ce8-921b-cf1d688d1987",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 77.83.39.24",
+      "description": "Operator A sender, Pitline Ltd /24 NL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '77.83.39.24']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f8547c08-152f-564e-a5ac-11e83defc5c6",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 198.135.51.150",
+      "description": "Operator A sender, spinservers",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '198.135.51.150']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--30803fef-11e3-54a0-acd8-24c638cf9d69",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://kingcrossingbookclub.org/Goodsdys/redirect.php",
+      "description": "Operator C: redirector on compromised WordPress — block path only, domain is victim",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://kingcrossingbookclub.org/Goodsdys/redirect.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--37c530e1-aedc-5028-8ba6-503df34d7724",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: dse_na2@docusign.net",
+      "description": "Operator C spoofed sender — real DocuSign brand address, do NOT block",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'dse_na2@docusign.net']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8c72670b-43c7-506f-8e48-7f24bc86e468",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 103.174.214.188",
+      "description": "Operator C residential relay — compromised host, do NOT block",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '103.174.214.188']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--762a0910-94b4-50f3-acd0-f3af273360ed",
+      "created": "2026-08-10T00:00:00Z",
+      "modified": "2026-08-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 186.19.160.163",
+      "description": "Operator C residential relay — compromised host, do NOT block",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '186.19.160.163']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-10T00:00:00Z",
+      "labels": [
+        "phishing",
+        "credential-harvesting",
+        "bec",
+        "open-redirect",
+        "public-bucket-exposure"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102"
+        }
+      ]
+    }
+  ]
+}
