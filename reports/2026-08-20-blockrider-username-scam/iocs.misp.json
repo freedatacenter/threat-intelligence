@@ -1,0 +1,74 @@
+{
+  "Event": {
+    "uuid": "b42c4819-855c-5e94-9777-f822b34233fe",
+    "info": "[TLP:CLEAR] A Telegram Username-Buyout Pretext Aimed at a Security Researcher",
+    "date": "2026-08-20",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "dafb70eb-41bd-5e2b-ad9c-feed6012e272",
+        "type": "text",
+        "category": "Other",
+        "value": "@BlockRider454",
+        "to_ids": false,
+        "comment": "Telegram username used to approach the researcher",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b0b1d7e8-95d5-57b7-8558-a8d8f279a5cc",
+        "type": "text",
+        "category": "Other",
+        "value": "BlockRider",
+        "to_ids": false,
+        "comment": "Telegram display name",
+        "distribution": "5"
+      },
+      {
+        "uuid": "454dbaf7-189c-5b84-9271-8fa5b0a513f4",
+        "type": "text",
+        "category": "Other",
+        "value": "Collector of usernames",
+        "to_ids": false,
+        "comment": "Telegram bio — pretext framing for the cold contact",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1585.001"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "mitre-attack:T1598.003"
+      },
+      {
+        "name": "mitre-attack:T1539"
+      },
+      {
+        "name": "mitre-attack:T1078"
+      },
+      {
+        "name": "label:social-engineering"
+      },
+      {
+        "name": "label:telegram"
+      },
+      {
+        "name": "label:account-takeover"
+      },
+      {
+        "name": "label:pretexting"
+      }
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "type": "bundle",
+  "id": "bundle--7298d012-1349-5caa-b12d-0ef75e13a87d",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--0738666f-9a04-5414-8a10-6d06f3919b90",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-20T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "A Telegram Username-Buyout Pretext Aimed at a Security Researcher",
+      "published": "2026-08-20T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--ff6a2de3-e88e-56e8-a628-13ea899500cb",
+        "indicator--30265b7c-8ea1-5c4e-a31c-a239a5a4b676",
+        "indicator--a76db7e5-665b-5208-9cb9-e12e47b8c621"
+      ],
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "account-takeover",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ff6a2de3-e88e-56e8-a628-13ea899500cb",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-20T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: @BlockRider454",
+      "description": "Telegram username used to approach the researcher",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '@BlockRider454']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "account-takeover",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--30265b7c-8ea1-5c4e-a31c-a239a5a4b676",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-20T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: BlockRider",
+      "description": "Telegram display name",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'BlockRider']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "account-takeover",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a76db7e5-665b-5208-9cb9-e12e47b8c621",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-20T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: Collector of usernames",
+      "description": "Telegram bio — pretext framing for the cold contact",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'Collector of usernames']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "account-takeover",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        }
+      ]
+    }
+  ]
+}

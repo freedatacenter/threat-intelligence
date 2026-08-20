@@ -6,6 +6,35 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-08-20 — A Telegram Username-Buyout Pretext Aimed at a Security Researcher
+
+A security researcher affiliated with our organization received an unsolicited Telegram message offering to buy their username, with the deal proposed outside Fragment, Telegram's official username marketplace. The researcher declined and the contact went no further, but the pretext matches a well-documented scheme in which a "buyout" offer is used to move the target into a fake escrow flow that ends in a QR-code or SMS-code session hijack. We are publishing the contact details because the impact of this scheme is disproportionate for anyone whose Telegram identity is a working channel to sources, journalists, or NGOs rather than just a resellable handle.
+
+**Key findings:**
+- The approach followed the documented pattern for this scam: a cold DM, no price or marketplace reference, and a push to negotiate outside Fragment — itself the main red flag, since Fragment sales don't require private negotiation.
+- The contact account combined signals built for trust rather than substance: Telegram Premium, a recently registered profile, and a bio ("Collector of usernames") that preemptively answers why a stranger is reaching out.
+- The account's own username was an auto-generated numeric handle, at odds with its claimed "collector" persona — genuine username traders typically showcase a portfolio of clean handles as proof of trade.
+- The name used in chat ("Thomas") matched neither the account's display name nor its username, a basic identity inconsistency.
+- The exchange stopped at the initial offer, so we did not observe the escrow/QR-hijack stage directly — the downstream chain described in the report is reconstructed from external, independently documented cases of the same scheme.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-08-20-blockrider-username-scam/Incident_Report_2026-08-20_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-08-20-blockrider-username-scam/Incident_Report_2026-08-20_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-08-20-blockrider-username-scam/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-08-20-blockrider-username-scam/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| Telegram username | `@BlockRider454` |
+| Telegram display name | `BlockRider` |
+| Telegram bio | `Collector of usernames` |
+
+**MITRE ATT&CK:** T1585.001, T1656, T1598.003, T1539, T1078
+
+---
+
 ### 2026-08-10 — A Multi-Brand Phishing Operation Exposed by a Public Cloud Bucket
 
 While monitoring inbound mail for a civil-society organization in early August 2026, we observed three concurrent phishing operations. One of them exposed its entire tooling through a world-listable Google Cloud Storage bucket (`storage.googleapis[.]com/cloakier/`), letting us map a single actor running six brand-impersonation kits — Webmail/Roundcube, DocuSign, LinkedIn, Microsoft Teams/Zoom, Office 365 Excel, and a procurement lure — from one staging area, with credential exfiltration split across several back-ends including a Telegram bot. Two other operators hit the same organization in parallel: a persistent three-week "webmail re-validation" campaign harvesting credentials to a shared form-service form ID, and a DocuSign-branded BEC spray abusing an open redirect on an aged legitimate domain to reach a compromised WordPress redirector.
