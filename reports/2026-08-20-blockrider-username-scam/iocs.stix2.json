@@ -17,22 +17,32 @@
       "spec_version": "2.1",
       "id": "report--0738666f-9a04-5414-8a10-6d06f3919b90",
       "created": "2026-08-20T00:00:00Z",
-      "modified": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
-      "name": "A Telegram Username-Buyout Pretext Aimed at a Security Researcher",
-      "published": "2026-08-20T00:00:00Z",
+      "name": "Telegram Username-Buyout Pretext: From Cold DM to a Fake Fragment Mini App",
+      "published": "2026-08-21T00:00:00Z",
       "report_types": [
         "threat-report"
       ],
       "object_refs": [
         "indicator--ff6a2de3-e88e-56e8-a628-13ea899500cb",
         "indicator--30265b7c-8ea1-5c4e-a31c-a239a5a4b676",
-        "indicator--a76db7e5-665b-5208-9cb9-e12e47b8c621"
+        "indicator--a76db7e5-665b-5208-9cb9-e12e47b8c621",
+        "indicator--447f8d40-5a76-5cdc-acf7-ca32483179f4",
+        "indicator--a82b48a7-c56c-5358-8fd1-f29192d7f746",
+        "indicator--43c0f64d-77f7-55b7-843c-29df37bdc864",
+        "indicator--aca4e158-d1ab-5621-b829-bc93d2ae7da5",
+        "indicator--e1dbadf9-8d08-5ca1-a597-0696e62de03d",
+        "indicator--3f59ae33-3bd4-5c29-a834-a279586464f7",
+        "indicator--3536f9f6-9d9d-5477-ac3e-386a13dd80d4",
+        "indicator--086ea0a9-fc60-5620-bb54-4d702509c687"
       ],
       "labels": [
         "social-engineering",
         "telegram",
-        "account-takeover",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
         "pretexting"
       ],
       "external_references": [
@@ -50,11 +60,15 @@
         },
         {
           "source_name": "mitre-attack",
-          "external_id": "T1539"
+          "external_id": "T1566.003"
         },
         {
           "source_name": "mitre-attack",
-          "external_id": "T1078"
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
         }
       ]
     },
@@ -63,10 +77,10 @@
       "spec_version": "2.1",
       "id": "indicator--ff6a2de3-e88e-56e8-a628-13ea899500cb",
       "created": "2026-08-20T00:00:00Z",
-      "modified": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "TEXT: @BlockRider454",
-      "description": "Telegram username used to approach the researcher",
+      "description": "Telegram username used to approach target 1",
       "indicator_types": [
         "malicious-activity"
       ],
@@ -76,7 +90,9 @@
       "labels": [
         "social-engineering",
         "telegram",
-        "account-takeover",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
         "pretexting"
       ],
       "external_references": [
@@ -94,11 +110,15 @@
         },
         {
           "source_name": "mitre-attack",
-          "external_id": "T1539"
+          "external_id": "T1566.003"
         },
         {
           "source_name": "mitre-attack",
-          "external_id": "T1078"
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
         }
       ]
     },
@@ -107,10 +127,10 @@
       "spec_version": "2.1",
       "id": "indicator--30265b7c-8ea1-5c4e-a31c-a239a5a4b676",
       "created": "2026-08-20T00:00:00Z",
-      "modified": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "TEXT: BlockRider",
-      "description": "Telegram display name",
+      "description": "Telegram display name — persona 1",
       "indicator_types": [
         "malicious-activity"
       ],
@@ -120,7 +140,9 @@
       "labels": [
         "social-engineering",
         "telegram",
-        "account-takeover",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
         "pretexting"
       ],
       "external_references": [
@@ -138,11 +160,15 @@
         },
         {
           "source_name": "mitre-attack",
-          "external_id": "T1539"
+          "external_id": "T1566.003"
         },
         {
           "source_name": "mitre-attack",
-          "external_id": "T1078"
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
         }
       ]
     },
@@ -151,7 +177,7 @@
       "spec_version": "2.1",
       "id": "indicator--a76db7e5-665b-5208-9cb9-e12e47b8c621",
       "created": "2026-08-20T00:00:00Z",
-      "modified": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
       "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
       "name": "TEXT: Collector of usernames",
       "description": "Telegram bio — pretext framing for the cold contact",
@@ -164,7 +190,9 @@
       "labels": [
         "social-engineering",
         "telegram",
-        "account-takeover",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
         "pretexting"
       ],
       "external_references": [
@@ -182,11 +210,415 @@
         },
         {
           "source_name": "mitre-attack",
-          "external_id": "T1539"
+          "external_id": "T1566.003"
         },
         {
           "source_name": "mitre-attack",
-          "external_id": "T1078"
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--447f8d40-5a76-5cdc-acf7-ca32483179f4",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: NightVelocity",
+      "description": "Telegram display name — persona 2, opening DM to target 2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'NightVelocity']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a82b48a7-c56c-5358-8fd1-f29192d7f746",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 8576276249",
+      "description": "Telegram numeric user ID — persona 2 (forwarding privacy disabled)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '8576276249']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--43c0f64d-77f7-55b7-843c-29df37bdc864",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: Alert",
+      "description": "Telegram display name — persona 3, poses as a platform notifier",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'Alert']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aca4e158-d1ab-5621-b829-bc93d2ae7da5",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: @trinformbot",
+      "description": "Telegram inline bot delivering the counterfeit Fragment notification",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '@trinformbot']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e1dbadf9-8d08-5ca1-a597-0696e62de03d",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 8986655554",
+      "description": "Telegram numeric bot ID — @trinformbot",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '8986655554']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3f59ae33-3bd4-5c29-a834-a279586464f7",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: Trades",
+      "description": "Telegram bot display name — @trinformbot",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'Trades']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3536f9f6-9d9d-5477-ac3e-386a13dd80d4",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://t.me/trinformbot/start",
+      "description": "Telegram Mini App entry point; live payload adds startapp=<username>_<amount>_<fee>_Doc4",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://t.me/trinformbot/start']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--086ea0a9-fc60-5620-bb54-4d702509c687",
+      "created": "2026-08-20T00:00:00Z",
+      "modified": "2026-08-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: c306dddfcbc88af28435a826a70310f82faf7d281fa18ebf4e931b8fcacafe1e",
+      "description": "Profile photo of @trinformbot (320x320 JPEG)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'c306dddfcbc88af28435a826a70310f82faf7d281fa18ebf4e931b8fcacafe1e']",
+      "pattern_type": "stix",
+      "valid_from": "2026-08-20T00:00:00Z",
+      "labels": [
+        "social-engineering",
+        "telegram",
+        "telegram-mini-app",
+        "ton-connect",
+        "crypto-theft",
+        "pretexting"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
         }
       ]
     }

@@ -1,8 +1,10 @@
 {
   "Event": {
     "uuid": "b42c4819-855c-5e94-9777-f822b34233fe",
-    "info": "[TLP:CLEAR] A Telegram Username-Buyout Pretext Aimed at a Security Researcher",
+    "info": "[TLP:CLEAR] Telegram Username-Buyout Pretext: From Cold DM to a Fake Fragment Mini App",
     "date": "2026-08-20",
+    "timestamp": "1787270400",
+    "publish_timestamp": "1787270400",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",
@@ -13,7 +15,7 @@
         "category": "Other",
         "value": "@BlockRider454",
         "to_ids": false,
-        "comment": "Telegram username used to approach the researcher",
+        "comment": "Telegram username used to approach target 1",
         "distribution": "5"
       },
       {
@@ -22,7 +24,7 @@
         "category": "Other",
         "value": "BlockRider",
         "to_ids": false,
-        "comment": "Telegram display name",
+        "comment": "Telegram display name — persona 1",
         "distribution": "5"
       },
       {
@@ -32,6 +34,78 @@
         "value": "Collector of usernames",
         "to_ids": false,
         "comment": "Telegram bio — pretext framing for the cold contact",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5b90ed4d-0725-5db8-93a9-d7938b9a6a0c",
+        "type": "text",
+        "category": "Other",
+        "value": "NightVelocity",
+        "to_ids": false,
+        "comment": "Telegram display name — persona 2, opening DM to target 2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e3a64e2d-f84e-50af-8694-84431dd276ec",
+        "type": "text",
+        "category": "Other",
+        "value": "8576276249",
+        "to_ids": false,
+        "comment": "Telegram numeric user ID — persona 2 (forwarding privacy disabled)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "770cb733-cee1-5f2e-9960-e2e8f47c3dd9",
+        "type": "text",
+        "category": "Other",
+        "value": "Alert",
+        "to_ids": false,
+        "comment": "Telegram display name — persona 3, poses as a platform notifier",
+        "distribution": "5"
+      },
+      {
+        "uuid": "53431ad7-ad0c-59b1-afb7-c50c1d3fda1f",
+        "type": "text",
+        "category": "Other",
+        "value": "@trinformbot",
+        "to_ids": false,
+        "comment": "Telegram inline bot delivering the counterfeit Fragment notification",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c70f6cf7-2a6e-5c40-bd16-c71b3f2b865d",
+        "type": "text",
+        "category": "Other",
+        "value": "8986655554",
+        "to_ids": false,
+        "comment": "Telegram numeric bot ID — @trinformbot",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5276b68b-125c-5cbc-b05d-06e627b87646",
+        "type": "text",
+        "category": "Other",
+        "value": "Trades",
+        "to_ids": false,
+        "comment": "Telegram bot display name — @trinformbot",
+        "distribution": "5"
+      },
+      {
+        "uuid": "595f74c9-e812-5663-b28a-9e1fb62542ff",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://t.me/trinformbot/start",
+        "to_ids": true,
+        "comment": "Telegram Mini App entry point; live payload adds startapp=<username>_<amount>_<fee>_Doc4",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bfc21acb-8d56-590d-be1b-f2c03c09c247",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "c306dddfcbc88af28435a826a70310f82faf7d281fa18ebf4e931b8fcacafe1e",
+        "to_ids": true,
+        "comment": "Profile photo of @trinformbot (320x320 JPEG)",
         "distribution": "5"
       }
     ],
@@ -52,10 +126,13 @@
         "name": "mitre-attack:T1598.003"
       },
       {
-        "name": "mitre-attack:T1539"
+        "name": "mitre-attack:T1566.003"
       },
       {
-        "name": "mitre-attack:T1078"
+        "name": "mitre-attack:T1204.001"
+      },
+      {
+        "name": "mitre-attack:T1657"
       },
       {
         "name": "label:social-engineering"
@@ -64,7 +141,13 @@
         "name": "label:telegram"
       },
       {
-        "name": "label:account-takeover"
+        "name": "label:telegram-mini-app"
+      },
+      {
+        "name": "label:ton-connect"
+      },
+      {
+        "name": "label:crypto-theft"
       },
       {
         "name": "label:pretexting"

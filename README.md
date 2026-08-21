@@ -6,16 +6,22 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
-### 2026-08-20 — A Telegram Username-Buyout Pretext Aimed at a Security Researcher
+### 2026-08-20 — Telegram Username-Buyout Pretext: From Cold DM to a Fake Fragment Mini App
 
-A security researcher affiliated with our organization received an unsolicited Telegram message offering to buy their username, with the deal proposed outside Fragment, Telegram's official username marketplace. The researcher declined and the contact went no further, but the pretext matches a well-documented scheme in which a "buyout" offer is used to move the target into a fake escrow flow that ends in a QR-code or SMS-code session hijack. We are publishing the contact details because the impact of this scheme is disproportionate for anyone whose Telegram identity is a working channel to sources, journalists, or NGOs rather than just a resellable handle.
+*Updated 2026-08-21 (revision 1.1) — the delivery stage has now been observed, and it corrects the central claim of the first version of this report.*
+
+Over 27 hours on 20-21 August 2026, two security researchers with public Telegram identifiers each received an unsolicited offer to buy their username, proposed in private chat rather than through Fragment, Telegram's official username marketplace. The first target declined and the contact stopped. With the second, the operation continued: sixteen minutes after the opening message, a third persona delivered a counterfeit "Fragment Official | Transaction Notification" through an inline bot, carrying a Confirm button that opens a Telegram Mini App. The link matches a publicly documented Fragment-impersonation kit whose endgame is a TON Connect wallet drainer — not the QR-code session hijack that revision 1.0 of this report reconstructed from external sources. The asset primarily at risk is the victim's wallet, not their Telegram account.
 
 **Key findings:**
-- The approach followed the documented pattern for this scam: a cold DM, no price or marketplace reference, and a push to negotiate outside Fragment — itself the main red flag, since Fragment sales don't require private negotiation.
-- The contact account combined signals built for trust rather than substance: Telegram Premium, a recently registered profile, and a bio ("Collector of usernames") that preemptively answers why a stranger is reaching out.
-- The account's own username was an auto-generated numeric handle, at odds with its claimed "collector" persona — genuine username traders typically showcase a portfolio of clean handles as proof of trade.
-- The name used in chat ("Thomas") matched neither the account's display name nor its username, a basic identity inconsistency.
-- The exchange stopped at the initial offer, so we did not observe the escrow/QR-hijack stage directly — the downstream chain described in the report is reconstructed from external, independently documented cases of the same scheme.
+- The lure has moved off the web and into Telegram itself. Where 2024-2025 write-ups of this scheme describe a `fragment.com` clone, the payload here is a Mini App: no domain, no address bar, no TLS certificate for a target to inspect, and nothing for defenders to block or submit for takedown.
+- The counterfeit notification carries a visible `via @bot` label. Telegram delivers system notifications only from the built-in Telegram account (ID `777000`), and Fragment is a website that does not send direct messages at all.
+- The two stages of the same operation contradict each other on currency: the opening DM quoted 5400 TON, the "official notification" quoted 5400 GRAM — a token that was never launched and was abandoned in 2020. Fragment settles in TON.
+- The notification invents platform mechanics that do not exist: an "escrow mechanism" holding buyer funds and a "Platform Service Fee (5%)", the latter being groundwork for an advance-fee demand.
+- The notifier persona displays a blue badge beside its name, almost certainly a Telegram Premium emoji status imitating verification. A genuine verification badge does not open anything when tapped.
+- The Mini App link is parameterised per victim (`<username>_<amount>_<fee>_Doc4`), indicating a templated pipeline rather than hand-crafted targeting; escalation to the payload required no reply from the target.
+- All three personas changed their display name and profile photo within a single window in June 2026, roughly two months before the campaign — a pool of aged accounts repurposed for the operation rather than registered for it.
+- The account pool is configured inconsistently: only one of the three personas had forwarding privacy disabled, which is how its numeric user ID was recovered. Numeric IDs survive handle rotation and are the durable pivot here.
+- We did not open the Mini App or submit its link to a public scanner: the link carries the victim's handle, so either action would confirm to the operator that the target is being worked. The kit identification rests on link structure, lure and branding, not on a detonated sample.
 
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-08-20-blockrider-username-scam/Incident_Report_2026-08-20_EN.pdf)
@@ -27,11 +33,21 @@ A security researcher affiliated with our organization received an unsolicited T
 
 | Type | Value |
 |------|-------|
-| Telegram username | `@BlockRider454` |
-| Telegram display name | `BlockRider` |
-| Telegram bio | `Collector of usernames` |
+| Telegram username | `@BlockRider454` (persona 1) |
+| Telegram display name | `BlockRider` (persona 1) |
+| Telegram bio | `Collector of usernames` (persona 1) |
+| Telegram display name | `NightVelocity` (persona 2) |
+| Telegram user ID | `8576276249` (persona 2) |
+| Telegram display name | `Alert` (persona 3, poses as platform notifier) |
+| Telegram bot | `@trinformbot` (payload delivery) |
+| Telegram bot ID | `8986655554` |
+| Telegram bot display name | `Trades` |
+| URL | `hxxps://t[.]me/trinformbot/start` (Mini App; live payload appends `?startapp=<username>_<amount>_<fee>_Doc4`) |
+| SHA-256 | `c306dddfcbc88af28435a826a70310f82faf7d281fa18ebf4e931b8fcacafe1e` (profile photo of `@trinformbot`) |
 
-**MITRE ATT&CK:** T1585.001, T1656, T1598.003, T1539, T1078
+Two further bot handles, `@FragmentOffersRoBot` and `@SendingOffersBot`, appear in third-party write-ups of the same kit. They are noted as context, not as our own observation.
+
+**MITRE ATT&CK:** T1585.001, T1656, T1598.003, T1566.003, T1204.001, T1657
 
 ---
 
