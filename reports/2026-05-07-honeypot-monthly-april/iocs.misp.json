@@ -3,6 +3,8 @@
     "uuid": "1cadba20-435d-5af1-95cb-3ed0bb6b0824",
     "info": "[TLP:CLEAR] Honeypot Threat Intelligence: Monthly Report, April 2026",
     "date": "2026-05-07",
+    "timestamp": "1778112000",
+    "publish_timestamp": "1778112000",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

@@ -3,6 +3,8 @@
     "uuid": "35a6d4f8-cffd-57cd-9d85-d8fcf4319bdd",
     "info": "[TLP:CLEAR] Phishing via Compromised PSL Mailbox: Lovable.app Front + .ru Credential Harvester",
     "date": "2026-05-03",
+    "timestamp": "1777766400",
+    "publish_timestamp": "1777766400",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

@@ -3,6 +3,8 @@
     "uuid": "a647b840-ca81-56c7-b84d-fae1d5c15cb8",
     "info": "[TLP:CLEAR] Gmail Workspace Credential Phishing via Commercial PhaaS Platform",
     "date": "2026-03-09",
+    "timestamp": "1773014400",
+    "publish_timestamp": "1773014400",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

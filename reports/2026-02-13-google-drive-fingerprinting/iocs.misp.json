@@ -3,6 +3,8 @@
     "uuid": "23e486f6-0be1-51eb-b433-55cfbc26976f",
     "info": "[TLP:CLEAR] Phishing Campaign via Google Drive with Browser Fingerprinting",
     "date": "2026-02-13",
+    "timestamp": "1770940800",
+    "publish_timestamp": "1770940800",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

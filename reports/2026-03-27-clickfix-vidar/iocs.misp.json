@@ -3,6 +3,8 @@
     "uuid": "504780a3-f54f-54a1-8e08-cb3cfa4e6d46",
     "info": "[TLP:CLEAR] ClickFix Social Engineering Campaign Delivering Vidar Stealer via Fake Cloudflare CAPTCHA",
     "date": "2026-03-27",
+    "timestamp": "1774569600",
+    "publish_timestamp": "1774569600",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

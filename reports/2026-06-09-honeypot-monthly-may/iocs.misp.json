@@ -3,6 +3,8 @@
     "uuid": "7a6fd80d-d4d0-5658-8946-9f8c781e5ee7",
     "info": "[TLP:CLEAR] Honeypot Fleet: Monthly Threat Report, May 2026",
     "date": "2026-06-09",
+    "timestamp": "1780963200",
+    "publish_timestamp": "1780963200",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

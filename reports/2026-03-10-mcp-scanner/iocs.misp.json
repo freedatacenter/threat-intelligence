@@ -3,6 +3,8 @@
     "uuid": "661af30d-6856-5b64-8e2d-e13e22834f37",
     "info": "[TLP:CLEAR] Multi-Protocol Scanner with MCP Module Detected in Honeypot",
     "date": "2026-03-10",
+    "timestamp": "1773100800",
+    "publish_timestamp": "1773100800",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

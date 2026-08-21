@@ -3,6 +3,8 @@
     "uuid": "ffc3b945-4dc9-50c8-85f3-455ae88b199a",
     "info": "[TLP:CLEAR] MSSQL Brute-force Farm and RDP Bruteforcer — zerolimit-servers.cool / AS205997",
     "date": "2026-05-27",
+    "timestamp": "1779840000",
+    "publish_timestamp": "1779840000",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

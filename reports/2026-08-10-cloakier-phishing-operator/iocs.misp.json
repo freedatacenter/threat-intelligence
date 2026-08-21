@@ -3,6 +3,8 @@
     "uuid": "ad082004-0558-51c0-9736-90dbc2286fc2",
     "info": "[TLP:CLEAR] A Multi-Brand Phishing Operation Exposed by a Public Cloud Bucket",
     "date": "2026-08-10",
+    "timestamp": "1786320000",
+    "publish_timestamp": "1786320000",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

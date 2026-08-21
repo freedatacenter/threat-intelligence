@@ -3,6 +3,8 @@
     "uuid": "899fd7ad-f7d0-529d-8496-b6a6b093d577",
     "info": "[TLP:CLEAR] Targeted Phishing Impersonating National Endowment for Democracy",
     "date": "2026-02-18",
+    "timestamp": "1771372800",
+    "publish_timestamp": "1771372800",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",

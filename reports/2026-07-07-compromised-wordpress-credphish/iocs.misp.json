@@ -3,6 +3,8 @@
     "uuid": "d29fa047-22df-577f-866e-abf2fd05916b",
     "info": "[TLP:CLEAR] Credential-Harvesting Campaign on Compromised WordPress Sites",
     "date": "2026-07-07",
+    "timestamp": "1783382400",
+    "publish_timestamp": "1783382400",
     "threat_level_id": "2",
     "distribution": "3",
     "analysis": "2",
