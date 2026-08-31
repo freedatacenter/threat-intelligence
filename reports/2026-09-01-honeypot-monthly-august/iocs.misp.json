@@ -1,0 +1,1435 @@
+{
+  "Event": {
+    "uuid": "b951d65c-ea83-5ecc-9d69-938f24f4ad6e",
+    "info": "[TLP:CLEAR] Honeypot Fleet: Monthly Threat Report, August 2026",
+    "date": "2026-09-01",
+    "timestamp": "1788220800",
+    "publish_timestamp": "1788220800",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "56f98590-818b-56fe-95cf-7014bdcbd31b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "147.45.69.42",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b033ef47-0d52-5175-aaf2-d782790ce1c7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "168.144.135.119",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "027b4e63-256f-58b9-a56b-0888da37bf90",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "208.84.103.51",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d4609f7f-d872-5015-a314-26bf779e52bd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "8.219.90.108",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "93f30e69-7c58-50ed-a7e4-3f24fa726e7e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "156.239.42.225",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "65789558-41e6-5df9-8c1e-24f6ae096497",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "151.231.112.236",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f5bf707b-f5ec-5569-bc2c-824b1240a4bf",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "136.243.10.183",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "16ae9e61-30d1-5730-a48d-b65517accb2d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "74.80.181.141",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ceedb296-0024-5c3f-ad16-0a94beb9484e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "199.217.105.247",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "eec8c14f-fc17-5809-9813-fb20a249a3bb",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.124.110.245",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "000db36b-47cd-5f09-a29f-406b70459a44",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.124.110.246",
+        "to_ids": true,
+        "comment": "LLM-honeypot abuse source (Ollama)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "229e42ca-ba8f-53d3-b751-0dc7c35cd60f",
+        "type": "text",
+        "category": "Other",
+        "value": "bc1q5xpazlg7q6ph2r6s7tzumd5zyjdet6vjzvsqln",
+        "to_ids": false,
+        "comment": "LLM-honeypot abuse source (Ollama) — BTC wallet",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c227742b-c580-52ee-bc48-b5f80a20b061",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.17.25",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7fce8cef-3293-5778-9183-0a92de68fd2d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.18.105",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0c716dce-0ad6-5f04-8342-e5755bc5ebcd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "140.235.19.17",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e27a6f3a-2c44-5648-b898-dc54e3431c41",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.1.227",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9be8bdd3-2d88-550e-8289-291ab3654ee6",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.2.239",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f9d7ef5b-8fbd-5686-81cf-48e2345d5b6d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "207.174.3.248",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fa1e202a-d0ba-56a5-b662-957074958c85",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "72.51.57.6",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "655a1f2b-9f70-5941-9d7b-989b1f3c2f1f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "72.51.59.6",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "95103919-8174-5881-bfd7-4705d1f44119",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "188.130.208.33",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9a67de51-5dff-5092-8024-43cbc9b46001",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "104.128.190.153",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "acdb9070-58a8-5014-8e11-eea771a1d5bc",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "37.187.3.25",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e1969ef5-80d9-5e24-a609-918741ce4caf",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "37.58.131.227",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0ef09eb5-ad2a-533a-9c38-00bf6ee31252",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.103.245.226",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "74229bf2-02ea-531e-9845-5eb00b10747d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "103.160.37.151",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "793b100e-d3c6-58d8-8e08-1ca90452cf52",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "183.178.3.113",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "43b2141a-630b-5944-8589-1bc349bce26f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "169.38.135.196",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9fb8ebcb-621b-50b9-8fba-ff35e604e68c",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "165.165.142.149",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e22e6bb8-5adf-539c-a349-850e5f00a70b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "192.3.154.34",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2da6156b-b1a4-5baa-9d39-5ba0c3d8cc0f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.154.43.191",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9a5103d5-6ef9-53f7-9631-3b4b118ef5cf",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "93.48.225.80",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "45c21320-b6bc-5786-8a15-bb8230a2bb5a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.242.3.3",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bd1bd4fe-a7a4-51d4-b7e8-895b4b0ab9d7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "43.228.157.74",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b6a92f13-c7c1-52b2-b678-115b4a068932",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.194.67.120",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "01010d00-a664-5fd5-b710-961e470605f9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.205.1.231",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5cd92ea9-c431-5f2e-bfd9-795c5f271c18",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "5.42.211.96",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "10ff1976-ba6e-540c-91d4-cab8c568c510",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "152.89.199.131",
+        "to_ids": true,
+        "comment": "ICS decoy: VNC password-spraying source / SNMP reflection spoofed source",
+        "distribution": "5"
+      },
+      {
+        "uuid": "23d8490a-6e82-5f34-b6ea-64d2926b2c97",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.92.40.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2a23cb94-a350-57bc-911b-f77d7ed35217",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.92.42.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "940353a6-ddbe-5e0b-a886-ed16d03fd772",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.92.47.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3a2be2ad-5835-56de-a844-8b3be517cb81",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.153.34.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3b011a68-5098-58f8-97fd-950fa4268988",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.156.87.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "92817846-1d07-5282-8e11-caf7e45de131",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "171.244.44.251",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d95efddd-97b8-5a4e-ab31-149f16df7d23",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "213.232.114.14",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6413e524-2474-57db-adf1-1aa6491132cc",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "176.65.139.228",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3c26502d-6181-59e8-8634-1dee444f90e8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "176.65.139.202",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c17dc6ba-6bea-5401-9afa-32488c673cb9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.154.43.231",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f233c0f6-059a-5c8f-bcd8-44cbb622f68b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.154.43.238",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f054125a-dc0d-54c4-9500-378988893a7f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "130.12.180.51",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1731354b-3bcb-520c-acba-45d410ea9d42",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "195.178.110.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b2b7d033-4d25-5581-a2b0-5d43d18269f2",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "92.118.39.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d1237685-d9ab-5711-b327-e3368bf80e7f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "193.32.162.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6b9dbfa3-3a32-57e8-87a4-ad07020ced88",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "2.57.122.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "60ceaa8c-9d12-506c-b8aa-89f5ff4bf3ea",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "80.94.92.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f118d6d5-3440-5215-8c57-0198b81f817e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.239.124.0/24",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e3a5dcc1-2ed0-5f64-b945-e1b73eae26cb",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "64.112.184.210",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a6128546-7da0-5a26-a036-2d5d823bae9e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "83.237.93.10",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8be898ad-226f-5085-b71a-186945437b77",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f0aa83bbbd2c75e2f71ec16029ee5fcfad59f3a8efa30a500b815f0f6c18d987",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7b214879-c79d-505f-bd98-2c22ec35580f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "3f3bf218089d1488617d37f8a5116bb2791eb39ce06a1b5bc9a4cdfe5e94dd39",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f687c14a-02e5-5f22-8778-931e6a17c343",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "8e1a67a5c03b3cd818f046c7a1605afccc0ee5ce437a0d099881f1872b54bc70",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a8ba0efd-21f4-5689-ae8e-8793048baf2f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d1cac82f44b54b0fd244a9e4122811e9ae108a197c7a65a20fd2e7552683e68e",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "035a6ff0-df63-505d-a8fc-587b9f5bb2ab",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d70f917e35813a7ae323e6b2b539d6dbbfc3a3a6599f1fed93430b14ca08b141",
+        "to_ids": true,
+        "comment": "SSH bruteforce / dropper / botnet infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9fc1a07f-59eb-51a9-a2a9-46f65147699b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "5.182.210.174",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2b28aa6b-6b4f-5159-8b1d-3fc3110eb85a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "5.182.210.61",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e58a4146-18c4-5f64-aae7-373625be8025",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.198.224.26",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "11dd1a50-88d3-56d7-be0d-880553b64efd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.198.224.5",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ab9fed16-b76f-51a9-b87e-da19909069b6",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "154.90.70.254",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "14965127-e683-52a3-8190-ace9bf788381",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.205.1.240",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "eb759c9b-5b0c-5198-90b1-76ba7f01772f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "154.54.100.247",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a480fda5-5603-525d-a730-6228071e26c4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "217.60.195.113",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7b118e41-c1ee-5b01-b744-fd31780476c5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "101.33.245.191",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "515be38b-2f1d-54aa-b97b-b064a82594f5",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "167.86.122.134",
+        "to_ids": true,
+        "comment": "Docker-API worm operator (VPSVAULT) infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e0a8232f-ca0d-592b-8322-318d8c0d72e3",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "36.255.97.120",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "620a6b2f-6876-59fd-8936-0b966ac3e3f2",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "77.83.39.10",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1e110710-8d3f-5625-9bb7-a9e52db1711f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "198.135.51.150",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "784c66de-2e7a-53ff-a2bb-aaeafe4f41fd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.74.252.189",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c838c803-208f-55d6-bdb2-3f784921f6e7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "65.181.122.48",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dca16f1b-ad97-57ae-9706-c7f6a9f45ac1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "152.89.218.91",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "219fadf9-2f50-53ea-8ec7-277ba53e7c2f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "108.59.4.205",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dc349bec-442c-5107-bef6-75b17a0c47d7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "66.181.39.225",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e4d74472-c685-5f51-b42d-192a10eaab74",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "95.217.203.83",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2e10d034-6ffe-510a-a163-16fdddb64a13",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "5.230.201.163",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8b3ca2ac-3498-5582-89d1-c3ea19f3b8ed",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "5.175.182.215",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b43d6e9d-56f4-5c2a-a750-c8588a35441c",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "192.227.144.55",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "44c0ab7c-afb8-5288-a810-a3e93b0eaf25",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "172.245.92.100",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a195f5aa-efdf-505e-abfe-007b96d3c82e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "198.135.55.67",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3e8a849c-ba67-534c-9e32-d97c711d34d4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "135.181.7.237",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a086835-276d-5199-ade1-8b5856f02737",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "136.243.200.190",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8a4af6e3-b4ed-539c-800c-c770a47c18cb",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "160.30.136.41",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a6bd5cd-7dbc-5ee1-8a6b-4680b071377f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "160.30.136.11",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2b6be274-d016-50eb-8bb3-15a0839520c4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "144.31.63.120",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5c0dd1e3-fb95-5266-ab3f-47726501585f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "204.152.214.27",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5f33ef0b-c131-5788-9ad5-5082d1e33df7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "150.241.230.186",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bc96b4d0-f2fe-5619-a8ac-c95cb99f137b",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "530d00da82a188bd6ff7dc3a1cc0b6216d8f9a279f7d00213bbc68acd09d2f71",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bc512261-ee75-5fee-9217-001631ba1b42",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f3cfcbd8c2d33128a836f891791a1743c427f321f538dc208521c371edd03d7f",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "eb81d522-3a6a-55f1-893d-b8f929407d36",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "df7ec7857c3e6c3679ad50c60fbd97f322eca68f1c893c1b9c8ee7aa05a0a656",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3d2a3268-861c-5192-bdb9-fedb193435a3",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "b3999441143b2dd9788d4dca2a538c349d68d0f6d3ce4bd61a3fc5c134445307",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cc5f78d6-2d4f-528e-99a6-5e6d07d8d86c",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "0667e9dba7e3bfcd004aa5f50e462a52efd01fa9ddd1c97d533e6db5ee0bc977",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "38dbffde-1cc5-5159-a90e-d8b7dfa315c2",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "ffaddf3882cdd59a4b685e7215bedee8b4b84f10ae4644d37e937755d8cb6d32",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3e0f583d-a34a-52bf-97af-656442411fe0",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "a601ae5011cec30fd1f3af31830e733e339e59e4bc9e3461cca383c99e06bfa3",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a93ea386-eb1d-5c02-80fd-5ebcf7c8f9bf",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "3ed1a5df1dfb1a5a345fdea33b97eff013c3ec08a415b73312b82daa1d13a792",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "73f3324e-3707-592e-889e-2b0e61b1dcb9",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "1219a58a2c598567bad7d06fa7f29769e613e279b5623df6302f2f4bb6594069",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4da75a92-f945-53c6-8e98-149be007f409",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "4721cafc6efbf3435a188af4a7e71722c8b647bcdfd4948e8c02a38bc2e7ebd1",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e5575e74-70b9-5c20-92d3-db9180f83339",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "c9826b12efd1a694159e1e2fd7b215045ed85dc92f0a4e52b9639bcbe2277264",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "384c6776-1163-5993-85a1-eacfcc56a36b",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "b3c7e130a3a6b609c21175e978d307f8efc9a11c5286e08898e045dbc6352fb4",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b1b5e0ce-d346-5b70-bef1-3e9ad7bca09f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "ab51b26c0fc15403dae63cf40a28a09bd85c624d5929cddf11537688f1b76f8b",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a1d68557-5b91-5501-827b-f0f8c351a4e0",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "3f746415957b5f2abbce7baeb6edd5232411372a5c1c0c04a319c6bedd8974e9",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "241109ac-d39f-5ab7-8637-778fa0a4edf5",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "bfc48971d3254861637e5e370ff2d522defe0b28d566c7b76c4bea7d7195aaf7",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8c41489e-6e70-5137-9994-36a9ecc6d6e3",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "fifapredict.live",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fd3b1c87-595a-5122-b632-e156b173e65b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "richiedabie.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "94032a75-d3f6-5215-9217-3ca5eb3c1041",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "hulladolsentenpe.top",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3aa6351f-3901-5c6a-b486-8a7003ac4754",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "v1ad0bv1.es",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "da1c7bd8-70f5-5f9b-ac42-657d4bc478ca",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-iden.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "436d102b-afab-5645-aed4-9461df48b646",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-ids.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "77310a0e-e1a1-5b66-984d-ffb7ddd7e2bb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-mailcontact.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e6f92f88-9449-52fb-b7bb-05ca5334839c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-betamax.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "57618fb4-7e3d-5c83-9632-8f7a8695fe59",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-securitypage.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3718d5e4-cdca-5013-b210-1ba1606f791b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "facebook-security.date",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e7f7925f-3bb7-5fd7-acf4-edb856c4da12",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "verified-blue-badge.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "deb1ddf5-a0ba-5cb5-aca2-d13cfb67849a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sellpia247.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "24e6d4a4-ff22-5af8-93a7-daa502133a0c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "st.sellpia247.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "29d6d013-8365-5522-a73e-8e76c788e394",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-security-mail.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ef257b53-be5f-585a-a55b-5e099c7a3f55",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "fb-security-blud.netlify.app",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "28818209-36f8-5ce9-9c32-b0f5219c935f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "fb-copyright-page.netlify.app",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e99f795c-142a-5960-ace8-bd92cbd74e55",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "facebook-verified-badge.center",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f53d8172-5503-544f-b083-24dae9152a5c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "facebookbadgeapply.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8481821e-a682-537d-9e72-d5349d1d265a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "solidfairhubhost.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b236dc3c-6655-53c6-8e36-077f4d994667",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "coredatafye.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d2e96fc5-efb4-50d9-bf19-7e76da9066a1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "domainswitchmove.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a94d383c-fd21-55fe-93ef-da0fbfe8141f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mail.logiswebmail.top",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7486f0e0-7cdd-5feb-a65c-ee834d413402",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "hatsmtp.top",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f9119366-d2f1-5575-8193-4b1630376a7a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "global.traders.ca",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "af3afe2d-8522-5d20-8070-51a28b41f38e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "secure.ambergmarktber.store",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4faec505-c321-5a1d-9c1c-fd0dbf5bcfd9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "project22499886.tilda.ws",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "decf75aa-8221-5ace-8211-145882b51af1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "habitatcyprus.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5190dd24-12e7-5085-b110-48b464b078d9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "nelsonequity.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d6fed432-7f5f-5ce2-b25d-4db79f10fdcc",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sameylogistics.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7d0180ca-08d5-5455-8b4a-2162abc8dbfa",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "login.2ccloud.com",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "631e6556-45e3-5ee7-933b-b232873cf86c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "flix-fox.com.in",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "73678ac7-ea34-5d52-aa84-317fbeed2289",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "read0nsession.es",
+        "to_ids": true,
+        "comment": "Phishing campaign infrastructure",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6e7d256b-7b8a-5b9f-adb0-d5af5836cdd1",
+        "type": "text",
+        "category": "Other",
+        "value": "bc1qw6l8m0u9720l7p6l8nw3trcesgt2rxshvr7xrd",
+        "to_ids": false,
+        "comment": "Phishing campaign infrastructure — BTC wallet",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bbf197b9-990c-59d4-9756-4cbe0bdce5c2",
+        "type": "text",
+        "category": "Other",
+        "value": "bc1q5t0peymgrvzd49e4zgwxnwrac7n4sc45fufwvr",
+        "to_ids": false,
+        "comment": "Phishing campaign infrastructure — BTC wallet",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cc15c8a4-43ca-5587-8a5d-58974f224f47",
+        "type": "text",
+        "category": "Other",
+        "value": "1DFN2R8w1Qos6Cwi4kp68ACZLSHHFeaRFq",
+        "to_ids": false,
+        "comment": "Phishing campaign infrastructure — BTC wallet",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0b880135-22e8-502d-8e2b-940ee2578bb0",
+        "type": "text",
+        "category": "Other",
+        "value": "bc1qk34llhm32cmj8t3m652wdz884hy565d6skv2de",
+        "to_ids": false,
+        "comment": "Phishing campaign infrastructure — BTC wallet",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5f84169f-e64d-540a-9fb3-f40430b96329",
+        "type": "text",
+        "category": "Other",
+        "value": "po11nn060000_46ba010406bc",
+        "to_ids": false,
+        "comment": "Docker-API worm operator (VPSVAULT) HTTP client JA4H fingerprint",
+        "distribution": "5"
+      },
+      {
+        "uuid": "08377c96-d6f2-5bbb-a87d-19fc3725ecec",
+        "type": "text",
+        "category": "Other",
+        "value": "po11nn050000_2c3038913033",
+        "to_ids": false,
+        "comment": "Docker-API worm operator (VPSVAULT) HTTP client JA4H fingerprint",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c5291cc9-82c5-511b-9b11-b7ff99a450d3",
+        "type": "text",
+        "category": "Other",
+        "value": "8AQRm4ZiDAxXwLhiuSAyCBfdQC1MFbQAyKtNqtN3De1pSYrWxXzaMjjMSm2THvviW52tPXTSfgSY6UqJxouc1vVpBN5MuJG",
+        "to_ids": false,
+        "comment": "Monero wallet used by the Docker-hosted XMRig miner",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T0846"
+      },
+      {
+        "name": "mitre-attack:T0888"
+      },
+      {
+        "name": "mitre-attack:T1021.004"
+      },
+      {
+        "name": "mitre-attack:T1021.005"
+      },
+      {
+        "name": "mitre-attack:T1027.002"
+      },
+      {
+        "name": "mitre-attack:T1046"
+      },
+      {
+        "name": "mitre-attack:T1090"
+      },
+      {
+        "name": "mitre-attack:T1098.004"
+      },
+      {
+        "name": "mitre-attack:T1105"
+      },
+      {
+        "name": "mitre-attack:T1110.001"
+      },
+      {
+        "name": "mitre-attack:T1190"
+      },
+      {
+        "name": "mitre-attack:T1496"
+      },
+      {
+        "name": "mitre-attack:T1498.002"
+      },
+      {
+        "name": "mitre-attack:T1539"
+      },
+      {
+        "name": "mitre-attack:T1552.001"
+      },
+      {
+        "name": "mitre-attack:T1552.005"
+      },
+      {
+        "name": "mitre-attack:T1566.001"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1567"
+      },
+      {
+        "name": "mitre-attack:T1585.002"
+      },
+      {
+        "name": "mitre-attack:T1595.002"
+      },
+      {
+        "name": "mitre-attack:T1610"
+      },
+      {
+        "name": "mitre-attack:T1611"
+      },
+      {
+        "name": "label:honeypot"
+      },
+      {
+        "name": "label:threat-intelligence"
+      },
+      {
+        "name": "label:monthly-report"
+      },
+      {
+        "name": "label:phishing"
+      }
+    ]
+  }
+}

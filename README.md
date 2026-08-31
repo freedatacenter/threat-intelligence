@@ -6,6 +6,53 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-09-01 — Honeypot Fleet: Monthly Threat Report, August 2026
+
+Our distributed honeypot sensors (Germany, the United States, Russia) together with an IEC-104/VNC (ICS/OT) industrial-protocol decoy recorded approximately 2.06–2.08 million attack sessions and requests during August 2026 across SSH, VNC, Docker, LLM, MikroTik and Kubernetes surfaces — up roughly 50% on July. The headline development is that our open LLM server (Ollama) stopped being a simple scan counter: through the CVE-2024-37032 ("Probllama") vulnerability family, attackers ran systematic path traversal against cloud credentials, SSRF into cloud metadata services, an attempted SSH-key implant, and a ransom-note defacement campaign, while a single sanctioned hosting provider supplied 46.5% of the month's volume. On the industrial decoy, the VNC password-guessing campaign changed composition entirely — the operator dominant through July went silent on 21 August, replaced by a broad cloud cluster and a synchronized new group of twelve hosts — while recording zero successful authentications and, separately, three SNMP reflection/amplification episodes. The Docker-worm operator known from previous reports shifted its delivery channel to direct SSH brute-forcing rather than retreating, a new operator took the lead in SSH brute-force weight, and a mimicry campaign repacks its dropper binary on almost every request. For the first time in this series, the report also covers phishing against mailboxes we monitor for partner organizations, where operators increasingly rely on legitimate third-party SaaS infrastructure, an adversary-in-the-middle proxy, and delivery channels with no sender spoofing at all.
+
+**Key findings:**
+- LLM-honeypot exploitation was the headline of the month: through CVE-2024-37032 ("Probllama"), attackers ran systematic path traversal against cloud credentials via `/api/pull`/`/api/create` (`../../../root/.aws/credentials`, GCP application-default credentials, `/etc/passwd`), SSRF into AWS/GCP instance metadata hidden in the model-name field, Go-template injection, and an attempted write into `~/.ssh/authorized_keys` — a key implant, not just a read; a sanctioned hosting provider supplied 46.5% of the month's 92,241 events
+- New in August: targeted reconnaissance of Anthropic-compatible proxy endpoints (hundreds of requests to `/v1/messages`-style paths probing for a default LiteLLM master key) and operators testing the honeypot's own authenticity with verification prompts — a hypothesis of risk to the LLM-decoy class, not yet an observed drop in traffic
+- The ICS decoy's VNC password-guessing campaign held its volume (1,279,302 attempts, +5.0% on a corrected July baseline — see below) but changed composition entirely: the autonomous system dominant through July went silent from 21 August, replaced by a broad cloud cluster and a synchronized new group of twelve geographically diverse hosts; zero successful authentications were recorded for the month
+- The same ICS decoy was used three times as an SNMP reflection/amplification source against third parties (13, 14–16 and 28 August); the two largest, previously undocumented episodes were roughly 33x the size of the one written up on its own, with measured amplification around 8.03x by payload size
+- IEC-104 received zero external control commands for a third consecutive month; the realistic entry vector into a segment like this remains remote-access tooling, not the OT protocol itself — the VNC surface of the same node absorbed orders of magnitude more traffic
+- The Docker-API worm operator known from previous reports did not retreat when Docker volume fell 34% — it shifted its primary delivery channel to direct SSH brute-forcing over the same drop zone and ASN, and its current C2 stayed continuously live through the entire 12–31 August window
+- A new operator took the lead in SSH brute-force weight (21.5% of the fleet total across five /24 blocks), a known dropper channel grew 15.5x, and a separate campaign repacks its dropper binary to a new hash on almost every request, defeating hash-based detection
+- Malware volume carries a methodological caveat this month: partial SMB captures of the same WannaCry file produce a different hash on every broken transfer, so the sample count is best read as an estimate (roughly 178–192 unique artifacts) rather than an exact figure
+- New in this report: a phishing section covering mailboxes we monitor for partner organizations. Eight or more operators worked one organization simultaneously in August (versus three in July); the throughline is infrastructure — landing pages and exfiltration moving onto legitimate third-party SaaS platforms, one operator running a live adversary-in-the-middle proxy against a Google login that defeats MFA, and two delivery channels bypassing sender spoofing entirely via compromised mailboxes and hijacked Google Groups
+- Correction to prior reporting: the July figure of 193,552 VNC authentication attempts covered the first 10 days of that month, not all of it — the corrected full-month total is 1,218,442, and the August comparison above uses this corrected baseline
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-09-01-honeypot-monthly-august/Incident_Report_2026-09-01_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-09-01-honeypot-monthly-august/Incident_Report_2026-09-01_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-09-01-honeypot-monthly-august/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-09-01-honeypot-monthly-august/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| IP (LLM abuse, Ollama) | `147[.]45[.]69[.]42` (AS210644, sanctioned — 46.5% of month's volume), `168[.]144[.]135[.]119`, `156[.]239[.]42[.]225`, `136[.]243[.]10[.]183`, `74[.]80[.]181[.]141`, `199[.]217[.]105[.]247` |
+| BTC wallet (LLM abuse) | `bc1q5xpazlg7q6ph2r6s7tzumd5zyjdet6vjzvsqln` (deadbugz ransom-style campaign — 0 transactions) |
+| IP (VNC campaign, decoy core) | `140[.]235[.]17[.]25`, `140[.]235[.]18[.]105`, `140[.]235[.]19[.]17`, `207[.]174[.]1[.]227`, `207[.]174[.]2[.]239`, `207[.]174[.]3[.]248`, `72[.]51[.]57[.]6`, `72[.]51[.]59[.]6` (silent since 21 Aug) |
+| IP (VNC campaign, new cluster) | `188[.]130[.]208[.]33`, `104[.]128[.]190[.]153`, `37[.]187[.]3[.]25`, `37[.]58[.]131[.]227`, `103[.]103[.]245[.]226`, `103[.]160[.]37[.]151`, `183[.]178[.]3[.]113`, `169[.]38[.]135[.]196`, `165[.]165[.]142[.]149`, `192[.]3[.]154[.]34`, `94[.]154[.]43[.]191`, `93[.]48[.]225[.]80` |
+| IP (SNMP reflection, spoofed sources) | `185[.]242[.]3[.]3`, `43[.]228[.]157[.]74`, `45[.]194[.]67[.]120`, `45[.]205[.]1[.]231`, `5[.]42[.]211[.]96`, `152[.]89[.]199[.]131` |
+| IP (SSH brute-force / droppers) | `171[.]244[.]44[.]251`, `213[.]232[.]114[.]14`, `176[.]65[.]139[.]228`, `94[.]154[.]43[.]231`, `130[.]12[.]180[.]51`, `64[.]112[.]184[.]210`, `83[.]237[.]93[.]10` |
+| CIDR (SSH brute-force / droppers) | `91[.]92[.]40[.]0/24`, `91[.]92[.]42[.]0/24`, `91[.]92[.]47[.]0/24`, `45[.]153[.]34[.]0/24`, `45[.]156[.]87[.]0/24`, `195[.]178[.]110[.]0/24`, `92[.]118[.]39[.]0/24`, `193[.]32[.]162[.]0/24`, `2[.]57[.]122[.]0/24`, `80[.]94[.]92[.]0/24`, `77[.]239[.]124[.]0/24` |
+| SHA256 (SSH droppers — RedTail) | `f0aa83bbbd2c75e2f71ec16029ee5fcfad59f3a8efa30a500b815f0f6c18d987` (x86_64), `8e1a67a5c03b3cd818f046c7a1605afccc0ee5ce437a0d099881f1872b54bc70` (i686) |
+| IP (Docker-API worm / VPSVAULT) | `5[.]182[.]210[.]174` (current C2, live continuously 12–31 Aug), `5[.]182[.]210[.]61`, `45[.]198[.]224[.]26`, `45[.]198[.]224[.]5`, `154[.]90[.]70[.]254`, `45[.]205[.]1[.]240`, `154[.]54[.]100[.]247`, `217[.]60[.]195[.]113`, `101[.]33[.]245[.]191`, `167[.]86[.]122[.]134` |
+| JA4H (Docker-API worm) | `po11nn060000_46ba010406bc`, `po11nn050000_2c3038913033` |
+| IP (Phishing infrastructure) | `36[.]255[.]97[.]120`, `77[.]83[.]39[.]10`, `198[.]135[.]51[.]150`, `45[.]74[.]252[.]189`, `152[.]89[.]218[.]91`, `160[.]30[.]136[.]11` |
+| Domain (Phishing infrastructure) | `hulladolsentenpe[.]top` (AiTM proxy in front of the Google login), `meta-iden[.]com`, `meta-security-mail[.]com`, `facebook-verified-badge[.]center`, `solidfairhubhost[.]com`, `fifapredict[.]live` |
+| SHA256 (Phishing — malware line) | `530d00da82a188bd6ff7dc3a1cc0b6216d8f9a279f7d00213bbc68acd09d2f71`, `f3cfcbd8c2d33128a836f891791a1743c427f321f538dc208521c371edd03d7f` |
+| BTC wallet (Phishing — sextortion) | `bc1q5t0peymgrvzd49e4zgwxnwrac7n4sc45fufwvr` (confirmed payment), `bc1qw6l8m0u9720l7p6l8nw3trcesgt2rxshvr7xrd` |
+
+*Unlike previous releases, publication of currently active command-and-control infrastructure has been explicitly approved for this report cycle — the VPSVAULT operator's C2 above was confirmed live and continuously active through the entire 12–31 August window. What remains withheld is anything that would reveal the location, architecture, or composition of our own sensors.*
+
+**MITRE ATT&CK:** T1595.002, T1110.001, T1021.005, T1021.004, T1046, T1190, T1610, T1611, T1105, T1027.002, T1090, T1496, T1498.002, T1552.001, T1552.005, T1539, T1566.001, T1566.002, T1567, T1585.002, T1098.004, T0846, T0888
+
+---
+
 ### 2026-08-20 — Telegram Username-Buyout Pretext: From Cold DM to a Fake Fragment Mini App
 
 *Updated 2026-08-21 (revision 1.1) — the delivery stage has now been observed, and it corrects the central claim of the first version of this report.*
