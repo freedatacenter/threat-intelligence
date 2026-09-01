@@ -532,6 +532,15 @@
         "distribution": "5"
       },
       {
+        "uuid": "e0526261-01f9-5d4f-b295-a39645e4533b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "201.48.108.11",
+        "to_ids": true,
+        "comment": "SSH bruteforce: single-source dictionary flood, 24,448 sessions on 31 Aug, zero successful logins",
+        "distribution": "5"
+      },
+      {
         "uuid": "8be898ad-226f-5085-b71a-186945437b77",
         "type": "sha256",
         "category": "Payload delivery",
