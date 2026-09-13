@@ -1,0 +1,430 @@
+{
+  "type": "bundle",
+  "id": "bundle--6bed9c06-afe7-5aa0-a6ce-2593de4b03d2",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--e9baa0f9-8229-50c7-a049-20d5138dac77",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "The \"UN Compensation\" Advance-Fee Scheme",
+      "published": "2026-09-13T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--b2ce1132-fb86-5d40-aa3a-a232d807f427",
+        "indicator--b5832b47-1782-5e07-8a71-0f10aea4a12f",
+        "indicator--b4982532-9538-5dc0-b5f5-eda6abadb61f",
+        "indicator--9f27c880-30db-574b-a2f3-1d62ced44887",
+        "indicator--0ad3bfb0-e299-537b-bc10-4a4d638ba918",
+        "indicator--86aeb787-d07e-59d5-b4b2-b65cc974057b",
+        "indicator--a93de31b-d856-53e6-a496-6d8d0063cdc0",
+        "indicator--0acdb306-40a3-5304-bfff-d26e85eaf474"
+      ],
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b2ce1132-fb86-5d40-aa3a-a232d807f427",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 64.89.161.75",
+      "description": "Sending relay for the run of 2026-09-01/02",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '64.89.161.75']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-13T00:00:00Z",
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b5832b47-1782-5e07-8a71-0f10aea4a12f",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS205759",
+      "description": "Announced the prefix at the time of the run; record deleted from RIPE 2026-09-12",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 205759]",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-13T00:00:00Z",
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b4982532-9538-5dc0-b5f5-eda6abadb61f",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS36680",
+      "description": "Resource holder ASN, listed in Spamhaus ASN-DROP; took over the announcement 2026-09-12",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 36680]",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-13T00:00:00Z",
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9f27c880-30db-574b-a2f3-1d62ced44887",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS401626",
+      "description": "Resource holder ASN, listed in Spamhaus ASN-DROP",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 401626]",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-13T00:00:00Z",
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0ad3bfb0-e299-537b-bc10-4a4d638ba918",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: alexanderdecro@outlook.com",
+      "description": "Reply channel, message 1 of the run",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'alexanderdecro@outlook.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-13T00:00:00Z",
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--86aeb787-d07e-59d5-b4b2-b65cc974057b",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: ddmndrold@gmail.com",
+      "description": "Reply channel, message 2 of the run",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'ddmndrold@gmail.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-13T00:00:00Z",
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a93de31b-d856-53e6-a496-6d8d0063cdc0",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: brokerjamesandy@gmail.com",
+      "description": "Reply channel, message 3 of the run",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'brokerjamesandy@gmail.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-13T00:00:00Z",
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0acdb306-40a3-5304-bfff-d26e85eaf474",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: brokerjamesady@mailingbin.com",
+      "description": "Same operator, 2026-08-29, unrelated victim",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'brokerjamesady@mailingbin.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-13T00:00:00Z",
+      "labels": [
+        "advance-fee-fraud",
+        "419",
+        "email-fraud",
+        "bulletproof-hosting",
+        "sender-spoofing",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1585.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--76cd9125-fb42-5417-ba33-2343bdb6d2e2",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): 64.89.160.0/22",
+      "content": "64.89.160.0/22 — CONTEXT, NOT A BLOCKING RECOMMENDATION - holder allocation, listed in Spamhaus DROP in full. Shared with uninvolved tenants; we do not recommend blocking at this granularity.",
+      "object_refs": [
+        "report--e9baa0f9-8229-50c7-a049-20d5138dac77"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--960d049b-beaf-585f-ad27-8bf8e5056e5d",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): blatant.host",
+      "content": "blatant.host — CONTEXT, NOT A DETECTION INDICATOR - infrastructure operator brand registered 2026-09-12",
+      "object_refs": [
+        "report--e9baa0f9-8229-50c7-a049-20d5138dac77"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--605615f9-6781-52c2-b716-1b824f55bec6",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): ghostynetworks.com",
+      "content": "ghostynetworks.com — CONTEXT, NOT A DETECTION INDICATOR - former operator brand, A record 127.0.0.127",
+      "object_refs": [
+        "report--e9baa0f9-8229-50c7-a049-20d5138dac77"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--bf8d5412-8d8a-58f0-a6d5-ad24bed59088",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): nfx.rip",
+      "content": "nfx.rip — CONTEXT, NOT A DETECTION INDICATOR - abuse-contact domain, no A record",
+      "object_refs": [
+        "report--e9baa0f9-8229-50c7-a049-20d5138dac77"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--92d1d2e4-438c-5697-9da7-e116464ce9df",
+      "created": "2026-09-13T00:00:00Z",
+      "modified": "2026-09-13T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): NFC-MNT",
+      "content": "NFC-MNT — CONTEXT, NOT A DETECTION INDICATOR - RIPE maintainer common to the holder and its trading names; the level at which to keep records",
+      "object_refs": [
+        "report--e9baa0f9-8229-50c7-a049-20d5138dac77"
+      ]
+    }
+  ]
+}

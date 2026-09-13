@@ -6,6 +6,49 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-09-13 — The "UN Compensation" Advance-Fee Scheme and the Eleven-Day Life of a Hosting Brand
+
+Three advance-fee fraud ("419") messages invoking a fictitious United Nations compensation body reached the published contact address of a human rights NGO overnight on 1–2 September 2026, sent from a single host under three unrelated personas. None carried a link or an attachment: the only route to monetisation is a reply, which places the entire risk beyond the reach of perimeter controls and renders detection rules that require a payload structurally blind. The messages did not reach staff mailboxes and no reply went out from the organisation's own addresses. The substance of this report is the sending infrastructure rather than the run. The host belongs to a provider whose entire network allocation sits in Spamhaus DROP and whose two autonomous systems sit in ASN-DROP, and eleven days after the run its operator changed trading name, stated jurisdiction and announcing autonomous system in roughly seven hours — registering a new domain at 09:35 UTC, updating the service contacts at 10:16, the network record at 10:24 and the company record at 10:25 — the last of these replacing a Luxembourg entity with a Lithuanian one while retaining the same handle, moving the BGP announcement to a dormant autonomous system by 16:00, and deleting the former record from the regional database. The identity of old and new brand is established by the geolocation feed cited in the new record, which enumerates the same portfolio of network blocks. We also record a methodological failure worth publishing: the common heuristic of counting autonomous systems sponsored by a single local internet registry produced a false positive here, reflecting the business model of a commercial resource brokerage rather than any property of the network.
+
+**Key findings:**
+- The scheme carries no technical payload by design — no link, attachment, form or telephone number — so detection rules predicated on a payload cannot see it at all; the residual signal is failed authentication combined with a reply address at a free mail provider.
+- The lure is fictitious at every level: no "United Nations Human Development Compensation Commission" exists, and the genuine UN Compensation Commission closed on 9 December 2022 and never paid individuals or companies directly, disbursing only to governments.
+- The run was not targeted despite a lure that appears tailored to the recipient's profile: the address is published on the organisation's website, the template contains nothing specific to the recipient, the genre's share of mail flow is near-identical across three unrelated organisations, and the same operator worked a Czech logistics victim three days earlier.
+- Choice of spoofed domains is unrelated to their email authentication posture — both publish strict SPF and one publishes DMARC set to reject — indicating the operator never expected to pass authentication and wagers on volume.
+- The infrastructure operator rebranded across domain, registry record, BGP announcement and regional database within about seven hours on 12 September 2026, eleven days after the run, invalidating attribution anchored to a company name or autonomous system number.
+- Counting autonomous systems per sponsoring registry is unsafe as a standalone indicator of abusive hosting; independent grounds (whole-network reputation listings, coverage of the unleased portion of an allocation, absence of a public shop front, observable prefix rotation) carried the assessment instead.
+- Absence of a host from honeypot data is not evidence of good standing: mail nodes at this class of provider are narrowly specialised and never scan, while other tenants of the same blocks do.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-09-13-un-compensation-advance-fee/Incident_Report_2026-09-13_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-09-13-un-compensation-advance-fee/Incident_Report_2026-09-13_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-09-13-un-compensation-advance-fee/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-09-13-un-compensation-advance-fee/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| IP | `64[.]89[.]161[.]75` (sending relay, Netiface/Ghosty Networks) |
+| Context | `64[.]89[.]160[.]0/22` (holder allocation, listed in Spamhaus DROP in full — **not** put forward for blocking) |
+| ASN | `AS205759` (announced the prefix during the run; record deleted from RIPE 2026-09-12) |
+| ASN | `AS36680` (resource holder, Spamhaus ASN-DROP; took over the announcement 2026-09-12) |
+| ASN | `AS401626` (resource holder, Spamhaus ASN-DROP) |
+| Email | `alexanderdecro@outlook[.]com` (reply channel, message 1) |
+| Email | `ddmndrold@gmail[.]com` (reply channel, message 2) |
+| Email | `brokerjamesandy@gmail[.]com` (reply channel, message 3) |
+| Email | `brokerjamesady@mailingbin[.]com` (same operator, 2026-08-29, unrelated victim) |
+| Context | `blatant[.]host` (operator brand registered 2026-09-12 — not a detection indicator) |
+| Context | `ghostynetworks[.]com` (former operator brand, A record `127.0.0.127` — not a detection indicator) |
+| Context | `nfx[.]rip` (abuse-contact domain, no A record — not a detection indicator) |
+| Context | `NFC-MNT` (RIPE maintainer common to holder and trading names — the level at which to keep records) |
+
+The domains of the spoofed senders are deliberately omitted from this table and from the machine-readable dumps. They belong to real, uninvolved companies whose names were abused; ingesting them into blocklists would harm the injured parties. The provider's network allocation is likewise not put forward for blocking despite its presence in reputation feeds: a block at that granularity would catch tenants unconnected to the events described, and the observable prefix rotation would date it quickly. Blocking is warranted at the level of the individual address.
+
+**MITRE ATT&CK:** T1583.001, T1585.002, T1656
+
+---
+
 ### 2026-09-01 — Honeypot Fleet: Monthly Threat Report, August 2026
 
 Our distributed honeypot sensors (Germany, the United States, Russia) together with an IEC-104/VNC (ICS/OT) industrial-protocol decoy recorded about 2.14 million attack sessions and requests during August 2026 across SSH, VNC, Docker, LLM, MikroTik and Kubernetes surfaces — up roughly 56% on July. The headline development is that our open LLM server (Ollama) stopped being a simple scan counter: through the CVE-2024-37032 ("Probllama") vulnerability family, attackers ran systematic path traversal against cloud credentials, SSRF into cloud metadata services, an attempted SSH-key implant, and a ransom-note defacement campaign, while a single sanctioned hosting provider supplied 48% of the month's volume. On the industrial decoy, the VNC password-guessing campaign changed composition entirely — the operator dominant through July went silent on 21 August, replaced by a broad cloud cluster and a synchronized new group of twelve hosts — while recording zero successful authentications and, separately, three SNMP reflection/amplification episodes. The Docker-worm operator known from previous reports shifted its delivery channel to direct SSH brute-forcing rather than retreating, a new operator took the lead in SSH brute-force weight, and a mimicry campaign repacks its dropper binary on almost every request. In the closing days of the month both the Docker-worm operator and the leading SSH brute-force operator fell silent on our sensors within a day of each other. For the first time in this series, the report also covers phishing against mailboxes we monitor for partner organizations, where operators increasingly rely on legitimate third-party SaaS infrastructure, an adversary-in-the-middle proxy, and delivery channels with no sender spoofing at all.

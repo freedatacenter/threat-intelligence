@@ -1,0 +1,166 @@
+{
+  "Event": {
+    "uuid": "dab13cf5-e326-5691-bec1-5f0d326f7f9c",
+    "info": "[TLP:CLEAR] The \"UN Compensation\" Advance-Fee Scheme",
+    "date": "2026-09-13",
+    "timestamp": "1789257600",
+    "publish_timestamp": "1789257600",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "4b67ef62-637b-5d82-bce0-5b7bc4794b4a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "64.89.161.75",
+        "to_ids": true,
+        "comment": "Sending relay for the run of 2026-09-01/02",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b13fbc1b-a73e-50f8-90b6-34a6c94f112e",
+        "type": "text",
+        "category": "Other",
+        "value": "64.89.160.0/22",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - holder allocation, listed in Spamhaus DROP in full. Shared with uninvolved tenants; we do not recommend blocking at this granularity.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e52240fc-b3f9-5d57-9930-63f9304933bf",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS205759",
+        "to_ids": false,
+        "comment": "Announced the prefix at the time of the run; record deleted from RIPE 2026-09-12",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5b864789-dd59-5fc8-b105-05291a250bca",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS36680",
+        "to_ids": false,
+        "comment": "Resource holder ASN, listed in Spamhaus ASN-DROP; took over the announcement 2026-09-12",
+        "distribution": "5"
+      },
+      {
+        "uuid": "590b15dd-7e19-59dc-835d-6dc36d8a31e1",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS401626",
+        "to_ids": false,
+        "comment": "Resource holder ASN, listed in Spamhaus ASN-DROP",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b9dbe734-4853-5ad6-9ccc-edb532b3ac59",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "alexanderdecro@outlook.com",
+        "to_ids": false,
+        "comment": "Reply channel, message 1 of the run",
+        "distribution": "5"
+      },
+      {
+        "uuid": "39abcc6f-84a3-5a1c-b661-916a880c409b",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "ddmndrold@gmail.com",
+        "to_ids": false,
+        "comment": "Reply channel, message 2 of the run",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1b64d313-1b35-581a-a721-1dd42d156bf1",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "brokerjamesandy@gmail.com",
+        "to_ids": false,
+        "comment": "Reply channel, message 3 of the run",
+        "distribution": "5"
+      },
+      {
+        "uuid": "eb29359b-9d31-52f5-8686-a705d7bd474a",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "brokerjamesady@mailingbin.com",
+        "to_ids": false,
+        "comment": "Same operator, 2026-08-29, unrelated victim",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8fb6fc39-8f13-5910-8c37-b49d6b28d6a5",
+        "type": "text",
+        "category": "Other",
+        "value": "blatant.host",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A DETECTION INDICATOR - infrastructure operator brand registered 2026-09-12",
+        "distribution": "5"
+      },
+      {
+        "uuid": "264f4e12-1476-5d9a-a15d-aaafe903820e",
+        "type": "text",
+        "category": "Other",
+        "value": "ghostynetworks.com",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A DETECTION INDICATOR - former operator brand, A record 127.0.0.127",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8d65d9ce-12f1-5bfb-850f-aad41c9d87a4",
+        "type": "text",
+        "category": "Other",
+        "value": "nfx.rip",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A DETECTION INDICATOR - abuse-contact domain, no A record",
+        "distribution": "5"
+      },
+      {
+        "uuid": "694d4576-7bd2-5a0b-8502-d4784e7b86c1",
+        "type": "text",
+        "category": "Other",
+        "value": "NFC-MNT",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A DETECTION INDICATOR - RIPE maintainer common to the holder and its trading names; the level at which to keep records",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1585.002"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "label:advance-fee-fraud"
+      },
+      {
+        "name": "label:419"
+      },
+      {
+        "name": "label:email-fraud"
+      },
+      {
+        "name": "label:bulletproof-hosting"
+      },
+      {
+        "name": "label:sender-spoofing"
+      },
+      {
+        "name": "label:incident-report"
+      }
+    ]
+  }
+}
