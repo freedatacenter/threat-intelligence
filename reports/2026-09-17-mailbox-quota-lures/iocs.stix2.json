@@ -1,0 +1,382 @@
+{
+  "type": "bundle",
+  "id": "bundle--80268f78-37c8-563f-9c80-c3800a6bf895",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--36964bca-8538-5246-a587-b0d597a67cfb",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Mailbox-Quota and Password-Reset Lures: One Campaign Rotating Its Pretext",
+      "published": "2026-09-17T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--848afcc8-9af1-5406-b864-020d2dbf7805",
+        "indicator--e2ee30a3-0438-5fed-9067-bcfeff065f2a",
+        "indicator--6210fbd7-af7e-5476-939c-b5cc89949470",
+        "indicator--3c8b487d-5837-5d21-9c1e-b61a4179717f",
+        "indicator--6bd366cb-e8c8-5c66-a25a-7b29e6391b02",
+        "indicator--7f492667-7048-5150-96c0-6ec2e4864466"
+      ],
+      "labels": [
+        "credential-phishing",
+        "webmail-phishing",
+        "sender-spoofing",
+        "object-storage-abuse",
+        "ipfs-abuse",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--848afcc8-9af1-5406-b864-020d2dbf7805",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: pub-bde527919f074a9d88485c51e0a7c57c.r2.dev",
+      "description": "Single-use Cloudflare R2 bucket hosting the kit, file sedu8258773.html, 2026-09-04; burned",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'pub-bde527919f074a9d88485c51e0a7c57c.r2.dev']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-17T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "webmail-phishing",
+        "sender-spoofing",
+        "object-storage-abuse",
+        "ipfs-abuse",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e2ee30a3-0438-5fed-9067-bcfeff065f2a",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: pub-a4ede915516d42efab13d8916cfb5c1d.r2.dev",
+      "description": "Same kit on a rotated bucket, file sedu4257302.html, 2026-09-07; burned",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'pub-a4ede915516d42efab13d8916cfb5c1d.r2.dev']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-17T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "webmail-phishing",
+        "sender-spoofing",
+        "object-storage-abuse",
+        "ipfs-abuse",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6210fbd7-af7e-5476-939c-b5cc89949470",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: 905874987verxgdfsdaswffavdsg79ad77aadfgsbghdr5.s3-eu-central-2.ionoscloud.com",
+      "description": "Intermediate page; recipient address base64-encoded in the data parameter",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = '905874987verxgdfsdaswffavdsg79ad77aadfgsbghdr5.s3-eu-central-2.ionoscloud.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-17T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "webmail-phishing",
+        "sender-spoofing",
+        "object-storage-abuse",
+        "ipfs-abuse",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3c8b487d-5837-5d21-9c1e-b61a4179717f",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: bafkreia5iln5dqpy2fejobjp2ojo2rkduchw2tv7xdfjrhhbfovvyzhp2i",
+      "description": "IPFS CID of the kit, reached via the inbrowser.link gateway, 2026-09-11. Content-addressed and immutable: cannot be taken down, only gateways can be filtered.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'bafkreia5iln5dqpy2fejobjp2ojo2rkduchw2tv7xdfjrhhbfovvyzhp2i']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-17T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "webmail-phishing",
+        "sender-spoofing",
+        "object-storage-abuse",
+        "ipfs-abuse",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6bd366cb-e8c8-5c66-a25a-7b29e6391b02",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: bafybeid65s7bjp5kigaj7kbw573wqczz3uiyvzxnxeu5on3tjsoe7nmcsm",
+      "description": "IPFS CID of the kit, file cPweb70.html, dweb.link gateway, 2026-09-11",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'bafybeid65s7bjp5kigaj7kbw573wqczz3uiyvzxnxeu5on3tjsoe7nmcsm']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-17T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "webmail-phishing",
+        "sender-spoofing",
+        "object-storage-abuse",
+        "ipfs-abuse",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7f492667-7048-5150-96c0-6ec2e4864466",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 4_zcc7175a2a5aface295f60211_f104d2b4c7205c55c",
+      "description": "Backblaze B2 fileId fragment shared by the messages of 2026-09-10, 09-11 and 09-17 - the most durable handle on this branch, stable across the pretext change",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '4_zcc7175a2a5aface295f60211_f104d2b4c7205c55c']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-17T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "webmail-phishing",
+        "sender-spoofing",
+        "object-storage-abuse",
+        "ipfs-abuse",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--3ba63a9f-c662-5f29-9b96-b5702a806377",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): f005.backblazeb2.com/b2api/v1/b2_download_file_by_id",
+      "content": "f005.backblazeb2.com/b2api/v1/b2_download_file_by_id — CONTEXT, NOT A BLOCKING RECOMMENDATION - Backblaze's own download endpoint, used to serve the kit. Blocking it would break a legitimate service; pivot on the fileId instead.",
+      "object_refs": [
+        "report--36964bca-8538-5246-a587-b0d597a67cfb"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--ea1784cb-19dd-5362-a0e3-d3485f3f56bf",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): sedu / kedu + 7 digits + .html",
+      "content": "sedu / kedu + 7 digits + .html — CONTEXT, NOT A BLOCKING RECOMMENDATION - kit filename pattern; stays fixed while the hosting bucket rotates completely",
+      "object_refs": [
+        "report--36964bca-8538-5246-a587-b0d597a67cfb"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--b33f219f-2cba-5c24-a1e1-cd9a1fbd0839",
+      "created": "2026-09-17T00:00:00Z",
+      "modified": "2026-09-17T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): <landing>#<recipient e-mail address>",
+      "content": "<landing>#<recipient e-mail address> — CONTEXT, NOT A BLOCKING RECOMMENDATION - behavioural marker. The recipient address is carried in the URL fragment, so it never reaches the server and leaves no trace in platform logs.",
+      "object_refs": [
+        "report--36964bca-8538-5246-a587-b0d597a67cfb"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "Event": {
+    "uuid": "7a559dda-8544-5bde-ae55-1a22baa1861a",
+    "info": "[TLP:CLEAR] Mailbox-Quota and Password-Reset Lures: One Campaign Rotating Its Pretext",
+    "date": "2026-09-17",
+    "timestamp": "1789603200",
+    "publish_timestamp": "1789603200",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "ae7a8036-2d89-57f9-900a-6f866ebcd14b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "pub-bde527919f074a9d88485c51e0a7c57c.r2.dev",
+        "to_ids": true,
+        "comment": "Single-use Cloudflare R2 bucket hosting the kit, file sedu8258773.html, 2026-09-04; burned",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8d42c291-0436-5a29-92d8-3c39cd9293fe",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "pub-a4ede915516d42efab13d8916cfb5c1d.r2.dev",
+        "to_ids": true,
+        "comment": "Same kit on a rotated bucket, file sedu4257302.html, 2026-09-07; burned",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f65df9ba-6a7a-5890-8901-c78ba27bf3a9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "905874987verxgdfsdaswffavdsg79ad77aadfgsbghdr5.s3-eu-central-2.ionoscloud.com",
+        "to_ids": true,
+        "comment": "Intermediate page; recipient address base64-encoded in the data parameter",
+        "distribution": "5"
+      },
+      {
+        "uuid": "89519e0f-5488-5771-8b6f-d30d3e318deb",
+        "type": "text",
+        "category": "Other",
+        "value": "bafkreia5iln5dqpy2fejobjp2ojo2rkduchw2tv7xdfjrhhbfovvyzhp2i",
+        "to_ids": false,
+        "comment": "IPFS CID of the kit, reached via the inbrowser.link gateway, 2026-09-11. Content-addressed and immutable: cannot be taken down, only gateways can be filtered.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "001ffb7a-5f2e-599a-adb1-0401558f6cd4",
+        "type": "text",
+        "category": "Other",
+        "value": "bafybeid65s7bjp5kigaj7kbw573wqczz3uiyvzxnxeu5on3tjsoe7nmcsm",
+        "to_ids": false,
+        "comment": "IPFS CID of the kit, file cPweb70.html, dweb.link gateway, 2026-09-11",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c4bf5e43-01c6-5d9a-835c-fe8d4285287f",
+        "type": "text",
+        "category": "Other",
+        "value": "4_zcc7175a2a5aface295f60211_f104d2b4c7205c55c",
+        "to_ids": false,
+        "comment": "Backblaze B2 fileId fragment shared by the messages of 2026-09-10, 09-11 and 09-17 - the most durable handle on this branch, stable across the pretext change",
+        "distribution": "5"
+      },
+      {
+        "uuid": "61e4992e-3d85-5a2f-8e79-70ecf0a19b0f",
+        "type": "text",
+        "category": "Other",
+        "value": "f005.backblazeb2.com/b2api/v1/b2_download_file_by_id",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - Backblaze's own download endpoint, used to serve the kit. Blocking it would break a legitimate service; pivot on the fileId instead.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d03d5b9c-a1b3-5aca-bc7c-7cce4d8e86e1",
+        "type": "text",
+        "category": "Other",
+        "value": "sedu / kedu + 7 digits + .html",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - kit filename pattern; stays fixed while the hosting bucket rotates completely",
+        "distribution": "5"
+      },
+      {
+        "uuid": "88b7a154-f477-54fd-ad1f-5cc82abf6da3",
+        "type": "text",
+        "category": "Other",
+        "value": "<landing>#<recipient e-mail address>",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - behavioural marker. The recipient address is carried in the URL fragment, so it never reaches the server and leaves no trace in platform logs.",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1056.003"
+      },
+      {
+        "name": "mitre-attack:T1102.002"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1583.006"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "label:credential-phishing"
+      },
+      {
+        "name": "label:webmail-phishing"
+      },
+      {
+        "name": "label:sender-spoofing"
+      },
+      {
+        "name": "label:object-storage-abuse"
+      },
+      {
+        "name": "label:ipfs-abuse"
+      },
+      {
+        "name": "label:incident-report"
+      }
+    ]
+  }
+}

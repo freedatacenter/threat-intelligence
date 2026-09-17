@@ -6,6 +6,46 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-09-17 — Mailbox-Quota and Password-Reset Lures: One Campaign Rotating Its Pretext, Not Its Tooling
+
+A shared, publicly listed mailbox of a human rights organisation has been under a continuous credential-phishing series since July 2026, using the mailbox-is-full, password-has-expired and confirm-your-account pretexts. Measured over a full quarter, the two pretexts move in opposite directions — the mailbox-quota subject rose from 0.59 to 2.55 messages per hundred of inbound flow between August and September while the password subject fell from 3.64 to 0.75 — and reading either in isolation inverts the actual picture. On 17 September the operator that had run the quota pretext for two months switched the subject line to a password reset while continuing to serve the identical kit, matching down to the file identifier in object storage, which settles the two as one campaign in which the pretext is a consumable and the hosted file is the durable artefact. The shape of the run also changed: an August broadcast of twenty-four messages across six regional addresses in three days gave way to sustained pressure on a single address that now receives nine of every ten messages, at which point one in five messages arriving there belongs to this class. Across all three hosting branches the operators never registered a domain of their own, serving the kit instead from Backblaze B2 object storage, single-use Cloudflare R2 buckets and public IPFS gateways — leaving nothing for a registrar or hosting provider to act on.
+
+**Key findings:**
+- The subject line is a consumable and the kit is not: the messages of 10, 11 and 17 September resolve to the same Backblaze B2 file identifier across a complete change of pretext, making the identifier — not the subject — the correct handle for tracking.
+- Tracking either pretext alone inverts the trend; the two subjects exchanged places between August and September while the underlying flow continued uninterrupted.
+- None of the three branches owns a domain, so takedown has no target: object storage, single-use buckets rotated per wave, and content-addressed IPFS objects that cannot be removed at all.
+- The kit filename holds a fixed four-letter, seven-digit pattern while the hosting bucket rotates completely — the invariant is the file, not the address.
+- The recipient's address is carried in the URL fragment, which the browser never transmits, denying defenders any way to reconstruct the set of addressees from the hosting platform's logs while making a bulk run look individually prepared.
+- The sender forges service addresses of the victim's own domain — administrative, notification, mail-server and hosting-panel mailboxes — which succeeds because the domain's authentication policy is set to quarantine rather than reject, so forgeries are delivered rather than refused.
+- Shared and group addresses are structurally under-monitored: mail platform administrative interfaces do not return distribution groups when enumerating users, so a coverage check comparing users against users reports full coverage while the most heavily targeted addresses are absent from it.
+- Deduplication by content fingerprint fails on this campaign: the operators place a short stub in the plain-text part, so a fingerprint computed over it degenerates into a constant and an escalating series reads as a long-settled repeat.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-09-17-mailbox-quota-lures/Incident_Report_2026-09-17_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-09-17-mailbox-quota-lures/Incident_Report_2026-09-17_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-09-17-mailbox-quota-lures/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-09-17-mailbox-quota-lures/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| Domain | `pub-bde527919f074a9d88485c51e0a7c57c[.]r2[.]dev` (single-use Cloudflare R2 bucket, file `sedu8258773.html`, 2026-09-04; burned) |
+| Domain | `pub-a4ede915516d42efab13d8916cfb5c1d[.]r2[.]dev` (same kit on a rotated bucket, file `sedu4257302.html`, 2026-09-07; burned) |
+| Domain | `905874987verxgdfsdaswffavdsg79ad77aadfgsbghdr5[.]s3-eu-central-2[.]ionoscloud[.]com` (intermediate page; recipient address base64-encoded in the `data` parameter) |
+| IPFS CID | `bafkreia5iln5dqpy2fejobjp2ojo2rkduchw2tv7xdfjrhhbfovvyzhp2i` (kit served via the `inbrowser[.]link` gateway, 2026-09-11) |
+| IPFS CID | `bafybeid65s7bjp5kigaj7kbw573wqczz3uiyvzxnxeu5on3tjsoe7nmcsm` (kit, file `cPweb70.html`, `dweb[.]link` gateway, 2026-09-11) |
+| Kit identifier | `4_zcc7175a2a5aface295f60211_f104d2b4c7205c55c` (Backblaze B2 fileId fragment shared by the 2026-09-10, 09-11 and 09-17 messages — stable across the pretext change) |
+| Context | `f005[.]backblazeb2[.]com/b2api/v1/b2_download_file_by_id` (Backblaze's own download endpoint — **not** put forward for blocking; pivot on the fileId instead) |
+| Context | `sedu` / `kedu` + 7 digits + `.html` (kit filename pattern, fixed while the bucket rotates) |
+| Context | `<landing>#<recipient e-mail address>` (behavioural marker: the address rides in the URL fragment and never reaches the server) |
+
+The domains of the spoofed senders are deliberately omitted from this table and from the machine-readable dumps. In the cases analysed the forgery was display-name substitution rather than compromise, and the domains belong to uninvolved companies. Also omitted: the compromised webmail panel of an unrelated small business used as an intermediate page, whose owner is an injured party, and one landing page from the most recent wave that may still be serving — publishing it would notify the operator while giving defenders nothing they cannot obtain from the patterns above.
+
+**MITRE ATT&CK:** T1056.003, T1102.002, T1566.002, T1583.006, T1656
+
+---
+
 ### 2026-09-13 — The "UN Compensation" Advance-Fee Scheme and the Eleven-Day Life of a Hosting Brand
 
 Three advance-fee fraud ("419") messages invoking a fictitious United Nations compensation body reached the published contact address of a human rights NGO overnight on 1–2 September 2026, sent from a single host under three unrelated personas. None carried a link or an attachment: the only route to monetisation is a reply, which places the entire risk beyond the reach of perimeter controls and renders detection rules that require a payload structurally blind. The messages did not reach staff mailboxes and no reply went out from the organisation's own addresses. The substance of this report is the sending infrastructure rather than the run. The host belongs to a provider whose entire network allocation sits in Spamhaus DROP and whose two autonomous systems sit in ASN-DROP, and eleven days after the run its operator changed trading name, stated jurisdiction and announcing autonomous system in roughly seven hours — registering a new domain at 09:35 UTC, updating the service contacts at 10:16, the network record at 10:24 and the company record at 10:25 — the last of these replacing a Luxembourg entity with a Lithuanian one while retaining the same handle, moving the BGP announcement to a dormant autonomous system by 16:00, and deleting the former record from the regional database. The identity of old and new brand is established by the geolocation feed cited in the new record, which enumerates the same portfolio of network blocks. We also record a methodological failure worth publishing: the common heuristic of counting autonomous systems sponsored by a single local internet registry produced a false positive here, reflecting the business model of a commercial resource brokerage rather than any property of the network.
