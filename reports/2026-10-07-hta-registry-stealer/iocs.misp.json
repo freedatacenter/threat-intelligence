@@ -1,0 +1,268 @@
+{
+  "Event": {
+    "uuid": "d067264c-e2de-56ac-b0d6-6439bfaeee1a",
+    "info": "[TLP:CLEAR] The PDF Viewer That Lives in the Registry: an HTA Loader Against Russian Organisations",
+    "date": "2026-10-07",
+    "timestamp": "1791331200",
+    "publish_timestamp": "1791331200",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "16fde8d9-2597-5aa2-8563-87e40bf5dfdc",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.156.87.120",
+        "to_ids": true,
+        "comment": "Primary command server, port 443; answering as of 2026-10-07. Paths /sts (liveness) and /vpr-<id> (POST, configuration). nginx 1.24.0 Ubuntu, self-signed certificate CN=45.156.87.120 issued 2026-03-24. AS197170",
+        "distribution": "5"
+      },
+      {
+        "uuid": "69408470-9d8f-5cfc-803f-1ff74df8dcad",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "176.65.132.239",
+        "to_ids": true,
+        "comment": "Fallback command server from the loader configuration, port 443; no response on 80/443 as of 2026-10-07. AS197170",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f4be6b47-a1a0-50f7-9acf-e61d22f23824",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.156.87.3",
+        "to_ids": true,
+        "comment": "Fallback command server from the loader configuration, port 443; no response as of 2026-10-07. Served RAT distribution domains in 2025. AS197170",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7ef2aa73-803d-51c2-9a07-ff9812abf068",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://45.156.87.120/sts",
+        "to_ids": true,
+        "comment": "Liveness probe; returns a constant 10-byte body",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee73139d-7a8a-583e-8720-47690aafacd5",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "1d79ab0c2d0183fcfa2772b008c4f146ec0c83000865a1bb2be2c8209d0abb88",
+        "to_ids": true,
+        "comment": "HTA file 'ИСХ № 134ОП-14 от 01.10.2026.hta', 190,084 bytes, first seen 2026-10-01",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c22dffb4-aae0-530b-93ac-971a9daf0e88",
+        "type": "md5",
+        "category": "Payload delivery",
+        "value": "66c671e994bd7d61a1b1811ed46a5dbe",
+        "to_ids": true,
+        "comment": "Same file",
+        "distribution": "5"
+      },
+      {
+        "uuid": "894249b6-9de0-5744-865e-c61f9f454791",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "a690ceebefc4ed804fe3217a25b4ed94786d58d7ee4024f36887aa620ba793be",
+        "to_ids": true,
+        "comment": "Dropped launcher backup_archive.js, 2,843 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ec9e42e8-6ab3-5fe7-81cc-2da00242fd44",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d3b6c64efadcc722d1feabb677f0e11001901e97f0be35c8fe12731a6dc0ab70",
+        "to_ids": true,
+        "comment": "Dropped launcher email_list.js, 2,898 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7eb3d852-407b-5532-a718-f7a200bed29e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f43139ef9d88ede77a4bc9b2d44eb442665d3da256077e76dab4b610d664b3ad",
+        "to_ids": true,
+        "comment": "Dropped launcher session_history.js, 3,534 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f85e9dc6-a2b7-5253-8aec-ed4e7b057711",
+        "type": "text",
+        "category": "Other",
+        "value": "S-K: D9F72A4E6A3D4FA6",
+        "to_ids": false,
+        "comment": "HTTP request header. CONSTANT across separate infections - a build/campaign key, not a session key. The most durable handle on this cluster: it survives a change of C2 address.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a107d166-4a58-54ae-926e-d88cbd53c1a9",
+        "type": "text",
+        "category": "Other",
+        "value": "C-I: 4tg-[A-Z0-9]{8}",
+        "to_ids": false,
+        "comment": "HTTP request header carrying the infected machine identifier",
+        "distribution": "5"
+      },
+      {
+        "uuid": "023a35c3-f170-5176-87ad-fb34db54ee68",
+        "type": "text",
+        "category": "Other",
+        "value": "R-T: conf",
+        "to_ids": false,
+        "comment": "HTTP request header, request type. The triple C-I + S-K + R-T in a single POST is the primary network marker and does not occur in ordinary traffic.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7c7f2a9a-4d87-5c49-b323-9eba679b0fd8",
+        "type": "text",
+        "category": "Other",
+        "value": "https://<server>/vpr-<7-12 characters>",
+        "to_ids": false,
+        "comment": "POST path for configuration retrieval; the suffix is generated afresh by the client on every request. GET on the same path is refused with 403.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7e79e1bf-d2f7-56cb-9824-0ee70839ee0d",
+        "type": "text",
+        "category": "Other",
+        "value": "HKCU\\Software\\RememberMilk",
+        "to_ids": false,
+        "comment": "Registry storage of later stages: string values of 2,000 characters named <name>_0, _1, ... under four subkeys. The XOR key for each module sits in an adjacent value of the same branch, so a dump of this branch is sufficient to recover the modules without C2 access. Host-based indicator.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "234c5adb-fce0-5c7b-83dc-0df9ed8113c4",
+        "type": "text",
+        "category": "Other",
+        "value": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Blender3D",
+        "to_ids": false,
+        "comment": "Autostart entry: wscript.exe %LOCALAPPDATA%\\CubaseLite\\Loop\\Unsafe\\Time\\Scroll\\Separate\\session_history.js",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7ca9f6cb-5bc3-578a-973f-1a9969b9bfc3",
+        "type": "text",
+        "category": "Other",
+        "value": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\CloneZillaX",
+        "to_ids": false,
+        "comment": "Autostart entry: wscript.exe ...\\backup_archive.js",
+        "distribution": "5"
+      },
+      {
+        "uuid": "29c0b81c-137e-588f-8a43-d1cad46ba960",
+        "type": "text",
+        "category": "Other",
+        "value": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Chromix",
+        "to_ids": false,
+        "comment": "Autostart entry: wscript.exe ...\\email_list.js",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7bc6d70d-8507-5c17-8311-dca6fc6ad310",
+        "type": "text",
+        "category": "Other",
+        "value": "FreshDesker\\Ip\\Connected\\Private",
+        "to_ids": false,
+        "comment": "Scheduled task, every 5 minutes, limited rights: wscript.exe %LOCALAPPDATA%\\ObsidianX\\Item\\Stop\\Link\\Export\\Paste\\spreadsheet.js",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cb5b35f9-174c-5be3-9fd2-44ca8c73ceef",
+        "type": "text",
+        "category": "Other",
+        "value": "FreshDesker\\Ip\\Connected\\Public",
+        "to_ids": false,
+        "comment": "Scheduled task, every 15 minutes: wscript.exe ...\\ObsidianX\\Item\\Stop\\Format\\download_queue.js",
+        "distribution": "5"
+      },
+      {
+        "uuid": "63aae452-6855-5729-a5ce-945c120c13eb",
+        "type": "text",
+        "category": "Other",
+        "value": "FreshDesker\\Ip\\Connected\\Previous",
+        "to_ids": false,
+        "comment": "Scheduled task, every 15 minutes: wscript.exe ...\\ObsidianX\\Item\\Stop\\Focus\\screen_map.js",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a5ed048f-3812-54d4-b2f9-e5d135ad2990",
+        "type": "text",
+        "category": "Other",
+        "value": "%LOCALAPPDATA%\\RealVNCix\\Pointer\\",
+        "to_ids": false,
+        "comment": "Loader working directory (hidden)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1027.011"
+      },
+      {
+        "name": "mitre-attack:T1053.005"
+      },
+      {
+        "name": "mitre-attack:T1059.001"
+      },
+      {
+        "name": "mitre-attack:T1059.005"
+      },
+      {
+        "name": "mitre-attack:T1059.007"
+      },
+      {
+        "name": "mitre-attack:T1071.001"
+      },
+      {
+        "name": "mitre-attack:T1140"
+      },
+      {
+        "name": "mitre-attack:T1218.005"
+      },
+      {
+        "name": "mitre-attack:T1547.001"
+      },
+      {
+        "name": "mitre-attack:T1555.003"
+      },
+      {
+        "name": "mitre-attack:T1564.001"
+      },
+      {
+        "name": "mitre-attack:T1566.001"
+      },
+      {
+        "name": "label:malspam"
+      },
+      {
+        "name": "label:hta"
+      },
+      {
+        "name": "label:jscript-loader"
+      },
+      {
+        "name": "label:registry-resident"
+      },
+      {
+        "name": "label:browser-credential-theft"
+      },
+      {
+        "name": "label:remote-access"
+      },
+      {
+        "name": "label:incident-report"
+      }
+    ]
+  }
+}

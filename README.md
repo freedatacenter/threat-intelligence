@@ -6,6 +6,57 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-10-07 — The PDF Viewer That Lives in the Registry: an HTA Loader Against Russian Organisations
+
+On 1 October 2026 a file named «ИСХ № 134ОП-14 от 01.10.2026.hta» — imitating an outgoing letter with the reference number and date that a registry office assigns — went out to Russian organisations; antivirus telemetry counted roughly a thousand encounters in the first day, and the sample reached public collections on 2 October without being attributed to any known family. The HTML application draws the interface of a PDF viewer while a VBScript stub assembles a JScript program from eight hidden text blocks encoded as GUID-like hexadecimal strings and hands it to the long-obsolete MSScriptControl component, which exists only in a 32-bit build — so the file detonates under the 32-bit mshta that Windows actually invokes on a double click, and dies with a script error under a 64-bit host, which is enough to make a sandbox report it clean. The decoded loader keeps its later stages in the registry under HKCU\Software\RememberMilk as 2,000-character string values, leaves only six hidden one-kilobyte launcher scripts on disk under directories named after real software, and secures execution twice: through three RunOnce entries that each re-register themselves and three scheduled tasks with nested names firing every five and fifteen minutes. Detonated in our own sandbox behind an anonymising network, it extracted the Chromium master key for both Chrome and Edge, then asked its command server for configuration over a protocol whose three custom HTTP headers — a machine identifier, a build key constant across separate infections, and a request type — are a far more durable marker than the addresses themselves. The server answered, and delivered nothing.
+
+**Key findings:**
+- The payload is not in the HTA as code: it is hexadecimal text disguised as comma-separated GUID strings in hidden page elements, decoded at load time and executed through MSScriptControl, so static checks for suspicious HTA content see only a web page.
+- The sample requires a 32-bit script host. Under the 64-bit mshta it fails with a script error and produces no behaviour at all — an analysis environment that launches the 64-bit host returns a false clean verdict, while a victim double-clicking the attachment gets the 32-bit host and a working infection.
+- The infection lives in the registry, not on disk — later stages are split into 2,000-character string values named `<name>_0, _1, …` under `HKCU\Software\RememberMilk` and rebuilt on every run; a disk scan after the HTA is deleted finds six harmless-looking launcher scripts and nothing else.
+- Module encryption is trivial and self-defeating for the operator: hex encoding plus a repeating-key XOR, with the key held in an adjacent registry value of the same branch — so a dump of that branch recovers every module without any access to the command server.
+- Persistence is layered sixfold: RunOnce entries `Blender3D`, `CloneZillaX` and `Chromix`, each re-registering itself, plus scheduled tasks `FreshDesker\Ip\Connected\{Private,Public,Previous}` whose nested names keep them off the scheduler's first screen; deleting part of the set does not stop the infection.
+- The command protocol carries three custom headers — `C-I` with the machine identifier, `S-K` with a build key, `R-T` with the request type — and the `S-K` value proved identical across two separate infections, making it a campaign marker that survives a change of address and ties future waves to the same batch.
+- The liveness endpoint returns a constant ten-byte body: a Russian obscenity in Latin letters, identical on 2 and 7 October, which places a Russian-speaking operator behind a campaign aimed at Russian organisations.
+- Browser credential theft is driven from JScript: a generated PowerShell one-liner reads `Local State`, strips the five-byte prefix from `os_crypt.encrypted_key` and decrypts it with `ProtectedData::Unprotect`, separately for Chrome and for Edge.
+- The hosting network is not a random choice: one of the fallback addresses carried a domain named after the XWorm RAT in late 2025, and the primary server's self-signed certificate was issued on 24 March 2026 — half a year before this mailing.
+- On detonation the server answered the configuration request with forty bytes and issued no modules: nothing reached the registry or disk and no second request followed. Whether this is victim selection by traffic origin or a wound-down wave could not be determined, and the content of those forty bytes was not recovered.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-10-07-hta-registry-stealer/Incident_Report_2026-10-07_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-10-07-hta-registry-stealer/Incident_Report_2026-10-07_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-10-07-hta-registry-stealer/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-10-07-hta-registry-stealer/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| IP | `45[.]156[.]87[.]120` (AS197170, NL; primary command server, port 443; answering as of 2026-10-07; self-signed certificate issued 2026-03-24) |
+| IP | `176[.]65[.]132[.]239` (AS197170; fallback from the loader configuration; no response on 80/443 as of 2026-10-07) |
+| IP | `45[.]156[.]87[.]3` (AS197170; fallback; no response; served RAT distribution domains in 2025) |
+| URL | `hxxps://45[.]156[.]87[.]120/sts` (liveness probe; constant 10-byte body) |
+| URL pattern | `hxxps://<server>/vpr-<7-12 characters>` (POST for configuration; GET refused with 403) |
+| HTTP header | `S-K: D9F72A4E6A3D4FA6` (**constant across separate infections** — build key, the most durable handle on this cluster) |
+| HTTP header | `C-I: 4tg-[A-Z0-9]{8}` (machine identifier) |
+| HTTP header | `R-T: conf` (request type; the triple `C-I` + `S-K` + `R-T` in one POST is the primary network marker) |
+| SHA-256 | `1d79ab0c2d0183fcfa2772b008c4f146ec0c83000865a1bb2be2c8209d0abb88` (HTA, 190,084 bytes, first seen 2026-10-01) |
+| MD5 | `66c671e994bd7d61a1b1811ed46a5dbe` (same file) |
+| SHA-256 | `a690ceebefc4ed804fe3217a25b4ed94786d58d7ee4024f36887aa620ba793be` (launcher `backup_archive.js`) |
+| SHA-256 | `d3b6c64efadcc722d1feabb677f0e11001901e97f0be35c8fe12731a6dc0ab70` (launcher `email_list.js`) |
+| SHA-256 | `f43139ef9d88ede77a4bc9b2d44eb442665d3da256077e76dab4b610d664b3ad` (launcher `session_history.js`) |
+| Filename | `ИСХ № 134ОП-14 от 01.10.2026.hta` |
+| Registry key | `HKCU\Software\RememberMilk` (stages in 2,000-character values; the XOR key sits in an adjacent value of the same branch) |
+| Registry key | `HKCU\…\CurrentVersion\RunOnce\{Blender3D, CloneZillaX, Chromix}` |
+| Scheduled task | `FreshDesker\Ip\Connected\{Private, Public, Previous}` (5 / 15 / 15 minutes, wscript.exe) |
+| Path | `%LOCALAPPDATA%\{CubaseLite, ObsidianX, RealVNCix}\…` (hidden launcher scripts and working directory) |
+
+The two fallback addresses were taken from the loader configuration. The forty-byte configuration response was not recovered: the interception truncates its record at a couple of hundred bytes, the response headers exhaust that limit, and the body did not survive in process memory.
+
+**MITRE ATT&CK:** T1027.011, T1053.005, T1059.001, T1059.005, T1059.007, T1071.001, T1140, T1218.005, T1547.001, T1555.003, T1564.001, T1566.001
+
+---
+
 ### 2026-09-17 — Mailbox-Quota and Password-Reset Lures: One Campaign Rotating Its Pretext, Not Its Tooling
 
 A shared, publicly listed mailbox of a human rights organisation has been under a continuous credential-phishing series since July 2026, using the mailbox-is-full, password-has-expired and confirm-your-account pretexts. Measured over a full quarter, the two pretexts move in opposite directions — the mailbox-quota subject rose from 0.59 to 2.55 messages per hundred of inbound flow between August and September while the password subject fell from 3.64 to 0.75 — and reading either in isolation inverts the actual picture. On 17 September the operator that had run the quota pretext for two months switched the subject line to a password reset while continuing to serve the identical kit, matching down to the file identifier in object storage, which settles the two as one campaign in which the pretext is a consumable and the hosted file is the durable artefact. The shape of the run also changed: an August broadcast of twenty-four messages across six regional addresses in three days gave way to sustained pressure on a single address that now receives nine of every ten messages, at which point one in five messages arriving there belongs to this class. Across all three hosting branches the operators never registered a domain of their own, serving the kit instead from Backblaze B2 object storage, single-use Cloudflare R2 buckets and public IPFS gateways — leaving nothing for a registrar or hosting provider to act on.
