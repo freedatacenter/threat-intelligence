@@ -1,0 +1,598 @@
+{
+  "Event": {
+    "uuid": "4f86a835-afea-5c4c-aff0-6824c996fa14",
+    "info": "[TLP:CLEAR] DarkSword \"P7\": a Leaked iOS Exploit Chain Repurposed for Crypto-Wallet Theft",
+    "date": "2026-10-10",
+    "timestamp": "1791590400",
+    "publish_timestamp": "1791590400",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "218952d6-ea31-5852-bcd7-b2d4b245a06f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "www.y21t8bcya6q9b7155a.cc",
+        "to_ids": true,
+        "comment": "P7 build-3 C2: /beacon (tasking, 15 s), /result, /a, /event, /u, /nb, /p (multipart ------HqBound), /war (keychain + wallets). Gname.com, registrant CN, created 2026-05-25, Cloudflare",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3ef72ba8-294d-5007-a7a2-7d2708cad6ee",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "y21t8bcya6q9b7155a.cc",
+        "to_ids": true,
+        "comment": "P7 build-3 C2 apex",
+        "distribution": "5"
+      },
+      {
+        "uuid": "977f1240-7f95-5c73-b3fa-f40725d71f87",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://www.y21t8bcya6q9b7155a.cc/beacon",
+        "to_ids": true,
+        "comment": "P7 tasking endpoint, POST HTTP/1.0 every 15 s",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3b5d6ede-70ef-5f75-a6bf-a60afa27c95c",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://www.y21t8bcya6q9b7155a.cc/war",
+        "to_ids": true,
+        "comment": "P7 keychain JSON + wallet package exfiltration",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2181b7a6-5d2a-5581-8e1c-84a9f86a0926",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "iospc8.com",
+        "to_ids": true,
+        "comment": "P7 build-3 lure: Chinese online casino, GoDaddy, created 2026-09-23, Cloudflare",
+        "distribution": "5"
+      },
+      {
+        "uuid": "61a14188-f03a-5e8e-a720-ed14531ebbc0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "agdx53.cc",
+        "to_ids": true,
+        "comment": "P7 C2 (iVerify). Gname, CN, 2026-06-09, Cloudflare",
+        "distribution": "5"
+      },
+      {
+        "uuid": "796f75d1-8688-5f37-9826-25c54f2e7730",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "js.gotoiphone.com",
+        "to_ids": true,
+        "comment": "P7 C2 (iVerify); Alibaba Cloud 47.237.185.24",
+        "distribution": "5"
+      },
+      {
+        "uuid": "56759e91-17f6-5cc1-a731-425c89877862",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "cdn.gotoiphone.com",
+        "to_ids": true,
+        "comment": "DarkCoruna delivery (iVerify): group.html loads Coruna loader.js for all devices and rce_loader.js for iOS 18. Alibaba OSS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0239f37a-425f-5ffc-9844-9cdc7d8d4597",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mzpo30.cam",
+        "to_ids": true,
+        "comment": "P7 delivery #2 (iVerify). Gname, CN, 2026-08-17, CloudFront; root fingerprint identical to nuih22[.]cc",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3fe11d3f-8cd5-5349-9bbb-dbf4449dbaa4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "oss.gotoiphone.com",
+        "to_ids": true,
+        "comment": "Injector host: /alicdn/a5a62a47e2914d88ab7b34b2ebea8b25.js creates the hidden iframe",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ad3b35ae-8166-5792-99e2-2a9735c8fe2e",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://oss.gotoiphone.com/alicdn/a5a62a47e2914d88ab7b34b2ebea8b25.js",
+        "to_ids": true,
+        "comment": "Injector script loaded by the lure site (urlscan 2026-09-05, 09-15)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d86ade8b-8603-581b-86c2-dc7e6d064f60",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://cdn.gotoiphone.com/group.html",
+        "to_ids": true,
+        "comment": "DarkCoruna router page, reloads every 120 s",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8633c186-2e38-5a3e-b087-294935bc2aa2",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://cdn.gotoiphone.com/loader.js",
+        "to_ids": true,
+        "comment": "Obfuscated Coruna loader (obChTK, salt cecd08aa6ff548c2)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cf0fdbc7-5bdc-5668-b619-3e8a58158c14",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "gotoiphone.com",
+        "to_ids": true,
+        "comment": "Cluster apex, re-registered 2026-07-28 (Dominet HK), alidns",
+        "distribution": "5"
+      },
+      {
+        "uuid": "449993e3-5261-567e-a184-d2550298f74e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "goo.wang",
+        "to_ids": true,
+        "comment": "Visitor telemetry of the injector; same IP as js[.]gotoiphone[.]com",
+        "distribution": "5"
+      },
+      {
+        "uuid": "003b19ab-af4d-5562-be82-d9e4ee54b445",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://goo.wang/alicdn/a5a62a47e2914d88ab7b34b2ebea8b25/visit",
+        "to_ids": true,
+        "comment": "Telemetry endpoint: visitorIp / deviceVersion / sourceUrl every 5 s",
+        "distribution": "5"
+      },
+      {
+        "uuid": "758eb183-feb9-5a23-a3ba-c97d019621b2",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ipsadminuser.shop",
+        "to_ids": true,
+        "comment": "qqtime loader result-report endpoint (/api), July 2026 build. Cloudflare",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7ea3cf7d-04eb-5521-9f36-a84d1db09973",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://ipsadminuser.shop/api",
+        "to_ids": true,
+        "comment": "qqtime loader report endpoint",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e3db0654-5068-5aba-8018-4dc755d3e0bf",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "1x8gmjbdq3tepgr.icu",
+        "to_ids": true,
+        "comment": "qqtime Coruna loader host and /api report endpoint, 2026-07-16",
+        "distribution": "5"
+      },
+      {
+        "uuid": "82a02097-66d1-50a8-89bc-1dc2a294e445",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://1x8gmjbdq3tepgr.icu/api",
+        "to_ids": true,
+        "comment": "qqtime loader report endpoint",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0cd1d9e6-868f-55e4-bfb7-6077ce4f6b06",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "iphone.apiforx.work",
+        "to_ids": true,
+        "comment": "qqtime Coruna loader host, /qqtime/qqtime.html, 2026-07-16",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9a5920eb-8cad-541d-95f9-fcea753a5bcb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "1.aivestorix.com",
+        "to_ids": true,
+        "comment": "qqtime Coruna loader host, /qqtime/qqtime.html, 2026-07-31",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d54a8fed-ba90-5330-84e0-e7e6abe90151",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "billowing-truth-804c.pages.dev",
+        "to_ids": true,
+        "comment": "qqtime 'foxtimes' DarkCoruna router deployment, 2026-08-04 (routers.js: ds_rce_loader.js for iOS >= 18.4, channelcode=1df7afe3...)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "daa587c2-cff1-5833-a10a-c9599d5257cb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "nuih22.cc",
+        "to_ids": true,
+        "comment": "Shared DarkSword back end serving 14 lure fronts (iVerify appendix); same 49-byte openresty root as mzpo30[.]cam",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0f6e1fda-b2d8-5363-ba3a-b4642de9a459",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "47.237.185.24",
+        "to_ids": true,
+        "comment": "CONTEXT - Alibaba Cloud address of gotoiphone[.]com, js[.]gotoiphone[.]com and goo[.]wang since 2026-08-10. Cloud IP, block with care",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9d73368b-5f4c-5d30-8824-fcf670eb56e5",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "ef9263b1a74e80d55331763335847017efba9018401b037c66729b265c255bb7",
+        "to_ids": true,
+        "comment": "test.zip - P7 build-3 kit archive, 437,030 bytes, files dated 2026-09-29, public sandbox submission 2026-10-03",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3a566314-4654-56b9-854d-c1bb8e9d1bac",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "57c3997642882815e02bcc50b60a63292dc3f5ed0337f2dd0c9c93b34a423a08",
+        "to_ids": true,
+        "comment": "pe_main.js - P7 build-3 kernel exploit + implant bundle, 793,879 bytes, incl. 'P7 Phase 2' AKS-oracle keychain decryption",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a58adde1-cdb1-5ec5-a5bc-57db6035ad56",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "38975537d2c66815484a1adb01b681bffa96168cd6e9474e24815ad4a4796127",
+        "to_ids": true,
+        "comment": "c2_agent.js - P7 command agent, build 3 (new), 170,867 bytes, SpringBoard",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e187edcf-b254-5bb3-b333-7bdab3365931",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d554f534fad7822cbde9ca7d9f6efe8a7e0f5786ccee60f8db6dad340a2a6f80",
+        "to_ids": true,
+        "comment": "loader.js - byte-identical to the GHOSTBLADE loader, 10,096 bytes; 0 detections on VirusTotal",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bc02cbed-7f59-5c14-a65d-797a00d8e30c",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f0f0aa82a03bf4835864a5b7f7ba38e537f3f81e82b3db311ac0d80b4b4b022e",
+        "to_ids": true,
+        "comment": "keychain_copier.js - GHOSTBLADE version plus keychain WAL/SHM and Apple Notes DB (iVerify mzpo30 hash)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6c7b9b6d-4815-505c-8b9d-c75452eb351c",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "48aacf46ad8b7f619d7f4346c330abfbda14a34ed3eb98c215a5ef5fb36e2171",
+        "to_ids": true,
+        "comment": "MigFilterBypassThread.js - shared DarkSword implant library, identical in GHOSTBLADE and all P7 builds",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1989fd42-1076-5956-84de-920fde9319a8",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "443045e0c3ffdabddaf1fd2d88e93b0e6f614654788fbc1d4f646a4fdc736a6d",
+        "to_ids": true,
+        "comment": "rce_loader.js - P7 build 3, 7,318 bytes, SERVER_LOG re-enabled, /406.html redirect",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5a989aec-3d2b-5e29-bb86-6d64f822bf72",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "92c7d246d2c163c076f783dcc19f87f5b9b9ac301b106b87a7aaea9346ce0052",
+        "to_ids": true,
+        "comment": "rce_module.js - CVE-2025-31277 RCE module, unchanged since the March 2026 leak",
+        "distribution": "5"
+      },
+      {
+        "uuid": "89446995-ce0b-5e82-a25e-40bfefe8f218",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "14882fb0baef0f6f45decc79e34d488cdccc15fda505e5b615c5c420a7a8826e",
+        "to_ids": true,
+        "comment": "rce_worker_18.4.js - P7 build 3",
+        "distribution": "5"
+      },
+      {
+        "uuid": "88f0a401-db7a-5137-9489-0dbf2a0b4ccb",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2415b9273b37a04c63bb2e45e81aad86d1b6a7a64a385e0a21377b24e6525245",
+        "to_ids": true,
+        "comment": "rce_worker_18.6.js - P7 build 3",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b0c12011-50ba-5e10-b520-2e2270128fa0",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d4aa9a78c9e4fb050abdf15da3ae166564f2fda6de63412bac36bc01a0984c21",
+        "to_ids": true,
+        "comment": "sbx0_main_18.4.js - P7 build 3",
+        "distribution": "5"
+      },
+      {
+        "uuid": "09c1b185-3eb5-5eb8-953c-740963e25d1e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2748a8fd029c7a55f3107563c8f7993d3deb609d16c4898be0a5609e66a7163d",
+        "to_ids": true,
+        "comment": "sbx1_main.js - P7 build 3",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0e42ee6f-77e3-5321-af3e-fb30d3819b67",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "cf2262d8d064fef3c0fd79018ddd3f2f0e5e827aabb20aa5b6abeebd890ca5f7",
+        "to_ids": true,
+        "comment": "jmp.html - P7 build-3 launcher (5 hidden iframes, sessionStorage locks)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c83c84d2-e4ff-52d3-b03c-b0f1aba999a9",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "fe767e3c7bcb5c9e241334054424333d95ce86fe0e07717ee9ca529dade6930d",
+        "to_ids": true,
+        "comment": "group.html - cdn[.]gotoiphone[.]com DarkCoruna router page, 1,559 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5ee0d2dc-25c8-502d-a3dd-96af755a695f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "20c49dd361181210fade5de43e1c8c4c59485b4f565007b4ca3552b71c7683be",
+        "to_ids": true,
+        "comment": "loader.js - cdn[.]gotoiphone[.]com Coruna loader, September 2026 build, 47,605 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "df203577-e189-5bd9-ab0d-39882228de56",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "b693b028e66e734b4552e0c95baf77d353f5fe178ba363594a157d6211751fdf",
+        "to_ids": true,
+        "comment": "a5a62a47e2914d88ab7b34b2ebea8b25.js - injector + telemetry, 2,660 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ad2cc027-a031-5d74-90a0-1249572a42bc",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "5bc7ce2af4fb5e62b801dec719c0dc90b5deddf0ccd0ac1d6610f8679d10fd47",
+        "to_ids": true,
+        "comment": "34ef644ff217a50beadde64dc8e23a7d.js - qqtime Coruna loader, July 2026 (cryptonewstrack, aivestorix), 50,673 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1cc35377-f069-5df2-bff2-d7ef339a994b",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "0d70b4c36967dc3740ee08993f9abe43693c1e92c8a9c1f25c218357307ced82",
+        "to_ids": true,
+        "comment": "34ef644ff217a50beadde64dc8e23a7d.js - qqtime Coruna loader, 2026-07-16 (apiforx, 1x8gmjbdq3tepgr), 50,694 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "732e7fa2-1d5f-5584-af32-2f18e72bc86c",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2eb359647852ae87e4a4de7adc741abb2889896bf9bda476c647fb075ffb967e",
+        "to_ids": true,
+        "comment": "routers.js - DarkCoruna router (pages.dev), 883 bytes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ebbeeb1b-2b3e-5485-a21e-7715b18e7c6c",
+        "type": "text",
+        "category": "Other",
+        "value": "------HqBound",
+        "to_ids": false,
+        "comment": "P7 multipart boundary for /p photo uploads - constant across builds",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c707d858-458e-51d4-a323-37bed5ac132a",
+        "type": "text",
+        "category": "Other",
+        "value": "POST /war HTTP/1.0",
+        "to_ids": false,
+        "comment": "P7 keychain + wallet exfiltration request; HTTP/1.0 over CFStream with certificate validation disabled",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c69dfb06-afd8-543c-8cb6-550f49177f1a",
+        "type": "text",
+        "category": "Other",
+        "value": "f94ed1edc290119993125d85c1106796",
+        "to_ids": false,
+        "comment": "P7 build-3 channel code, sent as 'source' in /a, /event, /u, /nb and as channel_code in the beacon",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6ccde9c8-22cc-57f9-a878-9c982942209f",
+        "type": "text",
+        "category": "Other",
+        "value": "1df7afe33d3bf512f124136cf405f57a",
+        "to_ids": false,
+        "comment": "qqtime channelcode URL parameter / deployment directory (pages.dev)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "14324567-d230-5b07-a877-05b3fd5d7958",
+        "type": "text",
+        "category": "Other",
+        "value": "cecd08aa6ff548c2",
+        "to_ids": false,
+        "comment": "Salt of the qqtime Coruna loader (module name = SHA256(salt+name)[:40]); identical in all seven recovered builds",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a16c86b8-550c-50e6-a097-3f76cf4749c3",
+        "type": "text",
+        "category": "Other",
+        "value": "/private/var/tmp/keychain_c2_dump.json",
+        "to_ids": false,
+        "comment": "HOST ARTEFACT - decrypted keychain dump written by P7 Phase 2 (also .tmp and .done marker)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9e97317c-4f7c-5784-b485-c78cc5a73f6a",
+        "type": "text",
+        "category": "Other",
+        "value": "/private/var/tmp/p7_debug.log",
+        "to_ids": false,
+        "comment": "HOST ARTEFACT - P7 Phase 2 debug journal; file logging is intentional",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e0f1a5d8-3945-5752-ac6e-681a9528d124",
+        "type": "text",
+        "category": "Other",
+        "value": "/private/var/tmp/c2_wallet_debug.log",
+        "to_ids": false,
+        "comment": "HOST ARTEFACT - agent wallet-branch debug log",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ac1ffca1-0922-50bd-8e1a-5d57bab74cf0",
+        "type": "text",
+        "category": "Other",
+        "value": "/private/var/tmp/_hq_notestore",
+        "to_ids": false,
+        "comment": "HOST ARTEFACT - copy of the Apple Notes database (also -wal, -shm; /private/var/tmp/notes.sqlite*)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4be5b28b-d2d9-5ede-91f0-11f2784cb3c3",
+        "type": "text",
+        "category": "Other",
+        "value": "/var/mobile/Library/Caches/ios_disk_scan.txt",
+        "to_ids": false,
+        "comment": "HOST ARTEFACT - disk_scan output, uploaded in chunks then unlinked (also /var/mobile/ios_disk_scan.txt)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2b1254d4-824a-5b57-a79c-c3d66b0cb532",
+        "type": "text",
+        "category": "Other",
+        "value": "lab_device_uuid / __ds_inflight_worker / __ds_skip_workers",
+        "to_ids": false,
+        "comment": "BROWSER ARTEFACT - localStorage keys left by the cdn[.]gotoiphone[.]com deployment",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1a0701ae-361a-5f86-8f99-2c9216a5243e",
+        "type": "text",
+        "category": "Other",
+        "value": "_x_pe_done / _x_try / _x_ok",
+        "to_ids": false,
+        "comment": "BROWSER ARTEFACT - localStorage keys left by the mzpo30[.]cam deployment",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1005"
+      },
+      {
+        "name": "mitre-attack:T1027"
+      },
+      {
+        "name": "mitre-attack:T1041"
+      },
+      {
+        "name": "mitre-attack:T1059.007"
+      },
+      {
+        "name": "mitre-attack:T1068"
+      },
+      {
+        "name": "mitre-attack:T1071.001"
+      },
+      {
+        "name": "mitre-attack:T1082"
+      },
+      {
+        "name": "mitre-attack:T1083"
+      },
+      {
+        "name": "mitre-attack:T1119"
+      },
+      {
+        "name": "mitre-attack:T1189"
+      },
+      {
+        "name": "mitre-attack:T1203"
+      },
+      {
+        "name": "mitre-attack:T1555.001"
+      },
+      {
+        "name": "mitre-attack:T1584.004"
+      },
+      {
+        "name": "mitre-attack:T1608.004"
+      },
+      {
+        "name": "label:ios"
+      },
+      {
+        "name": "label:exploit-kit"
+      },
+      {
+        "name": "label:darksword"
+      },
+      {
+        "name": "label:coruna"
+      },
+      {
+        "name": "label:darkcoruna"
+      },
+      {
+        "name": "label:drive-by"
+      },
+      {
+        "name": "label:keychain-theft"
+      },
+      {
+        "name": "label:crypto-wallet-theft"
+      },
+      {
+        "name": "label:cybercrime"
+      },
+      {
+        "name": "label:incident-report"
+      }
+    ]
+  }
+}

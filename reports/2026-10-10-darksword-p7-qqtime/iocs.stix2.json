@@ -1,0 +1,4973 @@
+{
+  "type": "bundle",
+  "id": "bundle--00fe8c9d-218d-531c-96da-30d2f26d7699",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--4baeeba5-ed51-57fe-b5ab-72d263534616",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DarkSword \"P7\": a Leaked iOS Exploit Chain Repurposed for Crypto-Wallet Theft",
+      "published": "2026-10-10T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--111c3272-8418-5cb6-8b42-17e4351a6150",
+        "indicator--137047bd-94d7-5a85-bdb7-76fd1914ff4f",
+        "indicator--b36ec6e9-91f1-5ac8-bfee-f5e61d7a29b2",
+        "indicator--59697dd9-8c7d-5994-8d62-a1460da23bad",
+        "indicator--108052a9-e8a3-57d9-9b38-c48f567a6763",
+        "indicator--4f387f8e-f07f-5a8d-9356-399aa486dde4",
+        "indicator--63e88fd3-7e03-5d0d-9971-63e1f7548411",
+        "indicator--bec884a5-058d-59e0-97c3-eefcc9eae7b2",
+        "indicator--f59ef802-96ba-5bc9-a747-6e8c100c684c",
+        "indicator--1482a724-dd88-57c4-bb39-0b90d21b11b0",
+        "indicator--cc789673-0ba9-53f1-b710-f6e1e96d61af",
+        "indicator--41aa7b49-27a6-5c7f-b77d-8bb907fbcd26",
+        "indicator--1b54d51b-a262-5db2-bbdc-8a4f319b11f5",
+        "indicator--a213582b-77db-5b34-b08f-c20065ffb824",
+        "indicator--208b0071-29f5-5253-b720-9bbae251f6b3",
+        "indicator--d57a64bc-d77e-5a7a-aa78-f702704939dd",
+        "indicator--06f2a104-5376-5e95-a538-cfc64bf2492d",
+        "indicator--7270e423-41e1-5e0e-89fe-73f83717341b",
+        "indicator--ed1fc0ee-d122-516c-8ba6-ef95df757191",
+        "indicator--c64acbcd-f033-589c-872a-82f131f747a3",
+        "indicator--2e4df6c2-255a-578e-a3c1-793e3e829920",
+        "indicator--797d5dcd-d178-533f-b255-073c42619320",
+        "indicator--d6c33b92-fd4f-571d-8976-f382648f7c89",
+        "indicator--30014395-988a-5dfb-95f1-07a5c160c7cf",
+        "indicator--027f24c8-d097-5fe8-95d1-62cbc7e673de",
+        "indicator--9baf71b3-a846-54db-a759-c63040b2b260",
+        "indicator--c93e65d6-6047-561a-9c22-61e6588e8dc3",
+        "indicator--41757cac-5e29-5bd1-a29f-d36c99aa52d6",
+        "indicator--973b07b4-6b4e-5270-b8d1-08086e065df5",
+        "indicator--c36f039d-0843-5453-88b0-83a9603be3ef",
+        "indicator--bf62919a-2522-5623-8f63-6c5bd68cf33f",
+        "indicator--7fe0afd4-c997-58ef-a3cf-7df102e27fa6",
+        "indicator--9f84db5c-e728-52ac-a795-4e74177e12d9",
+        "indicator--41879593-d554-5c76-8fcb-9c69c0036a48",
+        "indicator--d8c50db5-9228-59d7-8621-c15b8859bdcf",
+        "indicator--9057beed-6a6b-5a5f-864c-1024d6ae5b43",
+        "indicator--8e94060c-5a9e-5e83-a964-68c6be86e1c9",
+        "indicator--49a9caab-6b33-51fb-9045-2745167ed5f7",
+        "indicator--dbcd3bca-567c-59aa-809c-28cab5c5a3e7",
+        "indicator--23ed4b8f-826d-5c77-b442-26d3dd9976a1",
+        "indicator--081e9120-cccc-591e-9a0b-050a5299a3b8",
+        "indicator--aacf8fba-f7f0-5b2b-a6ff-6afc4bdace14",
+        "indicator--c2f05957-e113-5891-a807-f1631666bf2b",
+        "indicator--c89261f5-0180-516f-9a58-d065ea94fe85",
+        "indicator--6b1c82e7-bbbf-5a5f-ad4f-fc3379d2cb06",
+        "indicator--c1adb962-3ac5-51c5-b9c5-597dea8c9782",
+        "indicator--758198d4-e4b0-532b-8e41-571f1b8cb372",
+        "indicator--d37c0e4c-5d9a-511d-89e6-a67ccbba4fc1",
+        "indicator--8b9a45c2-10d7-55fd-b994-8f6f45934f6b",
+        "indicator--71654b63-d76d-5269-82a8-201b8725d47b",
+        "indicator--aa165057-172c-54a1-84aa-2d0b3dc6adef",
+        "indicator--96916f4e-2672-5ba2-b841-cebac3f8b69b",
+        "indicator--0cfefbca-22f2-5c34-a281-9bf6c0486e60",
+        "indicator--ed775c8e-7b75-59b4-92b4-7e07d0e9922f",
+        "indicator--47709a68-fb34-5acf-a4df-b229019f32bd",
+        "indicator--43b57357-c1f0-541e-acab-66753ef70aa1"
+      ],
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--111c3272-8418-5cb6-8b42-17e4351a6150",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: www.y21t8bcya6q9b7155a.cc",
+      "description": "P7 build-3 C2: /beacon (tasking, 15 s), /result, /a, /event, /u, /nb, /p (multipart ------HqBound), /war (keychain + wallets). Gname.com, registrant CN, created 2026-05-25, Cloudflare",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'www.y21t8bcya6q9b7155a.cc']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--137047bd-94d7-5a85-bdb7-76fd1914ff4f",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: y21t8bcya6q9b7155a.cc",
+      "description": "P7 build-3 C2 apex",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'y21t8bcya6q9b7155a.cc']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b36ec6e9-91f1-5ac8-bfee-f5e61d7a29b2",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://www.y21t8bcya6q9b7155a.cc/beacon",
+      "description": "P7 tasking endpoint, POST HTTP/1.0 every 15 s",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.y21t8bcya6q9b7155a.cc/beacon']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--59697dd9-8c7d-5994-8d62-a1460da23bad",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://www.y21t8bcya6q9b7155a.cc/war",
+      "description": "P7 keychain JSON + wallet package exfiltration",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.y21t8bcya6q9b7155a.cc/war']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--108052a9-e8a3-57d9-9b38-c48f567a6763",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: iospc8.com",
+      "description": "P7 build-3 lure: Chinese online casino, GoDaddy, created 2026-09-23, Cloudflare",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'iospc8.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4f387f8e-f07f-5a8d-9356-399aa486dde4",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: agdx53.cc",
+      "description": "P7 C2 (iVerify). Gname, CN, 2026-06-09, Cloudflare",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'agdx53.cc']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--63e88fd3-7e03-5d0d-9971-63e1f7548411",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: js.gotoiphone.com",
+      "description": "P7 C2 (iVerify); Alibaba Cloud 47.237.185.24",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'js.gotoiphone.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bec884a5-058d-59e0-97c3-eefcc9eae7b2",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: cdn.gotoiphone.com",
+      "description": "DarkCoruna delivery (iVerify): group.html loads Coruna loader.js for all devices and rce_loader.js for iOS 18. Alibaba OSS",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'cdn.gotoiphone.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f59ef802-96ba-5bc9-a747-6e8c100c684c",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: mzpo30.cam",
+      "description": "P7 delivery #2 (iVerify). Gname, CN, 2026-08-17, CloudFront; root fingerprint identical to nuih22[.]cc",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'mzpo30.cam']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1482a724-dd88-57c4-bb39-0b90d21b11b0",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: oss.gotoiphone.com",
+      "description": "Injector host: /alicdn/a5a62a47e2914d88ab7b34b2ebea8b25.js creates the hidden iframe",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'oss.gotoiphone.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cc789673-0ba9-53f1-b710-f6e1e96d61af",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://oss.gotoiphone.com/alicdn/a5a62a47e2914d88ab7b34b2ebea8b25.js",
+      "description": "Injector script loaded by the lure site (urlscan 2026-09-05, 09-15)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://oss.gotoiphone.com/alicdn/a5a62a47e2914d88ab7b34b2ebea8b25.js']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--41aa7b49-27a6-5c7f-b77d-8bb907fbcd26",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://cdn.gotoiphone.com/group.html",
+      "description": "DarkCoruna router page, reloads every 120 s",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://cdn.gotoiphone.com/group.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1b54d51b-a262-5db2-bbdc-8a4f319b11f5",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://cdn.gotoiphone.com/loader.js",
+      "description": "Obfuscated Coruna loader (obChTK, salt cecd08aa6ff548c2)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://cdn.gotoiphone.com/loader.js']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a213582b-77db-5b34-b08f-c20065ffb824",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: gotoiphone.com",
+      "description": "Cluster apex, re-registered 2026-07-28 (Dominet HK), alidns",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'gotoiphone.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--208b0071-29f5-5253-b720-9bbae251f6b3",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: goo.wang",
+      "description": "Visitor telemetry of the injector; same IP as js[.]gotoiphone[.]com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'goo.wang']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d57a64bc-d77e-5a7a-aa78-f702704939dd",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://goo.wang/alicdn/a5a62a47e2914d88ab7b34b2ebea8b25/visit",
+      "description": "Telemetry endpoint: visitorIp / deviceVersion / sourceUrl every 5 s",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://goo.wang/alicdn/a5a62a47e2914d88ab7b34b2ebea8b25/visit']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--06f2a104-5376-5e95-a538-cfc64bf2492d",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: ipsadminuser.shop",
+      "description": "qqtime loader result-report endpoint (/api), July 2026 build. Cloudflare",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'ipsadminuser.shop']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7270e423-41e1-5e0e-89fe-73f83717341b",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://ipsadminuser.shop/api",
+      "description": "qqtime loader report endpoint",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://ipsadminuser.shop/api']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ed1fc0ee-d122-516c-8ba6-ef95df757191",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: 1x8gmjbdq3tepgr.icu",
+      "description": "qqtime Coruna loader host and /api report endpoint, 2026-07-16",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = '1x8gmjbdq3tepgr.icu']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c64acbcd-f033-589c-872a-82f131f747a3",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://1x8gmjbdq3tepgr.icu/api",
+      "description": "qqtime loader report endpoint",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://1x8gmjbdq3tepgr.icu/api']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2e4df6c2-255a-578e-a3c1-793e3e829920",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: iphone.apiforx.work",
+      "description": "qqtime Coruna loader host, /qqtime/qqtime.html, 2026-07-16",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'iphone.apiforx.work']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--797d5dcd-d178-533f-b255-073c42619320",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: 1.aivestorix.com",
+      "description": "qqtime Coruna loader host, /qqtime/qqtime.html, 2026-07-31",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = '1.aivestorix.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d6c33b92-fd4f-571d-8976-f382648f7c89",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: billowing-truth-804c.pages.dev",
+      "description": "qqtime 'foxtimes' DarkCoruna router deployment, 2026-08-04 (routers.js: ds_rce_loader.js for iOS >= 18.4, channelcode=1df7afe3...)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'billowing-truth-804c.pages.dev']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--30014395-988a-5dfb-95f1-07a5c160c7cf",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: nuih22.cc",
+      "description": "Shared DarkSword back end serving 14 lure fronts (iVerify appendix); same 49-byte openresty root as mzpo30[.]cam",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'nuih22.cc']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--027f24c8-d097-5fe8-95d1-62cbc7e673de",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 47.237.185.24",
+      "description": "CONTEXT - Alibaba Cloud address of gotoiphone[.]com, js[.]gotoiphone[.]com and goo[.]wang since 2026-08-10. Cloud IP, block with care",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '47.237.185.24']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9baf71b3-a846-54db-a759-c63040b2b260",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: ef9263b1a74e80d55331763335847017efba9018401b037c66729b265c255bb7",
+      "description": "test.zip - P7 build-3 kit archive, 437,030 bytes, files dated 2026-09-29, public sandbox submission 2026-10-03",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'ef9263b1a74e80d55331763335847017efba9018401b037c66729b265c255bb7']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c93e65d6-6047-561a-9c22-61e6588e8dc3",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 57c3997642882815e02bcc50b60a63292dc3f5ed0337f2dd0c9c93b34a423a08",
+      "description": "pe_main.js - P7 build-3 kernel exploit + implant bundle, 793,879 bytes, incl. 'P7 Phase 2' AKS-oracle keychain decryption",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '57c3997642882815e02bcc50b60a63292dc3f5ed0337f2dd0c9c93b34a423a08']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--41757cac-5e29-5bd1-a29f-d36c99aa52d6",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 38975537d2c66815484a1adb01b681bffa96168cd6e9474e24815ad4a4796127",
+      "description": "c2_agent.js - P7 command agent, build 3 (new), 170,867 bytes, SpringBoard",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '38975537d2c66815484a1adb01b681bffa96168cd6e9474e24815ad4a4796127']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--973b07b4-6b4e-5270-b8d1-08086e065df5",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: d554f534fad7822cbde9ca7d9f6efe8a7e0f5786ccee60f8db6dad340a2a6f80",
+      "description": "loader.js - byte-identical to the GHOSTBLADE loader, 10,096 bytes; 0 detections on VirusTotal",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'd554f534fad7822cbde9ca7d9f6efe8a7e0f5786ccee60f8db6dad340a2a6f80']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c36f039d-0843-5453-88b0-83a9603be3ef",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: f0f0aa82a03bf4835864a5b7f7ba38e537f3f81e82b3db311ac0d80b4b4b022e",
+      "description": "keychain_copier.js - GHOSTBLADE version plus keychain WAL/SHM and Apple Notes DB (iVerify mzpo30 hash)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'f0f0aa82a03bf4835864a5b7f7ba38e537f3f81e82b3db311ac0d80b4b4b022e']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bf62919a-2522-5623-8f63-6c5bd68cf33f",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 48aacf46ad8b7f619d7f4346c330abfbda14a34ed3eb98c215a5ef5fb36e2171",
+      "description": "MigFilterBypassThread.js - shared DarkSword implant library, identical in GHOSTBLADE and all P7 builds",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '48aacf46ad8b7f619d7f4346c330abfbda14a34ed3eb98c215a5ef5fb36e2171']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7fe0afd4-c997-58ef-a3cf-7df102e27fa6",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 443045e0c3ffdabddaf1fd2d88e93b0e6f614654788fbc1d4f646a4fdc736a6d",
+      "description": "rce_loader.js - P7 build 3, 7,318 bytes, SERVER_LOG re-enabled, /406.html redirect",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '443045e0c3ffdabddaf1fd2d88e93b0e6f614654788fbc1d4f646a4fdc736a6d']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9f84db5c-e728-52ac-a795-4e74177e12d9",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 92c7d246d2c163c076f783dcc19f87f5b9b9ac301b106b87a7aaea9346ce0052",
+      "description": "rce_module.js - CVE-2025-31277 RCE module, unchanged since the March 2026 leak",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '92c7d246d2c163c076f783dcc19f87f5b9b9ac301b106b87a7aaea9346ce0052']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--41879593-d554-5c76-8fcb-9c69c0036a48",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 14882fb0baef0f6f45decc79e34d488cdccc15fda505e5b615c5c420a7a8826e",
+      "description": "rce_worker_18.4.js - P7 build 3",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '14882fb0baef0f6f45decc79e34d488cdccc15fda505e5b615c5c420a7a8826e']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d8c50db5-9228-59d7-8621-c15b8859bdcf",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 2415b9273b37a04c63bb2e45e81aad86d1b6a7a64a385e0a21377b24e6525245",
+      "description": "rce_worker_18.6.js - P7 build 3",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '2415b9273b37a04c63bb2e45e81aad86d1b6a7a64a385e0a21377b24e6525245']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9057beed-6a6b-5a5f-864c-1024d6ae5b43",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: d4aa9a78c9e4fb050abdf15da3ae166564f2fda6de63412bac36bc01a0984c21",
+      "description": "sbx0_main_18.4.js - P7 build 3",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'd4aa9a78c9e4fb050abdf15da3ae166564f2fda6de63412bac36bc01a0984c21']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8e94060c-5a9e-5e83-a964-68c6be86e1c9",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 2748a8fd029c7a55f3107563c8f7993d3deb609d16c4898be0a5609e66a7163d",
+      "description": "sbx1_main.js - P7 build 3",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '2748a8fd029c7a55f3107563c8f7993d3deb609d16c4898be0a5609e66a7163d']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--49a9caab-6b33-51fb-9045-2745167ed5f7",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: cf2262d8d064fef3c0fd79018ddd3f2f0e5e827aabb20aa5b6abeebd890ca5f7",
+      "description": "jmp.html - P7 build-3 launcher (5 hidden iframes, sessionStorage locks)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'cf2262d8d064fef3c0fd79018ddd3f2f0e5e827aabb20aa5b6abeebd890ca5f7']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dbcd3bca-567c-59aa-809c-28cab5c5a3e7",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: fe767e3c7bcb5c9e241334054424333d95ce86fe0e07717ee9ca529dade6930d",
+      "description": "group.html - cdn[.]gotoiphone[.]com DarkCoruna router page, 1,559 bytes",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'fe767e3c7bcb5c9e241334054424333d95ce86fe0e07717ee9ca529dade6930d']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--23ed4b8f-826d-5c77-b442-26d3dd9976a1",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 20c49dd361181210fade5de43e1c8c4c59485b4f565007b4ca3552b71c7683be",
+      "description": "loader.js - cdn[.]gotoiphone[.]com Coruna loader, September 2026 build, 47,605 bytes",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '20c49dd361181210fade5de43e1c8c4c59485b4f565007b4ca3552b71c7683be']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--081e9120-cccc-591e-9a0b-050a5299a3b8",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: b693b028e66e734b4552e0c95baf77d353f5fe178ba363594a157d6211751fdf",
+      "description": "a5a62a47e2914d88ab7b34b2ebea8b25.js - injector + telemetry, 2,660 bytes",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'b693b028e66e734b4552e0c95baf77d353f5fe178ba363594a157d6211751fdf']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aacf8fba-f7f0-5b2b-a6ff-6afc4bdace14",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 5bc7ce2af4fb5e62b801dec719c0dc90b5deddf0ccd0ac1d6610f8679d10fd47",
+      "description": "34ef644ff217a50beadde64dc8e23a7d.js - qqtime Coruna loader, July 2026 (cryptonewstrack, aivestorix), 50,673 bytes",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '5bc7ce2af4fb5e62b801dec719c0dc90b5deddf0ccd0ac1d6610f8679d10fd47']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c2f05957-e113-5891-a807-f1631666bf2b",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 0d70b4c36967dc3740ee08993f9abe43693c1e92c8a9c1f25c218357307ced82",
+      "description": "34ef644ff217a50beadde64dc8e23a7d.js - qqtime Coruna loader, 2026-07-16 (apiforx, 1x8gmjbdq3tepgr), 50,694 bytes",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '0d70b4c36967dc3740ee08993f9abe43693c1e92c8a9c1f25c218357307ced82']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c89261f5-0180-516f-9a58-d065ea94fe85",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "SHA256: 2eb359647852ae87e4a4de7adc741abb2889896bf9bda476c647fb075ffb967e",
+      "description": "routers.js - DarkCoruna router (pages.dev), 883 bytes",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '2eb359647852ae87e4a4de7adc741abb2889896bf9bda476c647fb075ffb967e']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6b1c82e7-bbbf-5a5f-ad4f-fc3379d2cb06",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: ------HqBound",
+      "description": "P7 multipart boundary for /p photo uploads - constant across builds",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '------HqBound']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c1adb962-3ac5-51c5-b9c5-597dea8c9782",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: POST /war HTTP/1.0",
+      "description": "P7 keychain + wallet exfiltration request; HTTP/1.0 over CFStream with certificate validation disabled",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'POST /war HTTP/1.0']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--758198d4-e4b0-532b-8e41-571f1b8cb372",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: f94ed1edc290119993125d85c1106796",
+      "description": "P7 build-3 channel code, sent as 'source' in /a, /event, /u, /nb and as channel_code in the beacon",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'f94ed1edc290119993125d85c1106796']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d37c0e4c-5d9a-511d-89e6-a67ccbba4fc1",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 1df7afe33d3bf512f124136cf405f57a",
+      "description": "qqtime channelcode URL parameter / deployment directory (pages.dev)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '1df7afe33d3bf512f124136cf405f57a']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8b9a45c2-10d7-55fd-b994-8f6f45934f6b",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: cecd08aa6ff548c2",
+      "description": "Salt of the qqtime Coruna loader (module name = SHA256(salt+name)[:40]); identical in all seven recovered builds",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'cecd08aa6ff548c2']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--71654b63-d76d-5269-82a8-201b8725d47b",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /private/var/tmp/keychain_c2_dump.json",
+      "description": "HOST ARTEFACT - decrypted keychain dump written by P7 Phase 2 (also .tmp and .done marker)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/private/var/tmp/keychain_c2_dump.json']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aa165057-172c-54a1-84aa-2d0b3dc6adef",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /private/var/tmp/p7_debug.log",
+      "description": "HOST ARTEFACT - P7 Phase 2 debug journal; file logging is intentional",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/private/var/tmp/p7_debug.log']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--96916f4e-2672-5ba2-b841-cebac3f8b69b",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /private/var/tmp/c2_wallet_debug.log",
+      "description": "HOST ARTEFACT - agent wallet-branch debug log",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/private/var/tmp/c2_wallet_debug.log']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0cfefbca-22f2-5c34-a281-9bf6c0486e60",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /private/var/tmp/_hq_notestore",
+      "description": "HOST ARTEFACT - copy of the Apple Notes database (also -wal, -shm; /private/var/tmp/notes.sqlite*)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/private/var/tmp/_hq_notestore']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ed775c8e-7b75-59b4-92b4-7e07d0e9922f",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /var/mobile/Library/Caches/ios_disk_scan.txt",
+      "description": "HOST ARTEFACT - disk_scan output, uploaded in chunks then unlinked (also /var/mobile/ios_disk_scan.txt)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/var/mobile/Library/Caches/ios_disk_scan.txt']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--47709a68-fb34-5acf-a4df-b229019f32bd",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: lab_device_uuid / __ds_inflight_worker / __ds_skip_workers",
+      "description": "BROWSER ARTEFACT - localStorage keys left by the cdn[.]gotoiphone[.]com deployment",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'lab_device_uuid / __ds_inflight_worker / __ds_skip_workers']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--43b57357-c1f0-541e-acab-66753ef70aa1",
+      "created": "2026-10-10T00:00:00Z",
+      "modified": "2026-10-10T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: _x_pe_done / _x_try / _x_ok",
+      "description": "BROWSER ARTEFACT - localStorage keys left by the mzpo30[.]cam deployment",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '_x_pe_done / _x_try / _x_ok']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-10T00:00:00Z",
+      "labels": [
+        "ios",
+        "exploit-kit",
+        "darksword",
+        "coruna",
+        "darkcoruna",
+        "drive-by",
+        "keychain-theft",
+        "crypto-wallet-theft",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.007"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1068"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1083"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1203"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.004"
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,72 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-10-10 — DarkSword "P7": a Leaked iOS Exploit Chain Repurposed for Crypto-Wallet Theft
+
+DarkSword is a complete JavaScript exploit chain for iOS 18.4–18.7 that Google documented in March 2026 in the hands of three espionage-style customers; one build leaked on GitHub on 22 March and the chain went criminal. On 8 October 2026 iVerify described a variant it calls "P7" — an implant with a bidirectional command channel and on-device keychain parsing. Working only from passive sources (public urlscan.io response bodies, a public tria.ge submission, CERT Polska MWDB, VirusTotal metadata) and without touching attacker infrastructure, we recovered a third, previously undescribed P7 build dated 29 September 2026: it is served from a Chinese-language online-casino lure, reports to a new command server behind Cloudflare, and carries an affiliate "channel code". A module-by-module comparison with the GHOSTBLADE sample published by Google shows that P7 is not a rewrite: its loader is byte-identical to GHOSTBLADE's and its low-level library is unchanged; what is new is a rewritten command agent that decrypts imToken wallet keystores on the device, and a "Phase 2" stage inside the kernel-exploit bundle that calls into securityd and uses the AppleKeyStore as a decryption oracle to dump the keychain to JSON. The iVerify-listed delivery host turned out to serve both chains — a Coruna loader for older iOS and DarkSword for iOS 18 — from one hidden iframe, and the same Coruna loader, identified by a fixed salt, appears on five further hosts since July 2026 under the operator's project name "qqtime". Everything about the operation points to financially motivated, Chinese-speaking crime built on the leak; nothing indicates state tasking.
+
+**Key findings:**
+- A third P7 build (kit dated 2026-09-29, found in a public sandbox on 2026-10-03) uses a new command server, `www.y21t8bcya6q9b7155a[.]cc`, and a casino lure, `iospc8[.]com`, registered six days before the build — neither is in the vendor indicator list.
+- The agent carries a constant `C2_CHANNEL_CODE` sent in every request, and the delivery cluster's router passes a `channelcode` URL parameter equal to the deployment directory: the kit is run as a service for several distributors, not by one end user.
+- P7's `loader.js` is byte-identical to the GHOSTBLADE loader (hence zero detections on VirusTotal) and `MigFilterBypassThread.js` is the same code; `keychain_copier.js` adds the keychain WAL/SHM files and the Apple Notes database; the agent is rewritten (2.5% shared lines) and the Telegram, WhatsApp, iCloud, WiFi and SMS collectors are gone — with them, every string in Google's `G_Datamine_GHOSTBLADE_1` YARA rule.
+- The new engineering is "P7 Phase 2" inside `pe_main.js`: a remote-call channel into securityd, `IOServiceOpen("AppleKeyStore")` from that context, and `aks_unwrap` used as an oracle to decrypt a local copy of `keychain-2.db` into `/private/var/tmp/keychain_c2_dump.json`. File logging to `p7_debug.log` and `c2_wallet_debug.log` is deliberate and is a reliable forensic artefact.
+- `cdn.gotoiphone[.]com` is a DarkCoruna deployment: `group.html` loads an obfuscated Coruna loader (salt `cecd08aa6ff548c2`) for every visitor and `rce_loader.js` only for user agents containing "18"; the injector on `oss.gotoiphone[.]com` posts visitor IP, OS version and page URL every five seconds to `goo[.]wang`, which shares its IP with the P7 command server `js.gotoiphone[.]com`.
+- The same Coruna loader build appears on `iphone.apiforx[.]work`, `1x8gmjbdq3tepgr[.]icu`, `1.aivestorix[.]com`, `cryptonewstrack[.]com` and a `pages.dev` site between 16 July and 4 August 2026; the `pages.dev` `routers.js` already branches iOS ≥ 18.4 to `ds_rce_loader.js` — the first visible DarkSword branch of the cluster.
+- Of the 185 component hashes in iVerify's DarkSword appendix, 38 are on VirusTotal and none on MalwareBazaar; 94 of 229 lure fronts load the kit from a single back end, `cf.r5dz2dz88wuideu[.]xyz`. Hash lists lag the operation by months; detection has to rely on artefact paths, the HTTP/1.0 beacon pattern and the `------HqBound` boundary.
+- Correction to our 28 March 2026 report: `static.cdncounter[.]net` and `sqwas.shapelie[.]com` belong, per Google, to UNC6353, not UNC6748; GHOSTBLADE is a Google designation. TA446 reused the leaked UNC6353 kit including its exfiltration server.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-10-10-darksword-p7-qqtime/Incident_Report_2026-10-10_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-10-10-darksword-p7-qqtime/Incident_Report_2026-10-10_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-10-10-darksword-p7-qqtime/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-10-10-darksword-p7-qqtime/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| Domain | `www.y21t8bcya6q9b7155a[.]cc` (P7 build-3 C2: /beacon /result /a /event /u /nb /p /war; Gname, CN, Cloudflare) |
+| Domain | `iospc8[.]com` (P7 build-3 lure, casino; GoDaddy, 2026-09-23) |
+| Domain | `agdx53[.]cc` (P7 C2, iVerify) |
+| Domain | `js.gotoiphone[.]com` (P7 C2, iVerify) |
+| Domain | `cdn.gotoiphone[.]com` (DarkCoruna delivery, iVerify; Alibaba OSS) |
+| Domain | `mzpo30[.]cam` (P7 delivery, iVerify; CloudFront) |
+| Domain | `oss.gotoiphone[.]com` (injector host) |
+| Domain | `gotoiphone[.]com` (cluster apex, re-registered 2026-07-28) |
+| Domain | `goo[.]wang` (visitor telemetry; same IP as js.gotoiphone) |
+| Domain | `ipsadminuser[.]shop` (loader report endpoint, July build) |
+| Domain | `1x8gmjbdq3tepgr[.]icu` (Coruna loader host + /api) |
+| Domain | `iphone.apiforx[.]work` (Coruna loader host) |
+| Domain | `1.aivestorix[.]com` (Coruna loader host) |
+| Domain | `billowing-truth-804c.pages[.]dev` (DarkCoruna router, "foxtimes") |
+| Domain | `nuih22[.]cc` (shared DarkSword back end; same root fingerprint as mzpo30) |
+| URL | `hxxps://oss.gotoiphone[.]com/alicdn/a5a62a47e2914d88ab7b34b2ebea8b25.js` (injector) |
+| URL | `hxxps://cdn.gotoiphone[.]com/group.html` (DarkCoruna router page) |
+| URL | `hxxps://goo[.]wang/alicdn/a5a62a47e2914d88ab7b34b2ebea8b25/visit` (telemetry) |
+| IP | `47[.]237[.]185[.]24` (Alibaba Cloud: gotoiphone apex, js.gotoiphone, goo.wang — context, cloud IP) |
+| SHA-256 | `ef9263b1a74e80d55331763335847017efba9018401b037c66729b265c255bb7` (test.zip, P7 build-3 kit) |
+| SHA-256 | `57c3997642882815e02bcc50b60a63292dc3f5ed0337f2dd0c9c93b34a423a08` (pe_main.js, P7 build-3 implant bundle) |
+| SHA-256 | `38975537d2c66815484a1adb01b681bffa96168cd6e9474e24815ad4a4796127` (c2_agent.js, P7 build 3) |
+| SHA-256 | `d554f534fad7822cbde9ca7d9f6efe8a7e0f5786ccee60f8db6dad340a2a6f80` (loader.js = GHOSTBLADE loader) |
+| SHA-256 | `f0f0aa82a03bf4835864a5b7f7ba38e537f3f81e82b3db311ac0d80b4b4b022e` (keychain_copier.js) |
+| SHA-256 | `48aacf46ad8b7f619d7f4346c330abfbda14a34ed3eb98c215a5ef5fb36e2171` (MigFilterBypassThread.js, shared library) |
+| SHA-256 | `443045e0c3ffdabddaf1fd2d88e93b0e6f614654788fbc1d4f646a4fdc736a6d` (rce_loader.js, P7 build 3) |
+| SHA-256 | `92c7d246d2c163c076f783dcc19f87f5b9b9ac301b106b87a7aaea9346ce0052` (rce_module.js, unchanged since the leak) |
+| SHA-256 | `fe767e3c7bcb5c9e241334054424333d95ce86fe0e07717ee9ca529dade6930d` (group.html, cdn.gotoiphone) |
+| SHA-256 | `20c49dd361181210fade5de43e1c8c4c59485b4f565007b4ca3552b71c7683be` (Coruna loader.js, cdn.gotoiphone) |
+| SHA-256 | `b693b028e66e734b4552e0c95baf77d353f5fe178ba363594a157d6211751fdf` (injector a5a62a47….js) |
+| SHA-256 | `5bc7ce2af4fb5e62b801dec719c0dc90b5deddf0ccd0ac1d6610f8679d10fd47` (Coruna loader, July, cryptonewstrack/aivestorix) |
+| SHA-256 | `0d70b4c36967dc3740ee08993f9abe43693c1e92c8a9c1f25c218357307ced82` (Coruna loader, July, apiforx/1x8gm) |
+| SHA-256 | `2eb359647852ae87e4a4de7adc741abb2889896bf9bda476c647fb075ffb967e` (routers.js, pages.dev) |
+| String | `------HqBound` (P7 multipart boundary) |
+| String | `f94ed1edc290119993125d85c1106796` (P7 build-3 channel code) |
+| String | `cecd08aa6ff548c2` (Coruna loader salt, all qqtime builds) |
+| Path | `/private/var/tmp/keychain_c2_dump.json`, `/private/var/tmp/p7_debug.log`, `/private/var/tmp/c2_wallet_debug.log`, `/private/var/tmp/_hq_notestore` (host artefacts) |
+
+**MITRE ATT&CK:** T1189, T1608.004, T1584.004, T1203, T1068, T1059.007, T1027, T1555.001, T1005, T1119, T1082, T1083, T1071.001, T1041
+
+---
+
 ### 2026-10-07 — The PDF Viewer That Lives in the Registry: an HTA Loader Against Russian Organisations
 
 On 1 October 2026 a file named «ИСХ № 134ОП-14 от 01.10.2026.hta» — imitating an outgoing letter with the reference number and date that a registry office assigns — went out to Russian organisations; antivirus telemetry counted roughly a thousand encounters in the first day, and the sample reached public collections on 2 October without being attributed to any known family. The HTML application draws the interface of a PDF viewer while a VBScript stub assembles a JScript program from eight hidden text blocks encoded as GUID-like hexadecimal strings and hands it to the long-obsolete MSScriptControl component, which exists only in a 32-bit build — so the file detonates under the 32-bit mshta that Windows actually invokes on a double click, and dies with a script error under a 64-bit host, which is enough to make a sandbox report it clean. The decoded loader keeps its later stages in the registry under HKCU\Software\RememberMilk as 2,000-character string values, leaves only six hidden one-kilobyte launcher scripts on disk under directories named after real software, and secures execution twice: through three RunOnce entries that each re-register themselves and three scheduled tasks with nested names firing every five and fifteen minutes. Detonated in our own sandbox behind an anonymising network, it extracted the Chromium master key for both Chrome and Edge, then asked its command server for configuration over a protocol whose three custom HTTP headers — a machine identifier, a build key constant across separate infections, and a request type — are a far more durable marker than the addresses themselves. The server answered, and delivered nothing.
