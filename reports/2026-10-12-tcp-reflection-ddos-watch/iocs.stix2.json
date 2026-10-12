@@ -1,0 +1,1422 @@
+{
+  "type": "bundle",
+  "id": "bundle--019c00b2-c50d-56ca-9244-3e8f21df4f7e",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--9818936b-9a28-5353-9f67-47b0ccf80cfc",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Who Is Being DDoSed via TCP Reflection: Sensor-Network Observations, April-October 2026",
+      "published": "2026-10-12T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--0a5827a8-1414-5232-b445-bd616617bf4a",
+        "indicator--a3850c86-3bd6-5142-8c79-722f4c64e007",
+        "indicator--a42c4382-d9b0-5631-bbf7-01ec21e78003",
+        "indicator--0509ae95-5173-5726-9d1b-42c0d6c81758",
+        "indicator--d9c4a97c-0b9d-5c22-aab0-22216d618345",
+        "indicator--331855e6-5485-5e6e-837e-9d7c839e2eb1",
+        "indicator--19c953c8-ec84-5a3d-a691-0e7bcfacd2e7",
+        "indicator--280eca49-9b1a-5336-bf45-22705b932779",
+        "indicator--5b371025-eb67-5164-8fae-358013fc6cb2",
+        "indicator--0fce0c28-e512-53dd-92d1-c919b56c5360",
+        "indicator--670c759d-2a6e-5d81-a0b3-65692c1d1e73",
+        "indicator--d8142ec9-81a9-5d61-86a1-4c749978ab7b",
+        "indicator--83a16ca8-47ba-5aa9-a06e-c2ee940af29a",
+        "indicator--189b4bf0-fc89-5619-b2cc-9c2d10f0c634",
+        "indicator--53040564-44cb-5e5f-9fb1-9bcf9a1e7b31",
+        "indicator--fae24b32-4afc-5055-be63-52cae6779b81",
+        "indicator--c550837e-a192-5fa7-a994-f95b6ddb6f53",
+        "indicator--508c5abc-06d5-511b-9f62-85688238ab30",
+        "indicator--91e28550-377b-5aca-816a-d049f7237bd8",
+        "indicator--db28cc0e-6751-5e94-8146-8f8557db4e0c",
+        "indicator--743ff49b-21de-5f03-b872-74152b75455f",
+        "indicator--454bbfa4-4779-5e71-bca8-3fbdb0de09cc",
+        "indicator--2accc186-2498-5792-b4ba-509557d4e95a",
+        "indicator--bd78233a-36e8-5a51-b7ac-f3f4ee552fec",
+        "indicator--b7e28d64-453e-5d89-b48d-be6be7dfc933",
+        "indicator--20774b0e-1766-5fb8-b1c5-6084083d7482",
+        "indicator--06bdc960-179b-5a47-9cc7-8cfc57e6562d",
+        "indicator--dc3131f3-8121-530e-9cbb-f8b61a2c10ba",
+        "indicator--510726ee-9517-5e4b-b0ae-3c4011fdb004",
+        "indicator--0eba7a64-8f37-58a9-abe4-73826c5c4a3a",
+        "indicator--4af11bf1-403f-55df-bac1-d17cfbd9f270"
+      ],
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0a5827a8-1414-5232-b445-bd616617bf4a",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 64240_2-4-8-1-3_1460_7",
+      "description": "JA4T of spoofed SYNs (attack tool pool, dominant) - Russian campaign since 2026-08-18",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '64240_2-4-8-1-3_1460_7']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a3850c86-3bd6-5142-8c79-722f4c64e007",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 29200_2-4-8-1-3_1460_7",
+      "description": "JA4T of spoofed SYNs (attack tool pool)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '29200_2-4-8-1-3_1460_7']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a42c4382-d9b0-5631-bbf7-01ec21e78003",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 64240_2-1-3-1-1-4_1460_8",
+      "description": "JA4T of spoofed SYNs (attack tool pool)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '64240_2-1-3-1-1-4_1460_8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0509ae95-5173-5726-9d1b-42c0d6c81758",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 65535_2-4-8-1-3_1460_9",
+      "description": "JA4T of spoofed SYNs (attack tool pool)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '65535_2-4-8-1-3_1460_9']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d9c4a97c-0b9d-5c22-aab0-22216d618345",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: 32120_2-1-1-4-1-3_1460_10",
+      "description": "JA4T of spoofed SYNs (attack tool pool)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '32120_2-1-1-4-1-3_1460_10']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--331855e6-5485-5e6e-837e-9d7c839e2eb1",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: zeek: history ShR|S0, orig_bytes=0, orig_pkts>=3, same (orig_h,orig_p,resp_p) tuple >=3/day",
+      "description": "Detection signature for TCP SYN-ACK reflection traffic",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'zeek: history ShR|S0, orig_bytes=0, orig_pkts>=3, same (orig_h,orig_p,resp_p) tuple >=3/day']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--19c953c8-ec84-5a3d-a691-0e7bcfacd2e7",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS42231",
+      "description": "VICTIM, context only - Promsvyazbank, 2026-08-31 (peak wave)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 42231]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--280eca49-9b1a-5336-bf45-22705b932779",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS21252",
+      "description": "VICTIM, context only - Bank Uralsib, 2026-09-29 and 10-01",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 21252]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5b371025-eb67-5164-8fae-358013fc6cb2",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS20872",
+      "description": "VICTIM, context only - Bank Uralsib (second AS), 2026-09-29",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 20872]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0fce0c28-e512-53dd-92d1-c919b56c5360",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS39850",
+      "description": "VICTIM, context only - National Bank Trust, 2026-10-12",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 39850]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--670c759d-2a6e-5d81-a0b3-65692c1d1e73",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS13105",
+      "description": "VICTIM, context only - Lukoil-Inform, 2026-10-05",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 13105]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d8142ec9-81a9-5d61-86a1-4c749978ab7b",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS12389",
+      "description": "VICTIM, context only - Rostelecom, 2026-09-18/19",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 12389]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--83a16ca8-47ba-5aa9-a06e-c2ee940af29a",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS8901",
+      "description": "VICTIM, context only - GKU Mosgortelecom, 2026-09-18/19",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 8901]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--189b4bf0-fc89-5619-b2cc-9c2d10f0c634",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS13238",
+      "description": "VICTIM, context only - Yandex, 42 public VIPs, 2026-10-11 18:56-20:26 UTC",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 13238]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--53040564-44cb-5e5f-9fb1-9bcf9a1e7b31",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS47764",
+      "description": "VICTIM, context only - VK Cloud, 2026-10-12",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 47764]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fae24b32-4afc-5055-be63-52cae6779b81",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS206973",
+      "description": "VICTIM, context only - Elecsnet (payment NCO), 2026-09-07",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 206973]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c550837e-a192-5fa7-a994-f95b6ddb6f53",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS49675",
+      "description": "VICTIM, context only - SKB Kontur, 2026-08-20",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 49675]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--508c5abc-06d5-511b-9f62-85688238ab30",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS49505",
+      "description": "VICTIM, context only - Selectel, 2026-08-25",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 49505]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--91e28550-377b-5aca-816a-d049f7237bd8",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS50340",
+      "description": "VICTIM, context only - Selectel MSK, 2026-09-26",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 50340]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--db28cc0e-6751-5e94-8146-8f8557db4e0c",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS42524",
+      "description": "VICTIM, context only - CDEK, 2026-08-25",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 42524]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--743ff49b-21de-5f03-b872-74152b75455f",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS47165",
+      "description": "VICTIM, context only - Omskie Kabelnye Seti, 2026-08-18/20",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 47165]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--454bbfa4-4779-5e71-bca8-3fbdb0de09cc",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS39153",
+      "description": "VICTIM, context only - Teleport Telecom, 2026-08-26",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 39153]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2accc186-2498-5792-b4ba-509557d4e95a",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS47156",
+      "description": "VICTIM, context only - Malnet, 2026-08-27/29",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 47156]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bd78233a-36e8-5a51-b7ac-f3f4ee552fec",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS203806",
+      "description": "VICTIM, context only - GranLine, 2026-09-02",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 203806]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b7e28d64-453e-5d89-b48d-be6be7dfc933",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS61068",
+      "description": "VICTIM, context only - Necstel, 2026-09-03",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 61068]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--20774b0e-1766-5fb8-b1c5-6084083d7482",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS31214",
+      "description": "VICTIM, context only - TIS Dialog, 2026-09-08/09",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 31214]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--06bdc960-179b-5a47-9cc7-8cfc57e6562d",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS57456",
+      "description": "VICTIM, context only - Intek-Mytischi, 2026-09-25",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 57456]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dc3131f3-8121-530e-9cbb-f8b61a2c10ba",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS30745",
+      "description": "VICTIM, context only - Site LLC, 2026-10-02",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 30745]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--510726ee-9517-5e4b-b0ae-3c4011fdb004",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS25532",
+      "description": "VICTIM, context only - Masterhost, 2026-10-07",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 25532]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0eba7a64-8f37-58a9-abe4-73826c5c4a3a",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS51518",
+      "description": "VICTIM, context only - EKMA IS, 2026-10-08/09",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 51518]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4af11bf1-403f-55df-bac1-d17cfbd9f270",
+      "created": "2026-10-12T00:00:00Z",
+      "modified": "2026-10-12T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "ASN: AS216071",
+      "description": "VICTIM, context only - VDSina, 2026-10-12",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[autonomous-system:number = 216071]",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-12T00:00:00Z",
+      "labels": [
+        "ddos",
+        "tcp-reflection",
+        "syn-ack-reflection",
+        "spoofing",
+        "hacktivism",
+        "russia",
+        "threat-intelligence"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1498.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1595.001"
+        }
+      ]
+    }
+  ]
+}

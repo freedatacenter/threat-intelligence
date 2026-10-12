@@ -1,0 +1,334 @@
+{
+  "Event": {
+    "uuid": "ef9b898a-de2f-541c-b291-825ce0d38ff2",
+    "info": "[TLP:CLEAR] Who Is Being DDoSed via TCP Reflection: Sensor-Network Observations, April-October 2026",
+    "date": "2026-10-12",
+    "timestamp": "1791763200",
+    "publish_timestamp": "1791763200",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "56c08798-6592-504d-be92-3fd059bdfb26",
+        "type": "text",
+        "category": "Other",
+        "value": "64240_2-4-8-1-3_1460_7",
+        "to_ids": false,
+        "comment": "JA4T of spoofed SYNs (attack tool pool, dominant) - Russian campaign since 2026-08-18",
+        "distribution": "5"
+      },
+      {
+        "uuid": "02ecf04f-419d-5b1a-991f-931313ea39fb",
+        "type": "text",
+        "category": "Other",
+        "value": "29200_2-4-8-1-3_1460_7",
+        "to_ids": false,
+        "comment": "JA4T of spoofed SYNs (attack tool pool)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5973e4ff-1eba-5cde-b600-d0f3369bb9b0",
+        "type": "text",
+        "category": "Other",
+        "value": "64240_2-1-3-1-1-4_1460_8",
+        "to_ids": false,
+        "comment": "JA4T of spoofed SYNs (attack tool pool)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "928a07ae-2247-51a4-b022-4fc34869d012",
+        "type": "text",
+        "category": "Other",
+        "value": "65535_2-4-8-1-3_1460_9",
+        "to_ids": false,
+        "comment": "JA4T of spoofed SYNs (attack tool pool)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "729b25dd-6dbd-5916-b0a1-1021b252eba9",
+        "type": "text",
+        "category": "Other",
+        "value": "32120_2-1-1-4-1-3_1460_10",
+        "to_ids": false,
+        "comment": "JA4T of spoofed SYNs (attack tool pool)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4817e010-4106-5f9f-8304-08a1be93d72c",
+        "type": "text",
+        "category": "Other",
+        "value": "zeek: history ShR|S0, orig_bytes=0, orig_pkts>=3, same (orig_h,orig_p,resp_p) tuple >=3/day",
+        "to_ids": false,
+        "comment": "Detection signature for TCP SYN-ACK reflection traffic",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ef192217-01e6-5505-bb72-65ee42c238b0",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS42231",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Promsvyazbank, 2026-08-31 (peak wave)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7e7b06d7-773e-56c5-a469-205c76473df2",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS21252",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Bank Uralsib, 2026-09-29 and 10-01",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bc0d1a86-79d1-5b01-b4c6-0c4cb7b54398",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS20872",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Bank Uralsib (second AS), 2026-09-29",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3f9e71cb-4097-58d1-89ac-fefd778ee774",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS39850",
+        "to_ids": false,
+        "comment": "VICTIM, context only - National Bank Trust, 2026-10-12",
+        "distribution": "5"
+      },
+      {
+        "uuid": "30830d09-d8d6-5926-a58d-a45a77fcce48",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS13105",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Lukoil-Inform, 2026-10-05",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ca98ff37-cdac-5c00-b980-830e55130d22",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS12389",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Rostelecom, 2026-09-18/19",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a7b42bc-c6da-51e0-a485-a7c3ff3dce6e",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS8901",
+        "to_ids": false,
+        "comment": "VICTIM, context only - GKU Mosgortelecom, 2026-09-18/19",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8b6ce54d-dd27-56b3-bde2-5f82de8e5401",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS13238",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Yandex, 42 public VIPs, 2026-10-11 18:56-20:26 UTC",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d6c3e4fd-d0e0-5513-99a1-4d1507fc1d7f",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS47764",
+        "to_ids": false,
+        "comment": "VICTIM, context only - VK Cloud, 2026-10-12",
+        "distribution": "5"
+      },
+      {
+        "uuid": "773274b2-3ac2-5ff3-ab0b-718f60898d82",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS206973",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Elecsnet (payment NCO), 2026-09-07",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b9faa863-bf4b-5c8e-94e1-63dfc3c0ecfd",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS49675",
+        "to_ids": false,
+        "comment": "VICTIM, context only - SKB Kontur, 2026-08-20",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a83c340d-3e4b-5802-85ec-c09d09069bc8",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS49505",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Selectel, 2026-08-25",
+        "distribution": "5"
+      },
+      {
+        "uuid": "eff02d4d-b618-5455-bc52-0048757ed7dc",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS50340",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Selectel MSK, 2026-09-26",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ae7ce61f-0074-5528-9cf4-aa70848141ae",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS42524",
+        "to_ids": false,
+        "comment": "VICTIM, context only - CDEK, 2026-08-25",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a525c4a-6d9b-56d6-823a-9d3d27c1f786",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS47165",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Omskie Kabelnye Seti, 2026-08-18/20",
+        "distribution": "5"
+      },
+      {
+        "uuid": "64ceb442-47ec-5497-bd10-9c9793eef5fd",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS39153",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Teleport Telecom, 2026-08-26",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bd15721e-bddd-5d2d-abde-bfa9c1fcb6d0",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS47156",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Malnet, 2026-08-27/29",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5e3d127b-0716-5716-9b70-85871b92d382",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS203806",
+        "to_ids": false,
+        "comment": "VICTIM, context only - GranLine, 2026-09-02",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5d948b3c-1ef8-551f-a6a6-696736f57375",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS61068",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Necstel, 2026-09-03",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a488c6b8-ad2b-5316-966e-2615e4bfc658",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS31214",
+        "to_ids": false,
+        "comment": "VICTIM, context only - TIS Dialog, 2026-09-08/09",
+        "distribution": "5"
+      },
+      {
+        "uuid": "df88f865-58bc-5648-8bbe-e9e6f98a235e",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS57456",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Intek-Mytischi, 2026-09-25",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e77213b4-a839-551a-907c-b7c6551e1e69",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS30745",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Site LLC, 2026-10-02",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ff003e7e-d8f3-5f4f-95e2-c9dbae02387d",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS25532",
+        "to_ids": false,
+        "comment": "VICTIM, context only - Masterhost, 2026-10-07",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4f29eee4-223d-5d98-ba96-9d906ecc099c",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS51518",
+        "to_ids": false,
+        "comment": "VICTIM, context only - EKMA IS, 2026-10-08/09",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2c535e31-a24c-5f85-bbce-0a6a75b313b8",
+        "type": "AS",
+        "category": "Network activity",
+        "value": "AS216071",
+        "to_ids": false,
+        "comment": "VICTIM, context only - VDSina, 2026-10-12",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1498"
+      },
+      {
+        "name": "mitre-attack:T1498.002"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1595.001"
+      },
+      {
+        "name": "label:ddos"
+      },
+      {
+        "name": "label:tcp-reflection"
+      },
+      {
+        "name": "label:syn-ack-reflection"
+      },
+      {
+        "name": "label:spoofing"
+      },
+      {
+        "name": "label:hacktivism"
+      },
+      {
+        "name": "label:russia"
+      },
+      {
+        "name": "label:threat-intelligence"
+      }
+    ]
+  }
+}

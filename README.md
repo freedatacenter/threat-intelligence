@@ -6,6 +6,39 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-10-12 — Who Is Being DDoSed via TCP Reflection: Sensor-Network Observations, April–October 2026
+
+Since late April 2026 our sensor network has continuously registered streams of TCP SYN packets with forged source addresses — the signature of TCP SYN-ACK reflection DDoS. Because the forged address is the victim's, the list of organisations under attack can be reconstructed from traffic that the sensors simply log and drop. Two layers stand out. A background layer since April is the familiar picture of commercial booter services: game servers, VPNs and DDoS-protected hosting worldwide (one Amarutu Technology host was hit for 95 consecutive days). A separate campaign since 18 August 2026 targets Russian organisations — ISPs, banks, payment and IT companies, the oil industry — 22 organisations in eight weeks, run with one tool and, by every sign, by one operator, with reflectors selected only inside Russia. The largest waves hit Promsvyazbank (31 August), Bank Uralsib (29 September), Lukoil-Inform (5 October), Rostelecom and Mosgortelecom (18–19 September), 42 production load balancers of Yandex (11 October, 18:56–20:26 UTC) and National Bank Trust with VK Cloud (12 October). Spoofing was confirmed at frame level during a live wave: identical IP IDs across a hundred replayed SYNs, and a TTL of 17–30 on the SYN against 59 on the RST from the victim's real host. The origin of the attacks cannot be recovered from packet headers and no public claim of responsibility was found. Sensor addresses and operators are not disclosed.
+
+**Key findings:**
+- Reflection traffic was present on 130 of 165 observed days; the forged source address identifies the victim, so the sensors act as a passive "who is being DDoSed" feed without taking part in the attack.
+- A Russian-target campaign started on 18 August 2026: Omskie Kabelnye Seti, SKB Kontur, Selectel, CDEK, Teleport Telecom, Malnet, Promsvyazbank (4,728 connections on one sensor, the period's peak), GranLine, Necstel, Elecsnet, TIS Dialog, Rostelecom, Mosgortelecom, Intek-Mytischi, Bank Uralsib, Site LLC, Lukoil-Inform, Masterhost, EKMA IS, Yandex, NB Trust, VK Cloud, VDSina.
+- One tool across the whole campaign: the same JA4T pool led by `64240_2-4-8-1-3_1460_7`, the same packet replayed 84–107 times within milliseconds, TTL and window randomised per forged tuple, the forged source port taken from the operator's target list (80/443 for Yandex, high ports for Uralsib).
+- The campaign's packets reached only Russia-located sensors; sensors in Europe and the US saw only the background layer — the reflector list was built from Russian address space, so geo-blocking does not help the victims.
+- On 11 October, 18:56–20:26 UTC, the forged sources were 42 public production load balancers of Yandex (qloud, eda, ott, plus, maps front ends, source ports 80/443); the wave is mechanically identical to the Uralsib and Trust waves.
+- Four signs separate reflection from scanning in zeek: replayed identical packets, TTL mismatch between SYN and RST of the same address, impossible source ports, and victims that form whole /24s or ASes. Half-open scanners never show tuple repeats.
+- Mitigation: BCP 38 egress filtering at hosters; state-aware filtering at victims (a SYN-ACK without a preceding SYN is dropped at the edge); owners of open TCP services should rate-limit repeated SYNs of one (source, source port, destination port) tuple — three per second is enough and never affects a legitimate client.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-10-12-tcp-reflection-ddos-watch/Incident_Report_2026-10-12_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-10-12-tcp-reflection-ddos-watch/Incident_Report_2026-10-12_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-10-12-tcp-reflection-ddos-watch/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-10-12-tcp-reflection-ddos-watch/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| JA4T (attack tool, spoofed SYNs) | `64240_2-4-8-1-3_1460_7` (dominant), `29200_2-4-8-1-3_1460_7`, `64240_2-1-3-1-1-4_1460_8`, `65535_2-4-8-1-3_1460_9`, `32120_2-1-1-4-1-3_1460_10` |
+| Detection signature (zeek) | `history ShR or S0, orig_bytes=0, orig_pkts>=3, same (orig_h, orig_p, resp_p) tuple >=3/day` |
+| AS (victims — context only, do not block) | `AS42231` (Promsvyazbank), `AS21252`/`AS20872` (Bank Uralsib), `AS39850` (NB Trust), `AS13105` (Lukoil-Inform), `AS12389` (Rostelecom), `AS8901` (Mosgortelecom), `AS13238` (Yandex), `AS47764` (VK Cloud), `AS206973` (Elecsnet), `AS49675` (SKB Kontur), `AS49505`/`AS50340` (Selectel), `AS42524` (CDEK), `AS47165` (Omskie Kabelnye Seti), `AS39153` (Teleport Telecom), `AS47156` (Malnet), `AS203806` (GranLine), `AS61068` (Necstel), `AS31214` (TIS Dialog), `AS57456` (Intek-Mytischi), `AS30745` (Site LLC), `AS25532` (Masterhost), `AS51518` (EKMA IS), `AS216071` (VDSina) |
+
+*No network indicators of the attacker exist: every source address in this traffic is forged. The AS entries are the targets of the campaign, published for correlation, and must not be used as blocklists.*
+
+**MITRE ATT&CK:** T1498.002, T1498, T1583.003, T1595.001
+
+---
+
 ### 2026-10-10 — DarkSword "P7": a Leaked iOS Exploit Chain Repurposed for Crypto-Wallet Theft
 
 DarkSword is a complete JavaScript exploit chain for iOS 18.4–18.7 that Google documented in March 2026 in the hands of three espionage-style customers; one build leaked on GitHub on 22 March and the chain went criminal. On 8 October 2026 iVerify described a variant it calls "P7" — an implant with a bidirectional command channel and on-device keychain parsing. Working only from passive sources (public urlscan.io response bodies, a public tria.ge submission, CERT Polska MWDB, VirusTotal metadata) and without touching attacker infrastructure, we recovered a third, previously undescribed P7 build dated 29 September 2026: it is served from a Chinese-language online-casino lure, reports to a new command server behind Cloudflare, and carries an affiliate "channel code". A module-by-module comparison with the GHOSTBLADE sample published by Google shows that P7 is not a rewrite: its loader is byte-identical to GHOSTBLADE's and its low-level library is unchanged; what is new is a rewritten command agent that decrypts imToken wallet keystores on the device, and a "Phase 2" stage inside the kernel-exploit bundle that calls into securityd and uses the AppleKeyStore as a decryption oracle to dump the keychain to JSON. The iVerify-listed delivery host turned out to serve both chains — a Coruna loader for older iOS and DarkSword for iOS 18 — from one hidden iframe, and the same Coruna loader, identified by a fixed salt, appears on five further hosts since July 2026 under the operator's project name "qqtime". Everything about the operation points to financially motivated, Chinese-speaking crime built on the leak; nothing indicates state tasking.
