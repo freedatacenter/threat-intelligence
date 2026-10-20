@@ -1,0 +1,1807 @@
+{
+  "Event": {
+    "uuid": "3cc39696-3849-5535-ac31-f1acfd096096",
+    "info": "[TLP:CLEAR] DarkCoruna \"analystic\": an iOS Exploit Kit Planted on Hacked Websites, and Its Native Payload Manager",
+    "date": "2026-10-20",
+    "timestamp": "1792454400",
+    "publish_timestamp": "1792454400",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "556bc79a-1224-5604-b324-fc7f00368b07",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "47.76.30.227",
+        "to_ids": true,
+        "comment": "btrf36.cc C2 - Alibaba Cloud HK, dedicated (no other hostnames observed).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "82f0e325-6a5f-5b9c-966f-5e62aeef35c2",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "38.190.222.108",
+        "to_ids": true,
+        "comment": "Bare-IP kit host http://38.190.222.108/gooll/49554fde7424c31c.js (variant 3f73476b..., 8 scans 2026-10-14..10-19). SonderCloud HK.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "47921534-592e-53be-a7bb-0cc5c8131e4b",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/hx",
+        "to_ids": true,
+        "comment": "page beacon: sendBeacon/XHR POST text/plain {\"k\":1,\"n\":\"<page hostname>\"} from a8c3f01e6b47d295.js (iOS UA only)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d76e4a0c-9f04-5760-97c6-ba327e120f59",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/beacon",
+        "to_ids": true,
+        "comment": "PE agent tasking (C2_BEACON_URL)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "373720da-5b81-5b92-951a-21c96779b400",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/result",
+        "to_ids": true,
+        "comment": "PE agent results (C2_RESULT_URL)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "248a5479-3a99-5c9a-b6b7-8b999670c817",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/heartbeat",
+        "to_ids": true,
+        "comment": "PE agent heartbeat (end of PE main)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4f0771e4-e4bd-5434-abe9-afc68ce5184c",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/x",
+        "to_ids": true,
+        "comment": "PE agent device-id handshake (UA 'iPhone OS 18_5')",
+        "distribution": "5"
+      },
+      {
+        "uuid": "51e1fbce-fa55-58e4-b0a9-bcc8733cfb6e",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/a",
+        "to_ids": true,
+        "comment": "PE agent pipeline step 1 (ack)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bcdf139c-d74d-570d-a6d0-901b99c41ded",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/u",
+        "to_ids": true,
+        "comment": "PE agent pipeline step 2 (upload gate)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f420e070-3fbe-5d81-b5aa-04190ff3a9b1",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/p",
+        "to_ids": true,
+        "comment": "PE agent wallet-first upload",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a575643f-361e-5d98-9dc4-0c0a5b555f05",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://btrf36.cc/qq",
+        "to_ids": true,
+        "comment": "PE agent keychain+wallet / photo upload (multipart ------HqBound, X-Ts, X-Inner-Content-Type)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "361c0470-7d62-5a52-b9f6-49b4df7c6eaf",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "btrf36.cc",
+        "to_ids": true,
+        "comment": "C2 of PE main e0e65d55905b9342.js (PE_HQ_BASE / HQ_API_BASE, build 20260914-aks40; replaced at packaging by 'pack_frontend', i.e. this is the deployed value) and of the page beacon a8c3f01e6b47d295.js (POST /hx {k:1,n:<page host>} - carrier census). A 47.76.30.227 (Alibaba Cloud HK). First seen 2026-09-28 (loader wave); urlscan of the host only by the MB uploader 2026-10-19 21:06 UTC (01a155fc-*).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bb69c425-c10a-5f81-8b3b-7f4450b087e9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "i0s.io",
+        "to_ids": true,
+        "comment": "Central kit host: https://i0s.io/web/49554fde7424c31c.js (BOM variant b7222f77...) loaded by lure oadvment.cc 2026-10-19 (urlscan 01a152dd-0d50-7203-933b-9da20cb4674a). Cloudflare.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee7863c6-dcde-58f1-975a-47ad1d5128c8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "tudou001.usdtio.cc",
+        "to_ids": true,
+        "comment": "Central Coruna-loader host for the bgp09.icu / bgp34.sbs / bgp36.sbs / bgp51.sbs / bgp63.sbs lure farms ('Account Security Compliance Check' pages): /49554fde7424c31c.js?v=0924g (variant ed81fbcc...), 21 lure pages 2026-09-21..10-20. Cloudflare.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7cd9f99e-50e8-5b55-ab9b-9d9e0206b9c5",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "fh001.usdtio.cc",
+        "to_ids": true,
+        "comment": "Same role as tudou001 (lure www.applevips.shop 2026-09-28).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "13ea1b39-7d15-5a88-8e40-0a65aab27763",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "usdtio.cc",
+        "to_ids": true,
+        "comment": "Apex of the central kit hosts tudou001/fh001.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5fa0e3f2-c79d-5e44-b989-e5125c10c19e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "gewc61.cc",
+        "to_ids": true,
+        "comment": "Kit host /assets/js/ for the Chinese SEO lookalike farm (7-Zip / HaoZip / Danzipaidui / manga *.com.cn, *.hl.cn; also bitget.ac, baron777net.com, ): 29 lure pages 2026-09-08..10-03. Cloudflare.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "11e7a930-bbec-5ff1-a46d-cccdd62732e9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "092ak.top",
+        "to_ids": true,
+        "comment": "Kit host /mgu/ for lures 744513.com, 481561.com, 945321.com ('VELNORA') 2026-09-23..10-18. Cloudflare.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7ded0133-3b1b-5381-b0fe-3b8c6a3dc176",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "pifilubihu.shop",
+        "to_ids": true,
+        "comment": "Kit host with random subdomains (vgfys478xr., pnce23vj4g., rqhudanjsf., b4necuk9c3.) /assets/js/ for lures btc/ai.edcchen.online, web3kkyulec.world, zhishi9.xyz, rollbit.rest, rootdata.cam 2026-10-09..10-16. Cloudflare.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ccca5299-7941-50e0-bc87-d7ff1a8e9117",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "chainvex.cam",
+        "to_ids": true,
+        "comment": "Kit host /assets/js/ (154.222.20.9) embedded by Google Sites pages sites.google.com/guge.j8b5.com/... 'ethereum market analysis' 2026-10-14 (urlscan 01a1397e-8863-7019-badc-69168509147e).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "97c370dd-e7b2-5e6c-9dc9-e2c42eb7c4e8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "afazxcr.xyz",
+        "to_ids": true,
+        "comment": "Kit host for lure domaincheckpro.com 2026-10-17. Cloudflare.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d0c917df-22c5-5877-8b6e-6bc593455341",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yc.d-j.cc",
+        "to_ids": true,
+        "comment": "Kit host /js/ (34.92.95.135 GCP) - gooll chain, for yago365.online 2026-10-08.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e8cfa2be-5e44-5202-953d-338c1ceb5ab9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ja.a-j.cc",
+        "to_ids": true,
+        "comment": "Kit host /js/ (34.92.95.135 GCP) - gooll chain, for coincheck-account-help.com 2026-09-12.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a14e2eb4-0a4e-546f-99c0-bb80f12f542e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "xinyea.cc",
+        "to_ids": true,
+        "comment": "Kit host for lure parkpeark.xyz 2026-08-28 (same loader).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e8a24247-c7bf-5afd-a5fd-2ba961218004",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "chunfe.cc",
+        "to_ids": true,
+        "comment": "Kit host for lure www.fcccccc.com 2026-08-03 (same loader).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d46a096a-adbc-5be5-a329-702839a0b845",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "t.yookme.cc",
+        "to_ids": true,
+        "comment": "Kit host /zfnrcuj0/ for lure aproject.ym301.vip 2026-09-26 (Nebula Global front).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ef5c651e-2f80-5e49-86fd-56a08003bb8e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bb.ttyyk.shop",
+        "to_ids": true,
+        "comment": "Kit host for lures bbh.ttu2220.com / bbh.ttu7890.com 2026-09-17 (AROSSCLOUD / CTG fronts, ).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "666cb5c8-7cc8-5164-a90b-05ddb88628b0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "www.7-11.help",
+        "to_ids": true,
+        "comment": "Kit host /gooll/49554fde7424c31c.js 2026-10-19 (cognetcloud 45.207.212.5).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fd692f75-6d1c-52a2-8ba3-adb221af6ece",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mining-game.online",
+        "to_ids": true,
+        "comment": "Only host where urlscan captured the full iOS 18 chain incl. sbx0/sbx1/PE (2026-09-13..16, 19 scans; e.g. 01a0ac71-4983-71df-8025-5e654447e166). Hostinger 2.25.124.147.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "59bea8ce-5683-5a8b-911f-b240374bf36c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "www.tavonexia.com",
+        "to_ids": true,
+        "comment": "Lure 'PRIVATE ISLANDS' self-hosting the kit at /assets/js/: 2026-10-20 08:09 urlscan 01a1585b-3f96-7663-930d-5f2a5ed73585 captured worker e1105852 (5856c2c5...), stub 455b474e (37efaa42...) and beacon variant 77000edb... Cloudflare.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8998efbe-e638-5eba-ad8a-98562e8e3641",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ios.hdios.cn",
+        "to_ids": true,
+        "comment": "Served /gooll/49554fde7424c31c.js to lure coinbasewallecn.com 2026-09-22 - links the 'analystic' Coruna loader to the hdios.cn panel/production host 112.213.108.85 (Censys 2026-10-07; our CL package).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "16e2b106-90a0-5788-8390-725b1608c553",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bgp09.icu",
+        "to_ids": true,
+        "comment": "Lure farm: random subdomains (0ud42s., qgdejedr., t3whlm., bzfqdx., c35uvy., 8zhu3ww., m5qwi33., 5yxsg6na., hwqrcxuo., e4eg51u., lanwhqf2., qbszfh., 2qpf6opx., kq60y., uqk73x0k.) 'Account Security Compliance Check' / 'Sicherheits- und Compliance-Pruefung' pages behind Cloudflare Turnstile, Coruna loader from tudou001.usdtio.cc; 2026-09-23..10-20. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "65a91c9a-823a-5b18-ba32-2193c67f26c1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bgp34.sbs",
+        "to_ids": true,
+        "comment": "Lure farm, same template (0xelf0n., anmr77., abqbh., runld., pvnlf., ieqc8ng.) 2026-10-10..10-16. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "94b7585b-b4bc-5451-9e4c-d9faad804847",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bgp36.sbs",
+        "to_ids": true,
+        "comment": "Lure farm, same template (2etp0r., 924k6p., w902y., 011yd., 0mcuja2.) on CTG Server 134.122.153.2, 2026-10-19..10-20. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "01a548ce-df47-5188-baca-7f0fd5a4606d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bgp51.sbs",
+        "to_ids": true,
+        "comment": "Lure farm, same template (ohun1.) 2026-09-21. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d5a44fd2-ee97-5e3a-bc07-e2fa92d90539",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bgp63.sbs",
+        "to_ids": true,
+        "comment": "Lure farm, same template (q8bxdy.) 2026-09-27. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "54793cb0-386d-587f-8564-7a7b055f15b6",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "buytrx-ins.com",
+        "to_ids": true,
+        "comment": "Lure 'InsPay' with ~50 throwaway subdomains (card., pma., alipay., alibaba., observe., elastic., adfs., cuenta., mypage., *notexists*...) self-hosting the Coruna loader at /css/good/49554fde7424c31c.js (variant 51aa693c...) and /css/good/group.html (355 B variant f380ddae...); 59 scans 2026-08-13..10-19. Cloudflare. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "20e78dd5-41e7-5a7b-9df7-f674ddc45128",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "cslt168.com",
+        "to_ids": true,
+        "comment": "Lure cluster (earthbuddypet., ooni., walkingpad. - product-guide decoys) self-hosting the kit at /assets/js/ on IONOS 216.225.196.71, 2026-09-30. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a121bcfc-3a68-5584-a3f8-1083a4ed6403",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "edcchen.online",
+        "to_ids": true,
+        "comment": "Lure cluster (btc., ai.) loading the kit from vgfys478xr.pifilubihu.shop 2026-10-16. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f9af9f5f-31f0-5203-9a08-ee7450ca701f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "trx-exchange.com",
+        "to_ids": true,
+        "comment": "Lure 'TRX Rewards' / 'BNB Field' (bnb., m.bnb., miley.bnb.) self-hosting the kit at /assets/js/ 2026-10-12..10-20 (Cloudflare / Alibaba 8.219.235.199). to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9f7736d4-4269-5b2e-94d1-12c2787680b0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vpnfastus.top",
+        "to_ids": true,
+        "comment": "Lure 'hide.me VPN' clones (aa., bb.) self-hosting the kit 2026-09-09..09-15. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a5af26e5-2e11-5203-aec8-e436c95a4970",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sftlr.com",
+        "to_ids": true,
+        "comment": "Lure cluster (sftlr.com 'Tomato Auto', usdt.sftlr.com 'Delta Capital USDT Unfreeze') self-hosting the kit; GTH 98.159.97.179 / Turing 154.81.37.178, 2026-10-09..10-20. to_ids=true (attacker-registered).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "99c867e1-bf8d-51df-b537-ab3b4e89d355",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "energyleasing88.com",
+        "to_ids": true,
+        "comment": "Lure page: 'Foresee prediction market' lure, Alibaba 47.245.115.153; 2026-10-15..10-20. urlscan 01a15844-0f0a-71cf-8d87-f6db9c3217ae (2026-10-20).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b02e6666-4fd2-57e8-b503-719ef9446f54",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yuce.xbsti.com",
+        "to_ids": true,
+        "comment": "Lure page: 'Foresee prediction market' lure; 2026-10-09. urlscan 01a12290-6147-743e-a649-3d6a8495ed07 (2026-10-09).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "734b4593-92ff-595a-bb1d-aeb6bafcd33d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sitmarx.site",
+        "to_ids": true,
+        "comment": "Lure page: 'AfterFive' dating lure, CloudValley 186.241.117.97; 2026-10-13..10-20. urlscan 01a15844-3747-741c-9c8c-a4413f760707 (2026-10-20).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e98aab6d-ed48-565a-8bf7-0379088c8bbf",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "jgbez.sitmarx.site",
+        "to_ids": true,
+        "comment": "Lure page: 'DropScope airdrop' lure; 2026-10-13. urlscan 01a13589-c521-754c-a99c-735861d47f45 (2026-10-13).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "90cc4fc1-3640-5da2-9cf3-6a8ed30b51df",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mbhhrx.sitmarks.xyz",
+        "to_ids": true,
+        "comment": "Lure page: 'DropScope airdrop' lure; 2026-10-10. urlscan 01a12349-5a8b-736c-bafa-b368119bc9dd (2026-10-10).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9a0aa06a-d873-5991-9f10-bb5096e93fb2",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "xgqosq.geblic.xyz",
+        "to_ids": true,
+        "comment": "Lure page: 'PRIMAL//ZERO' lure, CloudValley; 2026-10-18. urlscan 01a1501c-bbe3-745a-8d2b-dc8e1fba1949 (2026-10-18).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "15369e19-4fbe-5aa9-8363-8f4f54ebf06a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "2rxwujr64qoci6agbp9x.cfd",
+        "to_ids": true,
+        "comment": "Lure page: lure (Cloudflare), kit at root; 2026-10-20. urlscan 01a15789-b146-749d-9dd9-3b20b31c6276 (2026-10-20).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2889e12d-dffb-5766-9297-cdb3b50e042b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "w2jb75ffpa80bqtkc.cfd",
+        "to_ids": true,
+        "comment": "Lure page: lure (Cloudflare), kit at root - loader variant f47f493f...; 2026-10-20. urlscan 01a157db-211e-70ba-aa9b-41053821ae1b (2026-10-20).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8e495c14-c033-580a-8ba3-8d4114f3804a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ka376.online",
+        "to_ids": true,
+        "comment": "Lure page: 'AurumVault gold' lure; 2026-09-27. urlscan 01a0e377-d4e0-75aa-b10b-c5f0f6cfef32 (2026-09-27).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "713acc5f-36e0-57e5-8296-c0fcaef51e89",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "soj.s4kyn.com",
+        "to_ids": true,
+        "comment": "Lure page: 'Bitcoin Market Insights' lure; 2026-10-12. urlscan 01a13019-c1fd-72df-a3b2-6802052b990a (2026-10-12).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "70676705-64dd-5ee2-9fb5-51a32c569c5e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "imepki.com",
+        "to_ids": true,
+        "comment": "Lure page: 'Crypto Mixer' lure; 2026-10-12. urlscan 01a13013-6d9f-7139-bd83-f2cf2b6b125a (2026-10-12).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "58df67b9-52b3-5bd7-a738-2036c87497b9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "gentle.best",
+        "to_ids": true,
+        "comment": "Lure page: 'Hydrus board finder' lure; 2026-10-07. urlscan 01a11768-8440-74f0-b79b-778ab0992173 (2026-10-07).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0be4055a-6b33-5a18-9499-6c5bbf398aed",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "zt171.eu.cc",
+        "to_ids": true,
+        "comment": "Lure page: 'Live Market crypto' lure; 2026-09-28. urlscan 01a0e666-5be2-702e-8e4e-1be4011ba45b (2026-09-28).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3ce8fa96-b3c0-53d0-87da-19dc4b12a9ba",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "fdsdgrixj.uk.cc",
+        "to_ids": true,
+        "comment": "Lure page: 'MeetVibe dating' lure; 2026-10-12. urlscan 01a12eee-2a4f-7570-bca2-d095b708e2ab (2026-10-12).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "86ee277c-5bc4-515b-ac05-d89024e98014",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "gw162.online",
+        "to_ids": true,
+        "comment": "Lure page: 'NEXUS.GAME' lure; 2026-09-28. urlscan 01a0e65e-7433-7019-a9f2-9779ed3d971a (2026-09-28).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3c70da20-7a4b-5438-bac1-adf8a6240359",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "operator.beauty",
+        "to_ids": true,
+        "comment": "Lure page: 'Robb Report luxury cars' lure; 2026-10-10. urlscan 01a1240f-4322-7019-bc2b-551efefff187 (2026-10-10).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9c7d9934-72e1-597c-a8b0-f0e0d98e753d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "zedinfo.com",
+        "to_ids": true,
+        "comment": "Lure page: 'Velox' lure (self-hosted kit at root /assets/js; Cloudflare); 2026-10-11. urlscan 01a12aee-f85d-71bd-aa3b-272b11305916 (2026-10-11).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1536c7c6-a2da-5dfa-9d83-cd0fdf3e63be",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "accountshop.world",
+        "to_ids": true,
+        "comment": "Lure page: CN digital-goods shop lure; 2026-09-12. urlscan 01a09741-82b3-7064-9c7f-01ffebe812ee (2026-09-12).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "43bbd48d-924f-55a0-a167-d04452a5ab96",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "coinbase.ruhzy.top",
+        "to_ids": true,
+        "comment": "Lure page: Coinbase lookalike lure, GTH 98.159.97.179; 2026-09-21. urlscan 01a0c549-fd18-734f-b38a-a45eaf3647c0 (2026-09-21).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f5bcbe87-e04f-5e32-baba-74f7f21a0cdf",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "walletsecurity.dev",
+        "to_ids": true,
+        "comment": "Lure page: 'Wallet Security Manual' lure, HKCICL 177.3.47.3; 2026-10-02..10-20. urlscan 01a15844-3c1c-7369-a8a3-c081ab3716a4 (2026-10-20).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "98da5857-c704-5a25-ac8d-283b5aa8eb07",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "walletsecuritypro.cam",
+        "to_ids": true,
+        "comment": "Lure page: 'Shielded wallet security' lure, Zenixcloud; 2026-10-10. urlscan 01a125f7-8693-712c-aadd-a5f49b8037f0 (2026-10-10).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2fc1c2e1-f26f-58a2-87cf-31ca7402a902",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "coingateai.com",
+        "to_ids": true,
+        "comment": "Lure page: 'coingateAI' lure, Zenixcloud 149.88.89.180; 2026-10-08..10-20. urlscan 01a15844-4d91-7418-a559-25735edc01e5 (2026-10-20).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "495455b2-6240-52c4-94f1-d01965953fbb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "jgsbdrd.cc",
+        "to_ids": true,
+        "comment": "Lure page: CN navigation lure, POWERLINE 117.120.61.108; 2026-09-25. urlscan 01a0d8c4-6de3-73e4-909f-a62a14622251 (2026-09-25).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b2e8d9df-5b2c-533e-9319-51ff84ce1474",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "fx.j8l8.my",
+        "to_ids": true,
+        "comment": "Lure page: 'Crypto Personality Quiz' lure, Turing 154.81.37.178; 2026-10-09. urlscan 01a12049-15fb-716a-8df7-85d8127427e8 (2026-10-09).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "88982bc0-2255-5552-b497-1a2b0e0c4e3c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "kucoiins.cam",
+        "to_ids": true,
+        "comment": "Lure page: KuCoin lookalike lure, cognetcloud; 2026-10-06. urlscan 01a11082-b1a4-74db-9f25-25363efc3e62 (2026-10-06).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "02fe90d9-ef4c-5860-ac53-068aab45c09f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sexgirltiktok.cam",
+        "to_ids": true,
+        "comment": "Lure page: 'Tik.PORN' lure, cognetcloud 103.164.63.156; 2026-10-10. urlscan 01a12401-2476-7357-9f5e-dad329cabc3e (2026-10-10).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5f936ea2-fe2b-5c49-be0b-ccc7786d4270",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "defimoxx.top",
+        "to_ids": true,
+        "comment": "Lure page: 'Energy Rental' (TRX) lure, BitsFlowCloud; 2026-10-05. urlscan 01a10aac-df85-7058-85e8-495de6581ab5 (2026-10-05).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "17e2effb-cf75-5366-b593-7b541b6bfbe8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bc.ailingk.xyz",
+        "to_ids": true,
+        "comment": "Lure page: 'BA Games Web3' lure, CDN77; 2026-09-29. urlscan 01a0ef23-310f-7246-988e-26033c0d686f (2026-09-29).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fea82016-3043-5a21-a813-d7f436966d67",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "aiagentmi.com",
+        "to_ids": true,
+        "comment": "Lure page: 'Synapse Protocol' lure, CDN77 212.102.46.118; 2026-10-02..10-20. urlscan 01a0fb43-37b8-726e-8eb0-e8c7ff87f440 (2026-10-02).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f6da620d-b64d-5bbc-b06e-eef5a3b50ce4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "pghwhakg.lol",
+        "to_ids": true,
+        "comment": "Lure page: 'RoyalBet' lure, CDN77 79.127.221.146, kit at /gooll/; 2026-09-26. urlscan 01a0ddc1-5b04-738a-846f-f89fe3a44045 (2026-09-26).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "333a14fd-6a78-5209-8819-4f38d008e3bc",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "trxtron.live",
+        "to_ids": true,
+        "comment": "Lure page: 'TRX energy rental' lure (CN), CDN77 79.127.221.146, kit at /gooll/; 2026-09-11. urlscan 01a091e0-8bee-71fb-9781-bd83791de4ed (2026-09-11).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fb1adfa6-0a35-513a-a527-944b6980d5e1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "cwmk.eu.cc",
+        "to_ids": true,
+        "comment": "Lure page: 'Halden' (PT) lure, IONOS 216.225.196.120 - earliest seen page for the iOS>=18 loader; 2026-09-28..10-20. urlscan 01a15844-1df6-763e-99af-b8167b742fae (2026-10-20).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c99ef191-09e8-58f8-a401-dc592b3dfdd9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mjoh.eu.cc",
+        "to_ids": true,
+        "comment": "Lure page: 'Vetra renewed phones' lure, IONOS 82.165.211.15; 2026-10-05..10-20. urlscan 01a15844-6103-771d-afc2-a403a1c0c877 (2026-10-20).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e439654e-8539-502b-942e-7ca5d653b9ed",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "web3kkyulec.world",
+        "to_ids": true,
+        "comment": "Lure page: 'BA Games Web3' lure, kit from pifilubihu.shop; 2026-10-14. urlscan 01a13900-deff-71ea-90fc-6760945acdd5 (2026-10-14).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6321c53c-0a80-5e53-aa88-7d39f7d79d38",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "zhishi9.xyz",
+        "to_ids": true,
+        "comment": "Lure page: 'Hydrus board' lure, kit from pifilubihu.shop; 2026-10-13. urlscan 01a136f3-3e94-7341-a649-59cb2c4bf8bd (2026-10-13).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "60f99d7a-92ed-5759-ab70-01b36ce5c29c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "rollbit.rest",
+        "to_ids": true,
+        "comment": "Lure page: Rollbit lookalike lure, kit from pifilubihu.shop; 2026-10-10. urlscan 01a123b9-71eb-75ff-8fdc-825391c01dcd (2026-10-10).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9bd61afa-28ad-5539-b37f-4db1a7854978",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "rootdata.cam",
+        "to_ids": true,
+        "comment": "Lure page: RootData lookalike lure, kit from pifilubihu.shop; 2026-10-09. urlscan 01a11fd4-908b-7271-8051-e423eb3fe7f5 (2026-10-09).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cbb59fb7-fa46-51d4-8335-b792f9e81aad",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "oadvment.cc",
+        "to_ids": true,
+        "comment": "Lure page: TW stock-tips lure, kit from i0s.io; 2026-10-19. urlscan 01a152dd-0d50-7203-933b-9da20cb4674a (2026-10-19).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "44247211-465e-5408-b609-ccd40374c80f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "744513.com",
+        "to_ids": true,
+        "comment": "Lure page: 'VELNORA' lure, kit from 092ak.top/mgu; 2026-10-18. urlscan 01a14e1f-9ad7-763b-8941-15f77d80950b (2026-10-18).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1cd67254-a279-5ff6-a298-ffe79c080efc",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "481561.com",
+        "to_ids": true,
+        "comment": "Lure page: 'VELNORA' lure, kit from 092ak.top/mgu; 2026-09-30. urlscan 01a0f16a-6e4c-7114-bd3c-90f66d03da2b (2026-09-30).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a7643474-8f60-5188-afc7-1253d6e01fb8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "945321.com",
+        "to_ids": true,
+        "comment": "Lure page: 'VELNORA' lure, kit from 092ak.top/mgu; 2026-09-23. urlscan 01a0ce3b-647b-718e-9e75-c26c25a09e71 (2026-09-23).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "489c381b-60d1-5765-8e16-2058fae0e470",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "domaincheckpro.com",
+        "to_ids": true,
+        "comment": "Lure page: 'Domain Check Pro' lure, kit from afazxcr.xyz; 2026-10-17. urlscan 01a1487e-249a-711d-a2bc-df0851bdffbb (2026-10-17).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "34579a9c-699b-526f-811c-a26b139fe936",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yago365.online",
+        "to_ids": true,
+        "comment": "Lure page: gambling lure, kit from yc.d-j.cc (14 scans since 2026-08-03); 2026-08-03..10-08. urlscan 01a11bf7-99d7-754e-ba12-19930f2b2024 (2026-10-08).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "708b1a74-3ff5-55f8-bcff-f6985f55273e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "baron777net.com",
+        "to_ids": true,
+        "comment": "Lure page: slot lure (ID), kit from gewc61.cc; 2026-10-01. urlscan 01a0f51e-0de6-7399-a88e-289ec7a3c67c (2026-10-01).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "96e51829-b9cc-552f-910c-4322e8ff4e00",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bitget.ac",
+        "to_ids": true,
+        "comment": "Lure page: Bitget lookalike lure, kit from gewc61.cc; 2026-09-22. urlscan 01a0cb04-b5b8-7643-87de-28224354f91b (2026-09-22).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c4f8f396-5971-5324-98cf-90291efbb699",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "www.applevips.shop",
+        "to_ids": true,
+        "comment": "Lure page: 'AI character analysis' lure, kit from fh001.usdtio.cc; 2026-09-28. urlscan 01a0e88a-a887-71ca-93d7-d0ebd15645d5 (2026-09-28).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c2c1c7b3-14d2-5c48-8226-d77d52dbd2bd",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "aproject.ym301.vip",
+        "to_ids": true,
+        "comment": "Lure page: sports-betting lure (CN), kit from t.yookme.cc, Nebula Global; 2026-09-26. urlscan 01a0defa-8f17-7009-a2e7-00dc62925b56 (2026-09-26).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7a487800-e945-5473-8b12-e3da64e2f51e",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "parkpeark.xyz",
+        "to_ids": true,
+        "comment": "Lure page: 'Park@Perak' app lure, kit from xinyea.cc; 2026-08-28. urlscan 01a04840-3c56-7410-9336-3a959a819304 (2026-08-28).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d57e3e5d-118c-558d-88e9-6d8f9349e583",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "www.fcccccc.com",
+        "to_ids": true,
+        "comment": "Lure page: CN app-store lure, kit from chunfe.cc; 2026-08-03. urlscan 019fc8f0-ac03-72dd-88fe-54235716d60f (2026-08-03).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "04e9581a-1949-55bc-a275-d4fb08ce7cb6",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mobile.mumuheliio.com",
+        "to_ids": true,
+        "comment": "Lure page: lure serving the RCE 3196034e... as /6ef/5ce/3fef4e84.js (renamed), Zenixcloud 45.207.202.157; 2026-10-20.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4284a89d-a630-5adb-89d9-232a98a0e29c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "coinbasewallecn.com",
+        "to_ids": true,
+        "comment": "Lure page: Coinbase-wallet lure (NS share-dns = ), kit from ios.hdios.cn/gooll/; 2026-09-22. urlscan 01a0cae9-b610-716e-83f6-841c7d9ac621 (2026-09-22).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e526f51e-ecca-59f8-9478-3180af8d412a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "coincheck-account-help.com",
+        "to_ids": true,
+        "comment": "Lure page: Coincheck lookalike lure, kit from ja.a-j.cc; 2026-09-11..09-12. urlscan 01a0947d-c21c-75d3-842d-3a246d9d0276 (2026-09-12).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bcf0e74b-1558-5bac-b78a-9eb4bac2b644",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "5jyghnfmzp2wcr1.icu",
+        "to_ids": true,
+        "comment": "Lure page: qqtime-style random-name lure (Cloudflare), Coruna loader b7222f77...; 2026-09-16..10-10.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c119f809-84e9-5803-a3ae-c606f71ce162",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-bv.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2bbab3a0-c4d6-54eb-bc7c-5b278589a53f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-jieya.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "665fe852-4e7b-57e4-9b86-8cf388df3813",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-download.hl.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d6c7ca46-c347-598d-a647-8f9e9a28dd9f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "zip-haozip2345.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9dc47831-dff1-526f-b6ac-1585b4b83b84",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduiguanfu.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d63ee896-0981-5b97-8704-99772f77a99b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduixiazaianzh.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1d8d1f5a-18d2-5862-8321-f520554dd638",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduigw.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dfc2b30a-236e-550c-b440-ed105a925311",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduitouxiang.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "93dc0f59-9486-5103-a3b2-e235b045418a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduixiazai.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5b5562c3-6dad-55e9-970e-c0f8a4594413",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduigfxiazai.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "090260c5-aeba-596e-bf3a-bfe3eb2679be",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduiwuxiandanbi.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7cab4da0-df60-5a2a-ac21-38ba470cff29",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduitiyanfu.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "691114e4-9801-5674-ae27-47dae54e61a6",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yaojingmanhua-zip.hl.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a0ebd128-e392-58ab-825b-91916ce9c3ee",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduidiannaobanxiazai.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "85e61775-ad79-5a6f-b9a4-9b386222655d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "danzipaiduigjfu.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "65a50c92-380c-5d51-9001-9df4e512fd65",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-zh.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "10b05651-59b8-54df-8dfd-73598140d017",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7-zip-yasuo.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a21031b6-6a5e-59da-870c-afcc6c3b0c09",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-tool.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "78867306-1eef-5523-ada2-fce97da2545d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7-zip-soft.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "897e1b64-980a-5848-976b-eb3034f5f462",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ac-7-zip.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ebdf25d4-915d-5f5a-8f77-bb31d1491025",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "haozip-hub.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "968e4de9-551f-531c-88e4-b02e12aead29",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "haozip-studio.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a0773db-33cd-58a0-ac5d-595f0cd8cc20",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "haozip-daily.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fa26335a-6f9d-5153-aeae-613462fcf692",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-us.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "30fea4f1-986b-5f52-be07-74cf68bff0f4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-download.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "78aa9c62-a9c1-5ac2-928b-7c3f7efd8633",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-soft.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "09763521-fdbc-5a1d-96bd-d6b55a04423a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7zip-tools.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0a5ddb12-aa1c-5c9b-a6f2-52c7c2d09868",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "apps-7-zip.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "93160cf8-0a95-574f-9eb0-6698d4f5056c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ac-haozip-2345.com.cn",
+        "to_ids": true,
+        "comment": "Chinese SEO lookalike (7-Zip / HaoZip / Danzipaidui game / manga) loading the Coruna loader 49554fde7424c31c.js from gewc61.cc; POWERLINE / FASTNET / PEG TECH HK hosting; waves 2026-09-08 and 2026-09-29..10-03.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3fc5bf87-fa44-5010-9432-c9abe7b18957",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "b4290d69fbb099f72f0b7ebc5fdb1211db0810f79372b871229746027d23f52c",
+        "to_ids": true,
+        "comment": "group.html - Dispatcher 1 551 B: loads beacon, UA iOS-version gate (<18 Coruna / >=18 DarkSword), sessionStorage _x_nav (8 s), localStorage _x_done/_x_ok locks, ?force=1 reset. 70 urlscan hits.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "410d5997-c78c-5943-8592-ea9a85ca965d",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2af55f5c00efad5e4d7547ca5153285db8a5d9e885d09d11fe85243faf8a11cf",
+        "to_ids": true,
+        "comment": "group.html - Same dispatcher as captured on the compromised site of the vxunderground capture (vxunderground zip, 1 610 B, CRLF).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "871d71e0-3ab8-5cee-8c99-393076bde69e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f380ddaeaac011b69ef5058b1ea39e28cc656f359705479247f72f227d481f8b",
+        "to_ids": true,
+        "comment": "group.html - 355 B dispatcher variant on buytrx-ins.com /css/good/.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "689ff48e-383b-5d6c-a46d-891f90e3ffd4",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d70f5b8ec6359ad5c22acb628a7c7ec81c8d549869afa7f96a377e52879a6642",
+        "to_ids": true,
+        "comment": "a8c3f01e6b47d295.js - Carrier beacon: POST https://btrf36.cc/hx {k:1,n:hostname}, iOS UA only (781 B).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "eca4095a-9982-542f-91fd-985ebf41b825",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "19380347b2cb20a40469a6de4ebbf6fcfddff551e9f5d5ecd657f2957d82042a",
+        "to_ids": true,
+        "comment": "a8c3f01e6b47d295.js - Beacon as captured on the compromised site of the vxunderground capture (810 B).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "02cead5d-5503-591a-b019-15eaa6ae087a",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "77000edbfbc01f899c04054bb8ffc5d33978e70397d6c8484ea7a56959334274",
+        "to_ids": true,
+        "comment": "a8c3f01e6b47d295.js - Beacon variant on www.tavonexia.com 2026-10-20.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "127778da-1a64-572d-a517-b237596b72b7",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "e9b106745a31d7ad4095dd87cf8f915cf600f929b6930b9ff3534826c649f803",
+        "to_ids": true,
+        "comment": "49554fde7424c31c.js - Coruna loader (iOS<18) as served by the compromised site of the vxunderground capture - token-identical to cdn.gotoiphone.com loader 20c49dd3...: obfuscator obChTK, salt cecd08aa6ff548c2, module map MM.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "73b8b81d-b4aa-5f08-8a74-62205fc1087e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "b7222f779e753ff8e624b6ab4fca43fba3a113f3ceb55ef89537ec669186c91b",
+        "to_ids": true,
+        "comment": "49554fde7424c31c.js - Same Coruna loader with UTF-8 BOM (47 604 B) - the on-the-wire body on i0s.io, 88 urlscan hits since 2026-07-23.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "19ce77c9-3fd5-5b36-bc2f-63235d74be02",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "ed81fbcce134faacb3e151d36d00a32f902d1e5977b2aaaa71738c68650af7bb",
+        "to_ids": true,
+        "comment": "49554fde7424c31c.js - Coruna loader variant 54 692 B on tudou001.usdtio.cc (bgp lure farms).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "29b37a55-3688-54e6-85bc-28e003bf92a6",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "51aa693c66f21540b53783594eea48d5fcb8e611c5d433e40a658fbf9d4952d1",
+        "to_ids": true,
+        "comment": "49554fde7424c31c.js - Coruna loader variant 50 497 B on buytrx-ins.com /css/good/.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "24f1ac67-fc70-5d43-b712-529cf58b91d2",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "3f73476b6fc79234b77354704212b676f0542475658e9da5268e9b90997dbc07",
+        "to_ids": true,
+        "comment": "49554fde7424c31c.js - Coruna loader variant 50 387 B on 38.190.222.108/gooll/.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2df42e63-0c09-5fc9-a47e-97beab456649",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2e443833dd58278d094acda2067a43cae1e88cbdf3902d7515776ab42f41b7e8",
+        "to_ids": true,
+        "comment": "b8def7dab9dd9ad8.js - DarkSword loader iOS>=18 (8 209 B): version gate 18.6/18.6.1/18.6.2/18.1.1 -> e1105852 worker + 455b474e stub, else 8150b44e + a13e3e45; dlopen workers; rce_ok/redirect -> /404.html; CN comment. 86% same as rce_loader.js of P7. 64 urlscan hits.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5a60ea29-fae1-53fe-aaf2-2a851100363b",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d86a69137cda7c4e6caab58ccf66eb59a6f68282b2e10fcd186a7b8c5af3b710",
+        "to_ids": true,
+        "comment": "b8def7dab9dd9ad8.js - Same loader as captured on the compromised site of the vxunderground capture (8 283 B, CRLF).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "18c9fea3-00de-5441-92f5-74d545b8a763",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f47f493f316b85ca75e2024c98e4b62df218db3a1c00e620aff13c32229ed915",
+        "to_ids": true,
+        "comment": "b8def7dab9dd9ad8.js - Loader variant 8 013 B on w2jb75ffpa80bqtkc.cfd 2026-10-20.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "02f054b9-45cf-5c0e-bee8-a9757fe8c40d",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "5856c2c59ffcbe6b82f49ec94517463dc764cfe43333a7313c49a11c1c7934de",
+        "to_ids": true,
+        "comment": "e1105852cab6ef49.js - Worker 'direct' for iOS 18.6/18.6.1/18.6.2/18.1.1 (545 191 B): RCE built in, primitives, PAC bypass, dlopen interpose, fetches sbx0 717d3ef0.... Captured on www.tavonexia.com 2026-10-20.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9819e10e-4c39-5736-be08-3846f7e69946",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "37efaa4237a28a4be411d40de80b2935be5b8c4e6731ee1f858c609142a87445",
+        "to_ids": true,
+        "comment": "455b474ef0843d25.js - 85 B stub fetched as 'RCE' for the direct branch (same body as rce_module_18.6 stub ).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c8a39483-1cb8-5247-93aa-6f73f381aaa6",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "df86db89f7f965fc117d4c14b722d3d02f1d1de5c6ec216bb59fcf2736374caa",
+        "to_ids": true,
+        "comment": "8150b44e89f06890.js - Worker primitives for other iOS 18.x (45 333 B): Encoder/IPC, addrof/fakeobj, interpose, pacia, slow_fcall; 80% token overlap with rce_worker_18.4.js of the September 2026 MalwareBazaar-feed kit. 65 urlscan hits.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7f366b73-1159-5f00-a12c-bbde16e7231e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "3196034ef1196c9151395859019674e14e3c06e3fdbf230c7e0d0c5f6211824a",
+        "to_ids": true,
+        "comment": "a13e3e4525e28ff8.js - RCE JSC OOB array corruption (182 339 B) with offset table for 22B91/22E240/22E252/22F76/22G86/22G90/22G100 on iPhone11,2..iPhone17,5; 72% same as rce_module.js, adds iOS 18.1.1 'direct'. 147 urlscan hits (also renamed 3fef4e84.js on mobile.mumuheliio.com).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "27ef131c-24ce-56ab-98af-57c616c5e420",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "9c7f86f2b82df171a09f096afcd8fa5b6b24f0b643aae765ad17ecf80dadb196",
+        "to_ids": true,
+        "comment": "717d3ef037488de5.js - sbx0 - WebContent -> GPU process sandbox escape (425 869 B; AGX/IOSurface/RemoteRenderingBackend, stage1..8 logging); 99.8% token-identical to sbx0_main_18.4.js of the September 2026 MalwareBazaar-feed DarkSword kit. Fetches sbx1 e698499e.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "49e5fde0-c578-5ea4-9ea2-e3b500993044",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "6db7114ed9e8a89a75d11930d348ebd6c3bd52572238191c3116b100e8963a98",
+        "to_ids": true,
+        "comment": "e698499e769d1643.js - sbx1 - mediaplaybackd userland LPE (324 817 B; XPC/mach_msg, &v={{LPE_64BITE}}, A12 vs non-A12); 99.4% token-identical to sbx1_main.js of the September 2026 MalwareBazaar-feed DarkSword kit. Fetches PE e0e65d55.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a6060e1c-61d0-5e2f-9e15-b29dff5b160a",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "da3fe94ac1ffe0ae01adfab6d5e6cd58933e93853c4b6e664f76ca468981bb02",
+        "to_ids": true,
+        "comment": "e0e65d55905b9342.js - PE main (911 288 B): PE_BUILD 20260914-aks40, kernel LPE (socket spray / icmp6filter / kwrite_zone_element, XNU offsets by major/minor), MIG filter bypass (GHOSTBLADE TaskRop lib - GTIG YARA FilePaths hits), C2 agent in SpringBoard (btrf36.cc /beacon /result), pipeline /x /a /u /p /qq, 45 wallet bundle ids, keychain dump (P7), photo probe KokCore. 82% token overlap with the public P7 build-3 pe_main 57c39976 (tria.ge sample of 2026-10-03). Only captured on mining-game.online 2026-09-16 and in the MB dump.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "13beab88-fc20-54f9-a7e1-20e53fd2ca06",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "6d522977b4f5473050ae9f493cc34e837110fd5b06c236517c317d15623ba86c",
+        "to_ids": true,
+        "comment": "99d0_decompressed_start256.bin - Mach-O arm64 dylib (90 112 B), LC_ID_DYLIB 'x01', minos/SDK iOS 13.0, ld 820.1.0, ObjC, export _process, UUID 41D39E20-04A3-35F4-AC13-F6B200260386: native stage of the <18 (Coruna) branch - anti-Corellium (/usr/libexec/corelliumd), SystemVersion/serial/xnu checks, HTTP POST with UA MobileStore/1.0 and JSON {\"e\":%u,\"l\":%u} error reports, ChaCha ('expand 32-byte k') + libcompression + mmap/vm_protect/sys_icache_invalidate = reflective loader of the next Mach-O. C2 passed from JS (no URL inside). Carved by the uploader from a JS stage (hash prefix 99d0, offset 256).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a50b05d3-73cb-566f-92f6-9124833e99f1",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "b0a7077b5d5baa1fb2d31115fbf226bac47f54c9aa499de343385cab6712f79c",
+        "to_ids": true,
+        "comment": "child_667fa543.dylib - 'CorePayloadManager' Mach-O arm64 (420 896 B), ad-hoc signed ident CorePayloadManager-55554944757dca2979fd3e5fbf35cb378c4e9357, UUID 757DCA29-79FD-3E5F-BF35-CB378C4E9357, LC_ID_DYLIB masquerade /usr/lib/system/libsystem_featureflags.dylib, minos iOS 15.0 / SDK 26.0 / ld 1221.4.0 (Xcode 26), C++, exports _startp/_startx; libplzma (7z/xz/LZMA/AES256CBC), CFNetwork HTTPS https://%s:%d%s with certificate validation off, config keys configRefreshInterval/heartbeatReportInterval/minPingIntervalPerDomain/validationCacheTTL/core/sha256/size/entries/bundleId/doNotCloseAfterRun/requiresColdStart, caches /tmp/com.apple.nsurlsessiond, /tmp/cpm27stor, %s/%s.bin, netconfig_cache_seed_v7; inject-fn-raw/inject-jit-switch-sig strings; XOR-0x5A strings _entry_main, powerd, /System/Library/CoreServices/powerd.bundle/powerdlocationd. Origin host unknown (not seen by urlscan).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2531b866-f4f4-505b-835b-6e2d0505282f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "a436ac961ce25a0072fbafb8c1937a94b8c900e3ac512a5aa32ecf4610f2260e",
+        "to_ids": true,
+        "comment": "child_a159973e.dylib - 'CorePayloadManager' Mach-O arm64e (668 480 B), ad-hoc ident CorePayloadManager-55554944cb6987e5f2473fbba3a46788a7d01ab3, UUID CB6987E5-F247-3FBB-A3A4-6788A7D01AB3, same ID/SDK/exports as the arm64 build, plus tar/PAX support and the developer build path Project/iOSC2/native-src/CorePayloadManager/vendor/plzma/ (user '<user>', project 'iOSC2').",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bbf99c18-f3c8-56bc-9272-c7e700074623",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "7b8436669563e7d317c219b26432bdaab70e39061ea2c1c70fcc201f2c19c470",
+        "to_ids": true,
+        "comment": "17480ecc0120292fb6b8b19f2fa134385dcfd0fd.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c066babd-a5af-5a5f-a24f-8183822ab57c",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "675a40df5f517f8f0cd99f74c5468f56d1d8f05003e997477a2af3bc7b0105a9",
+        "to_ids": true,
+        "comment": "3bc0f6865c0476c0a98a76cb9924d6b3972df591.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a8aeeda-8198-5ffa-a89a-2f257c2501f0",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "329ae1401819da4f87e3726b7e2707afcaf62d1219c4256c828df36af0a8784a",
+        "to_ids": true,
+        "comment": "3fd66b32c44150acff3dcb80f86c759574148ed5.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dcf504ba-5fd4-529c-8146-b03e107cae1b",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "b0b29b6148c4b0dbd77d33f821ca01e2d7a711988b854285a2606dcc53894abe",
+        "to_ids": true,
+        "comment": "46ecd515ac9e99ef0603063db39303a0fd849632.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5f510e4a-5510-56ff-b9ae-27e6f963e953",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "473f182b8cbbdb5b4b29b7ad875014d66f1691ed2e770c633b559d97243895a7",
+        "to_ids": true,
+        "comment": "4a75f0551eba446b4fa35127024a84b71d9688d6.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0007ae74-34f9-52d3-bece-f595fb131ab4",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "080da430f7e3a38d7cad59887df30d9ac40e70d203c7aa5f5afaf0cafcb73e5f",
+        "to_ids": true,
+        "comment": "5ff38f5342bb3c931bc504d6fa3523d0c8865b93.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna). urlscan: coinpan.vip, oucloudmining.com, binance226.icu, sparkvault.lol 2026-07-23..08-03 (qqtime July wave).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "56f42db6-20c2-5c15-93c1-0fd5774be77d",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "eaab0874332777ad8a03a292bcd608a3358547f9f16ab551d34eef35d5cd539e",
+        "to_ids": true,
+        "comment": "6beef463953ff422511395b79735ec990bed65f4.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna). = /A8/6beef463953ff422511395b79735ec990bed65f4.js of / rigs (2026-08-07..09-12) - direct link to the rigs.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6647c935-1f9f-5996-ac53-4e861c11071e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2cfa14b2cd1f3fd51406cf1ac49c761a5c26ce3994e97de7f1ca469d85248a52",
+        "to_ids": true,
+        "comment": "8835419f53fa3b270c8928d53f012d4c28b29ea4.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "497d5b1b-5e02-5246-9156-c95212802853",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2c4a5a49a84f55db0dd5554f7a9e055dbb0eae3782986726c6dcfab84ecd6dc5",
+        "to_ids": true,
+        "comment": "8c4451cf1258f9a8d6a8af27864f111fd69a0e99.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna). 75 urlscan hits 2026-10-01..10-19 (ledger.voto, mask-gift.com, 7zip lookalikes, energy-dasstudio.at ...).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6cb6d8c8-e33e-5e52-b580-58b9214e8312",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "ebcc76dcd5ef596e732321a8d16eb2dee525c5d9a68c700b7885648c13c65a57",
+        "to_ids": true,
+        "comment": "9af53c1bb40f0328841df6149f1ef94f5336ae11.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "44e44cc5-fcf0-5c5c-b318-b5f5b8a3dd98",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "5c0ebd86d2e8ae2087c0a4def4e0364a0cfb85c7e0a753fc96dca55b6c303432",
+        "to_ids": true,
+        "comment": "aea58f0e58801b528702a6c66bf4af8b99041243.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7cec1b4f-14f3-5d99-a0ee-f2dda41fbbc1",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "feb9442c39619d7bb3ff29de8e1d4bebceb1b24f8c0a63da2f2b30a1023dc94f",
+        "to_ids": true,
+        "comment": "bef10a7c014b826e9dd645984e80baf313c1635f.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8ad51cab-5642-5308-aa73-9f37098fdf02",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "de1a07d8978725eaa6da5658e373e88264ac90515750201bfbe17947d5a9e788",
+        "to_ids": true,
+        "comment": "f6377d5d458183d41c5fd99661c5a306b42c6255.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1e699241-49f0-531d-b6e6-b06423c4617a",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "593548d714f6d48acb886d42bf576d8fd6b1ddae6f888dda0719671a53463663",
+        "to_ids": true,
+        "comment": "ff4f3cb4711fb364b52de5ab04a8f83140466f89.js - Coruna (iOS<18) remote stage fetched by salted-hash name, XOR-array string obfuscation; lineage of the public Coruna leak (github.com/Ridter/coruna). urlscan: pr1vacy.dioboia.icu 2026-10-02.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "21109cfa-1c46-56a8-a40a-ecfa5b865c90",
+        "type": "text",
+        "category": "Other",
+        "value": "------HqBound",
+        "to_ids": false,
+        "comment": "multipart boundary of the PE agent uploads (also / P7 builds).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "82bb1ab2-670f-5f83-abd9-ea442529bddb",
+        "type": "text",
+        "category": "Other",
+        "value": "{\"k\":1,\"n\":\"",
+        "to_ids": false,
+        "comment": "body of the /hx carrier beacon.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1ee96e2a-03e2-5eba-ac6e-19599b67eb0e",
+        "type": "text",
+        "category": "Other",
+        "value": "20260914-aks40",
+        "to_ids": false,
+        "comment": "PE_BUILD of the PE main.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cdb2bb91-595d-59a2-b436-a2cc458b4fdc",
+        "type": "text",
+        "category": "Other",
+        "value": "pack_frontend replaces btrf36.cc -> data_host",
+        "to_ids": false,
+        "comment": "packaging comment in PE main - C2 substituted at build time.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6ce102bd-fc45-50b2-a92e-fa172dad6f50",
+        "type": "text",
+        "category": "Other",
+        "value": "KokCore",
+        "to_ids": false,
+        "comment": "photo/directory probe module name in PE main (kok_collect_full_directory_scan, photo_probe).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "01fe1c32-4b03-5d57-a0f2-292c8f169bcb",
+        "type": "text",
+        "category": "Other",
+        "value": "MobileStore/1.0",
+        "to_ids": false,
+        "comment": "User-Agent of the native <18 loader 6d522977....",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a9c116f9-5d60-5b20-9f56-e3354200fc79",
+        "type": "text",
+        "category": "Other",
+        "value": "CorePayloadManager-55554944",
+        "to_ids": false,
+        "comment": "ad-hoc code-signing identifier prefix of the payload-manager dylibs (followed by the LC_UUID).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "86884676-7ca8-5424-a674-684e015f36ce",
+        "type": "text",
+        "category": "Other",
+        "value": "Project/iOSC2/native-src/CorePayloadManager",
+        "to_ids": false,
+        "comment": "developer build path left in child_a159973e.dylib.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5bba32d6-f0bd-5878-9600-0b8efac21ff8",
+        "type": "text",
+        "category": "Other",
+        "value": "/tmp/cpm27stor",
+        "to_ids": false,
+        "comment": "cache directory of CorePayloadManager.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dc8fd963-59fe-5f8b-914e-67318b2c49ae",
+        "type": "text",
+        "category": "Other",
+        "value": "netconfig_cache_seed_v7",
+        "to_ids": false,
+        "comment": "CorePayloadManager string (config cache seed).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1f15e969-9d43-52f2-9e11-23a4f1007f34",
+        "type": "text",
+        "category": "Other",
+        "value": "analystic/assets/js",
+        "to_ids": false,
+        "comment": "deployment path of the kit on compromised sites (/js/, /img/, /wp-includes/js/).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e3f0ceb4-da15-5e76-a2fa-ba48d00f6299",
+        "type": "text",
+        "category": "Other",
+        "value": "_x_done",
+        "to_ids": false,
+        "comment": "localStorage success lock set by the loader after rce_ok / redirect.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0acbf9c4-cb1b-51d7-9336-822277a66b6b",
+        "type": "text",
+        "category": "Other",
+        "value": "expand 32-byte k",
+        "to_ids": false,
+        "comment": "ChaCha20/Salsa20 constant in both native loaders (payload decryption).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f88397cf-eeb9-501c-bc6a-cc97a17f0e4a",
+        "type": "text",
+        "category": "Other",
+        "value": "/usr/lib/system/libsystem_featureflags.dylib",
+        "to_ids": false,
+        "comment": "LC_ID_DYLIB of the CorePayloadManager dylibs - masquerades as a system library (T1036.005).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "47794c4c-a0d6-5e00-a638-e0929417dfda",
+        "type": "text",
+        "category": "Other",
+        "value": "/System/Library/CoreServices/powerd.bundle/powerdlocationd",
+        "to_ids": false,
+        "comment": "XOR-0x5A string in CorePayloadManager: planted path/name for persistence (no such Apple binary).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "636dc555-5df3-57e7-b749-c0d462533488",
+        "type": "text",
+        "category": "Other",
+        "value": "/tmp/pe_worker_trace.log",
+        "to_ids": false,
+        "comment": "PE main trace log (PE_WORKER_LOG).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "091510d9-88af-5fd2-994e-1a427ae221f4",
+        "type": "text",
+        "category": "Other",
+        "value": "/tmp/keychain_c2_dump.json",
+        "to_ids": false,
+        "comment": "P7 keychain dump handed to the C2 agent.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d88da692-def1-5e10-b95c-f217215f77fb",
+        "type": "text",
+        "category": "Other",
+        "value": "/tmp/pe_wallet_hit_bundles.json",
+        "to_ids": false,
+        "comment": "wallet-hit marker written by the PE agent.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d03f03f5-db25-5ed2-9e1a-8c788a24681d",
+        "type": "text",
+        "category": "Other",
+        "value": "/tmp/c2_wallet_debug.log",
+        "to_ids": false,
+        "comment": "wallet debug log of the C2 agent.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1267cd33-07cc-5f74-9210-0c361a6c5f8f",
+        "type": "text",
+        "category": "Other",
+        "value": "/tmp/p7_debug.log",
+        "to_ids": false,
+        "comment": "P7 debug log.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "35d59a6e-c823-5ffa-a976-fe443c5362be",
+        "type": "text",
+        "category": "Other",
+        "value": "/private/var/mobile/Media/PostLogs.txt",
+        "to_ids": false,
+        "comment": "Logger output of the PE main bundle.",
+        "distribution": "5"
+      },
+      {
+        "uuid": "547c1e9a-accf-5b4c-9c2a-e3e18d0196e8",
+        "type": "text",
+        "category": "Other",
+        "value": "/usr/libexec/corelliumd",
+        "to_ids": false,
+        "comment": "checked by the native <18 loader (Corellium detection).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a7b092fd-55d8-54ba-bac1-e976fafff0d1",
+        "type": "text",
+        "category": "Other",
+        "value": "/tmp/com.apple.nsurlsessiond",
+        "to_ids": false,
+        "comment": "cache root used by CorePayloadManager (%s/fsCachedData%s).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9156b12e-4c98-5e1c-94c7-ae8e6d024136",
+        "type": "text",
+        "category": "Other",
+        "value": "41D39E20-04A3-35F4-AC13-F6B200260386",
+        "to_ids": false,
+        "comment": "Mach-O LC_UUID of 6d522977... (native <18 loader, id x01).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6e1ee689-32c0-5748-bb18-4434166e184a",
+        "type": "text",
+        "category": "Other",
+        "value": "757DCA29-79FD-3E5F-BF35-CB378C4E9357",
+        "to_ids": false,
+        "comment": "Mach-O LC_UUID of child_667fa543.dylib (CorePayloadManager arm64).",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b1a68d36-a7c6-568a-9a4f-2a8b111995ca",
+        "type": "text",
+        "category": "Other",
+        "value": "CB6987E5-F247-3FBB-A3A4-6788A7D01AB3",
+        "to_ids": false,
+        "comment": "Mach-O LC_UUID of child_a159973e.dylib (CorePayloadManager arm64e).",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1005"
+      },
+      {
+        "name": "mitre-attack:T1027"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1041"
+      },
+      {
+        "name": "mitre-attack:T1055"
+      },
+      {
+        "name": "mitre-attack:T1059.007"
+      },
+      {
+        "name": "mitre-attack:T1068"
+      },
+      {
+        "name": "mitre-attack:T1070.004"
+      },
+      {
+        "name": "mitre-attack:T1071.001"
+      },
+      {
+        "name": "mitre-attack:T1082"
+      },
+      {
+        "name": "mitre-attack:T1083"
+      },
+      {
+        "name": "mitre-attack:T1105"
+      },
+      {
+        "name": "mitre-attack:T1119"
+      },
+      {
+        "name": "mitre-attack:T1189"
+      },
+      {
+        "name": "mitre-attack:T1203"
+      },
+      {
+        "name": "mitre-attack:T1555.001"
+      },
+      {
+        "name": "mitre-attack:T1573.001"
+      },
+      {
+        "name": "mitre-attack:T1584.004"
+      },
+      {
+        "name": "mitre-attack:T1608.004"
+      },
+      {
+        "name": "label:ios"
+      },
+      {
+        "name": "label:exploit-kit"
+      },
+      {
+        "name": "label:darksword"
+      },
+      {
+        "name": "label:coruna"
+      },
+      {
+        "name": "label:darkcoruna"
+      },
+      {
+        "name": "label:drive-by"
+      },
+      {
+        "name": "label:compromised-websites"
+      },
+      {
+        "name": "label:crypto-wallet-theft"
+      },
+      {
+        "name": "label:keychain-theft"
+      },
+      {
+        "name": "label:payload-manager"
+      },
+      {
+        "name": "label:cybercrime"
+      },
+      {
+        "name": "label:incident-report"
+      }
+    ]
+  }
+}

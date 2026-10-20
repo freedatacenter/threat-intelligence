@@ -6,6 +6,59 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-10-20 — DarkCoruna "analystic": an iOS Exploit Kit Planted on Hacked Websites, and Its Native Payload Manager
+
+On 19 October 2026 the operation behind the DarkSword "P7" implant we described on 10 October surfaced in public malware repositories as a complete kit, named "analystic" after the directory it occupies on hacked web servers: an anonymous MalwareBazaar contributor and vxunderground published 27 files — the dispatcher page, the Coruna loader for iOS 13–17.2.1, the DarkSword chain for iOS 18.1.1 and 18.4–18.6.2, fourteen obfuscated Coruna stages and three Mach-O binaries. Working only from those samples and from public urlscan.io data, and without touching attacker infrastructure, we analysed every file statically, disassembled the native libraries and mapped the distribution. The Coruna loader is token-identical to the one served by `cdn.gotoiphone[.]com` in September, the implant bundle (build `20260914-aks40`) shares 82% of its tokens with the P7 bundle of our previous report, and the command server is now stamped into the bundle at packaging time: the same operation, next build. Two things are new. The kit no longer lives only on the operator's lure domains — nineteen legitimate online shops and company sites in eleven countries serve it from a planted directory, loaded by a 300-byte inline script that creates a hidden iframe 1.5 seconds after the page loads. And the set contains the first native components of this operation that we have seen in public: "CorePayloadManager", a pair of dylibs masquerading as `libsystem_featureflags.dylib` that fetch an encrypted configuration from `btrf36[.]cc`, download modules, inject a core module into `locationd` or `powerd` and per-app modules into crypto-wallet apps as they start, delete the crash logs they cause and take commands from marker files in `/tmp`. The implant itself now targets 45 bundle identifiers of 22 wallet and exchange apps, gates all exfiltration on a "wallet hit", and collects photo thumbnails small enough to be seed-phrase backups. Everything still points to Chinese-speaking, financially motivated crime; nothing indicates state tasking. The owners of the compromised sites were notified through their hosting providers; the sites are not named.
+
+**Key findings:**
+- Same operation, next build: the Coruna loader (salt `cecd08aa6ff548c2`) is unchanged since July, the sandbox escapes are 99% identical to those of the September MalwareBazaar-feed kit, the PE bundle shares 82% of its tokens with the P7 bundle of 10 October; the affiliate channel code is gone and `pack_frontend` writes the C2 host into the bundle at build time.
+- The iOS 18 chain targets exactly seven builds — 22B91 (18.1.1), 22E240, 22E252, 22F76, 22G86, 22G90, 22G100 (18.4–18.6.2) — on iPhone11,2 to iPhone17,5, with a 545 KB "direct" worker carrying the JavaScriptCore exploit for 18.1.1 and 18.6.x; there are no offsets for iOS 18.7 or 26.
+- The implant looks for 45 bundle identifiers (MetaMask, Trust Wallet, Coinbase, OKX, Binance, Bitget, Bybit, Tonkeeper, Tonhub, MyTonWallet, imToken, SafePal, TokenPocket, Bitpie, BitKeep, Exodus, Phantom, Solflare, Uniswap, TronLink, Krystal, Sky Mavis); keychain and photos are uploaded only when `wallet_hit` is 1; a new "KokCore" probe collects 1–512 KB photo thumbnails.
+- CorePayloadManager (arm64 + arm64e, Xcode 26, ad-hoc signed, install name `/usr/lib/system/libsystem_featureflags.dylib`): `GET hxxps://btrf36[.]cc/api/v1/cpm/config.bin` with a fixed `X-Client-Id` header and an "iPhone OS 15_0" user agent, decryption with a hard-coded key, module store `/tmp/cpm27stor/`, injection by `_entry_main` into `locationd`/`powerd` and into wallet apps by `bundleId` at launch, control files `/tmp/.launchd_db_{stop,reload,purge}`, hot reload from `/tmp/.com.apple.nsurlsessiond.cache`, a keep-alive to `127.0.0.1:8888`, and deletion of CrashReporter logs — no boot persistence. The uploader's "iOS < 18" label for these files is wrong: they run after the iOS 18 kernel exploit.
+- A separate native reflective loader ("x01", iOS 13 SDK, user agent `MobileStore/1.0`, Corellium check, ChaCha-decrypted and libcompression-unpacked payload) is the native end of the Coruna branch.
+- Distribution, iOS < 18: more than 200 public scans — farms of disposable subdomains on `bgp09[.]icu` / `bgp34|36|51|63[.]sbs` ("Account Security Compliance Check", loader from `tudou001.usdtio[.]cc`), some fifty subdomains of `buytrx-ins[.]com`, 29 Chinese SEO look-alikes of 7-Zip/HaoZip on .com.cn (loader from `gewc61[.]cc`), central hosts `i0s[.]io`, `092ak[.]top`, `*.pifilubihu[.]shop`, `chainvex[.]cam` (embedded by Google Sites lures) and `ios.hdios[.]cn`, part of the DarkSword server cluster described by Censys.
+- Distribution, iOS 18: 88 scans on 69 domains since 13 September — crypto, dating, gambling and "wallet security" lures — plus nineteen hacked legitimate sites in eleven countries with the kit under `/js/analystic/assets/js/`, `/wp-includes/js/`, `/img/` or a PrestaShop module path; the full chain was captured by urlscan only on `mining-game[.]online` (September) and `www.tavonexia[.]com` (20 October).
+- Detection that survives rebuilds: the beacon `POST /hx {"k":1,"n":"<host>"}`, the `X-Client-Id: 7f3a9c2b8e1d4f6a0b5c7e9d2f4a6b8c` header, the browser locks `_x_done`/`_x_nav`/`_x_ok`, the `/tmp` artefacts, an ad-hoc-signed image named `libsystem_featureflags.dylib` in `locationd`, and the YARA string sets in the report.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-10-20-darksword-analystic/Incident_Report_2026-10-20_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-10-20-darksword-analystic/Incident_Report_2026-10-20_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-10-20-darksword-analystic/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-10-20-darksword-analystic/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| Domain | `btrf36[.]cc` (C2 of the implant, the beacon and the payload manager; Gname.com, 2026-09-25; /hx /beacon /result /heartbeat /x /a /u /p /qq /api/v1/cpm/config.bin) |
+| IP | `47[.]76[.]30[.]227` (btrf36[.]cc, Alibaba Cloud Hong Kong, dedicated) |
+| URL | `hxxps://btrf36[.]cc/hx` (carrier beacon), `hxxps://btrf36[.]cc/api/v1/cpm/config.bin` (payload-manager configuration) |
+| Domain | `i0s[.]io`, `tudou001.usdtio[.]cc`, `fh001.usdtio[.]cc`, `gewc61[.]cc`, `092ak[.]top`, `pifilubihu[.]shop`, `chainvex[.]cam`, `afazxcr[.]xyz`, `yc.d-j[.]cc`, `ja.a-j[.]cc`, `xinyea[.]cc`, `chunfe[.]cc`, `t.yookme[.]cc`, `bb.ttyyk[.]shop`, `www.7-11[.]help`, `ios.hdios[.]cn` (central kit hosts) |
+| IP | `38[.]190[.]222[.]108` (bare-IP kit host, /gooll/; SonderCloud HK) |
+| Domain | `mining-game[.]online`, `www.tavonexia[.]com`, `mobile.mumuheliio[.]com` (hosts where the full chain or the exploit was captured) |
+| Domain | `bgp09[.]icu`, `bgp34[.]sbs`, `bgp36[.]sbs`, `bgp51[.]sbs`, `bgp63[.]sbs`, `buytrx-ins[.]com` (lure farms, random subdomains) |
+| Domain | `walletsecurity[.]dev`, `coingateai[.]com`, `trx-exchange[.]com`, `kucoiins[.]cam`, `rollbit[.]rest`, `rootdata[.]cam`, `sitmarx[.]site`, `cwmk.eu[.]cc`, `mjoh.eu[.]cc`, `energyleasing88[.]com` (selected lure pages, operator-controlled to our assessment — verify before blocking; the full lure set and the 29 .com.cn look-alikes are in the JSON dumps) |
+| SHA-256 | `b4290d69fbb099f72f0b7ebc5fdb1211db0810f79372b871229746027d23f52c` (group.html, dispatcher) |
+| SHA-256 | `d70f5b8ec6359ad5c22acb628a7c7ec81c8d549869afa7f96a377e52879a6642` (a8c3f01e6b47d295.js, beacon) |
+| SHA-256 | `e9b106745a31d7ad4095dd87cf8f915cf600f929b6930b9ff3534826c649f803` (49554fde7424c31c.js, Coruna loader; `b7222f77…` with BOM) |
+| SHA-256 | `2e443833dd58278d094acda2067a43cae1e88cbdf3902d7515776ab42f41b7e8` (b8def7dab9dd9ad8.js, DarkSword loader) |
+| SHA-256 | `5856c2c59ffcbe6b82f49ec94517463dc764cfe43333a7313c49a11c1c7934de` (e1105852cab6ef49.js, direct worker 18.1.1 / 18.6.x) |
+| SHA-256 | `df86db89f7f965fc117d4c14b722d3d02f1d1de5c6ec216bb59fcf2736374caa` (8150b44e89f06890.js, primitives worker) |
+| SHA-256 | `3196034ef1196c9151395859019674e14e3c06e3fdbf230c7e0d0c5f6211824a` (a13e3e4525e28ff8.js, JavaScriptCore exploit) |
+| SHA-256 | `9c7f86f2b82df171a09f096afcd8fa5b6b24f0b643aae765ad17ecf80dadb196` (717d3ef037488de5.js, sbx0) |
+| SHA-256 | `6db7114ed9e8a89a75d11930d348ebd6c3bd52572238191c3116b100e8963a98` (e698499e769d1643.js, sbx1) |
+| SHA-256 | `da3fe94ac1ffe0ae01adfab6d5e6cd58933e93853c4b6e664f76ca468981bb02` (e0e65d55905b9342.js, PE bundle 20260914-aks40) |
+| SHA-256 | `b0a7077b5d5baa1fb2d31115fbf226bac47f54c9aa499de343385cab6712f79c` (CorePayloadManager arm64) |
+| SHA-256 | `a436ac961ce25a0072fbafb8c1937a94b8c900e3ac512a5aa32ecf4610f2260e` (CorePayloadManager arm64e) |
+| SHA-256 | `6d522977b4f5473050ae9f493cc34e837110fd5b06c236517c317d15623ba86c` (native loader "x01", Coruna branch) |
+| String | `20260914-aks40` (PE_BUILD), `pack_frontend replaces btrf36.cc -> data_host`, `KokCore`, `wallet_hit`, `------HqBound` |
+| String | `X-Client-Id: 7f3a9c2b8e1d4f6a0b5c7e9d2f4a6b8c` (payload-manager header), `abf3bdc8e239c0f3183c257f9ccc23e8` (config.bin key), `Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X)`, `MobileStore/1.0`, `CorePayloadManager-55554944` |
+| Path | `/tmp/cpm27stor/`, `/tmp/com.apple.analyticsd.lock`, `/tmp/.launchd_db_stop|reload|purge`, `/tmp/.com.apple.nsurlsessiond.cache`, `/tmp/pe_worker_trace.log`, `/tmp/pe_wallet_hit_bundles.json`, `/tmp/keychain_c2_dump.json` (host artefacts); `*/analystic/assets/js/group.html` (web); `_x_done` / `_x_nav` / `_x_ok` (browser storage) |
+
+**MITRE ATT&CK:** T1189, T1584.004, T1608.004, T1203, T1068, T1059.007, T1027, T1036.005, T1055, T1105, T1555.001, T1005, T1119, T1082, T1083, T1071.001, T1041, T1070.004, T1573.001
+
+---
+
 ### 2026-10-12 — Who Is Being DDoSed via TCP Reflection: Sensor-Network Observations, April–October 2026
 
 Since late April 2026 our sensor network has continuously registered streams of TCP SYN packets with forged source addresses — the signature of TCP SYN-ACK reflection DDoS. Because the forged address is the victim's, the list of organisations under attack can be reconstructed from traffic that the sensors simply log and drop. Two layers stand out. A background layer since April is the familiar picture of commercial booter services: game servers, VPNs and DDoS-protected hosting worldwide (one Amarutu Technology host was hit for 95 consecutive days). A separate campaign since 18 August 2026 targets Russian organisations — ISPs, banks, payment and IT companies, the oil industry — 22 organisations in eight weeks, run with one tool and, by every sign, by one operator, with reflectors selected only inside Russia. The largest waves hit Promsvyazbank (31 August), Bank Uralsib (29 September), Lukoil-Inform (5 October), Rostelecom and Mosgortelecom (18–19 September), 42 production load balancers of Yandex (11 October, 18:56–20:26 UTC) and National Bank Trust with VK Cloud (12 October). Spoofing was confirmed at frame level during a live wave: identical IP IDs across a hundred replayed SYNs, and a TTL of 17–30 on the SYN against 59 on the RST from the victim's real host. The origin of the attacks cannot be recovered from packet headers and no public claim of responsibility was found. Sensor addresses and operators are not disclosed.
