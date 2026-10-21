@@ -1,0 +1,325 @@
+{
+  "Event": {
+    "uuid": "52a01d37-0f8c-5348-ad59-60179e840066",
+    "info": "[TLP:CLEAR] Fake YouTube DMCA Notice via Google Groups: a Browser-in-the-Browser Kit with a Live Operator",
+    "date": "2026-10-21",
+    "timestamp": "1792540800",
+    "publish_timestamp": "1792540800",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "cb3db3f6-ab4f-52c2-9441-f1f75a85ceee",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "copyright-library.com",
+        "to_ids": true,
+        "comment": "Kit host 'Copyright Library'; registered 2026-10-03 12:24Z NiceNIC, NS ClouDNS (ns71-74), A 94.26.90.86 since 2026-10-05; nginx/1.18.0 + Express; index Last-Modified 2026-10-06 17:43Z",
+        "distribution": "5"
+      },
+      {
+        "uuid": "12ef162f-c1d8-5724-b44c-70ffa4ef9740",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "dmcaalertsinfo.com",
+        "to_ids": true,
+        "comment": "Related DMCA lure domain, registered 2026-10-02 NiceNIC; on 94.26.90.86 2026-10-03..10-10; currently no A",
+        "distribution": "5"
+      },
+      {
+        "uuid": "13395201-4b88-51b7-bb25-4e51372cb869",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.26.90.86",
+        "to_ids": true,
+        "comment": "Kit host; DEDIK Services AS207043 DE, Plesk since 2025-04; earlier unrelated tenants 2021-2025",
+        "distribution": "5"
+      },
+      {
+        "uuid": "840fe969-fd77-59b3-b397-1d1c90e300eb",
+        "type": "text",
+        "category": "Other",
+        "value": "Account Update Information",
+        "to_ids": false,
+        "comment": "email-subject: Lure subject; body 'compliance review ... intellectual property ... Date of Notification: October 13, 2026'",
+        "distribution": "5"
+      },
+      {
+        "uuid": "26f1292e-b271-54cd-ad78-c7b61219542d",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "0b2a4cd076aec476b99b9cb37c5eb7c95fe45cb7b3cfcd26c218012609118f3a",
+        "to_ids": true,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - index.html (?ref=terms), 25039 B, 2026-10-21",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d7f9919a-be6b-5267-bf5e-40cc6a1f2d37",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "a6c66736a96753a90cceadd02fbe5d607aa10b0c9cabfd75af15df3f65148238",
+        "to_ids": true,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - auth-verifi iframe HTML, 148421 B",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3bdabbe3-76c7-5c26-9be3-ed3a81c557e3",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "e6fc7ee9483f9ecc388e6e0eededf062f7a4333fa92c4b7f8b53c855f6e87d62",
+        "to_ids": true,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - script.js?v=20261016h, 265737 B, obfuscator.io RC4 strings",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e5daf434-2435-5715-a969-d73e56492e7f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f59fc322ad252f01c9744811e871e40874dd90efdffee60cb88fd5d857db5450",
+        "to_ids": true,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - assets/js/config.js — template config (registrationNumber 4489-4822-9054-3245, brand list) => resold/PhaaS kit",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f476337c-a9e8-549c-a2c6-42d05f047e49",
+        "type": "text",
+        "category": "Other",
+        "value": "continue_verifi_userID_",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit iframe path marker",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b1b9ba24-636a-572b-8aa8-a2e1a0e33258",
+        "type": "text",
+        "category": "Other",
+        "value": "/api/submit-form",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit pre-login endpoint",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4b2e7c0e-87e7-539d-864f-ef602f1a824d",
+        "type": "text",
+        "category": "Other",
+        "value": "window.CL.getChannelInfo",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit JS marker",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f5a3d194-6de0-59bf-a01c-9e92ac5ba386",
+        "type": "text",
+        "category": "Other",
+        "value": "data-noise-json",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit DOM-noise marker in sign-in iframe",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1b4e72fe-3f3e-54a3-879a-04dce825ef5c",
+        "type": "text",
+        "category": "Other",
+        "value": "youtube.studio/dmca-policy/alerts",
+        "to_ids": false,
+        "comment": "Visible anchor text of the link (youtube.studio not registered: RDAP 404, NX since 2020)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a92a1e47-6f3d-5b04-aafa-f269d14625a3",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ytchannelinfo.com",
+        "to_ids": true,
+        "comment": "Allowed by the kit script's obfuscator.io domainLock; resolves 2026-10-21 (Cloudflare 172.67.162.174 / 104.21.90.236, NS mona/piotr.ns.cloudflare.com); role not confirmed, most likely a parallel or staging installation (Medium)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "44cac518-1e00-5827-9fae-358e3a6cf1a4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "verify1you-be-main213047298.com",
+        "to_ids": true,
+        "comment": "Allowed by the kit script's domainLock; resolves 2026-10-21 (Cloudflare 188.114.97.3 / 188.114.96.3, NS zeus/luciana.ns.cloudflare.com); role not confirmed, most likely a parallel or staging installation (Medium)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "256c2900-cb4b-556e-9422-98ecb4007ce9",
+        "type": "text",
+        "category": "Other",
+        "value": "/youtube/api/slot/claim",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit backend: operator slot claim (503 => 'all slots busy' message in Russian)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0c22add0-e86b-5d3a-a7c9-aca4f0b8cbdd",
+        "type": "text",
+        "category": "Other",
+        "value": "/youtube/api/slot/ping",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit backend: 5 s heartbeat carrying operator commands (forceRestart, redirectToChoice)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fa510f4b-06f7-5336-b517-3ae4cd646a34",
+        "type": "text",
+        "category": "Other",
+        "value": "/youtube/api/current-page",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit backend: victim step telemetry",
+        "distribution": "5"
+      },
+      {
+        "uuid": "18afcb1d-35a2-5bea-b51d-a2c285a84365",
+        "type": "text",
+        "category": "Other",
+        "value": "/youtube/api/pushmfa-context",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit backend: Google-prompt (push MFA) context from operator",
+        "distribution": "5"
+      },
+      {
+        "uuid": "05575bd0-d268-503c-8d08-27261e3a4e4b",
+        "type": "text",
+        "category": "Other",
+        "value": "/youtube/api/success-config",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit backend: operator-defined final redirect",
+        "distribution": "5"
+      },
+      {
+        "uuid": "631b3c34-37f7-5955-bb55-5a998ef8aaeb",
+        "type": "text",
+        "category": "Other",
+        "value": "/youtube/api/visitor-init",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit backend",
+        "distribution": "5"
+      },
+      {
+        "uuid": "30896015-aebd-581e-bcca-33d27c99141e",
+        "type": "text",
+        "category": "Other",
+        "value": "X-Session-Token",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Kit request header (with X-Visitor-Id; cookie fallback keysession)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7846a70d-45ce-5c26-9918-48a9118c8404",
+        "type": "text",
+        "category": "Other",
+        "value": "__collabixSkipAutoFocusOnce",
+        "to_ids": false,
+        "comment": "pattern-in-file: Kit engine signature 'collabix' (also event collabix:introAnimationDone in login HTML) — unique hunt marker",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9092f78e-6389-5ebf-8ab8-6917acd92651",
+        "type": "text",
+        "category": "Other",
+        "value": "AMbiOORRJPdBjFasdakbo3wiIqkHBtqxFsopSBWeBZ_4VHZLayZprBSrAd9cHSo6",
+        "to_ids": false,
+        "comment": "pattern-in-file: Real Google TL token hard-coded in the fake URL bar (dsh=S1209249350:1758801949113141 = 2025-09-25, hl=ru) — build signature",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c916847c-92e4-50ef-bea6-0426f732be9b",
+        "type": "text",
+        "category": "Other",
+        "value": "v=20261016h",
+        "to_ids": false,
+        "comment": "pattern-in-file: Kit build version (script.js, modal.css) = 2026-10-16 rev h",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0f77310d-95bc-5654-9be2-a39b60d727ea",
+        "type": "text",
+        "category": "Other",
+        "value": "Copyright Library LLC, 58 Riverside Ave, Suite 200, Rockford, IL 61101; info@copyrightlibrary.com; +1 (815) 226-5700; DMCA-8593543; reg. 4489-4822-9054-3245",
+        "to_ids": false,
+        "comment": "Fictitious legal details of the landing (config.js)",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1027"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1056.003"
+      },
+      {
+        "name": "mitre-attack:T1111"
+      },
+      {
+        "name": "mitre-attack:T1204.001"
+      },
+      {
+        "name": "mitre-attack:T1497.001"
+      },
+      {
+        "name": "mitre-attack:T1557"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.006"
+      },
+      {
+        "name": "mitre-attack:T1592"
+      },
+      {
+        "name": "mitre-attack:T1608.005"
+      },
+      {
+        "name": "mitre-attack:T1621"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "label:credential-phishing"
+      },
+      {
+        "name": "label:youtube"
+      },
+      {
+        "name": "label:dmca-lure"
+      },
+      {
+        "name": "label:google-groups-abuse"
+      },
+      {
+        "name": "label:browser-in-the-browser"
+      },
+      {
+        "name": "label:mfa-relay"
+      },
+      {
+        "name": "label:phishing-kit"
+      },
+      {
+        "name": "label:cybercrime"
+      },
+      {
+        "name": "label:incident-report"
+      }
+    ]
+  }
+}

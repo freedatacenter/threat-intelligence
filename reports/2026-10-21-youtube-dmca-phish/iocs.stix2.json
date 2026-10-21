@@ -1,0 +1,2044 @@
+{
+  "type": "bundle",
+  "id": "bundle--baa22bd2-85a2-5974-9624-db73ce80da68",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--c3314c9d-9dc8-5890-b6b1-1d57976abf70",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Fake YouTube DMCA Notice via Google Groups: a Browser-in-the-Browser Kit with a Live Operator",
+      "published": "2026-10-21T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--9cb035b5-c971-5e0f-b886-95ee82a624e5",
+        "indicator--c98e1637-6c82-53d9-83b9-90ffe1006f3a",
+        "indicator--5f49dd88-1c2b-575c-ae65-82ef81dc3b2c",
+        "indicator--907cd7d2-dc77-5a93-acd2-8c4efeb16f1a",
+        "indicator--1015b577-44fc-5bb0-ae91-612e6ad3f2a0",
+        "indicator--08abbfee-4728-593f-8a4b-faff259f6b3b",
+        "indicator--7641ae13-2890-5527-a3de-c7b2bf20b4fb",
+        "indicator--84d222f5-d6b8-56c9-ab53-b55006cf8ada",
+        "indicator--db6e8709-647b-55c9-904c-57097d69414e",
+        "indicator--3f4e603a-93cc-511b-b280-85fe58442c98",
+        "indicator--2a4780da-7fba-57e8-9c7e-fcb32e4a65dc",
+        "indicator--35ce28af-1867-5949-92d1-d2cf191857c3",
+        "indicator--d1d5fe1a-7ecf-54c1-b831-4dcdce6a152a",
+        "indicator--45dc0de2-6068-5681-b251-74e47a8ea090",
+        "indicator--4d89c8b7-4560-5246-923d-818fc76adac1",
+        "indicator--1ae3919f-0ffd-53f6-9261-1a904eaf45ca",
+        "indicator--1d8b5959-5578-57d5-88d7-09b87f9c93fc",
+        "indicator--89cedcfb-4766-5179-afe0-a4b905faff54",
+        "indicator--829f42dc-54a2-52cf-8b37-f0f9055126a1",
+        "indicator--ed82826d-357a-5dd3-b218-f427ac03840b",
+        "indicator--92d432ad-9c57-55f4-8547-f33405a3c99b",
+        "indicator--f3bd4ec6-18e6-589f-afe4-94e69758ebae"
+      ],
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9cb035b5-c971-5e0f-b886-95ee82a624e5",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: copyright-library.com",
+      "description": "Kit host 'Copyright Library'; registered 2026-10-03 12:24Z NiceNIC, NS ClouDNS (ns71-74), A 94.26.90.86 since 2026-10-05; nginx/1.18.0 + Express; index Last-Modified 2026-10-06 17:43Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'copyright-library.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c98e1637-6c82-53d9-83b9-90ffe1006f3a",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: dmcaalertsinfo.com",
+      "description": "Related DMCA lure domain, registered 2026-10-02 NiceNIC; on 94.26.90.86 2026-10-03..10-10; currently no A",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'dmcaalertsinfo.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5f49dd88-1c2b-575c-ae65-82ef81dc3b2c",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 94.26.90.86",
+      "description": "Kit host; DEDIK Services AS207043 DE, Plesk since 2025-04; earlier unrelated tenants 2021-2025",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '94.26.90.86']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--907cd7d2-dc77-5a93-acd2-8c4efeb16f1a",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: Account Update Information",
+      "description": "email-subject: Lure subject; body 'compliance review ... intellectual property ... Date of Notification: October 13, 2026'",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'Account Update Information']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1015b577-44fc-5bb0-ae91-612e6ad3f2a0",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: continue_verifi_userID_",
+      "description": "pattern-in-traffic: Kit iframe path marker",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'continue_verifi_userID_']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--08abbfee-4728-593f-8a4b-faff259f6b3b",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /api/submit-form",
+      "description": "pattern-in-traffic: Kit pre-login endpoint",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/api/submit-form']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7641ae13-2890-5527-a3de-c7b2bf20b4fb",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: window.CL.getChannelInfo",
+      "description": "pattern-in-traffic: Kit JS marker",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'window.CL.getChannelInfo']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--84d222f5-d6b8-56c9-ab53-b55006cf8ada",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: data-noise-json",
+      "description": "pattern-in-traffic: Kit DOM-noise marker in sign-in iframe",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'data-noise-json']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--db6e8709-647b-55c9-904c-57097d69414e",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: youtube.studio/dmca-policy/alerts",
+      "description": "Visible anchor text of the link (youtube.studio not registered: RDAP 404, NX since 2020)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'youtube.studio/dmca-policy/alerts']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3f4e603a-93cc-511b-b280-85fe58442c98",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: ytchannelinfo.com",
+      "description": "Allowed by the kit script's obfuscator.io domainLock; resolves 2026-10-21 (Cloudflare 172.67.162.174 / 104.21.90.236, NS mona/piotr.ns.cloudflare.com); role not confirmed, most likely a parallel or staging installation (Medium)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'ytchannelinfo.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2a4780da-7fba-57e8-9c7e-fcb32e4a65dc",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: verify1you-be-main213047298.com",
+      "description": "Allowed by the kit script's domainLock; resolves 2026-10-21 (Cloudflare 188.114.97.3 / 188.114.96.3, NS zeus/luciana.ns.cloudflare.com); role not confirmed, most likely a parallel or staging installation (Medium)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'verify1you-be-main213047298.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--35ce28af-1867-5949-92d1-d2cf191857c3",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /youtube/api/slot/claim",
+      "description": "pattern-in-traffic: Kit backend: operator slot claim (503 => 'all slots busy' message in Russian)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/youtube/api/slot/claim']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d1d5fe1a-7ecf-54c1-b831-4dcdce6a152a",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /youtube/api/slot/ping",
+      "description": "pattern-in-traffic: Kit backend: 5 s heartbeat carrying operator commands (forceRestart, redirectToChoice)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/youtube/api/slot/ping']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--45dc0de2-6068-5681-b251-74e47a8ea090",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /youtube/api/current-page",
+      "description": "pattern-in-traffic: Kit backend: victim step telemetry",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/youtube/api/current-page']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4d89c8b7-4560-5246-923d-818fc76adac1",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /youtube/api/pushmfa-context",
+      "description": "pattern-in-traffic: Kit backend: Google-prompt (push MFA) context from operator",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/youtube/api/pushmfa-context']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1ae3919f-0ffd-53f6-9261-1a904eaf45ca",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /youtube/api/success-config",
+      "description": "pattern-in-traffic: Kit backend: operator-defined final redirect",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/youtube/api/success-config']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1d8b5959-5578-57d5-88d7-09b87f9c93fc",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: /youtube/api/visitor-init",
+      "description": "pattern-in-traffic: Kit backend",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '/youtube/api/visitor-init']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--89cedcfb-4766-5179-afe0-a4b905faff54",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: X-Session-Token",
+      "description": "pattern-in-traffic: Kit request header (with X-Visitor-Id; cookie fallback keysession)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'X-Session-Token']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--829f42dc-54a2-52cf-8b37-f0f9055126a1",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: __collabixSkipAutoFocusOnce",
+      "description": "pattern-in-file: Kit engine signature 'collabix' (also event collabix:introAnimationDone in login HTML) — unique hunt marker",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = '__collabixSkipAutoFocusOnce']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ed82826d-357a-5dd3-b218-f427ac03840b",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: AMbiOORRJPdBjFasdakbo3wiIqkHBtqxFsopSBWeBZ_4VHZLayZprBSrAd9cHSo6",
+      "description": "pattern-in-file: Real Google TL token hard-coded in the fake URL bar (dsh=S1209249350:1758801949113141 = 2025-09-25, hl=ru) — build signature",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'AMbiOORRJPdBjFasdakbo3wiIqkHBtqxFsopSBWeBZ_4VHZLayZprBSrAd9cHSo6']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--92d432ad-9c57-55f4-8547-f33405a3c99b",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: v=20261016h",
+      "description": "pattern-in-file: Kit build version (script.js, modal.css) = 2026-10-16 rev h",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'v=20261016h']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f3bd4ec6-18e6-589f-afe4-94e69758ebae",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: Copyright Library LLC, 58 Riverside Ave, Suite 200, Rockford, IL 61101; info@copyrightlibrary.com; +1 (815) 226-5700; DMCA-8593543; reg. 4489-4822-9054-3245",
+      "description": "Fictitious legal details of the landing (config.js)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'Copyright Library LLC, 58 Riverside Ave, Suite 200, Rockford, IL 61101; info@copyrightlibrary.com; +1 (815) 226-5700; DMCA-8593543; reg. 4489-4822-9054-3245']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "youtube",
+        "dmca-lure",
+        "google-groups-abuse",
+        "browser-in-the-browser",
+        "mfa-relay",
+        "phishing-kit",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1111"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1592"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1621"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--cec1b16f-fca8-5a55-9c03-b3e5b7210da6",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): 0b2a4cd076aec476b99b9cb37c5eb7c95fe45cb7b3cfcd26c218012609118f3a",
+      "content": "0b2a4cd076aec476b99b9cb37c5eb7c95fe45cb7b3cfcd26c218012609118f3a — CONTEXT, NOT A BLOCKING RECOMMENDATION - index.html (?ref=terms), 25039 B, 2026-10-21",
+      "object_refs": [
+        "report--c3314c9d-9dc8-5890-b6b1-1d57976abf70"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--9db04ddc-448a-544b-a491-0b6d5396d71d",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): a6c66736a96753a90cceadd02fbe5d607aa10b0c9cabfd75af15df3f65148238",
+      "content": "a6c66736a96753a90cceadd02fbe5d607aa10b0c9cabfd75af15df3f65148238 — CONTEXT, NOT A BLOCKING RECOMMENDATION - auth-verifi iframe HTML, 148421 B",
+      "object_refs": [
+        "report--c3314c9d-9dc8-5890-b6b1-1d57976abf70"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--850b6866-e593-5109-85e7-f0322ebae408",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): e6fc7ee9483f9ecc388e6e0eededf062f7a4333fa92c4b7f8b53c855f6e87d62",
+      "content": "e6fc7ee9483f9ecc388e6e0eededf062f7a4333fa92c4b7f8b53c855f6e87d62 — CONTEXT, NOT A BLOCKING RECOMMENDATION - script.js?v=20261016h, 265737 B, obfuscator.io RC4 strings",
+      "object_refs": [
+        "report--c3314c9d-9dc8-5890-b6b1-1d57976abf70"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--8d8f9dbc-25d2-59ac-9d42-5f8b7941641f",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): f59fc322ad252f01c9744811e871e40874dd90efdffee60cb88fd5d857db5450",
+      "content": "f59fc322ad252f01c9744811e871e40874dd90efdffee60cb88fd5d857db5450 — CONTEXT, NOT A BLOCKING RECOMMENDATION - assets/js/config.js — template config (registrationNumber 4489-4822-9054-3245, brand list) => resold/PhaaS kit",
+      "object_refs": [
+        "report--c3314c9d-9dc8-5890-b6b1-1d57976abf70"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "Event": {
+    "uuid": "96b82796-d391-5c3a-a756-cb082535ba20",
+    "info": "[TLP:CLEAR] Hetzner Billing Phishing Sent from Hetzner Cloud via Hijacked DNS, with a Multi-Brand Look-alike Cluster",
+    "date": "2026-10-21",
+    "timestamp": "1792540800",
+    "publish_timestamp": "1792540800",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "b6dd5d05-189d-56e0-b24a-9159a8cbb52b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "2.29.109.211",
+        "to_ids": true,
+        "comment": "Actor MTA mta.singermali.com; Hetzner Cloud HEL1 AS24940 (inetnum 2.29.96.0/20 created 2026-09-29), rDNS static.211.109.29.2.clients.your-server.de; mailing 2026-10-20 from 08:42Z; AbuseIPDB 5 reports 20.10; SPF 'v=spf1 ip4:2.29.109.211 -all'",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f8a60b7b-b151-5464-bfaa-35e098b45121",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "178.105.10.8",
+        "to_ids": true,
+        "comment": "mta.jaggery.org — second prepared MTA, identical DNS template on hijacked DreamHost domain; Hetzner AS24940",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee3c9075-6e38-586c-94d4-cb2d430e1c52",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "37.148.201.157",
+        "to_ids": true,
+        "comment": "Landing host: hz.azrylin.com, gty.singermali.com, srv.jaggery.org, consels-hetzner.com, panel-dreamhost.com, app-openbank.com, billing.chatgpt-opania.com, account-one.azrylin.net; GoDaddy/Host Europe NL AS21499, Plesk since 2026-10-15; pDNS 13 names, all phishing/decoy",
+        "distribution": "5"
+      },
+      {
+        "uuid": "406c718d-e5e4-5f03-9c0e-1a78c145aca4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "208.116.19.38",
+        "to_ids": true,
+        "comment": "Actor server since 2026-06-23: azrylin.com/.net/azryliz.com apex, billing-openia.com, billng-chatgpt.com, app-strato.com, ebanking-piraeusbank.com, azetd.com, pmta.ayalti.com (PowerMTA); WHG Hosting AS209341 DE, Plesk",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bfa6520e-4d46-51b2-a24d-98a308584c36",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "azrylin.com",
+        "to_ids": true,
+        "comment": "Actor domain, registered 2026-10-12 03:06Z Cloudflare Registrar, CF NS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "989f0443-ac4f-518f-80e5-aa687092640d",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "hz.azrylin.com",
+        "to_ids": true,
+        "comment": "Landing page of the 2026-10-20 Hetzner mailing; LE cert notBefore 2026-10-20 03:30Z; PHP 8.4/Plesk; 3-stage fingerprint gate: cookie jscheck=1 -> cookie screen=WxH -> server check, non-victims 302 to hetzner.com",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e2f548c1-13a0-5b92-92fa-0fa657893946",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "azrylin.net",
+        "to_ids": true,
+        "comment": "Actor domain 2026-10-12 Cloudflare Registrar",
+        "distribution": "5"
+      },
+      {
+        "uuid": "148b411c-e40b-560e-8225-ca0f9c4101ce",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "account-one.azrylin.net",
+        "to_ids": true,
+        "comment": "-> 37.148.201.157",
+        "distribution": "5"
+      },
+      {
+        "uuid": "666c4945-d873-5c5c-adad-5b8092cf7188",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "azryliz.com",
+        "to_ids": true,
+        "comment": "Actor domain 2026-10-12; OpenAI/ChatGPT billing lure (AbuseIPDB report 2026-10-12: azryliz.com/billing)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "167923be-ccb0-5d70-83b5-64864b99cc04",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mta.singermali.com",
+        "to_ids": true,
+        "comment": "Actor MTA on hijacked legitimate domain -> 2.29.109.211; MX 10 for singermali.com",
+        "distribution": "5"
+      },
+      {
+        "uuid": "dd1de463-175a-5df0-8f94-aba2a4244ed5",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "gty.singermali.com",
+        "to_ids": true,
+        "comment": "Prepared landing, LE cert 2026-10-21 02:00Z -> 37.148.201.157 (next wave)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d57e477d-1635-59d1-ba9c-dbafe916b879",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mta.jaggery.org",
+        "to_ids": true,
+        "comment": "-> 178.105.10.8; MX 10 for jaggery.org",
+        "distribution": "5"
+      },
+      {
+        "uuid": "452c93c6-1ee8-569f-afb6-cf75d9b2ab74",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "srv.jaggery.org",
+        "to_ids": true,
+        "comment": "Prepared landing, LE cert 2026-10-21 02:02Z -> 37.148.201.157",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0dbfe529-708e-5233-9c23-b203f1d9ee9f",
+        "type": "text",
+        "category": "Other",
+        "value": "singermali.com",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - COMPROMISED LEGITIMATE DOMAIN — DreamHost, registered 2018-11-12, site on DreamHost shared 67.205.27.194. DNS hijacked: MX mta., SPF ip4 -all, DKIM selector 1792477938.singermali (= unixtime 2026-10-20 06:32Z), DMARC p=none. Do not block apex",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3c443382-331a-5a31-ac5d-1f2dee2cace0",
+        "type": "text",
+        "category": "Other",
+        "value": "jaggery.org",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - COMPROMISED LEGITIMATE DOMAIN — DreamHost, registered 2004; same template: MX mta.jaggery.org -> 178.105.10.8, SPF ip4:178.105.10.8 -all, DMARC p=none. Do not block apex",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1794f2d3-7f2e-5d33-8899-d17be131e8f6",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "consels-hetzner.com",
+        "to_ids": true,
+        "comment": "Hetzner look-alike, certs 2026-10-20 02:35Z, CF NS -> 37.148.201.157",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9880154e-302d-5f79-a0ca-d9c68178250a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "panel-dreamhost.com",
+        "to_ids": true,
+        "comment": "DreamHost panel look-alike since 2026-07-26 (likely source of hijacked DreamHost accounts) -> 37.148.201.157 (208.116.19.38 before 2026-10-16)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a26cce67-2f71-5d27-894c-3b9595cc2609",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "billing-openia.com",
+        "to_ids": true,
+        "comment": "OpenAI look-alike, reg. 2026-08-24 -> 208.116.19.38",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f4f1ad10-5f36-5464-913f-ca32eca4f2c0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "billng-chatgpt.com",
+        "to_ids": true,
+        "comment": "OpenAI look-alike, reg. 2026-08-24 -> 208.116.19.38",
+        "distribution": "5"
+      },
+      {
+        "uuid": "61201c3d-7303-5a18-b8da-2fe9f06b0aa7",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "chatgpt-opania.com",
+        "to_ids": true,
+        "comment": "OpenAI look-alike, certs 2026-10-12",
+        "distribution": "5"
+      },
+      {
+        "uuid": "74337f9d-f9df-5e35-97b1-25f61462dcf0",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "billing.chatgpt-opania.com",
+        "to_ids": true,
+        "comment": "-> 37.148.201.157, cert reissued 2026-10-21 01:39Z",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9889e897-267e-581e-9c49-97c99a65bf45",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "app-strato.com",
+        "to_ids": true,
+        "comment": "Strato look-alike, reg. 2026-08-25 -> 208.116.19.38",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5877eaf3-7916-5057-91f4-d1ad0988a3f7",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ebanking-piraeusbank.com",
+        "to_ids": true,
+        "comment": "Piraeus Bank look-alike, reg. 2026-10-07 -> 208.116.19.38",
+        "distribution": "5"
+      },
+      {
+        "uuid": "51c26599-9027-5267-8b16-b53e34d332e4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "app-openbank.com",
+        "to_ids": true,
+        "comment": "Openbank look-alike, cert 2026-10-21 00:06Z -> 37.148.201.157",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ac1bbe24-5a1a-549d-8ec6-f0175aad104a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "azetd.com",
+        "to_ids": true,
+        "comment": "Actor cluster domain, reg. 2026-10-06 -> 208.116.19.38; purpose unknown",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b7b92073-51ef-547c-a718-cd911292e654",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ww-one.com",
+        "to_ids": true,
+        "comment": "Actor cluster, certs 2026-10-20 -> 37.148.201.157; purpose unknown",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c7f5d120-b962-57ea-9376-f6cc0ce7eb85",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ony1.net",
+        "to_ids": true,
+        "comment": "Actor cluster, certs 2026-10-20 -> 37.148.201.157; purpose unknown",
+        "distribution": "5"
+      },
+      {
+        "uuid": "73706e0a-9be6-5db8-866d-e806f6f1720a",
+        "type": "text",
+        "category": "Other",
+        "value": "drliny.com",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - Decoy blog 'Best Recipes Ever' on actor host (cloaking target), certs 2026-10-12",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7d85ea2f-70a0-539d-81d6-f37c9a665da1",
+        "type": "text",
+        "category": "Other",
+        "value": "ayalti.com",
+        "to_ids": false,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - PowerMTA node domain (united-domains, reg. 2026-04-14; A 208.116.19.38 + 3.137.108.170); apex not blockable",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d4498603-627a-5b54-91d6-891823399cbe",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "pmta.ayalti.com",
+        "to_ids": true,
+        "comment": "PowerMTA node -> 208.116.19.38 (PTR of that IP)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fbf2ae8b-2aa9-580e-9c5a-3e3cee391f51",
+        "type": "email-src",
+        "category": "Payload delivery",
+        "value": "support@singermali.com",
+        "to_ids": false,
+        "comment": "From / Return-Path; display name 'Hetznar Online Gmbh'; List-Unsubscribe unsubscribe@singermali.com",
+        "distribution": "5"
+      },
+      {
+        "uuid": "78a8b036-f9a8-5ce5-8c7f-19885ee53fd9",
+        "type": "text",
+        "category": "Other",
+        "value": "Update your payment method to avoid suspension",
+        "to_ids": false,
+        "comment": "email-subject: Lure subject; body 'Dear Customer... update your payment method within the next 7 days'",
+        "distribution": "5"
+      },
+      {
+        "uuid": "386222a2-8937-5ea7-b8ee-7ae0f5edac5e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "1ffd13d1c1c64480376a47ed7c3c257d4e39df2ede1af1d6c52007b699c2a7c1",
+        "to_ids": true,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - Gate stage 1 body (72 B): <script>document.cookie='jscheck=1; path=/'; location.reload();</script>",
+        "distribution": "5"
+      },
+      {
+        "uuid": "59e88a83-8550-5605-8f71-bd63f3071845",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "6d6054771a352d3d54c81d54d18af6c3ee06ce3ebf7d4d960d4180c41529e965",
+        "to_ids": true,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - Gate stage 2 body (104 B): document.cookie='screen='+screen.width+'x'+screen.height + reload",
+        "distribution": "5"
+      },
+      {
+        "uuid": "55a1a37c-59b9-5b74-a309-16849d3aee7a",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "5297362709b04b678399af1d68137fb857086149a275e1758760da79f1741132",
+        "to_ids": true,
+        "comment": "CONTEXT, NOT A BLOCKING RECOMMENDATION - Inline PNG logo (945x284, 25862 B) embedded in the mail; XMP title 'Hetzner Logo 2019' — probably genuine press logo",
+        "distribution": "5"
+      },
+      {
+        "uuid": "14da5278-daef-534d-ae6b-9810a6acc2cb",
+        "type": "text",
+        "category": "Other",
+        "value": "document.cookie='jscheck=1; path=/'; location.reload();",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Landing gate stage 1 (exact HTTP body)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "407c0be1-68f0-58e9-863b-11c2e38a1774",
+        "type": "text",
+        "category": "Other",
+        "value": "document.cookie='screen='+screen.width+'x'+screen.height",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Landing gate stage 2",
+        "distribution": "5"
+      },
+      {
+        "uuid": "90db4529-156c-57b7-a35a-c8409763bb56",
+        "type": "text",
+        "category": "Other",
+        "value": "notifications.googleapis.com/email/redirect?t=",
+        "to_ids": false,
+        "comment": "pattern-in-traffic: Google notification redirector abused as open redirect; real target = base64url(zlib) in r= ; decode: zlib.decompress(base64.urlsafe_b64decode(r+'='*(-len(r)%4))). Do not block the Google host",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8a04131a-92f5-53a1-becf-4762bdfbe93b",
+        "type": "text",
+        "category": "Other",
+        "value": "Hetzner Online Ltd. · 24 Commerce Street, Suite 900 · London, United Kingdom",
+        "to_ids": false,
+        "comment": "Fake footer in the mail (real Hetzner: Gunzenhausen, DE); signature 'Hetzner Online Billing Department', 'accounts@hetzner.com | help.hetzner.com'",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1204.001"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1583.006"
+      },
+      {
+        "name": "mitre-attack:T1584.001"
+      },
+      {
+        "name": "mitre-attack:T1608.005"
+      },
+      {
+        "name": "mitre-attack:T1656"
+      },
+      {
+        "name": "label:credential-phishing"
+      },
+      {
+        "name": "label:hosting-provider-lure"
+      },
+      {
+        "name": "label:dns-hijacking"
+      },
+      {
+        "name": "label:google-redirector-abuse"
+      },
+      {
+        "name": "label:look-alike-domains"
+      },
+      {
+        "name": "label:cloaking"
+      },
+      {
+        "name": "label:cybercrime"
+      },
+      {
+        "name": "label:incident-report"
+      }
+    ]
+  }
+}

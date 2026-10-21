@@ -1,0 +1,2250 @@
+{
+  "type": "bundle",
+  "id": "bundle--f0f13db7-fcf9-5fa7-b3dd-1312a9359769",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "created": "2026-02-13T00:00:00Z",
+      "modified": "2026-02-13T00:00:00Z",
+      "name": "FDC Threat Intelligence",
+      "identity_class": "organization",
+      "description": "Threat intelligence from a distributed honeypot network and incident investigations."
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--d50d5a67-9f9c-5b4d-bea6-924090a95e3a",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "Hetzner Billing Phishing Sent from Hetzner Cloud via Hijacked DNS, with a Multi-Brand Look-alike Cluster",
+      "published": "2026-10-21T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--fd2923f4-cc64-58d9-97df-5f3d13899630",
+        "indicator--4b2c4bbe-33ef-5852-9a03-891d4fc0e72c",
+        "indicator--18e52d8b-b87d-54aa-bd91-ba8d635433b4",
+        "indicator--667ad3ba-a23a-5021-b645-c69b061b3444",
+        "indicator--5b47a711-b40e-57b0-9ab6-e42ae47f6c88",
+        "indicator--96c4e2bb-3e5e-58eb-bbc8-7496c5af29dc",
+        "indicator--fee9c27c-a512-582d-9ec4-7789c331c1d5",
+        "indicator--e7e202d5-6017-5c5e-8b37-b8a596552788",
+        "indicator--ae41322f-f551-5f86-9705-4803490ceadf",
+        "indicator--913b285d-2790-5896-9096-3017aa82e288",
+        "indicator--2c542453-49cc-582c-ad57-6222ddd0071d",
+        "indicator--77cf41dc-be3c-5cce-ac97-e2a732765c67",
+        "indicator--f6c9ee8a-db6e-5e99-9e1e-3925dde2609b",
+        "indicator--02e9a53d-9f18-5ae7-9f11-a9943d12e8d9",
+        "indicator--5d29dd86-53a2-55ed-99d9-de0ec02146d7",
+        "indicator--7e21430f-eeb8-5b67-8073-07c90563f016",
+        "indicator--f59571dd-fd86-585b-9af0-7e40350378ef",
+        "indicator--f01517ca-82bf-5539-89ac-5af226614340",
+        "indicator--16f1d6c0-54db-539d-895a-5a5e182963ac",
+        "indicator--115d03e1-826f-5cfe-9e22-1219a20c3b13",
+        "indicator--76e1fb91-ad6e-5c78-87c1-135b8713e573",
+        "indicator--cb5f5c2b-c344-5110-9229-f494e4c58b79",
+        "indicator--b43c84c6-fad4-53ed-82ba-94188ff5d48e",
+        "indicator--7aaeb8ba-79ce-5910-bf2e-37fc1c3d895e",
+        "indicator--b2fd6ac9-bb47-5f3c-af37-092cac347b06",
+        "indicator--f296a777-7d4a-50ec-9bff-6c021e6f6d42",
+        "indicator--afae849d-55f7-5c59-b622-e1e99fc1ab06",
+        "indicator--c06dd8a0-03cc-5cb0-80d6-305715f7eb53",
+        "indicator--5189a143-2f7b-5d3c-afb3-384f891215ab",
+        "indicator--f488451f-eda2-5048-86c9-9964c1646517",
+        "indicator--ba963530-af0b-594c-b7f3-a4c0fe6315b2",
+        "indicator--70fa3db0-faec-5abe-b629-dbee8356eefa"
+      ],
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fd2923f4-cc64-58d9-97df-5f3d13899630",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 2.29.109.211",
+      "description": "Actor MTA mta.singermali.com; Hetzner Cloud HEL1 AS24940 (inetnum 2.29.96.0/20 created 2026-09-29), rDNS static.211.109.29.2.clients.your-server.de; mailing 2026-10-20 from 08:42Z; AbuseIPDB 5 reports 20.10; SPF 'v=spf1 ip4:2.29.109.211 -all'",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '2.29.109.211']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4b2c4bbe-33ef-5852-9a03-891d4fc0e72c",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 178.105.10.8",
+      "description": "mta.jaggery.org — second prepared MTA, identical DNS template on hijacked DreamHost domain; Hetzner AS24940",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '178.105.10.8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--18e52d8b-b87d-54aa-bd91-ba8d635433b4",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 37.148.201.157",
+      "description": "Landing host: hz.azrylin.com, gty.singermali.com, srv.jaggery.org, consels-hetzner.com, panel-dreamhost.com, app-openbank.com, billing.chatgpt-opania.com, account-one.azrylin.net; GoDaddy/Host Europe NL AS21499, Plesk since 2026-10-15; pDNS 13 names, all phishing/decoy",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '37.148.201.157']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--667ad3ba-a23a-5021-b645-c69b061b3444",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 208.116.19.38",
+      "description": "Actor server since 2026-06-23: azrylin.com/.net/azryliz.com apex, billing-openia.com, billng-chatgpt.com, app-strato.com, ebanking-piraeusbank.com, azetd.com, pmta.ayalti.com (PowerMTA); WHG Hosting AS209341 DE, Plesk",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '208.116.19.38']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5b47a711-b40e-57b0-9ab6-e42ae47f6c88",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: azrylin.com",
+      "description": "Actor domain, registered 2026-10-12 03:06Z Cloudflare Registrar, CF NS",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'azrylin.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--96c4e2bb-3e5e-58eb-bbc8-7496c5af29dc",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: hz.azrylin.com",
+      "description": "Landing page of the 2026-10-20 Hetzner mailing; LE cert notBefore 2026-10-20 03:30Z; PHP 8.4/Plesk; 3-stage fingerprint gate: cookie jscheck=1 -> cookie screen=WxH -> server check, non-victims 302 to hetzner.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'hz.azrylin.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fee9c27c-a512-582d-9ec4-7789c331c1d5",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: azrylin.net",
+      "description": "Actor domain 2026-10-12 Cloudflare Registrar",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'azrylin.net']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e7e202d5-6017-5c5e-8b37-b8a596552788",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: account-one.azrylin.net",
+      "description": "-> 37.148.201.157",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'account-one.azrylin.net']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ae41322f-f551-5f86-9705-4803490ceadf",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: azryliz.com",
+      "description": "Actor domain 2026-10-12; OpenAI/ChatGPT billing lure (AbuseIPDB report 2026-10-12: azryliz.com/billing)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'azryliz.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--913b285d-2790-5896-9096-3017aa82e288",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: mta.singermali.com",
+      "description": "Actor MTA on hijacked legitimate domain -> 2.29.109.211; MX 10 for singermali.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'mta.singermali.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2c542453-49cc-582c-ad57-6222ddd0071d",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: gty.singermali.com",
+      "description": "Prepared landing, LE cert 2026-10-21 02:00Z -> 37.148.201.157 (next wave)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'gty.singermali.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--77cf41dc-be3c-5cce-ac97-e2a732765c67",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: mta.jaggery.org",
+      "description": "-> 178.105.10.8; MX 10 for jaggery.org",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'mta.jaggery.org']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f6c9ee8a-db6e-5e99-9e1e-3925dde2609b",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: srv.jaggery.org",
+      "description": "Prepared landing, LE cert 2026-10-21 02:02Z -> 37.148.201.157",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'srv.jaggery.org']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--02e9a53d-9f18-5ae7-9f11-a9943d12e8d9",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: consels-hetzner.com",
+      "description": "Hetzner look-alike, certs 2026-10-20 02:35Z, CF NS -> 37.148.201.157",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'consels-hetzner.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5d29dd86-53a2-55ed-99d9-de0ec02146d7",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: panel-dreamhost.com",
+      "description": "DreamHost panel look-alike since 2026-07-26 (likely source of hijacked DreamHost accounts) -> 37.148.201.157 (208.116.19.38 before 2026-10-16)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'panel-dreamhost.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7e21430f-eeb8-5b67-8073-07c90563f016",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: billing-openia.com",
+      "description": "OpenAI look-alike, reg. 2026-08-24 -> 208.116.19.38",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'billing-openia.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f59571dd-fd86-585b-9af0-7e40350378ef",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: billng-chatgpt.com",
+      "description": "OpenAI look-alike, reg. 2026-08-24 -> 208.116.19.38",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'billng-chatgpt.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f01517ca-82bf-5539-89ac-5af226614340",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: chatgpt-opania.com",
+      "description": "OpenAI look-alike, certs 2026-10-12",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'chatgpt-opania.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--16f1d6c0-54db-539d-895a-5a5e182963ac",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: billing.chatgpt-opania.com",
+      "description": "-> 37.148.201.157, cert reissued 2026-10-21 01:39Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'billing.chatgpt-opania.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--115d03e1-826f-5cfe-9e22-1219a20c3b13",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: app-strato.com",
+      "description": "Strato look-alike, reg. 2026-08-25 -> 208.116.19.38",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'app-strato.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--76e1fb91-ad6e-5c78-87c1-135b8713e573",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: ebanking-piraeusbank.com",
+      "description": "Piraeus Bank look-alike, reg. 2026-10-07 -> 208.116.19.38",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'ebanking-piraeusbank.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cb5f5c2b-c344-5110-9229-f494e4c58b79",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: app-openbank.com",
+      "description": "Openbank look-alike, cert 2026-10-21 00:06Z -> 37.148.201.157",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'app-openbank.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b43c84c6-fad4-53ed-82ba-94188ff5d48e",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: azetd.com",
+      "description": "Actor cluster domain, reg. 2026-10-06 -> 208.116.19.38; purpose unknown",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'azetd.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7aaeb8ba-79ce-5910-bf2e-37fc1c3d895e",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: ww-one.com",
+      "description": "Actor cluster, certs 2026-10-20 -> 37.148.201.157; purpose unknown",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'ww-one.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b2fd6ac9-bb47-5f3c-af37-092cac347b06",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: ony1.net",
+      "description": "Actor cluster, certs 2026-10-20 -> 37.148.201.157; purpose unknown",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'ony1.net']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f296a777-7d4a-50ec-9bff-6c021e6f6d42",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: pmta.ayalti.com",
+      "description": "PowerMTA node -> 208.116.19.38 (PTR of that IP)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'pmta.ayalti.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--afae849d-55f7-5c59-b622-e1e99fc1ab06",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "EMAIL: support@singermali.com",
+      "description": "From / Return-Path; display name 'Hetznar Online Gmbh'; List-Unsubscribe unsubscribe@singermali.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[email-addr:value = 'support@singermali.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c06dd8a0-03cc-5cb0-80d6-305715f7eb53",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: Update your payment method to avoid suspension",
+      "description": "email-subject: Lure subject; body 'Dear Customer... update your payment method within the next 7 days'",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'Update your payment method to avoid suspension']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5189a143-2f7b-5d3c-afb3-384f891215ab",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: document.cookie='jscheck=1; path=/'; location.reload();",
+      "description": "pattern-in-traffic: Landing gate stage 1 (exact HTTP body)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'document.cookie='jscheck=1; path=/'; location.reload();']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f488451f-eda2-5048-86c9-9964c1646517",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: document.cookie='screen='+screen.width+'x'+screen.height",
+      "description": "pattern-in-traffic: Landing gate stage 2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'document.cookie='screen='+screen.width+'x'+screen.height']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ba963530-af0b-594c-b7f3-a4c0fe6315b2",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: notifications.googleapis.com/email/redirect?t=",
+      "description": "pattern-in-traffic: Google notification redirector abused as open redirect; real target = base64url(zlib) in r= ; decode: zlib.decompress(base64.urlsafe_b64decode(r+'='*(-len(r)%4))). Do not block the Google host",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'notifications.googleapis.com/email/redirect?t=']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--70fa3db0-faec-5abe-b629-dbee8356eefa",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "TEXT: Hetzner Online Ltd. · 24 Commerce Street, Suite 900 · London, United Kingdom",
+      "description": "Fake footer in the mail (real Hetzner: Gunzenhausen, DE); signature 'Hetzner Online Billing Department', 'accounts@hetzner.com | help.hetzner.com'",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[x-custom:value = 'Hetzner Online Ltd. · 24 Commerce Street, Suite 900 · London, United Kingdom']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-21T00:00:00Z",
+      "labels": [
+        "credential-phishing",
+        "hosting-provider-lure",
+        "dns-hijacking",
+        "google-redirector-abuse",
+        "look-alike-domains",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--71115435-d422-50b4-9afa-1890009dc9ec",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): singermali.com",
+      "content": "singermali.com — CONTEXT, NOT A BLOCKING RECOMMENDATION - COMPROMISED LEGITIMATE DOMAIN — DreamHost, registered 2018-11-12, site on DreamHost shared 67.205.27.194. DNS hijacked: MX mta., SPF ip4 -all, DKIM selector 1792477938.singermali (= unixtime 2026-10-20 06:32Z), DMARC p=none. Do not block apex",
+      "object_refs": [
+        "report--d50d5a67-9f9c-5b4d-bea6-924090a95e3a"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--60231530-ad6a-59ac-9a2e-993ebfa682f0",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): jaggery.org",
+      "content": "jaggery.org — CONTEXT, NOT A BLOCKING RECOMMENDATION - COMPROMISED LEGITIMATE DOMAIN — DreamHost, registered 2004; same template: MX mta.jaggery.org -> 178.105.10.8, SPF ip4:178.105.10.8 -all, DMARC p=none. Do not block apex",
+      "object_refs": [
+        "report--d50d5a67-9f9c-5b4d-bea6-924090a95e3a"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--f93c5e0d-b7f6-5005-b79a-53db44134664",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): drliny.com",
+      "content": "drliny.com — CONTEXT, NOT A BLOCKING RECOMMENDATION - Decoy blog 'Best Recipes Ever' on actor host (cloaking target), certs 2026-10-12",
+      "object_refs": [
+        "report--d50d5a67-9f9c-5b4d-bea6-924090a95e3a"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--741b6474-44d3-5cf8-a29c-74980859445e",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): ayalti.com",
+      "content": "ayalti.com — CONTEXT, NOT A BLOCKING RECOMMENDATION - PowerMTA node domain (united-domains, reg. 2026-04-14; A 208.116.19.38 + 3.137.108.170); apex not blockable",
+      "object_refs": [
+        "report--d50d5a67-9f9c-5b4d-bea6-924090a95e3a"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--4f6b3034-d6d4-5159-8d88-b8c4f31fbbd7",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): 1ffd13d1c1c64480376a47ed7c3c257d4e39df2ede1af1d6c52007b699c2a7c1",
+      "content": "1ffd13d1c1c64480376a47ed7c3c257d4e39df2ede1af1d6c52007b699c2a7c1 — CONTEXT, NOT A BLOCKING RECOMMENDATION - Gate stage 1 body (72 B): <script>document.cookie='jscheck=1; path=/'; location.reload();</script>",
+      "object_refs": [
+        "report--d50d5a67-9f9c-5b4d-bea6-924090a95e3a"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--9f1824aa-251b-59d8-bbd2-6fe3edacffa8",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): 6d6054771a352d3d54c81d54d18af6c3ee06ce3ebf7d4d960d4180c41529e965",
+      "content": "6d6054771a352d3d54c81d54d18af6c3ee06ce3ebf7d4d960d4180c41529e965 — CONTEXT, NOT A BLOCKING RECOMMENDATION - Gate stage 2 body (104 B): document.cookie='screen='+screen.width+'x'+screen.height + reload",
+      "object_refs": [
+        "report--d50d5a67-9f9c-5b4d-bea6-924090a95e3a"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--53ecbc36-7fde-588b-92bf-2383c0841537",
+      "created": "2026-10-21T00:00:00Z",
+      "modified": "2026-10-21T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): 5297362709b04b678399af1d68137fb857086149a275e1758760da79f1741132",
+      "content": "5297362709b04b678399af1d68137fb857086149a275e1758760da79f1741132 — CONTEXT, NOT A BLOCKING RECOMMENDATION - Inline PNG logo (945x284, 25862 B) embedded in the mail; XMP title 'Hetzner Logo 2019' — probably genuine press logo",
+      "object_refs": [
+        "report--d50d5a67-9f9c-5b4d-bea6-924090a95e3a"
+      ]
+    }
+  ]
+}

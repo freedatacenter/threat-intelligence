@@ -6,6 +6,65 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-10-21 — Hetzner Billing Phishing Sent from Hetzner Cloud via Hijacked DNS, with a Multi-Brand Look-alike Cluster
+
+On 20 October 2026 a billing phishing message impersonating Hetzner Online reached a genuine Hetzner customer, who recognised it and did not interact with it. A separate message investigated in parallel is not related to this campaign (High confidence). The message was sent from a dedicated VPS inside Hetzner Cloud itself (2[.]29[.]109[.]211). The sender domain, singermali[.]com, is a legitimate domain registered in 2018 at DreamHost whose DNS was taken over: the actor added an MX/A record for its own MTA, an SPF record that authorises only that VPS (-all) and a DKIM key whose selector is a Unix timestamp. As a result SPF, DKIM and DMARC all pass. The only link in the message goes through the Google notification redirector (notifications.googleapis[.]com/email/redirect), which hides the real target (a zlib + base64url-encoded value in the r= parameter) behind a Google domain. The target, hz.azrylin[.]com, sits behind a JavaScript gate and lives on a server that also hosts a cluster of fresh multi-brand look-alikes (Hetzner, DreamHost, Strato, OpenAI/ChatGPT, Piraeus Bank, Openbank). A second hijacked DreamHost domain (jaggery[.]org) uses the same DNS template, and certificates issued on 21 October show that the next wave was being prepared.
+
+**Key findings:**
+- The phishing is sent from the impersonated provider’s own cloud, and passes SPF, DKIM and DMARC because the actor controls the DNS of a hijacked legitimate domain.
+- DNS template of the actor on hijacked domains: MX 10 mta.<domain> to a Hetzner Cloud address; v=spf1 ip4:<IP> -all; DMARC p=none with rua=postmaster@<domain>; DKIM selector <unixtime>.<label>.
+- Link laundering through a Google redirector: the visible and the first-hop domains belong to Google. The landing page is protected by a multi-stage cookie gate (jscheck, screen, server-side screening) that ends in a redirect to the genuine brand for rejected visitors.
+- The campaign is part of an active multi-brand operation (since at least 23 June 2026) with look-alikes of hosting providers, an AI service and banks on two servers (37[.]148[.]201[.]157, 208[.]116[.]19[.]38).
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-10-21-hetzner-billing-phish/Incident_Report_2026-10-21_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-10-21-hetzner-billing-phish/Incident_Report_2026-10-21_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-10-21-hetzner-billing-phish/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-10-21-hetzner-billing-phish/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| IP | `2[.]29[.]109[.]211`, `178[.]105[.]10[.]8`, `37[.]148[.]201[.]157`, `208[.]116[.]19[.]38` |
+| Domain | `azrylin[.]com`, `hz[.]azrylin[.]com`, `azrylin[.]net`, `account-one[.]azrylin[.]net`, `azryliz[.]com`, `mta[.]singermali[.]com`, `gty[.]singermali[.]com`, `mta[.]jaggery[.]org`, `srv[.]jaggery[.]org`, `consels-hetzner[.]com`, `panel-dreamhost[.]com`, `billing-openia[.]com`, `billng-chatgpt[.]com`, `chatgpt-opania[.]com`, `billing[.]chatgpt-opania[.]com`, `app-strato[.]com`, `ebanking-piraeusbank[.]com`, `app-openbank[.]com`, `azetd[.]com`, `ww-one[.]com`, `ony1[.]net`, `pmta[.]ayalti[.]com` |
+| Email | `support@singermali[.]com` |
+| String | `Update your payment method to avoid suspension`, `document.cookie='jscheck=1; path=/'; location.reload();`, `document.cookie='screen='+screen.width+'x'+screen.height`, `notifications.googleapis.com/email/redirect?t=`, `Hetzner Online Ltd. · 24 Commerce Street, Suite 900 · London, United Kingdom` |
+| Domain (compromised legitimate / decoy, do not block) | `singermali[.]com`, `jaggery[.]org`, `drliny[.]com`, `ayalti[.]com` |
+
+**MITRE ATT&CK:** T1036.005, T1204.001, T1566.002, T1583.001, T1583.003, T1583.006, T1584.001, T1608.005, T1656
+
+---
+
+### 2026-10-21 — Fake YouTube DMCA Notice via Google Groups: a Browser-in-the-Browser Kit with a Live Operator
+
+On 13 October 2026 a fake YouTube copyright notice was distributed through a Google group to its members; it was reported to us on 21 October. The link leads to a live credential-phishing kit that imitates a DMCA strike and a Google sign-in overlay. A separate message investigated in parallel is not related to this campaign (High confidence). The message was posted to a Google group and distributed to its members with Google’s own DKIM signature. Its link is a share.google short link that resolves to copyright-library[.]com, a live "Copyright Library" kit: the visitor enters a channel link, sees a fake "DMCA strike 1/3" and is pushed into a Browser-in-the-Browser window that imitates a Google sign-in. The window is driven in real time by an operator, and the kit supports capture of the password and of all common second factors. The kit hides behind obfuscator.io, a domain lock and DOM noise.
+
+**Key findings:**
+- Delivery through a Google group: Google distributes the post to every member with its own valid DKIM/SPF/DMARC, so mail authentication and domain reputation do not help; the link is a share.google short link.
+- The visible link text (youtube.studio/dmca-policy/alerts) is a domain that is not registered; the real target is copyright-library[.]com (registered 3 October 2026).
+- The kit is not a static form: it is a Browser-in-the-Browser window orchestrated by a script that claims a live operator slot, polls for operator commands every 5 seconds and reports the victim’s current step; the supported factors are password, Google prompt, SMS, TOTP, code to a recovery e-mail, phone number and backup codes.
+- The kit’s domain lock allows two further domains that currently resolve (ytchannelinfo[.]com, verify1you- be-main213047298[.]com); they are most likely parallel or staging installations (not verified).
+- Facts about the code: engine marker "collabix", build v=20261016h (16 October 2026), Russian-language interface strings and hl=ru in an embedded Google URL. A relation to the PhaaS family described in April 2026 is not confirmed by the code.
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-10-21-youtube-dmca-phish/Incident_Report_2026-10-21_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-10-21-youtube-dmca-phish/Incident_Report_2026-10-21_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-10-21-youtube-dmca-phish/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-10-21-youtube-dmca-phish/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| Domain | `copyright-library[.]com`, `dmcaalertsinfo[.]com`, `ytchannelinfo[.]com`, `verify1you-be-main213047298[.]com` |
+| IP | `94[.]26[.]90[.]86` |
+| String | `Account Update Information`, `continue_verifi_userID_`, `/api/submit-form`, `window.CL.getChannelInfo`, `data-noise-json`, `youtube.studio/dmca-policy/alerts`, `/youtube/api/slot/claim`, `/youtube/api/slot/ping`, `/youtube/api/current-page`, `/youtube/api/pushmfa-context`, `/youtube/api/success-config`, `/youtube/api/visitor-init`, `X-Session-Token`, `__collabixSkipAutoFocusOnce`, `AMbiOORRJPdBjFasdakbo3wiIqkHBtqxFsopSBWeBZ_4VHZLayZprBSrAd9cHSo6`, `v=20261016h`, `Copyright Library LLC, 58 Riverside Ave, Suite 200, Rockford, IL 61101; info@copyrightlibrary.com; +1 (815) 226-5700; DMCA-8593543; reg. 4489-4822-9054-3245` |
+
+**MITRE ATT&CK:** T1027, T1036.005, T1056.003, T1111, T1204.001, T1497.001, T1557, T1566.002, T1583.001, T1583.006, T1592, T1608.005, T1621, T1656
+
+---
+
 ### 2026-10-20 — DarkCoruna "analystic": an iOS Exploit Kit Planted on Hacked Websites, and Its Native Payload Manager
 
 On 19 October 2026 the operation behind the DarkSword "P7" implant we described on 10 October surfaced in public malware repositories as a complete kit, named "analystic" after the directory it occupies on hacked web servers: an anonymous MalwareBazaar contributor and vxunderground published 27 files — the dispatcher page, the Coruna loader for iOS 13–17.2.1, the DarkSword chain for iOS 18.1.1 and 18.4–18.6.2, fourteen obfuscated Coruna stages and three Mach-O binaries. Working only from those samples and from public urlscan.io data, and without touching attacker infrastructure, we analysed every file statically, disassembled the native libraries and mapped the distribution. The Coruna loader is token-identical to the one served by `cdn.gotoiphone[.]com` in September, the implant bundle (build `20260914-aks40`) shares 82% of its tokens with the P7 bundle of our previous report, and the command server is now stamped into the bundle at packaging time: the same operation, next build. Two things are new. The kit no longer lives only on the operator's lure domains — nineteen legitimate online shops and company sites in eleven countries serve it from a planted directory, loaded by a 300-byte inline script that creates a hidden iframe 1.5 seconds after the page loads. And the set contains the first native components of this operation that we have seen in public: "CorePayloadManager", a pair of dylibs masquerading as `libsystem_featureflags.dylib` that fetch an encrypted configuration from `btrf36[.]cc`, download modules, inject a core module into `locationd` or `powerd` and per-app modules into crypto-wallet apps as they start, delete the crash logs they cause and take commands from marker files in `/tmp`. The implant itself now targets 45 bundle identifiers of 22 wallet and exchange apps, gates all exfiltration on a "wallet hit", and collects photo thumbnails small enough to be seed-phrase backups. Everything still points to Chinese-speaking, financially motivated crime; nothing indicates state tasking. The owners of the compromised sites were notified through their hosting providers; the sites are not named.
