@@ -1,0 +1,1264 @@
+{
+  "Event": {
+    "uuid": "df9b2e01-8be1-57f7-9cad-663a989b3d93",
+    "info": "[TLP:CLEAR] Honeypot Fleet: Monthly Threat Report, October 2026",
+    "date": "2026-11-11",
+    "timestamp": "1794355200",
+    "publish_timestamp": "1794355200",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "9220c19f-c43f-5e32-9f2c-277f29784360",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "217.60.102.5",
+        "to_ids": true,
+        "comment": "RedTail-scp command server, rotated 2-3 October (third rotation in three months); same SSH key dlr@sftp",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0d0a26b5-b198-5154-9c46-e0faaca3fcfb",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "130.12.180.212",
+        "to_ids": true,
+        "comment": "Drop zone of a self-propagating loader: 2,157 downloads from 89 sources, 16 builds behind one URL (9-27 October)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1c8da3a1-0e2d-557a-a701-9bc88ffc0b3f",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://130.12.180.212/x86_64",
+        "to_ids": true,
+        "comment": "Drop zone of a self-propagating loader: 2,157 downloads from 89 sources, 16 builds behind one URL (9-27 October)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e9a024e2-71eb-5c20-957e-81ec55792940",
+        "type": "url",
+        "category": "External analysis",
+        "value": "tftp://130.12.180.212:69/x86_64",
+        "to_ids": true,
+        "comment": "Drop zone of a self-propagating loader: 2,157 downloads from 89 sources, 16 builds behind one URL (9-27 October)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e877070a-7642-5da2-8e91-261cde7a7412",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "45.9.149.168",
+        "to_ids": true,
+        "comment": "Same loader template (/x86_64 with a tftp fallback), the host keeps changing",
+        "distribution": "5"
+      },
+      {
+        "uuid": "959796b8-a06e-52e0-91de-f2ac220427b9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "31.56.209.86",
+        "to_ids": true,
+        "comment": "Same loader template (/x86_64 with a tftp fallback), the host keeps changing",
+        "distribution": "5"
+      },
+      {
+        "uuid": "09c21326-14b9-536f-b6f2-616f5c5ffdf2",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "217.60.195.187",
+        "to_ids": true,
+        "comment": "Same loader template (/x86_64 with a tftp fallback), the host keeps changing",
+        "distribution": "5"
+      },
+      {
+        "uuid": "57620422-033d-52b9-b86f-8ea5fd8576c8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "143.20.154.42",
+        "to_ids": true,
+        "comment": "Bot distribution for 18 architectures run from cloud VMs; related wget.sh distribution",
+        "distribution": "5"
+      },
+      {
+        "uuid": "258fddb3-2e1f-5403-b6f2-503b0786677f",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://143.20.154.42/bins/wget.sh",
+        "to_ids": true,
+        "comment": "Bot distribution for 18 architectures run from cloud VMs; related wget.sh distribution",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0515a922-c63a-542d-bdea-ab5c36ce172d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "85.137.53.167",
+        "to_ids": true,
+        "comment": "Bot distribution for 18 architectures run from cloud VMs; related wget.sh distribution",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9b9d4a46-1a9e-50e7-ab83-15c25f06dff4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "176.65.139.40",
+        "to_ids": true,
+        "comment": "Storm Industries (AS219502): Mirai-family drop zones; wget.sh fetched by 170 sources in a week",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6ea44894-1f4f-50f1-b126-475b0b5d0475",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "176.65.139.196",
+        "to_ids": true,
+        "comment": "Storm Industries (AS219502): Mirai-family drop zones; wget.sh fetched by 170 sources in a week",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b9bf20c4-262c-5b28-bbd9-683070278f92",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "176.65.139.36",
+        "to_ids": true,
+        "comment": "Storm Industries (AS219502): Mirai-family drop zones; wget.sh fetched by 170 sources in a week",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e3d8a414-aeb9-5557-8c7f-51400c0c1a75",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "176.65.139.131",
+        "to_ids": true,
+        "comment": "Storm Industries (AS219502): Mirai-family drop zones; wget.sh fetched by 170 sources in a week",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d9253dd0-c47c-5834-8e85-9947e3b54c35",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://176.65.139.40/wget.sh",
+        "to_ids": true,
+        "comment": "Storm Industries (AS219502): Mirai-family drop zones; wget.sh fetched by 170 sources in a week",
+        "distribution": "5"
+      },
+      {
+        "uuid": "38f0e209-fac9-5e71-ab15-ac6a35992d54",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://176.65.139.196/bins/kla.sh",
+        "to_ids": true,
+        "comment": "Storm Industries (AS219502): Mirai-family drop zones; wget.sh fetched by 170 sources in a week",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b5c35ded-fc7f-59f8-9e57-9e3493ac2f49",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "hand.genddos.st",
+        "to_ids": true,
+        "comment": "Storm: command/distribution host (/telnet, /bug) (port 48180)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bb1c6c90-39ee-51b5-a2ff-0b8776342374",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "85.215.73.250",
+        "to_ids": true,
+        "comment": "IONOS: kushnet / nyx_bot, builds named after kernel threads (kthreadd, ksoftirqd)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3fcc0491-7191-5e25-8f93-998a9eeb6ae3",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://85.215.73.250/nyx_bot_linux_amd64",
+        "to_ids": true,
+        "comment": "IONOS: kushnet / nyx_bot, builds named after kernel threads (kthreadd, ksoftirqd)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "01d02ad1-a153-5368-918d-b588d4e32ed8",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.92.43.221",
+        "to_ids": true,
+        "comment": "iranbot-ultimate loader: root password change, ld.so.preload wipe",
+        "distribution": "5"
+      },
+      {
+        "uuid": "32e14d7d-d3b8-50fb-b71a-12c7badcd8d8",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://91.92.43.221/cat.sh",
+        "to_ids": true,
+        "comment": "iranbot-ultimate loader: root password change, ld.so.preload wipe",
+        "distribution": "5"
+      },
+      {
+        "uuid": "62c8b80d-ade5-53b4-8ebd-4b8736ca2a4d",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "203.161.41.148",
+        "to_ids": true,
+        "comment": "iranbot-ultimate loader: root password change, ld.so.preload wipe",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f74bface-1af7-5c60-af09-ecc69363b075",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "64.89.160.48",
+        "to_ids": true,
+        "comment": "pxerom.sh (directory chosen by filesystem type), aisu builds",
+        "distribution": "5"
+      },
+      {
+        "uuid": "deec6ff2-095c-53eb-88d1-18462e6630b1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "64.89.160.185",
+        "to_ids": true,
+        "comment": "pxerom.sh (directory chosen by filesystem type), aisu builds",
+        "distribution": "5"
+      },
+      {
+        "uuid": "291d23ae-4ecb-5a3a-9ec8-026b7530ed09",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "89.163.157.131",
+        "to_ids": true,
+        "comment": "Persistence script for Telnet devices, 263 downloads on 4 October",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6bbc4fab-555b-5692-b26d-31e4f9a8ea51",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://89.163.157.131:8080/persist.sh",
+        "to_ids": true,
+        "comment": "Persistence script for Telnet devices, 263 downloads on 4 October",
+        "distribution": "5"
+      },
+      {
+        "uuid": "87c56998-2d2a-5f39-bdab-d3b978b97cda",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "217.60.242.6",
+        "to_ids": true,
+        "comment": "Set of classic Mirai forks (sora, Beastmode, SBIDIOT); Alsycon; long-running Mirai loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c5da0820-d240-5e67-81ca-07caa5213847",
+        "type": "url",
+        "category": "External analysis",
+        "value": "http://217.60.242.6/sora.sh",
+        "to_ids": true,
+        "comment": "Set of classic Mirai forks (sora, Beastmode, SBIDIOT); Alsycon; long-running Mirai loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d17852ea-debe-5ab1-9a23-31426852d335",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "160.119.66.206",
+        "to_ids": true,
+        "comment": "Set of classic Mirai forks (sora, Beastmode, SBIDIOT); Alsycon; long-running Mirai loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b66286d9-2f6d-568b-b6f3-45559fde7aa0",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.93.89.72",
+        "to_ids": true,
+        "comment": "Set of classic Mirai forks (sora, Beastmode, SBIDIOT); Alsycon; long-running Mirai loader",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ebb8e4cf-4e6c-50a6-a2cc-1c41aee710e0",
+        "type": "hasshserver-md5",
+        "category": "Network activity",
+        "value": "01ca35584ad5a1b66cf6a9846b5b2821",
+        "to_ids": true,
+        "comment": "One brute-force tool (SSH-2.0-Go client) run from disposable VPS; same fingerprint as in September",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8b420fd1-3903-5e5f-9eb9-13384b546662",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "138.226.239.47",
+        "to_ids": true,
+        "comment": "Synchronised MSSQL brute force on 25 and 27 October (blocks 138[.]226[.]239[.]0/24 and 185[.]136[.]15[.]0/24)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a923f4b4-14b6-548f-be24-4ef1e619b0eb",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "138.226.239.2",
+        "to_ids": true,
+        "comment": "Synchronised MSSQL brute force on 25 and 27 October (blocks 138[.]226[.]239[.]0/24 and 185[.]136[.]15[.]0/24)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "02b87dba-f37e-5604-9d3f-a4a4f439fc9e",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.136.15.31",
+        "to_ids": true,
+        "comment": "Synchronised MSSQL brute force on 25 and 27 October (blocks 138[.]226[.]239[.]0/24 and 185[.]136[.]15[.]0/24)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d1c05f58-3f02-51bd-adf7-fd7054dc245c",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "185.136.15.26",
+        "to_ids": true,
+        "comment": "Synchronised MSSQL brute force on 25 and 27 October (blocks 138[.]226[.]239[.]0/24 and 185[.]136[.]15[.]0/24)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "223508cd-884a-5d35-b98a-e4118a2bc3d7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "16.5.7.221",
+        "to_ids": true,
+        "comment": "VPSVAULT payload host seen in Docker, 19-20 October; wget | sh wrapper",
+        "distribution": "5"
+      },
+      {
+        "uuid": "48002624-817f-5cc9-9a6f-3c0bc564f979",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "wemqmewkqewq.work.gd",
+        "to_ids": true,
+        "comment": "Bot registration endpoint of an operator working through Docker and SSH at once",
+        "distribution": "5"
+      },
+      {
+        "uuid": "815ffc70-220d-59aa-b4b6-7eb8e2d99593",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "193.233.20.122",
+        "to_ids": true,
+        "comment": "Distribution of \"egg\" binaries; miner masquerading as systemd-journal-bridge plus its own worm",
+        "distribution": "5"
+      },
+      {
+        "uuid": "73145c96-9e08-5292-a302-c7c141acaf56",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "89.147.109.236",
+        "to_ids": true,
+        "comment": "Distribution of \"egg\" binaries; miner masquerading as systemd-journal-bridge plus its own worm",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a0f737af-11dc-5f48-833f-f9a4bc67b227",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "201.79.47.26",
+        "to_ids": true,
+        "comment": "Successful logins to the industrial decoy VNC on 2, 12, 13, 15 and 24 October; identical trace: one screenshot, zero keystrokes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5cc23183-28dd-51fa-b167-2ceadfb7d4f7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "201.79.29.85",
+        "to_ids": true,
+        "comment": "Successful logins to the industrial decoy VNC on 2, 12, 13, 15 and 24 October; identical trace: one screenshot, zero keystrokes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6529aa99-1dff-507e-b0c0-d384a48c6a77",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "165.245.160.178",
+        "to_ids": true,
+        "comment": "Successful logins to the industrial decoy VNC on 2, 12, 13, 15 and 24 October; identical trace: one screenshot, zero keystrokes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c99a214d-1f79-5965-abcb-3ece2d052989",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "165.245.165.166",
+        "to_ids": true,
+        "comment": "Successful logins to the industrial decoy VNC on 2, 12, 13, 15 and 24 October; identical trace: one screenshot, zero keystrokes",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cf15ea31-61f2-589c-99c2-d54540e3025a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "64.188.83.80",
+        "to_ids": true,
+        "comment": "Successful login on 22 October, a different VNC client (RFB 003.003)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "235eac2a-4439-5a4d-8f5e-b4ccc588b191",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "6ec4b8e7a1c5f3e289bf126822e5a158e168998d1b7be31e07c1278707f8cc6c",
+        "to_ids": true,
+        "comment": "Conficker/Kido DLL (SMB)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "22c3fb8d-1a1a-5060-8f66-86e7276fa0bb",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "2893ee752983fe3fa399744e1313fca6c247acf25ce2f9c0540c7cae6819e203",
+        "to_ids": true,
+        "comment": "Gafgyt, 886 KB, from 45[.]9[.]149[.]168 (unknown to both VirusTotal and MalwareBazaar on the capture date)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2f04a45b-c2ff-59ed-964a-b5407f8dad5a",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "32eeda00f48336b8deb51ed6592098efed1ad13bbe6e58606c97c958bf0859cf",
+        "to_ids": true,
+        "comment": "Farfli/PCClient (Gh0st lineage, BaiduNetdisk.exe), SMB, 22 October",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7c4a9528-9a56-5795-9809-1e056c12a51e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "e5f1c2ec78b2d1bede0ef4502e1b9acb00ca6dcb34468937075b3c5d56f811ec",
+        "to_ids": true,
+        "comment": "ELF .so, UPX, from 130[.]12[.]180[.]212",
+        "distribution": "5"
+      },
+      {
+        "uuid": "98b98262-202a-5147-a9f5-dea0f4d5a61d",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "1984be06964df21243c08368f5497a050709ac64fce32c718389b60a04bd3870",
+        "to_ids": true,
+        "comment": "ELF .so, UPX, from 130[.]12[.]180[.]212 (964 downloads)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "716ab2d6-1a1e-5b1e-a0b5-16cc1ea7b825",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "07fc2e0cdebffaa01fb8bdccdb16e89db4653b6d0bfa56d182c31e0ceff82282",
+        "to_ids": true,
+        "comment": "bot.arc from 143[.]20[.]154[.]42",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c1133c8f-ee3e-5429-811f-11ed6468474e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "6fe3779ca5f37dde4f680dbb7fe5ae87af32a6b463d059ba89fa8426963772e1",
+        "to_ids": true,
+        "comment": "nyx_bot_linux_amd64 (Go flooder), 6.4 MB",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f90c5009-4720-5d8a-a288-40a1e732195b",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "7b8cd695424f9b004b459ce886d92e9a24f38957dc9071510ab669a7cb89c417",
+        "to_ids": true,
+        "comment": "jkl-family wget.sh, Storm",
+        "distribution": "5"
+      },
+      {
+        "uuid": "33c0675c-3044-5fe2-8c06-ba2aa5902ad0",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "1e1e20f7a8723cb0d4b4d8eb1ed5cb4f7a5109f304d1dc7935ab1a9a4b1085a3",
+        "to_ids": true,
+        "comment": "telnet build from hand[.]genddos[.]st",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7ddd716c-3fc1-57b8-a52d-e342b939195c",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+        "to_ids": true,
+        "comment": "pxerom.sh",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f27dcba9-f3bc-5eec-8c42-994f82996756",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "81a7cdbbf15c84b01f5144fa45f4148dd12a373df07ea37850510cc3b0694d92",
+        "to_ids": true,
+        "comment": "wget.sh from 143[.]20[.]154[.]42",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6a015235-c2fd-5faa-9098-e6ecc56116a2",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "d06f4d5357a82aa87794436260e6059397ac3d5e42d916ea8d898d34a9944bab",
+        "to_ids": true,
+        "comment": "iranbot-ultimate.x86_64",
+        "distribution": "5"
+      },
+      {
+        "uuid": "810160e8-b67f-5c38-82c9-cfa1f9351bd0",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "3b3567b32b69f7592fd035ff7de3e3171271da8bace8977009ea081e6f0467d7",
+        "to_ids": true,
+        "comment": "kushnet.x64-test",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9ffc9edb-aeef-5124-b7f2-1e32e936b4f2",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "31b246282c688ab94e88110ae7b7078d515a6721c14e411b82b8b83eda91f293",
+        "to_ids": true,
+        "comment": "nyx_bot_linux_amd64 (one of four builds)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4c930ead-2ee9-57b6-ab47-276023662057",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "b46452162cf05d0cdfd1d4e2d7f10424d0d22caf10415d720b623276ba684d03",
+        "to_ids": true,
+        "comment": "musl (delivery integrity check)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3e742455-11d6-570c-bca4-791f4ba7d359",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "36.255.97.93",
+        "to_ids": true,
+        "comment": "Self-spoofing and credential phishing, daily line against one organisation (block 36[.]255[.]97[.]0/24 listed in Spamhaus DROP)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a85b6d2a-cae9-5874-9138-f87d507ae853",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "184.174.96.216",
+        "to_ids": true,
+        "comment": "Credential phishing with Telegram exfiltration",
+        "distribution": "5"
+      },
+      {
+        "uuid": "219ea825-7fe6-5509-befb-cb3ea862c306",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "193.111.208.199",
+        "to_ids": true,
+        "comment": "Sending nodes of the yurel[.]sbs / gentlherm[.]com line",
+        "distribution": "5"
+      },
+      {
+        "uuid": "27a42bdf-b323-5562-8fdb-450476bc1657",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "98.142.251.76",
+        "to_ids": true,
+        "comment": "Sending nodes of the yurel[.]sbs / gentlherm[.]com line",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a6bf96cc-4a43-5f89-ac91-88f0b31303b3",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.156.152.46",
+        "to_ids": true,
+        "comment": "Sending node of the \"Helpdesk IT\" (EmailJS) line",
+        "distribution": "5"
+      },
+      {
+        "uuid": "81b5b886-d81d-560a-ab4b-3b2c2d5260d3",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "217.60.195.224",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: sending node and the VPS behind a farm of 12+ domains",
+        "distribution": "5"
+      },
+      {
+        "uuid": "940d0d3f-3b26-5cdb-bafc-822f1dec71be",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "84.247.152.62",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: sending node and the VPS behind a farm of 12+ domains",
+        "distribution": "5"
+      },
+      {
+        "uuid": "48e3931c-cf02-5c6c-8417-3c4ca12aae61",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "151.248.68.59",
+        "to_ids": true,
+        "comment": "Sending node of the line impersonating French banks",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c998b91d-ee9e-51c3-bfc6-e7a1fafa9299",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "158.94.209.127",
+        "to_ids": true,
+        "comment": "FormBook / VIPKeylogger delivery",
+        "distribution": "5"
+      },
+      {
+        "uuid": "88c0c346-95f4-54e6-87dc-29cff9f116f6",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "192.3.101.154",
+        "to_ids": true,
+        "comment": "DHL lure: OLE link (CVE-2017-0199), HTA",
+        "distribution": "5"
+      },
+      {
+        "uuid": "18048849-e946-59a4-a3dc-55c41040b08b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.26.90.86",
+        "to_ids": true,
+        "comment": "Fake copyright notice (browser-in-the-browser frame)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f1d4f482-e521-5b23-a19b-0f8b9cb176db",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "91.188.254.52",
+        "to_ids": true,
+        "comment": "PayPal-themed line: landing/node",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2bc8d425-71bf-5acb-822a-23c259921815",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "client-fr-connect.com",
+        "to_ids": true,
+        "comment": "French-bank line; domain registered 53 minutes before the email",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e12e3f41-d0f3-5d16-8a75-f449503455a6",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "app-claude-ai.online",
+        "to_ids": true,
+        "comment": "Phishing as billing notices of AI vendors (Anthropic 15 October, OpenAI 29 October); landing open to allow-listed IPs only",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9917a064-c8d4-52f9-b2e4-b071f49d052f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "app-claude-ai.com",
+        "to_ids": true,
+        "comment": "Phishing as billing notices of AI vendors (Anthropic 15 October, OpenAI 29 October); landing open to allow-listed IPs only",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cb939f12-ca55-5574-9665-0e85e383c1e8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "claude-ai.one",
+        "to_ids": true,
+        "comment": "Phishing as billing notices of AI vendors (Anthropic 15 October, OpenAI 29 October); landing open to allow-listed IPs only",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e4e3ebb0-74d4-57aa-83e7-9c77c0703a35",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "openai-chatgpt.one",
+        "to_ids": true,
+        "comment": "Phishing as billing notices of AI vendors (Anthropic 15 October, OpenAI 29 October); landing open to allow-listed IPs only",
+        "distribution": "5"
+      },
+      {
+        "uuid": "eda5bd4c-cefa-5411-9ffd-07289b58f424",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "amexxveriffonline.us.cc",
+        "to_ids": true,
+        "comment": "American Express clone with a live operator panel (HTML smuggling into blob:)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b1b2d015-b850-5347-8fdc-eb1e3e4d7ff9",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ysrvhc.app",
+        "to_ids": true,
+        "comment": "Google AiTM: reverse proxy of accounts.google.com",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c4575e5d-1ec7-5596-8458-a5f73b7785fc",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "vyneroo.com",
+        "to_ids": true,
+        "comment": "Landing of the Workspace-quota line",
+        "distribution": "5"
+      },
+      {
+        "uuid": "36b87f91-489b-5258-b0e4-aa82e19b3473",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "yurel.sbs",
+        "to_ids": true,
+        "comment": "The /nu/ line: self-spoofing, landings behind Cloudflare",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9eb3c783-76a9-5b39-9b4a-2be01286c754",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "gentlherm.com",
+        "to_ids": true,
+        "comment": "The /nu/ line: self-spoofing, landings behind Cloudflare",
+        "distribution": "5"
+      },
+      {
+        "uuid": "091fa099-5c88-59a8-83ee-539a5f3081a1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "erxmuf.net",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7500ef23-b337-5dd9-b011-fbd9a3975ce4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mvnqgm.net",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c6bc1d76-eb62-54d0-ba2d-4d19ca96e94f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "bjjxfo.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "f4cf3156-03e8-5eb6-be00-cf75ca292492",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "jspfqe.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "965dbb66-23f4-535c-8f71-e334833161c8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "wnemcd.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7a85bf19-496c-51c8-8223-7cb778f16ab1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "lfmari.net",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2cc95b6e-b88c-5731-9954-ef997fabaec4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "smsdmk.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8ff1ba62-8061-506a-88e6-7d20f7381033",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "nixrgd.co.uk",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2f2e8279-9138-5075-baff-7b6f7ca60d92",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "btzhdb.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b33aabde-a000-5ade-8cbf-182250956389",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "uwrabu.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "aeaad851-9390-56e2-b73f-e056d6f169c1",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "ubrvgc.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e32316a6-42cf-5013-978e-ac19a7a8899f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "qedguk.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "922e8533-87eb-5873-b542-32baec057f44",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "pzbvjp.com",
+        "to_ids": true,
+        "comment": "The \"Undeliverable\" line: domain farm on a single VPS",
+        "distribution": "5"
+      },
+      {
+        "uuid": "736b8dfe-96df-5e4b-83c7-c0c9cb40d2bb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "minesmillsus.com",
+        "to_ids": true,
+        "comment": "DocuSign lure (operator returns after a two-month pause)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "636cb84a-a8ae-5823-8f6c-b567b1a51917",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "mydrome.pw",
+        "to_ids": true,
+        "comment": "Lure themed on Social Security \"Trump Accounts\"",
+        "distribution": "5"
+      },
+      {
+        "uuid": "64e75752-0a36-51af-90d2-e3682b6be71b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-blud-tik.com",
+        "to_ids": true,
+        "comment": "Meta-Verified kit: waves 24-29",
+        "distribution": "5"
+      },
+      {
+        "uuid": "04ca31a8-84c3-509a-89a1-59742b00373c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-casemails.win",
+        "to_ids": true,
+        "comment": "Meta-Verified kit: waves 24-29",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e7b29e6f-1512-5314-939c-0cd265b45702",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "meta-fanpageupdate.com",
+        "to_ids": true,
+        "comment": "Meta-Verified kit: waves 24-29",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a6a9f5b5-10db-592f-9774-37c4f11fbd73",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "copyright-library.com",
+        "to_ids": true,
+        "comment": "Fake copyright-strike notice with a BitB frame",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d07e4b42-2ffe-56e1-ba79-6b0fa418d210",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "azrylin.com",
+        "to_ids": true,
+        "comment": "Multi-brand operator (hosting \"billing\" notices)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8a6373d5-b059-5a98-bb60-e343ec211f4f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "7773653.com",
+        "to_ids": true,
+        "comment": "Classiscam \"Verification\" kit; domain registered 5 hours before the email",
+        "distribution": "5"
+      },
+      {
+        "uuid": "c60ed1ca-c6a5-5421-bed8-07148865085c",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "legacydatastat.click",
+        "to_ids": true,
+        "comment": "Casino TDS (scam spam)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bf2baee0-15e0-565f-9244-a6c5dfa5ba6f",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "campaignenginex.org",
+        "to_ids": true,
+        "comment": "PayPal-themed line (signed Bing Places redirect)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ea2c3d95-ef03-5440-8c87-e0ebf6086876",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "4bfa2ff90e9e3f071616a5e75029c4a13c32d2ccafa6bd80ccc5ae4f35ea8dca",
+        "to_ids": true,
+        "comment": "WABILL961.xls (OLE link, CVE-2017-0199)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0435f6c8-51f0-56b2-9a18-55fff7481fb7",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "acff090c0f2ce6fc1f0ae3a667f2f35f68b67cc2c879a20fd5aa9d015be73094",
+        "to_ids": true,
+        "comment": "HTA of the DHL chain, stage 3",
+        "distribution": "5"
+      },
+      {
+        "uuid": "714099f9-1c8b-56bc-858b-cbf8fc7e7f97",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f4a6c26f9ad226e923333623d7f46f925542fc26f92a36015a6d061d9646308e",
+        "to_ids": true,
+        "comment": "FormBook (final stage of the RAR - VBS - PS1 chain)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "56f67015-5242-5b47-bfa7-3b8272f1de42",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "64b047c1e215c0ff15744ae2ac183bdbcd821e42a2408c7e53a6dddf8982dd66",
+        "to_ids": true,
+        "comment": "ModiLoader JS loader (DHL Waybill, 29 October)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9afde92a-035e-5f2d-8074-e6506506f9c4",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "03e934c4dd23a0f630dec0f3c89ac864f94629f0a4c74c1e69ff71c49588a219",
+        "to_ids": true,
+        "comment": "VIPKeylogger (RdRm.exe)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "10ed687b-a599-553f-8c12-10a299db7a5f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "ec3f227f4409d3ae2388cfb7ac6458c430fbd346a8168c05aee28125d1f74062",
+        "to_ids": true,
+        "comment": "Kit of the self-spoofing line (version 4)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6eedf113-8f50-5f7b-828e-c1101bc87f8f",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "5c17e9d70209ab371d119fa185a7b4bc041b738747efc675fedc8a24e00f1867",
+        "to_ids": true,
+        "comment": "Kit of the IPFS-landing line",
+        "distribution": "5"
+      },
+      {
+        "uuid": "58670aba-5bf8-593b-9e5d-8837505f4267",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "638296433a71ca73c15d0dacef5d6dfd4d88d17543a1673d8261c8bb312e614b",
+        "to_ids": true,
+        "comment": "Kit of the \"Undeliverable\" line",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d3ddc0cc-837f-5b78-85b0-376be083a428",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "4c9fe2e8a87a9b654473409df4d5913f30fdb1f296c183c71cd2c0062e00d34e",
+        "to_ids": true,
+        "comment": "\"Helpdesk IT\" kit (HTML, JS)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d3997ae9-7e9f-5d1a-9a65-4fc9abe486b2",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "f04469e6ef0d51271a131a915cf3bd2e5ac1c6ddc2cfb8015cc891a172c08357",
+        "to_ids": true,
+        "comment": "\"Helpdesk IT\" kit (HTML, JS)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bf6361df-b9dd-5066-bd02-01b73e95035b",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "9246ad3d71e7766a3ccaf9262a8e6e1bff54a4b87a2afa4b29cf6fa152c032e7",
+        "to_ids": true,
+        "comment": "American Express clone kit (bag.html, kit)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ac5ce753-3120-53fb-abf6-215b5bfbf79c",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "cd917b38aceaf9035429d8f44bfe1d98dfac304301e0f2fc686436145d70babf",
+        "to_ids": true,
+        "comment": "American Express clone kit (bag.html, kit)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ee637b42-7c47-59cd-adaa-91234dc90183",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "c12f62984915a56f8dacf671460ac44957dfba89d3d51d60a60a374ea9e689a3",
+        "to_ids": true,
+        "comment": "Callback locker on Azure Static Website",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6183133d-d38b-517f-b0ce-0bb34e405fdf",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "45d2d20b2042e45d955d9e73515d2c041b62354af5dcf9fc28a19b6b8f6ac30b",
+        "to_ids": true,
+        "comment": "Kit of the Workspace-quota line",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cc6e3204-c713-5a40-a8cd-6d1e811d5333",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "1deb9507e5902d493b8262501ff538ce0e2eba78101e78bef389ce2930c227f3",
+        "to_ids": true,
+        "comment": "Classiscam \"Verification\" (JS)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a9d50b10-406a-52b3-9961-7c87bc384b38",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "471c13c5ebdd384ed80ece14feff30fbaaff6279fa1886f0274eb3a919cb3eca",
+        "to_ids": true,
+        "comment": "Classiscam \"Verification\" (JS)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e375b8b6-1212-57cd-8122-bf57de186558",
+        "type": "text",
+        "category": "Other",
+        "value": "AAAAC3NzaC1lZDI1NTE5AAAAIO94S34m0hVkYFUhtWQe92S9Cp0yJp+7n8gw696Uf/LG",
+        "to_ids": false,
+        "comment": "SSH public key (ssh-ed25519, comment dlr@sftp) written into authorized_keys — RedTail-scp",
+        "distribution": "5"
+      },
+      {
+        "uuid": "23f4521f-9288-5e03-ae5a-50081f1b4f87",
+        "type": "text",
+        "category": "Other",
+        "value": "AAAAC3NzaC1lZDI1NTE5AAAAIKOt5NJ3GIodPpDjO0ZqwAPbfcAH5N/GQ7Rnc1bseTME",
+        "to_ids": false,
+        "comment": "SSH public key (ssh-ed25519, comment gpustack-escape-1012) added to host authorized_keys via Docker — GPU-host hunting",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9d775d38-a71e-5a07-8ae4-59cad9dd3716",
+        "type": "text",
+        "category": "Other",
+        "value": "AAAAC3NzaC1lZDI1NTE5AAAAIOwOfg70uKVWHhz9ZsPILTx+XKZOHgt/q2c9SKgCC3Ed",
+        "to_ids": false,
+        "comment": "SSH public key (ssh-ed25519, comment stronggate-2026100x) added to host authorized_keys via Docker — GPU-host hunting",
+        "distribution": "5"
+      },
+      {
+        "uuid": "33f3cd03-ae04-5b2c-84cf-c9398210f4de",
+        "type": "text",
+        "category": "Other",
+        "value": "463SPAnPEUhf5UcTMZKNFcQR746vXBzekhALuxrycVMWVnZHttfw5sR4vER3NkvTTHTA8zEa5WpdbcW6hLHsjhVxVjMfjmi",
+        "to_ids": false,
+        "comment": "Monero wallet — miner deployed by four Docker executors, 20-30 October",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5efaf967-7b99-5443-921c-a965bc6338bc",
+        "type": "text",
+        "category": "Other",
+        "value": "46kj3xENTeQeiFufdCGNYLWJniQWxQiWthtp6guaM88yMp25dZYitj6CHPh8igoVCRJ31pghae48JGBcV33aaRqJBkAXJS7",
+        "to_ids": false,
+        "comment": "Monero wallet — miner (Kryptex) masquerading as fstrim-helper",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T0812"
+      },
+      {
+        "name": "mitre-attack:T0822"
+      },
+      {
+        "name": "mitre-attack:T0846"
+      },
+      {
+        "name": "mitre-attack:T0886"
+      },
+      {
+        "name": "mitre-attack:T0888"
+      },
+      {
+        "name": "mitre-attack:T1021.004"
+      },
+      {
+        "name": "mitre-attack:T1021.005"
+      },
+      {
+        "name": "mitre-attack:T1027.002"
+      },
+      {
+        "name": "mitre-attack:T1027.006"
+      },
+      {
+        "name": "mitre-attack:T1036.004"
+      },
+      {
+        "name": "mitre-attack:T1036.005"
+      },
+      {
+        "name": "mitre-attack:T1059.004"
+      },
+      {
+        "name": "mitre-attack:T1078"
+      },
+      {
+        "name": "mitre-attack:T1090"
+      },
+      {
+        "name": "mitre-attack:T1098.004"
+      },
+      {
+        "name": "mitre-attack:T1105"
+      },
+      {
+        "name": "mitre-attack:T1110.001"
+      },
+      {
+        "name": "mitre-attack:T1110.003"
+      },
+      {
+        "name": "mitre-attack:T1190"
+      },
+      {
+        "name": "mitre-attack:T1203"
+      },
+      {
+        "name": "mitre-attack:T1210"
+      },
+      {
+        "name": "mitre-attack:T1496"
+      },
+      {
+        "name": "mitre-attack:T1498"
+      },
+      {
+        "name": "mitre-attack:T1531"
+      },
+      {
+        "name": "mitre-attack:T1539"
+      },
+      {
+        "name": "mitre-attack:T1552.001"
+      },
+      {
+        "name": "mitre-attack:T1552.005"
+      },
+      {
+        "name": "mitre-attack:T1557"
+      },
+      {
+        "name": "mitre-attack:T1562.001"
+      },
+      {
+        "name": "mitre-attack:T1566.001"
+      },
+      {
+        "name": "mitre-attack:T1566.002"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1610"
+      },
+      {
+        "name": "mitre-attack:T1611"
+      },
+      {
+        "name": "label:honeypot"
+      },
+      {
+        "name": "label:threat-intelligence"
+      },
+      {
+        "name": "label:monthly-report"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:ics"
+      }
+    ]
+  }
+}

@@ -6,6 +6,53 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-11-11 — Honeypot Fleet: Monthly Threat Report, October 2026
+
+Our distributed honeypot sensors (Germany, the United States, Russia) and a separate industrial (ICS/OT) decoy imitating an energy facility recorded 1,056,621 SSH sessions in October 2026 — +21.2% per day on September, or about +4.3% if a single brute-force source active on 12–15 October is excluded; across the attack events of six services the flow grew 44.5% per day to 2.68 million. The headline is a change in the character of SSH/Telnet traffic: shell commands grew 7.3 times and malware downloads 7.4 times, about 70% of commands are Telnet-Mirai from infected subscriber routers and IP cameras, and IoT loaders now take the device away from its owner and from competing bots. Docker API activity fell 86% as the mass worm all but disappeared, leaving targeted operators hunting for cloud credentials and GPU hosts; the LLM decoy (Ollama) saw 3.2 times more events, most of it continuous polling and authenticity checks. On the industrial decoy VNC remains the only real entry vector — eight successful logins (two in September), the first interactive session at the end of the month, no effect on the emulated process and no external control commands for the fifth month running. The phishing section shows that sender authentication no longer means much: lures arrived as genuine platform emails, from hijacked mailboxes and through live operator panels harvesting one-time codes.
+
+**Key findings:**
+- SSH/Telnet shell commands grew 7.3x (656,371) and payload downloads 7.4x (15,200) per day — for the third month in a row faster than the session count; about 70% of commands are Telnet-Mirai ("HISILICON" and related scripts) from subscriber routers and IP cameras in India, Sweden, Russia, the US and elsewhere
+- IoT loaders now seize the device: they change the root password, wipe `ld.so.preload`, kill competing bots, masquerade as kernel threads (`kthreadd`, `ksoftirqd`) and choose the persistence directory by filesystem type
+- Delivery model "the infected machine pulls the bot itself": one drop zone received 2,157 downloads from 89 sources in 19 days and served 16 different builds behind a single URL; Storm Industries (AS219502) is the main drop-zone hoster for the third month running
+- Docker API attacks fell 86% per day: the mass worm almost vanished, targeted operators remain — cloud credential theft via instance metadata, GPU-host hunting with planted SSH keys, miners; the VPSVAULT operator returned on 19–20 October with a new payload host, while its previous C2 drew no contacts at all
+- RedTail-scp rotated its command server for the third time in three months, keeping the same SSH key
+- The LLM decoy (Ollama) received 3.2x more events per day, roughly 70% of them periodic polling by two clients from mid-month; verifying whether an endpoint is a decoy is now routine for operators
+- ICS/OT decoy: ≈2.71 million VNC login attempts (+32% per day), eight successful logins from seven addresses; five left an identical trace (one screenshot, zero keystrokes), and the first interactive session was recorded at the end of the month, with no effect on the process; zero external IEC-104 control commands for the fifth consecutive month
+- Malware: 439 hashes amount to about 197 unique artifacts (240 are partial copies of one WannaCry DLL); 162 ELF samples (+35% per day), nearly all Mirai/Gafgyt; Farfli/PCClient arrived on the SMB decoy alongside WannaCry and Conficker
+- Phishing: lures were sent through genuine platforms (a marketplace complaint form, Google Groups, signed Bing Places redirects) and hijacked mailboxes; an American Express clone with a live operator panel for one-time codes; Google AiTM through the hijacked mailbox of a real partner; billing lures impersonating AI vendors (Anthropic, then OpenAI)
+- Correction to prior reporting: the autonomous-system attribution of `36[.]255[.]97[.]0/24` given in the September report is no longer current — block by address, not by AS number
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-11-11-honeypot-monthly-october/Incident_Report_2026-11-11_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-11-11-honeypot-monthly-october/Incident_Report_2026-11-11_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-11-11-honeypot-monthly-october/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-11-11-honeypot-monthly-october/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| IP (RedTail-scp C2) | `217[.]60[.]102[.]5` (rotated 2–3 Oct) |
+| IP (Mirai/Gafgyt drop zones) | `130[.]12[.]180[.]212`, `45[.]9[.]149[.]168`, `31[.]56[.]209[.]86`, `217[.]60[.]195[.]187`, `143[.]20[.]154[.]42`, `85[.]137[.]53[.]167`, `176[.]65[.]139[.]40`, `176[.]65[.]139[.]196`, `176[.]65[.]139[.]36`, `176[.]65[.]139[.]131` (Storm Industries, AS219502), `85[.]215[.]73[.]250`, `91[.]92[.]43[.]221`, `203[.]161[.]41[.]148`, `64[.]89[.]160[.]48`, `64[.]89[.]160[.]185`, `89[.]163[.]157[.]131`, `217[.]60[.]242[.]6`, `160[.]119[.]66[.]206`, `185[.]93[.]89[.]72` |
+| URL (droppers) | `hxxp://130[.]12[.]180[.]212/x86_64`, `tftp://130[.]12[.]180[.]212:69/x86_64`, `hxxp://143[.]20[.]154[.]42/bins/wget[.]sh`, `hxxp://176[.]65[.]139[.]40/wget[.]sh`, `hxxp://176[.]65[.]139[.]196/bins/kla[.]sh`, `hxxp://85[.]215[.]73[.]250/nyx_bot_linux_amd64`, `hxxp://91[.]92[.]43[.]221/cat[.]sh`, `hxxp://89[.]163[.]157[.]131:8080/persist[.]sh`, `hxxp://217[.]60[.]242[.]6/sora[.]sh` |
+| Domain (bot C2 / registration) | `hand[.]genddos[.]st` (port 48180), `wemqmewkqewq[.]work[.]gd` |
+| IP (MSSQL brute force, 25 and 27 Oct) | `138[.]226[.]239[.]47`, `138[.]226[.]239[.]2`, `185[.]136[.]15[.]31`, `185[.]136[.]15[.]26` |
+| HASSH (SSH brute-force tool) | `01ca35584ad5a1b66cf6a9846b5b2821` |
+| IP (Docker: VPSVAULT payload host, egg/miner distribution) | `16[.]5[.]7[.]221`, `193[.]233[.]20[.]122`, `89[.]147[.]109[.]236` |
+| SSH public key (authorized_keys implants) | `AAAAC3NzaC1lZDI1NTE5AAAAIO94S34m0hVkYFUhtWQe92S9Cp0yJp+7n8gw696Uf/LG` (dlr@sftp), `AAAAC3NzaC1lZDI1NTE5AAAAIKOt5NJ3GIodPpDjO0ZqwAPbfcAH5N/GQ7Rnc1bseTME` (gpustack-escape-1012), `AAAAC3NzaC1lZDI1NTE5AAAAIOwOfg70uKVWHhz9ZsPILTx+XKZOHgt/q2c9SKgCC3Ed` (stronggate-2026100x) |
+| Monero wallet (miners) | `463SPAnPEUhf5UcTMZKNFcQR746vXBzekhALuxrycVMWVnZHttfw5sR4vER3NkvTTHTA8zEa5WpdbcW6hLHsjhVxVjMfjmi`, `46kj3xENTeQeiFufdCGNYLWJniQWxQiWthtp6guaM88yMp25dZYitj6CHPh8igoVCRJ31pghae48JGBcV33aaRqJBkAXJS7` |
+| IP (ICS decoy: successful VNC logins) | `201[.]79[.]47[.]26`, `201[.]79[.]29[.]85`, `165[.]245[.]160[.]178`, `165[.]245[.]165[.]166` (DigitalOcean), `64[.]188[.]83[.]80` (1Cent Host) |
+| SHA256 (malware) | `6ec4b8e7a1c5f3e289bf126822e5a158e168998d1b7be31e07c1278707f8cc6c` (Conficker), `32eeda00f48336b8deb51ed6592098efed1ad13bbe6e58606c97c958bf0859cf` (Farfli/PCClient), `2893ee752983fe3fa399744e1313fca6c247acf25ce2f9c0540c7cae6819e203` (Gafgyt), `6fe3779ca5f37dde4f680dbb7fe5ae87af32a6b463d059ba89fa8426963772e1` (nyx_bot), `d06f4d5357a82aa87794436260e6059397ac3d5e42d916ea8d898d34a9944bab` (iranbot-ultimate) — full list in the dumps |
+| IP (phishing infrastructure) | `36[.]255[.]97[.]93`, `184[.]174[.]96[.]216`, `193[.]111[.]208[.]199`, `98[.]142[.]251[.]76`, `94[.]156[.]152[.]46`, `217[.]60[.]195[.]224`, `84[.]247[.]152[.]62`, `151[.]248[.]68[.]59`, `158[.]94[.]209[.]127`, `192[.]3[.]101[.]154`, `94[.]26[.]90[.]86`, `91[.]188[.]254[.]52` |
+| Domain (phishing infrastructure) | `client-fr-connect[.]com`, `app-claude-ai[.]online`, `app-claude-ai[.]com`, `claude-ai[.]one`, `openai-chatgpt[.]one`, `amexxveriffonline[.]us[.]cc`, `ysrvhc[.]app` (Google AiTM), `vyneroo[.]com`, `yurel[.]sbs`, `gentlherm[.]com`, `erxmuf[.]net` (+12 farm domains in the dumps), `minesmillsus[.]com`, `mydrome[.]pw`, `meta-blud-tik[.]com`, `meta-casemails[.]win`, `meta-fanpageupdate[.]com`, `copyright-library[.]com`, `azrylin[.]com`, `7773653[.]com`, `legacydatastat[.]click`, `campaignenginex[.]org` |
+| SHA256 (phishing attachments) | `4bfa2ff90e9e3f071616a5e75029c4a13c32d2ccafa6bd80ccc5ae4f35ea8dca` (XLS, CVE-2017-0199), `f4a6c26f9ad226e923333623d7f46f925542fc26f92a36015a6d061d9646308e` (FormBook), `64b047c1e215c0ff15744ae2ac183bdbcd821e42a2408c7e53a6dddf8982dd66` (ModiLoader), `03e934c4dd23a0f630dec0f3c89ac864f94629f0a4c74c1e69ff71c49588a219` (VIPKeylogger) — kit hashes in the dumps |
+
+*Subscriber hosts, cloud executors, hijacked mailboxes, compromised websites and shared platforms are deliberately excluded — they are victims or shared infrastructure, not attacker-owned. Anything that would reveal the location, architecture or composition of our own sensors is withheld.*
+
+**MITRE ATT&CK:** T1110.001, T1110.003, T1078, T1021.004, T1021.005, T1059.004, T1105, T1027.002, T1036.004, T1036.005, T1098.004, T1531, T1562.001, T1190, T1210, T1610, T1611, T1552.001, T1552.005, T1496, T1498, T1090, T1566.001, T1566.002, T1583.001, T1027.006, T1203, T1557, T1539, T0822, T0812, T0886, T0846, T0888
+
+---
+
 ### 2026-10-21 — Hetzner Billing Phishing Sent from Hetzner Cloud via Hijacked DNS, with a Multi-Brand Look-alike Cluster
 
 On 20 October 2026 a billing phishing message impersonating Hetzner Online reached a genuine Hetzner customer, who recognised it and did not interact with it. A separate message investigated in parallel is not related to this campaign (High confidence). The message was sent from a dedicated VPS inside Hetzner Cloud itself (2[.]29[.]109[.]211). The sender domain, singermali[.]com, is a legitimate domain registered in 2018 at DreamHost whose DNS was taken over: the actor added an MX/A record for its own MTA, an SPF record that authorises only that VPS (-all) and a DKIM key whose selector is a Unix timestamp. As a result SPF, DKIM and DMARC all pass. The only link in the message goes through the Google notification redirector (notifications.googleapis[.]com/email/redirect), which hides the real target (a zlib + base64url-encoded value in the r= parameter) behind a Google domain. The target, hz.azrylin[.]com, sits behind a JavaScript gate and lives on a server that also hosts a cluster of fresh multi-brand look-alikes (Hetzner, DreamHost, Strato, OpenAI/ChatGPT, Piraeus Bank, Openbank). A second hijacked DreamHost domain (jaggery[.]org) uses the same DNS template, and certificates issued on 21 October show that the next wave was being prepared.
