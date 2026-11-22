@@ -1,0 +1,454 @@
+{
+  "Event": {
+    "uuid": "cef35045-f42d-51a9-8595-446d21e889c5",
+    "info": "[TLP:CLEAR] Telegram Account Takeover Lure \"Vote in a Children's Drawing Contest\" Served from Hijacked DNS Zones",
+    "date": "2026-11-22",
+    "timestamp": "1795305600",
+    "publish_timestamp": "1795305600",
+    "threat_level_id": "2",
+    "distribution": "3",
+    "analysis": "2",
+    "Attribute": [
+      {
+        "uuid": "b9b7b202-1016-5bd4-8d18-9b0fe931a316",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "cabin.host16p.cfd",
+        "to_ids": true,
+        "comment": "Front redirector (cloaking nginx/PHP filter) on a hijacked third-party DNS zone, seen 2026-11-22; block the hostname, not the registered domain",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ac383a6d-f343-56c9-9965-d568b35167a3",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "wave.hqxavero.icu",
+        "to_ids": true,
+        "comment": "Front redirector, seen 2026-11-21; subdomain of a hijacked third-party zone",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6fc1212c-c0fe-574e-bd56-c8914f2b6711",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "horse.0902sdq.sbs",
+        "to_ids": true,
+        "comment": "Front redirector, seen 2026-11-19; subdomain of a hijacked third-party zone",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e36826b5-e5a1-5908-9a66-8cb38ece3772",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "oak.pl24092.top",
+        "to_ids": true,
+        "comment": "Front redirector, seen 2026-11-19; subdomain of a hijacked third-party zone",
+        "distribution": "5"
+      },
+      {
+        "uuid": "22ab7c0e-cbc0-5e8c-ad61-1ecf16d99f8b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "pond.cmo13d8xvrp4m3t.top",
+        "to_ids": true,
+        "comment": "Front redirector, seen 2026-11-21; subdomain of a hijacked third-party zone",
+        "distribution": "5"
+      },
+      {
+        "uuid": "db08f64c-39b1-55dd-80a4-5bf662d3a09a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "wall.inspirace.beauty",
+        "to_ids": true,
+        "comment": "Front redirector, September 2026",
+        "distribution": "5"
+      },
+      {
+        "uuid": "245089bc-e540-555a-9556-99dc983e0490",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "89.117.30.115",
+        "to_ids": true,
+        "comment": "Operator front server (nginx/PHP), Ethernet Servers, AS46475; not a CDN; November 2026",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6ff218aa-59e2-5817-9e90-5f30aba0b83b",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "89.116.72.200",
+        "to_ids": true,
+        "comment": "Operator front server, Ethernet Servers, AS46475; November 2026",
+        "distribution": "5"
+      },
+      {
+        "uuid": "aee9fe0b-fa65-5322-b3c2-c4d575969b75",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "194.62.249.206",
+        "to_ids": true,
+        "comment": "Operator front server, Ethernet Servers, AS46475; November 2026",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b77df75e-6ee8-5cfa-a002-c5903fae2149",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "neo-pen.lol",
+        "to_ids": true,
+        "comment": "Landing gallery of the fake children's drawing contest, November 2026 (behind Cloudflare)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "d98a1fca-2e97-5e73-bfc2-0dd6c3e85dd8",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://neo-pen.lol/child-baby/",
+        "to_ids": true,
+        "comment": "Landing path prefix; suffix is two letters (us, ue, ub, gl, hw)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "5c47869f-18c5-55ec-bb1f-a1e367ea4f07",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "draws-pix.lol",
+        "to_ids": true,
+        "comment": "Landing gallery, September 2026 (behind Cloudflare)",
+        "distribution": "5"
+      },
+      {
+        "uuid": "7f7f04d5-4971-57ef-a420-ea6582869b37",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "kids-mix.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "4517d5c2-de4f-5def-94c1-d094a3606eae",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "paint-glow.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "15177113-6569-5e1a-bcae-f6bd0cd86240",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "kids-glow.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "9d6b24ec-fbc7-586e-b11e-9c75c7c7edcf",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "draw-pen.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "6db87f2a-174b-53ab-be86-a7ec7f09232b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "draw-glow.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "2c170eb0-e7ae-5515-8b62-9a8e324dfbc8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "paint-pop.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "20fd4154-20df-5851-a398-1b595cefbc11",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "happy-dash.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "0145ce41-dda8-56f5-a61b-bedfdfbb36da",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "draw-mix.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "944be34b-71bc-557c-87d5-b7c8d6242516",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "color-pen.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cae928f4-bcf8-56f1-8f8a-f74e7a3c33e8",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "paint-pen.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8820faf0-3910-5018-8ee3-6bc9b3cb40bb",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "paint-mix.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "a164cbb9-8b7a-54c0-9c19-265e03226407",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "give-art.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "95222e7d-e5a2-5a7d-bfc9-af5c5486236b",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "draw-pop.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "1d326621-bc1d-587e-82b5-a71c30871d09",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "artsy-art.lol",
+        "to_ids": false,
+        "comment": "Context, historic landing of the same kit (May-July 2026, public scan archives); not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3cfaec43-2a62-5f4e-916e-107a72e89eb7",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.183.191.242",
+        "to_ids": false,
+        "comment": "Context, historic front address, CGI GLOBAL LIMITED (HK) / CloudBackbone (LV); 2026-09; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "56a582e1-7651-5e25-a4f5-9b44b89e8af4",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "85.121.245.10",
+        "to_ids": false,
+        "comment": "Context, historic front address, Urban Network Solutions SRL (RO); 2026-05-28..06-16; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e558d0d8-256c-5419-af27-2c7f521b0c5f",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "85.121.245.22",
+        "to_ids": false,
+        "comment": "Context, historic front address, Urban Network Solutions SRL (RO); 2026-05-28..06-16; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "fe689a52-f894-5b95-89a2-30a76cf1ccbd",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "85.121.245.138",
+        "to_ids": false,
+        "comment": "Context, historic front address, Urban Network Solutions SRL (RO); 2026-05-28..06-16; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "b0b6edf5-ab70-5dda-a56e-53f6bd220418",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "85.121.245.145",
+        "to_ids": false,
+        "comment": "Context, historic front address, Urban Network Solutions SRL (RO); 2026-05-28..06-16; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "578fc0fa-75b8-5559-8623-79d36f1350e9",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "85.121.126.22",
+        "to_ids": false,
+        "comment": "Context, historic front address, Urban Network Solutions SRL (RO); 2026-05-28..06-16; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "cbb719af-b531-56f1-8034-aa4c5250ea30",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.26.35.28",
+        "to_ids": false,
+        "comment": "Context, historic front address, SINO WORLDWIDE TRADING LIMITED (HK); 2026-05-21..06-02; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ff685281-a0a4-575a-9a27-d3f8d4306d83",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "94.26.35.89",
+        "to_ids": false,
+        "comment": "Context, historic front address, SINO WORLDWIDE TRADING LIMITED (HK); 2026-05-21..06-02; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ddfa3b67-898d-536d-b7c7-7b965598dbc3",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "92.119.167.125",
+        "to_ids": false,
+        "comment": "Context, historic front address, Hostishere.com (DE); 2026-06-16..06-17; may have been reassigned; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "bc328c23-87d4-5238-b3d8-a58b2980efaa",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "host16p.cfd",
+        "to_ids": false,
+        "comment": "Context, third-party zone hijacked through a dangling DNS delegation (victim domain, not an operator asset); apex and www records are decoys; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "3064ecdd-f06f-54b7-b133-6c93884bb649",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "hqxavero.icu",
+        "to_ids": false,
+        "comment": "Context, third-party zone hijacked through a dangling DNS delegation (victim domain, not an operator asset); apex and www records are decoys; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "be9136c5-4b55-551d-92c8-bbcead6e0c6a",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "0902sdq.sbs",
+        "to_ids": false,
+        "comment": "Context, third-party zone hijacked through a dangling DNS delegation (victim domain, not an operator asset); apex and www records are decoys; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "416241ee-92ae-5370-b474-1dd19bbe3130",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "pl24092.top",
+        "to_ids": false,
+        "comment": "Context, third-party zone hijacked through a dangling DNS delegation (victim domain, not an operator asset); apex and www records are decoys; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "942d318e-d86c-5e4d-b789-3b1a47018aad",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "cmo13d8xvrp4m3t.top",
+        "to_ids": false,
+        "comment": "Context, third-party zone hijacked through a dangling DNS delegation (victim domain, not an operator asset); apex and www records are decoys; not a blocking recommendation",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e1e21b46-4f3c-53f2-8e8d-1b2a863322e6",
+        "type": "text",
+        "category": "Other",
+        "value": "495762f859cb56f48565b248c8f01818e2a44a546498250a1d9175bf683270f2",
+        "to_ids": false,
+        "comment": "Context, SHA-256 fingerprint of the Let's Encrypt wildcard certificate for *.host16p.cfd issued 2026-11-18 (certificate fingerprint, not a file hash); not a detection indicator",
+        "distribution": "5"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "mitre-attack:T1027"
+      },
+      {
+        "name": "mitre-attack:T1036"
+      },
+      {
+        "name": "mitre-attack:T1204.001"
+      },
+      {
+        "name": "mitre-attack:T1534"
+      },
+      {
+        "name": "mitre-attack:T1566.003"
+      },
+      {
+        "name": "mitre-attack:T1583.001"
+      },
+      {
+        "name": "mitre-attack:T1583.003"
+      },
+      {
+        "name": "mitre-attack:T1584.001"
+      },
+      {
+        "name": "mitre-attack:T1586.001"
+      },
+      {
+        "name": "mitre-attack:T1588.004"
+      },
+      {
+        "name": "mitre-attack:T1608.005"
+      },
+      {
+        "name": "mitre-attack:T1657"
+      },
+      {
+        "name": "mitre-attack:T1665"
+      },
+      {
+        "name": "label:phishing"
+      },
+      {
+        "name": "label:telegram"
+      },
+      {
+        "name": "label:account-takeover"
+      },
+      {
+        "name": "label:hijacked-dns-zones"
+      },
+      {
+        "name": "label:sitting-ducks"
+      },
+      {
+        "name": "label:cloaking"
+      },
+      {
+        "name": "label:cybercrime"
+      },
+      {
+        "name": "label:incident-report"
+      }
+    ]
+  }
+}

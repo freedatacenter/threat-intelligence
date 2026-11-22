@@ -6,6 +6,49 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ## Reports
 
+### 2026-11-22 — Telegram Account Takeover Lure "Vote in a Children's Drawing Contest" Served from Hijacked DNS Zones
+
+A private Telegram message from a compromised account asked the recipient to "click" for a child in an international children's drawing contest ("Peaceful Dreams", earlier "Colours of Hope"). The link led to a cloaking front redirector hosted on a subdomain of a third-party domain whose dangling DNS delegation had been hijacked; visitors who pass the filter are sent to a landing gallery behind Cloudflare with a one-time "vote" link. The campaign is visible in public scan archives since May 2026. The credential-collection step itself was not observed and is described from third-party public reporting only.
+
+**Key findings:**
+- The lure is a long-running campaign: 117 archived scans, at least 23 landing domains and about 75 front hosts between May and November 2026; only the contest name changes
+- Front hostnames are not on operator-registered domains: the operator re-created abandoned zones at the DNS provider while the registry delegation still pointed there (a "Sitting Ducks"-class takeover); 27 of 27 sibling domains on the same address show the same one-name-server mismatch
+- Apex and `www` records of the hijacked zones point to decoy addresses of large providers, so the registered domains must not be blocked — only the specific front hostnames
+- The front (nginx + PHP on a directly exposed VPS) sets a cookie with the results of six checks and redirects filtered visitors to a large social network; the landing gallery serves scanners a video site instead
+- The landing is a static gallery of seven fictitious "contestants" with a countdown and a promised "treatment grant"; the name used in the message is a string from the kit's template, not a real child
+- Anti-analysis: CSS class names randomised on every load, zero-width characters in the title, hidden noise text, hidden trap fields, `noindex`
+- Compromised accounts are also used to ask contacts to lend money; according to the recipient, the transfer is requested to a card issued by a Ukrainian bank (unverified; a cash-out detail, not attribution)
+- Not observed: the phone number and login code collection step; whether one operator controls all of the roughly 128 hijacked zones seen on the three front addresses
+
+**Documents:**
+- [Incident Report (English, TLP:CLEAR)](reports/2026-11-22-telegram-takeover-drawing-contest-lure/Incident_Report_2026-11-22_EN.pdf)
+- [Отчёт об инциденте (Russian, TLP:CLEAR)](reports/2026-11-22-telegram-takeover-drawing-contest-lure/Incident_Report_2026-11-22_RU.pdf)
+- [IOCs (STIX 2.1)](reports/2026-11-22-telegram-takeover-drawing-contest-lure/iocs.stix2.json)
+- [IOCs (MISP JSON)](reports/2026-11-22-telegram-takeover-drawing-contest-lure/iocs.misp.json)
+
+**IOCs:**
+
+| Type | Value |
+|------|-------|
+| Domain | `cabin[.]host16p[.]cfd` (front redirector on a hijacked zone) |
+| Domain | `wave[.]hqxavero[.]icu` (front redirector on a hijacked zone) |
+| Domain | `horse[.]0902sdq[.]sbs` (front redirector on a hijacked zone) |
+| Domain | `oak[.]pl24092[.]top` (front redirector on a hijacked zone) |
+| Domain | `pond[.]cmo13d8xvrp4m3t[.]top` (front redirector on a hijacked zone) |
+| Domain | `wall[.]inspirace[.]beauty` (front redirector, September 2026) |
+| IP | `89[.]117[.]30[.]115` (Ethernet Servers, AS46475) |
+| IP | `89[.]116[.]72[.]200` (Ethernet Servers, AS46475) |
+| IP | `194[.]62[.]249[.]206` (Ethernet Servers, AS46475) |
+| Domain | `neo-pen[.]lol` (landing gallery, November 2026) |
+| URL | `hxxps://neo-pen[.]lol/child-baby/` (landing path prefix) |
+| Domain | `draws-pix[.]lol` (landing gallery, September 2026) |
+
+Historic landings and addresses, the certificate fingerprint and the hijacked third-party zones (victim domains, not for blocking) are listed in the report and in the IOC dumps as context.
+
+**MITRE ATT&CK:** T1027, T1036, T1204.001, T1534, T1566.003, T1583.001, T1583.003, T1584.001, T1586.001, T1588.004, T1608.005, T1657, T1665
+
+---
+
 ### 2026-11-11 — Honeypot Fleet: Monthly Threat Report, October 2026
 
 Our distributed honeypot sensors (Germany, the United States, Russia) and a separate industrial (ICS/OT) decoy imitating an energy facility recorded 1,056,621 SSH sessions in October 2026 — +21.2% per day on September, or about +4.3% if a single brute-force source active on 12–15 October is excluded; across the attack events of six services the flow grew 44.5% per day to 2.68 million. The headline is a change in the character of SSH/Telnet traffic: shell commands grew 7.3 times and malware downloads 7.4 times, about 70% of commands are Telnet-Mirai from infected subscriber routers and IP cameras, and IoT loaders now take the device away from its owner and from competing bots. Docker API activity fell 86% as the mass worm all but disappeared, leaving targeted operators hunting for cloud credentials and GPU hosts; the LLM decoy (Ollama) saw 3.2 times more events, most of it continuous polling and authenticity checks. On the industrial decoy VNC remains the only real entry vector — eight successful logins (two in September), the first interactive session at the end of the month, no effect on the emulated process and no external control commands for the fifth month running. The phishing section shows that sender authentication no longer means much: lures arrived as genuine platform emails, from hijacked mailboxes and through live operator panels harvesting one-time codes.
