@@ -8,17 +8,20 @@ Public threat intelligence reports and indicators of compromise (IOCs) from real
 
 ### 2026-11-22 — Telegram Account Takeover Lure "Vote in a Children's Drawing Contest" Served from Hijacked DNS Zones
 
-A private Telegram message from a compromised account asked the recipient to "click" for a child in an international children's drawing contest ("Peaceful Dreams", earlier "Colours of Hope"). The link led to a cloaking front redirector hosted on a subdomain of a third-party domain whose dangling DNS delegation had been hijacked; visitors who pass the filter are sent to a landing gallery behind Cloudflare with a one-time "vote" link. The campaign is visible in public scan archives since May 2026. The credential-collection step itself was not observed and is described from third-party public reporting only.
+A private Telegram message from a compromised account asked the recipient to "click" for a child in an international children's drawing contest ("Peaceful Dreams", earlier "Colours of Hope"). The link led to a cloaking front redirector hosted on a subdomain of a third-party domain whose dangling DNS delegation had been hijacked; visitors who pass the filter are sent to a landing gallery behind Cloudflare with a one-time "vote" link. The vote page is an obfuscated fork of the Telegram Web client: the victim's own browser performs a genuine Telegram login while presenting itself as Telegram Desktop, and the phone number and code-request result are posted to the landing origin. Landings on the same origin address are visible in public scan archives since February 2026. (Revision 2, 22 November 2026: credential-collection step observed; current landing and origin address added; campaign start moved to February 2026.)
 
 **Key findings:**
-- The lure is a long-running campaign: 117 archived scans, at least 23 landing domains and about 75 front hosts between May and November 2026; only the contest name changes
+- The lure is a long-running campaign: 117 archived scans of the kit, at least 23 landing domains and about 75 front hosts between May and November 2026, with similarly themed landings on the same origin address since 13 February 2026; only the contest name changes
+- The "vote" page is a fork of Telegram Web K relabelled "vote verification system" (phone number entry, QR login, the stock cloud-password screen); the session it creates appears in the victim's device list as `Telegram Desktop 7.4.4 x64, Windows 11 x64`
+- The kit posts the phone number and the code-request result to the landing origin (`POST /<random>/logger/<same random>`, JSON with one base64 field named `image`)
+- Landing domains were served from one origin address before moving behind Cloudflare; about 246 domains of the same style point there (94 `<word>-<word>.lol`, 148 `.com.tr`/`.cyou`)
 - Front hostnames are not on operator-registered domains: the operator re-created abandoned zones at the DNS provider while the registry delegation still pointed there (a "Sitting Ducks"-class takeover); 27 of 27 sibling domains on the same address show the same one-name-server mismatch
 - Apex and `www` records of the hijacked zones point to decoy addresses of large providers, so the registered domains must not be blocked — only the specific front hostnames
-- The front (nginx + PHP on a directly exposed VPS) sets a cookie with the results of six checks and redirects filtered visitors to a large social network; the landing gallery serves scanners a video site instead
+- The front (nginx + PHP on a directly exposed VPS) sets a cookie with the results of six checks and redirects filtered visitors to a large social network — an ordinary browser on a home connection passes, anonymisation networks and datacentre addresses do not; the landing gallery serves scanners a video site instead
 - The landing is a static gallery of seven fictitious "contestants" with a countdown and a promised "treatment grant"; the name used in the message is a string from the kit's template, not a real child
 - Anti-analysis: CSS class names randomised on every load, zero-width characters in the title, hidden noise text, hidden trap fields, `noindex`
 - Compromised accounts are also used to ask contacts to lend money; according to the recipient, the transfer is requested to a card issued by a Ukrainian bank (unverified; a cash-out detail, not attribution)
-- Not observed: the phone number and login code collection step; whether one operator controls all of the roughly 128 hijacked zones seen on the three front addresses
+- Not established: how the session itself is handed to the operator (the code-entry, password and network modules were not captured); whether one operator controls all of the roughly 128 hijacked zones seen on the three front addresses
 
 **Documents:**
 - [Incident Report (English, TLP:CLEAR)](reports/2026-11-22-telegram-takeover-drawing-contest-lure/Incident_Report_2026-11-22_EN.pdf)
@@ -42,10 +45,15 @@ A private Telegram message from a compromised account asked the recipient to "cl
 | Domain | `neo-pen[.]lol` (landing gallery, November 2026) |
 | URL | `hxxps://neo-pen[.]lol/child-baby/` (landing path prefix) |
 | Domain | `draws-pix[.]lol` (landing gallery, September 2026) |
+| Domain | `sky-sun[.]lol` (current landing and cloned Telegram login, November 2026) |
+| URL | `hxxps://sky-sun[.]lol/child-dream/sn` (landing gallery) |
+| IP | `130[.]12[.]182[.]19` (origin of the landing domains, Netiface) |
+| Domain | `colorkid-pop[.]lol` (landing gallery, October 2026) |
+| Domain | `rainbow-art[.]lol` (landing gallery, August 2026) |
 
 Historic landings and addresses, the certificate fingerprint and the hijacked third-party zones (victim domains, not for blocking) are listed in the report and in the IOC dumps as context.
 
-**MITRE ATT&CK:** T1027, T1036, T1204.001, T1534, T1566.003, T1583.001, T1583.003, T1584.001, T1586.001, T1588.004, T1608.005, T1657, T1665
+**MITRE ATT&CK:** T1027, T1036, T1041, T1056.003, T1204.001, T1534, T1566.003, T1583.001, T1583.003, T1584.001, T1586.001, T1588.004, T1608.005, T1657, T1665
 
 ---
 

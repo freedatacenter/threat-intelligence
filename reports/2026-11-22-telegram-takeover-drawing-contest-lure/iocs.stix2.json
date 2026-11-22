@@ -36,7 +36,12 @@
         "indicator--2b4ac821-323f-5f3a-90d0-0d3e79d96a77",
         "indicator--12f4fba0-db75-5708-b775-e37e212a9b2b",
         "indicator--8ed25ddc-ed27-5571-b0ee-2a0f62bb36a0",
-        "indicator--0a0d7153-de55-5c77-8dae-1d87bbd85e16"
+        "indicator--0a0d7153-de55-5c77-8dae-1d87bbd85e16",
+        "indicator--b2e3d0eb-3c1f-5d54-879d-c30c533e8b94",
+        "indicator--51685571-b84b-5e63-af54-7a167901284b",
+        "indicator--83b9017c-b538-5655-aa79-50fc063e1033",
+        "indicator--8e9024b9-3db7-5bd0-aa53-7e53bf86ae73",
+        "indicator--821b88bb-8a0b-59d2-b92e-8952a9984e29"
       ],
       "labels": [
         "phishing",
@@ -52,6 +57,14 @@
         {
           "source_name": "mitre-attack",
           "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
         },
         {
           "source_name": "mitre-attack",
@@ -135,6 +148,14 @@
         },
         {
           "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
           "external_id": "T1036"
         },
         {
@@ -212,6 +233,14 @@
         {
           "source_name": "mitre-attack",
           "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
         },
         {
           "source_name": "mitre-attack",
@@ -295,6 +324,14 @@
         },
         {
           "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
           "external_id": "T1036"
         },
         {
@@ -372,6 +409,14 @@
         {
           "source_name": "mitre-attack",
           "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
         },
         {
           "source_name": "mitre-attack",
@@ -455,6 +500,14 @@
         },
         {
           "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
           "external_id": "T1036"
         },
         {
@@ -532,6 +585,14 @@
         {
           "source_name": "mitre-attack",
           "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
         },
         {
           "source_name": "mitre-attack",
@@ -615,6 +676,14 @@
         },
         {
           "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
           "external_id": "T1036"
         },
         {
@@ -692,6 +761,14 @@
         {
           "source_name": "mitre-attack",
           "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
         },
         {
           "source_name": "mitre-attack",
@@ -775,6 +852,14 @@
         },
         {
           "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
           "external_id": "T1036"
         },
         {
@@ -852,6 +937,14 @@
         {
           "source_name": "mitre-attack",
           "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
         },
         {
           "source_name": "mitre-attack",
@@ -935,6 +1028,14 @@
         },
         {
           "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
           "external_id": "T1036"
         },
         {
@@ -1015,6 +1116,14 @@
         },
         {
           "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
           "external_id": "T1036"
         },
         {
@@ -1061,6 +1170,472 @@
           "source_name": "mitre-attack",
           "external_id": "T1665"
         }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b2e3d0eb-3c1f-5d54-879d-c30c533e8b94",
+      "created": "2026-11-22T00:00:00Z",
+      "modified": "2026-11-22T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: sky-sun.lol",
+      "description": "Current landing gallery and cloned Telegram login page, observed 2026-11-22 (behind Cloudflare); registered one second after neo-pen[.]lol with the same name-server pair",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'sky-sun.lol']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-22T00:00:00Z",
+      "labels": [
+        "phishing",
+        "telegram",
+        "account-takeover",
+        "hijacked-dns-zones",
+        "sitting-ducks",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1534"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1665"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--51685571-b84b-5e63-af54-7a167901284b",
+      "created": "2026-11-22T00:00:00Z",
+      "modified": "2026-11-22T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "URL: https://sky-sun.lol/child-dream/sn",
+      "description": "Landing gallery of the current wave, target of the front redirect on 2026-11-22",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://sky-sun.lol/child-dream/sn']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-22T00:00:00Z",
+      "labels": [
+        "phishing",
+        "telegram",
+        "account-takeover",
+        "hijacked-dns-zones",
+        "sitting-ducks",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1534"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1665"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--83b9017c-b538-5655-aa79-50fc063e1033",
+      "created": "2026-11-22T00:00:00Z",
+      "modified": "2026-11-22T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "IP: 130.12.182.19",
+      "description": "Origin address of the landing domains before they moved behind Cloudflare (2026-10-25 to 2026-11-21), Netiface; about 246 campaign-style domains; unrelated third-party malware is also served from this address, link not established",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '130.12.182.19']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-22T00:00:00Z",
+      "labels": [
+        "phishing",
+        "telegram",
+        "account-takeover",
+        "hijacked-dns-zones",
+        "sitting-ducks",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1534"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1665"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8e9024b9-3db7-5bd0-aa53-7e53bf86ae73",
+      "created": "2026-11-22T00:00:00Z",
+      "modified": "2026-11-22T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: colorkid-pop.lol",
+      "description": "Landing gallery with the same /child-dream/ path, public scan 2026-10-04",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'colorkid-pop.lol']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-22T00:00:00Z",
+      "labels": [
+        "phishing",
+        "telegram",
+        "account-takeover",
+        "hijacked-dns-zones",
+        "sitting-ducks",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1534"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1665"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--821b88bb-8a0b-59d2-b92e-8952a9984e29",
+      "created": "2026-11-22T00:00:00Z",
+      "modified": "2026-11-22T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "name": "DOMAIN: rainbow-art.lol",
+      "description": "Landing gallery with the same /child-dream/ path, public scan 2026-08-14",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'rainbow-art.lol']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-22T00:00:00Z",
+      "labels": [
+        "phishing",
+        "telegram",
+        "account-takeover",
+        "hijacked-dns-zones",
+        "sitting-ducks",
+        "cloaking",
+        "cybercrime",
+        "incident-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1534"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1584.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1586.001"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.004"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.005"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        },
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1665"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--462e6458-e50e-51e0-9ed8-68db72a7e5b2",
+      "created": "2026-11-22T00:00:00Z",
+      "modified": "2026-11-22T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): Telegram Desktop 7.4.4 x64, Windows 11 x64",
+      "content": "Telegram Desktop 7.4.4 x64, Windows 11 x64 — Context, device string of the session created by the cloned client (api_id 2040); hunt for it in a victim's Telegram device list; not a detection indicator on its own",
+      "object_refs": [
+        "report--d7efb4b9-d033-54a0-b1a6-9e602bc34e98"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--b8219685-1f80-5e9e-8f11-5165679adc38",
+      "created": "2026-11-22T00:00:00Z",
+      "modified": "2026-11-22T00:00:00Z",
+      "created_by_ref": "identity--1c79b696-ef2d-56b1-b61b-98e2af977d08",
+      "abstract": "Context (not a detection indicator): POST /[A-Za-z0-9]{5,14}/logger/[A-Za-z0-9]{5,14}",
+      "content": "POST /[A-Za-z0-9]{5,14}/logger/[A-Za-z0-9]{5,14} — Context, request pattern used by the kit to send the phone number and code-request result to the landing origin (JSON body with a single base64 field named image); not a detection indicator without the body check",
+      "object_refs": [
+        "report--d7efb4b9-d033-54a0-b1a6-9e602bc34e98"
       ]
     },
     {

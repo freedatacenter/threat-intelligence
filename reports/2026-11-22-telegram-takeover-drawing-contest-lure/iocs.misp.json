@@ -118,6 +118,69 @@
         "distribution": "5"
       },
       {
+        "uuid": "fc5e4248-bc2b-5bd8-8e43-c66612a472ff",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "sky-sun.lol",
+        "to_ids": true,
+        "comment": "Current landing gallery and cloned Telegram login page, observed 2026-11-22 (behind Cloudflare); registered one second after neo-pen[.]lol with the same name-server pair",
+        "distribution": "5"
+      },
+      {
+        "uuid": "ec52a0a8-c900-5ecf-acb2-f72b054d68ac",
+        "type": "url",
+        "category": "External analysis",
+        "value": "https://sky-sun.lol/child-dream/sn",
+        "to_ids": true,
+        "comment": "Landing gallery of the current wave, target of the front redirect on 2026-11-22",
+        "distribution": "5"
+      },
+      {
+        "uuid": "78c06734-2165-50cc-95b8-e59215479b0a",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "130.12.182.19",
+        "to_ids": true,
+        "comment": "Origin address of the landing domains before they moved behind Cloudflare (2026-10-25 to 2026-11-21), Netiface; about 246 campaign-style domains; unrelated third-party malware is also served from this address, link not established",
+        "distribution": "5"
+      },
+      {
+        "uuid": "edcdf5ff-ce9a-5f01-8049-c2a6da24d936",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "colorkid-pop.lol",
+        "to_ids": true,
+        "comment": "Landing gallery with the same /child-dream/ path, public scan 2026-10-04",
+        "distribution": "5"
+      },
+      {
+        "uuid": "30500943-8560-53c7-b79f-2ff277235ab4",
+        "type": "domain",
+        "category": "Network activity",
+        "value": "rainbow-art.lol",
+        "to_ids": true,
+        "comment": "Landing gallery with the same /child-dream/ path, public scan 2026-08-14",
+        "distribution": "5"
+      },
+      {
+        "uuid": "e9181e76-9bd9-572c-a128-0327fa9ba866",
+        "type": "text",
+        "category": "Other",
+        "value": "Telegram Desktop 7.4.4 x64, Windows 11 x64",
+        "to_ids": false,
+        "comment": "Context, device string of the session created by the cloned client (api_id 2040); hunt for it in a victim's Telegram device list; not a detection indicator on its own",
+        "distribution": "5"
+      },
+      {
+        "uuid": "8c391287-26c5-5363-83ff-72364b832359",
+        "type": "text",
+        "category": "Other",
+        "value": "POST /[A-Za-z0-9]{5,14}/logger/[A-Za-z0-9]{5,14}",
+        "to_ids": false,
+        "comment": "Context, request pattern used by the kit to send the phone number and code-request result to the landing origin (JSON body with a single base64 field named image); not a detection indicator without the body check",
+        "distribution": "5"
+      },
+      {
         "uuid": "7f7f04d5-4971-57ef-a420-ea6582869b37",
         "type": "domain",
         "category": "Network activity",
@@ -388,6 +451,12 @@
       },
       {
         "name": "mitre-attack:T1027"
+      },
+      {
+        "name": "mitre-attack:T1041"
+      },
+      {
+        "name": "mitre-attack:T1056.003"
       },
       {
         "name": "mitre-attack:T1036"
